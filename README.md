@@ -4,7 +4,10 @@ Predict the top 250 PPR fantasy football players for an upcoming season, turn
 that into a draft board, and build a CLI assistant that recommends picks based
 on the board plus current roster composition.
 
-**Status:** data assembled and validated. No modeling started.
+**Status:** model built and backtested; draft board and CLI running.
+Best result **69.1%** set overlap @250 against a **68.8%** baseline and a
+**76.8%** structural ceiling. See `RESULTS.md` for every number and the
+scripts that produce them.
 
 `CLAUDE.md` holds the working rules and constraints. This file is the history —
 what was done, what was found, and what is still open.

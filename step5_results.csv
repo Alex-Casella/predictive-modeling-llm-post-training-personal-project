@@ -1,0 +1,1297 @@
+method,target,tier,overlap,split
+A_carry_forward,2001,25,52.0,train
+A_carry_forward,2001,50,52.0,train
+A_carry_forward,2001,100,60.0,train
+A_carry_forward,2001,150,66.0,train
+A_carry_forward,2001,200,66.0,train
+A_carry_forward,2001,250,66.0,train
+A_carry_forward,2002,25,48.0,train
+A_carry_forward,2002,50,62.0,train
+A_carry_forward,2002,100,63.0,train
+A_carry_forward,2002,150,63.333333333333336,train
+A_carry_forward,2002,200,70.0,train
+A_carry_forward,2002,250,66.8,train
+A_carry_forward,2003,25,52.0,train
+A_carry_forward,2003,50,58.0,train
+A_carry_forward,2003,100,67.0,train
+A_carry_forward,2003,150,75.33333333333333,train
+A_carry_forward,2003,200,73.0,train
+A_carry_forward,2003,250,73.2,train
+A_carry_forward,2004,25,36.0,train
+A_carry_forward,2004,50,52.0,train
+A_carry_forward,2004,100,56.0,train
+A_carry_forward,2004,150,63.333333333333336,train
+A_carry_forward,2004,200,68.0,train
+A_carry_forward,2004,250,70.4,train
+A_carry_forward,2005,25,40.0,train
+A_carry_forward,2005,50,50.0,train
+A_carry_forward,2005,100,68.0,train
+A_carry_forward,2005,150,69.33333333333333,train
+A_carry_forward,2005,200,67.5,train
+A_carry_forward,2005,250,70.0,train
+A_carry_forward,2006,25,40.0,train
+A_carry_forward,2006,50,52.0,train
+A_carry_forward,2006,100,61.0,train
+A_carry_forward,2006,150,65.33333333333333,train
+A_carry_forward,2006,200,64.5,train
+A_carry_forward,2006,250,68.0,train
+A_carry_forward,2007,25,36.0,train
+A_carry_forward,2007,50,46.0,train
+A_carry_forward,2007,100,61.0,train
+A_carry_forward,2007,150,64.66666666666667,train
+A_carry_forward,2007,200,67.0,train
+A_carry_forward,2007,250,68.0,train
+A_carry_forward,2008,25,28.0,train
+A_carry_forward,2008,50,50.0,train
+A_carry_forward,2008,100,65.0,train
+A_carry_forward,2008,150,61.333333333333336,train
+A_carry_forward,2008,200,64.5,train
+A_carry_forward,2008,250,67.6,train
+A_carry_forward,2009,25,40.0,train
+A_carry_forward,2009,50,50.0,train
+A_carry_forward,2009,100,62.0,train
+A_carry_forward,2009,150,65.33333333333333,train
+A_carry_forward,2009,200,68.0,train
+A_carry_forward,2009,250,70.4,train
+A_carry_forward,2010,25,44.0,train
+A_carry_forward,2010,50,46.0,train
+A_carry_forward,2010,100,63.0,train
+A_carry_forward,2010,150,67.33333333333333,train
+A_carry_forward,2010,200,73.0,train
+A_carry_forward,2010,250,73.6,train
+A_carry_forward,2011,25,40.0,train
+A_carry_forward,2011,50,52.0,train
+A_carry_forward,2011,100,58.0,train
+A_carry_forward,2011,150,60.666666666666664,train
+A_carry_forward,2011,200,67.0,train
+A_carry_forward,2011,250,72.4,train
+A_carry_forward,2012,25,52.0,train
+A_carry_forward,2012,50,46.0,train
+A_carry_forward,2012,100,61.0,train
+A_carry_forward,2012,150,67.33333333333333,train
+A_carry_forward,2012,200,66.5,train
+A_carry_forward,2012,250,66.4,train
+A_carry_forward,2013,25,56.0,train
+A_carry_forward,2013,50,50.0,train
+A_carry_forward,2013,100,59.0,train
+A_carry_forward,2013,150,62.666666666666664,train
+A_carry_forward,2013,200,67.5,train
+A_carry_forward,2013,250,70.4,train
+k=0,2001,25,48.0,train
+k=0,2001,50,54.0,train
+k=0,2001,100,60.0,train
+k=0,2001,150,65.33333333333333,train
+k=0,2001,200,67.5,train
+k=0,2001,250,66.0,train
+k=0,2002,25,52.0,train
+k=0,2002,50,62.0,train
+k=0,2002,100,63.0,train
+k=0,2002,150,62.666666666666664,train
+k=0,2002,200,67.5,train
+k=0,2002,250,66.8,train
+k=0,2003,25,52.0,train
+k=0,2003,50,64.0,train
+k=0,2003,100,68.0,train
+k=0,2003,150,72.66666666666667,train
+k=0,2003,200,72.0,train
+k=0,2003,250,73.2,train
+k=0,2004,25,40.0,train
+k=0,2004,50,52.0,train
+k=0,2004,100,60.0,train
+k=0,2004,150,63.333333333333336,train
+k=0,2004,200,68.5,train
+k=0,2004,250,70.4,train
+k=0,2005,25,40.0,train
+k=0,2005,50,48.0,train
+k=0,2005,100,67.0,train
+k=0,2005,150,70.66666666666667,train
+k=0,2005,200,68.5,train
+k=0,2005,250,70.0,train
+k=0,2006,25,40.0,train
+k=0,2006,50,58.0,train
+k=0,2006,100,61.0,train
+k=0,2006,150,64.66666666666667,train
+k=0,2006,200,65.0,train
+k=0,2006,250,68.0,train
+k=0,2007,25,40.0,train
+k=0,2007,50,46.0,train
+k=0,2007,100,61.0,train
+k=0,2007,150,65.33333333333333,train
+k=0,2007,200,68.0,train
+k=0,2007,250,68.0,train
+k=0,2008,25,32.0,train
+k=0,2008,50,52.0,train
+k=0,2008,100,64.0,train
+k=0,2008,150,60.0,train
+k=0,2008,200,63.5,train
+k=0,2008,250,67.6,train
+k=0,2009,25,40.0,train
+k=0,2009,50,50.0,train
+k=0,2009,100,62.0,train
+k=0,2009,150,63.333333333333336,train
+k=0,2009,200,68.0,train
+k=0,2009,250,70.4,train
+k=0,2010,25,40.0,train
+k=0,2010,50,44.0,train
+k=0,2010,100,61.0,train
+k=0,2010,150,67.33333333333333,train
+k=0,2010,200,73.0,train
+k=0,2010,250,73.6,train
+k=0,2011,25,32.0,train
+k=0,2011,50,52.0,train
+k=0,2011,100,60.0,train
+k=0,2011,150,62.0,train
+k=0,2011,200,68.5,train
+k=0,2011,250,72.4,train
+k=0,2012,25,44.0,train
+k=0,2012,50,48.0,train
+k=0,2012,100,62.0,train
+k=0,2012,150,66.0,train
+k=0,2012,200,66.0,train
+k=0,2012,250,66.4,train
+k=0,2013,25,48.0,train
+k=0,2013,50,54.0,train
+k=0,2013,100,60.0,train
+k=0,2013,150,64.66666666666667,train
+k=0,2013,200,67.5,train
+k=0,2013,250,70.4,train
+k=1,2001,25,48.0,train
+k=1,2001,50,52.0,train
+k=1,2001,100,62.0,train
+k=1,2001,150,65.33333333333333,train
+k=1,2001,200,67.5,train
+k=1,2001,250,66.0,train
+k=1,2002,25,56.0,train
+k=1,2002,50,62.0,train
+k=1,2002,100,63.0,train
+k=1,2002,150,62.666666666666664,train
+k=1,2002,200,67.5,train
+k=1,2002,250,66.8,train
+k=1,2003,25,52.0,train
+k=1,2003,50,64.0,train
+k=1,2003,100,67.0,train
+k=1,2003,150,73.33333333333333,train
+k=1,2003,200,71.5,train
+k=1,2003,250,73.2,train
+k=1,2004,25,40.0,train
+k=1,2004,50,52.0,train
+k=1,2004,100,60.0,train
+k=1,2004,150,63.333333333333336,train
+k=1,2004,200,68.5,train
+k=1,2004,250,70.4,train
+k=1,2005,25,36.0,train
+k=1,2005,50,50.0,train
+k=1,2005,100,67.0,train
+k=1,2005,150,70.66666666666667,train
+k=1,2005,200,69.5,train
+k=1,2005,250,70.0,train
+k=1,2006,25,40.0,train
+k=1,2006,50,58.0,train
+k=1,2006,100,61.0,train
+k=1,2006,150,64.66666666666667,train
+k=1,2006,200,65.0,train
+k=1,2006,250,68.0,train
+k=1,2007,25,36.0,train
+k=1,2007,50,44.0,train
+k=1,2007,100,60.0,train
+k=1,2007,150,65.33333333333333,train
+k=1,2007,200,67.5,train
+k=1,2007,250,68.0,train
+k=1,2008,25,32.0,train
+k=1,2008,50,52.0,train
+k=1,2008,100,64.0,train
+k=1,2008,150,60.0,train
+k=1,2008,200,63.5,train
+k=1,2008,250,67.6,train
+k=1,2009,25,40.0,train
+k=1,2009,50,48.0,train
+k=1,2009,100,62.0,train
+k=1,2009,150,63.333333333333336,train
+k=1,2009,200,68.0,train
+k=1,2009,250,70.4,train
+k=1,2010,25,40.0,train
+k=1,2010,50,44.0,train
+k=1,2010,100,61.0,train
+k=1,2010,150,66.66666666666667,train
+k=1,2010,200,73.0,train
+k=1,2010,250,73.6,train
+k=1,2011,25,36.0,train
+k=1,2011,50,52.0,train
+k=1,2011,100,60.0,train
+k=1,2011,150,62.0,train
+k=1,2011,200,68.5,train
+k=1,2011,250,72.4,train
+k=1,2012,25,48.0,train
+k=1,2012,50,48.0,train
+k=1,2012,100,61.0,train
+k=1,2012,150,66.0,train
+k=1,2012,200,65.5,train
+k=1,2012,250,66.4,train
+k=1,2013,25,48.0,train
+k=1,2013,50,50.0,train
+k=1,2013,100,62.0,train
+k=1,2013,150,64.0,train
+k=1,2013,200,67.5,train
+k=1,2013,250,70.4,train
+k=2,2001,25,48.0,train
+k=2,2001,50,54.0,train
+k=2,2001,100,62.0,train
+k=2,2001,150,65.33333333333333,train
+k=2,2001,200,67.5,train
+k=2,2001,250,66.0,train
+k=2,2002,25,56.0,train
+k=2,2002,50,62.0,train
+k=2,2002,100,63.0,train
+k=2,2002,150,62.666666666666664,train
+k=2,2002,200,67.5,train
+k=2,2002,250,66.8,train
+k=2,2003,25,52.0,train
+k=2,2003,50,64.0,train
+k=2,2003,100,66.0,train
+k=2,2003,150,72.66666666666667,train
+k=2,2003,200,72.0,train
+k=2,2003,250,73.2,train
+k=2,2004,25,44.0,train
+k=2,2004,50,50.0,train
+k=2,2004,100,59.0,train
+k=2,2004,150,62.666666666666664,train
+k=2,2004,200,68.5,train
+k=2,2004,250,70.4,train
+k=2,2005,25,36.0,train
+k=2,2005,50,50.0,train
+k=2,2005,100,66.0,train
+k=2,2005,150,70.66666666666667,train
+k=2,2005,200,69.0,train
+k=2,2005,250,70.0,train
+k=2,2006,25,40.0,train
+k=2,2006,50,58.0,train
+k=2,2006,100,60.0,train
+k=2,2006,150,65.33333333333333,train
+k=2,2006,200,65.5,train
+k=2,2006,250,68.0,train
+k=2,2007,25,36.0,train
+k=2,2007,50,44.0,train
+k=2,2007,100,61.0,train
+k=2,2007,150,64.66666666666667,train
+k=2,2007,200,67.5,train
+k=2,2007,250,68.0,train
+k=2,2008,25,32.0,train
+k=2,2008,50,54.0,train
+k=2,2008,100,63.0,train
+k=2,2008,150,60.666666666666664,train
+k=2,2008,200,64.0,train
+k=2,2008,250,67.6,train
+k=2,2009,25,40.0,train
+k=2,2009,50,48.0,train
+k=2,2009,100,62.0,train
+k=2,2009,150,62.666666666666664,train
+k=2,2009,200,68.0,train
+k=2,2009,250,70.4,train
+k=2,2010,25,40.0,train
+k=2,2010,50,44.0,train
+k=2,2010,100,61.0,train
+k=2,2010,150,66.66666666666667,train
+k=2,2010,200,73.0,train
+k=2,2010,250,73.6,train
+k=2,2011,25,36.0,train
+k=2,2011,50,52.0,train
+k=2,2011,100,60.0,train
+k=2,2011,150,62.0,train
+k=2,2011,200,68.5,train
+k=2,2011,250,72.4,train
+k=2,2012,25,48.0,train
+k=2,2012,50,46.0,train
+k=2,2012,100,61.0,train
+k=2,2012,150,66.0,train
+k=2,2012,200,64.0,train
+k=2,2012,250,66.4,train
+k=2,2013,25,48.0,train
+k=2,2013,50,48.0,train
+k=2,2013,100,62.0,train
+k=2,2013,150,64.0,train
+k=2,2013,200,67.5,train
+k=2,2013,250,70.4,train
+k=3,2001,25,48.0,train
+k=3,2001,50,54.0,train
+k=3,2001,100,62.0,train
+k=3,2001,150,65.33333333333333,train
+k=3,2001,200,67.5,train
+k=3,2001,250,66.0,train
+k=3,2002,25,52.0,train
+k=3,2002,50,62.0,train
+k=3,2002,100,63.0,train
+k=3,2002,150,62.666666666666664,train
+k=3,2002,200,68.0,train
+k=3,2002,250,66.8,train
+k=3,2003,25,52.0,train
+k=3,2003,50,64.0,train
+k=3,2003,100,66.0,train
+k=3,2003,150,72.66666666666667,train
+k=3,2003,200,71.5,train
+k=3,2003,250,73.2,train
+k=3,2004,25,44.0,train
+k=3,2004,50,50.0,train
+k=3,2004,100,60.0,train
+k=3,2004,150,62.666666666666664,train
+k=3,2004,200,68.5,train
+k=3,2004,250,70.4,train
+k=3,2005,25,36.0,train
+k=3,2005,50,50.0,train
+k=3,2005,100,66.0,train
+k=3,2005,150,70.66666666666667,train
+k=3,2005,200,69.5,train
+k=3,2005,250,70.0,train
+k=3,2006,25,44.0,train
+k=3,2006,50,58.0,train
+k=3,2006,100,60.0,train
+k=3,2006,150,66.0,train
+k=3,2006,200,65.5,train
+k=3,2006,250,68.0,train
+k=3,2007,25,36.0,train
+k=3,2007,50,44.0,train
+k=3,2007,100,61.0,train
+k=3,2007,150,64.66666666666667,train
+k=3,2007,200,67.5,train
+k=3,2007,250,68.0,train
+k=3,2008,25,32.0,train
+k=3,2008,50,54.0,train
+k=3,2008,100,63.0,train
+k=3,2008,150,60.0,train
+k=3,2008,200,64.0,train
+k=3,2008,250,67.6,train
+k=3,2009,25,40.0,train
+k=3,2009,50,48.0,train
+k=3,2009,100,61.0,train
+k=3,2009,150,62.666666666666664,train
+k=3,2009,200,68.0,train
+k=3,2009,250,70.4,train
+k=3,2010,25,40.0,train
+k=3,2010,50,44.0,train
+k=3,2010,100,61.0,train
+k=3,2010,150,66.66666666666667,train
+k=3,2010,200,73.5,train
+k=3,2010,250,73.6,train
+k=3,2011,25,36.0,train
+k=3,2011,50,52.0,train
+k=3,2011,100,60.0,train
+k=3,2011,150,62.666666666666664,train
+k=3,2011,200,68.0,train
+k=3,2011,250,72.4,train
+k=3,2012,25,52.0,train
+k=3,2012,50,46.0,train
+k=3,2012,100,61.0,train
+k=3,2012,150,66.0,train
+k=3,2012,200,64.0,train
+k=3,2012,250,66.4,train
+k=3,2013,25,48.0,train
+k=3,2013,50,46.0,train
+k=3,2013,100,62.0,train
+k=3,2013,150,63.333333333333336,train
+k=3,2013,200,67.5,train
+k=3,2013,250,70.4,train
+k=4,2001,25,48.0,train
+k=4,2001,50,54.0,train
+k=4,2001,100,60.0,train
+k=4,2001,150,65.33333333333333,train
+k=4,2001,200,67.0,train
+k=4,2001,250,66.0,train
+k=4,2002,25,52.0,train
+k=4,2002,50,62.0,train
+k=4,2002,100,63.0,train
+k=4,2002,150,62.666666666666664,train
+k=4,2002,200,68.0,train
+k=4,2002,250,66.8,train
+k=4,2003,25,52.0,train
+k=4,2003,50,64.0,train
+k=4,2003,100,65.0,train
+k=4,2003,150,73.33333333333333,train
+k=4,2003,200,71.5,train
+k=4,2003,250,73.2,train
+k=4,2004,25,44.0,train
+k=4,2004,50,50.0,train
+k=4,2004,100,60.0,train
+k=4,2004,150,62.666666666666664,train
+k=4,2004,200,68.5,train
+k=4,2004,250,70.4,train
+k=4,2005,25,36.0,train
+k=4,2005,50,50.0,train
+k=4,2005,100,67.0,train
+k=4,2005,150,70.66666666666667,train
+k=4,2005,200,70.0,train
+k=4,2005,250,70.0,train
+k=4,2006,25,40.0,train
+k=4,2006,50,58.0,train
+k=4,2006,100,60.0,train
+k=4,2006,150,66.0,train
+k=4,2006,200,65.5,train
+k=4,2006,250,68.0,train
+k=4,2007,25,36.0,train
+k=4,2007,50,44.0,train
+k=4,2007,100,62.0,train
+k=4,2007,150,65.33333333333333,train
+k=4,2007,200,67.0,train
+k=4,2007,250,68.0,train
+k=4,2008,25,36.0,train
+k=4,2008,50,52.0,train
+k=4,2008,100,63.0,train
+k=4,2008,150,60.0,train
+k=4,2008,200,64.0,train
+k=4,2008,250,67.6,train
+k=4,2009,25,40.0,train
+k=4,2009,50,50.0,train
+k=4,2009,100,61.0,train
+k=4,2009,150,62.0,train
+k=4,2009,200,68.0,train
+k=4,2009,250,70.4,train
+k=4,2010,25,44.0,train
+k=4,2010,50,44.0,train
+k=4,2010,100,61.0,train
+k=4,2010,150,66.0,train
+k=4,2010,200,73.0,train
+k=4,2010,250,73.6,train
+k=4,2011,25,36.0,train
+k=4,2011,50,52.0,train
+k=4,2011,100,61.0,train
+k=4,2011,150,62.666666666666664,train
+k=4,2011,200,68.0,train
+k=4,2011,250,72.4,train
+k=4,2012,25,52.0,train
+k=4,2012,50,46.0,train
+k=4,2012,100,60.0,train
+k=4,2012,150,65.33333333333333,train
+k=4,2012,200,64.0,train
+k=4,2012,250,66.4,train
+k=4,2013,25,48.0,train
+k=4,2013,50,46.0,train
+k=4,2013,100,62.0,train
+k=4,2013,150,62.666666666666664,train
+k=4,2013,200,68.0,train
+k=4,2013,250,70.4,train
+k=6,2001,25,48.0,train
+k=6,2001,50,52.0,train
+k=6,2001,100,60.0,train
+k=6,2001,150,65.33333333333333,train
+k=6,2001,200,66.5,train
+k=6,2001,250,66.0,train
+k=6,2002,25,52.0,train
+k=6,2002,50,62.0,train
+k=6,2002,100,63.0,train
+k=6,2002,150,62.666666666666664,train
+k=6,2002,200,67.5,train
+k=6,2002,250,66.8,train
+k=6,2003,25,56.0,train
+k=6,2003,50,62.0,train
+k=6,2003,100,64.0,train
+k=6,2003,150,73.33333333333333,train
+k=6,2003,200,71.5,train
+k=6,2003,250,73.2,train
+k=6,2004,25,40.0,train
+k=6,2004,50,52.0,train
+k=6,2004,100,59.0,train
+k=6,2004,150,62.0,train
+k=6,2004,200,69.5,train
+k=6,2004,250,70.4,train
+k=6,2005,25,32.0,train
+k=6,2005,50,48.0,train
+k=6,2005,100,66.0,train
+k=6,2005,150,70.0,train
+k=6,2005,200,71.0,train
+k=6,2005,250,70.0,train
+k=6,2006,25,40.0,train
+k=6,2006,50,56.0,train
+k=6,2006,100,58.0,train
+k=6,2006,150,66.66666666666667,train
+k=6,2006,200,66.0,train
+k=6,2006,250,68.0,train
+k=6,2007,25,36.0,train
+k=6,2007,50,44.0,train
+k=6,2007,100,62.0,train
+k=6,2007,150,65.33333333333333,train
+k=6,2007,200,67.5,train
+k=6,2007,250,68.0,train
+k=6,2008,25,36.0,train
+k=6,2008,50,52.0,train
+k=6,2008,100,63.0,train
+k=6,2008,150,58.666666666666664,train
+k=6,2008,200,63.5,train
+k=6,2008,250,67.6,train
+k=6,2009,25,44.0,train
+k=6,2009,50,50.0,train
+k=6,2009,100,61.0,train
+k=6,2009,150,61.333333333333336,train
+k=6,2009,200,68.5,train
+k=6,2009,250,70.4,train
+k=6,2010,25,40.0,train
+k=6,2010,50,44.0,train
+k=6,2010,100,61.0,train
+k=6,2010,150,65.33333333333333,train
+k=6,2010,200,73.0,train
+k=6,2010,250,73.6,train
+k=6,2011,25,36.0,train
+k=6,2011,50,52.0,train
+k=6,2011,100,60.0,train
+k=6,2011,150,61.333333333333336,train
+k=6,2011,200,68.0,train
+k=6,2011,250,72.4,train
+k=6,2012,25,48.0,train
+k=6,2012,50,48.0,train
+k=6,2012,100,60.0,train
+k=6,2012,150,64.66666666666667,train
+k=6,2012,200,64.0,train
+k=6,2012,250,66.4,train
+k=6,2013,25,52.0,train
+k=6,2013,50,46.0,train
+k=6,2013,100,60.0,train
+k=6,2013,150,62.666666666666664,train
+k=6,2013,200,68.0,train
+k=6,2013,250,70.4,train
+k=8,2001,25,48.0,train
+k=8,2001,50,52.0,train
+k=8,2001,100,60.0,train
+k=8,2001,150,65.33333333333333,train
+k=8,2001,200,67.0,train
+k=8,2001,250,66.0,train
+k=8,2002,25,52.0,train
+k=8,2002,50,62.0,train
+k=8,2002,100,63.0,train
+k=8,2002,150,64.0,train
+k=8,2002,200,67.5,train
+k=8,2002,250,66.8,train
+k=8,2003,25,56.0,train
+k=8,2003,50,64.0,train
+k=8,2003,100,63.0,train
+k=8,2003,150,73.33333333333333,train
+k=8,2003,200,71.0,train
+k=8,2003,250,73.2,train
+k=8,2004,25,40.0,train
+k=8,2004,50,52.0,train
+k=8,2004,100,59.0,train
+k=8,2004,150,61.333333333333336,train
+k=8,2004,200,69.5,train
+k=8,2004,250,70.4,train
+k=8,2005,25,32.0,train
+k=8,2005,50,50.0,train
+k=8,2005,100,65.0,train
+k=8,2005,150,70.0,train
+k=8,2005,200,70.0,train
+k=8,2005,250,70.0,train
+k=8,2006,25,40.0,train
+k=8,2006,50,58.0,train
+k=8,2006,100,57.0,train
+k=8,2006,150,66.0,train
+k=8,2006,200,66.0,train
+k=8,2006,250,68.0,train
+k=8,2007,25,36.0,train
+k=8,2007,50,44.0,train
+k=8,2007,100,61.0,train
+k=8,2007,150,64.0,train
+k=8,2007,200,67.0,train
+k=8,2007,250,68.0,train
+k=8,2008,25,36.0,train
+k=8,2008,50,52.0,train
+k=8,2008,100,63.0,train
+k=8,2008,150,58.666666666666664,train
+k=8,2008,200,63.5,train
+k=8,2008,250,67.6,train
+k=8,2009,25,44.0,train
+k=8,2009,50,50.0,train
+k=8,2009,100,60.0,train
+k=8,2009,150,61.333333333333336,train
+k=8,2009,200,68.0,train
+k=8,2009,250,70.4,train
+k=8,2010,25,40.0,train
+k=8,2010,50,48.0,train
+k=8,2010,100,61.0,train
+k=8,2010,150,66.0,train
+k=8,2010,200,73.0,train
+k=8,2010,250,73.6,train
+k=8,2011,25,40.0,train
+k=8,2011,50,50.0,train
+k=8,2011,100,59.0,train
+k=8,2011,150,61.333333333333336,train
+k=8,2011,200,67.0,train
+k=8,2011,250,72.4,train
+k=8,2012,25,48.0,train
+k=8,2012,50,46.0,train
+k=8,2012,100,60.0,train
+k=8,2012,150,64.66666666666667,train
+k=8,2012,200,64.5,train
+k=8,2012,250,66.4,train
+k=8,2013,25,52.0,train
+k=8,2013,50,46.0,train
+k=8,2013,100,60.0,train
+k=8,2013,150,62.666666666666664,train
+k=8,2013,200,68.0,train
+k=8,2013,250,70.4,train
+k=12,2001,25,48.0,train
+k=12,2001,50,52.0,train
+k=12,2001,100,60.0,train
+k=12,2001,150,64.66666666666667,train
+k=12,2001,200,66.5,train
+k=12,2001,250,66.0,train
+k=12,2002,25,52.0,train
+k=12,2002,50,60.0,train
+k=12,2002,100,62.0,train
+k=12,2002,150,64.0,train
+k=12,2002,200,66.5,train
+k=12,2002,250,66.8,train
+k=12,2003,25,56.0,train
+k=12,2003,50,62.0,train
+k=12,2003,100,62.0,train
+k=12,2003,150,72.0,train
+k=12,2003,200,71.5,train
+k=12,2003,250,73.2,train
+k=12,2004,25,40.0,train
+k=12,2004,50,52.0,train
+k=12,2004,100,59.0,train
+k=12,2004,150,61.333333333333336,train
+k=12,2004,200,68.5,train
+k=12,2004,250,70.4,train
+k=12,2005,25,28.0,train
+k=12,2005,50,48.0,train
+k=12,2005,100,65.0,train
+k=12,2005,150,69.33333333333333,train
+k=12,2005,200,68.0,train
+k=12,2005,250,70.0,train
+k=12,2006,25,40.0,train
+k=12,2006,50,56.0,train
+k=12,2006,100,58.0,train
+k=12,2006,150,66.0,train
+k=12,2006,200,65.5,train
+k=12,2006,250,68.0,train
+k=12,2007,25,36.0,train
+k=12,2007,50,40.0,train
+k=12,2007,100,60.0,train
+k=12,2007,150,62.666666666666664,train
+k=12,2007,200,66.5,train
+k=12,2007,250,68.0,train
+k=12,2008,25,32.0,train
+k=12,2008,50,54.0,train
+k=12,2008,100,60.0,train
+k=12,2008,150,57.333333333333336,train
+k=12,2008,200,63.0,train
+k=12,2008,250,67.6,train
+k=12,2009,25,36.0,train
+k=12,2009,50,52.0,train
+k=12,2009,100,58.0,train
+k=12,2009,150,60.666666666666664,train
+k=12,2009,200,68.0,train
+k=12,2009,250,70.4,train
+k=12,2010,25,40.0,train
+k=12,2010,50,48.0,train
+k=12,2010,100,60.0,train
+k=12,2010,150,65.33333333333333,train
+k=12,2010,200,72.5,train
+k=12,2010,250,73.6,train
+k=12,2011,25,36.0,train
+k=12,2011,50,48.0,train
+k=12,2011,100,60.0,train
+k=12,2011,150,60.666666666666664,train
+k=12,2011,200,67.0,train
+k=12,2011,250,72.4,train
+k=12,2012,25,44.0,train
+k=12,2012,50,50.0,train
+k=12,2012,100,59.0,train
+k=12,2012,150,64.66666666666667,train
+k=12,2012,200,63.5,train
+k=12,2012,250,66.4,train
+k=12,2013,25,52.0,train
+k=12,2013,50,50.0,train
+k=12,2013,100,60.0,train
+k=12,2013,150,62.666666666666664,train
+k=12,2013,200,68.5,train
+k=12,2013,250,70.4,train
+k=16,2001,25,52.0,train
+k=16,2001,50,50.0,train
+k=16,2001,100,60.0,train
+k=16,2001,150,62.666666666666664,train
+k=16,2001,200,66.0,train
+k=16,2001,250,66.0,train
+k=16,2002,25,48.0,train
+k=16,2002,50,60.0,train
+k=16,2002,100,63.0,train
+k=16,2002,150,62.666666666666664,train
+k=16,2002,200,66.0,train
+k=16,2002,250,66.8,train
+k=16,2003,25,52.0,train
+k=16,2003,50,60.0,train
+k=16,2003,100,63.0,train
+k=16,2003,150,70.66666666666667,train
+k=16,2003,200,71.5,train
+k=16,2003,250,73.2,train
+k=16,2004,25,40.0,train
+k=16,2004,50,52.0,train
+k=16,2004,100,58.0,train
+k=16,2004,150,62.0,train
+k=16,2004,200,68.0,train
+k=16,2004,250,70.4,train
+k=16,2005,25,24.0,train
+k=16,2005,50,48.0,train
+k=16,2005,100,61.0,train
+k=16,2005,150,68.0,train
+k=16,2005,200,67.5,train
+k=16,2005,250,70.0,train
+k=16,2006,25,44.0,train
+k=16,2006,50,52.0,train
+k=16,2006,100,57.0,train
+k=16,2006,150,66.0,train
+k=16,2006,200,65.0,train
+k=16,2006,250,68.0,train
+k=16,2007,25,32.0,train
+k=16,2007,50,38.0,train
+k=16,2007,100,57.0,train
+k=16,2007,150,62.0,train
+k=16,2007,200,66.0,train
+k=16,2007,250,68.0,train
+k=16,2008,25,32.0,train
+k=16,2008,50,54.0,train
+k=16,2008,100,60.0,train
+k=16,2008,150,58.0,train
+k=16,2008,200,62.5,train
+k=16,2008,250,67.6,train
+k=16,2009,25,36.0,train
+k=16,2009,50,54.0,train
+k=16,2009,100,58.0,train
+k=16,2009,150,60.0,train
+k=16,2009,200,66.5,train
+k=16,2009,250,70.4,train
+k=16,2010,25,40.0,train
+k=16,2010,50,48.0,train
+k=16,2010,100,59.0,train
+k=16,2010,150,64.66666666666667,train
+k=16,2010,200,72.5,train
+k=16,2010,250,73.6,train
+k=16,2011,25,36.0,train
+k=16,2011,50,48.0,train
+k=16,2011,100,59.0,train
+k=16,2011,150,59.333333333333336,train
+k=16,2011,200,67.0,train
+k=16,2011,250,72.4,train
+k=16,2012,25,44.0,train
+k=16,2012,50,50.0,train
+k=16,2012,100,59.0,train
+k=16,2012,150,64.66666666666667,train
+k=16,2012,200,63.5,train
+k=16,2012,250,66.4,train
+k=16,2013,25,40.0,train
+k=16,2013,50,50.0,train
+k=16,2013,100,59.0,train
+k=16,2013,150,62.666666666666664,train
+k=16,2013,200,69.0,train
+k=16,2013,250,70.4,train
+k=24,2001,25,48.0,train
+k=24,2001,50,48.0,train
+k=24,2001,100,58.0,train
+k=24,2001,150,62.666666666666664,train
+k=24,2001,200,65.0,train
+k=24,2001,250,66.0,train
+k=24,2002,25,48.0,train
+k=24,2002,50,60.0,train
+k=24,2002,100,65.0,train
+k=24,2002,150,61.333333333333336,train
+k=24,2002,200,67.5,train
+k=24,2002,250,66.8,train
+k=24,2003,25,52.0,train
+k=24,2003,50,60.0,train
+k=24,2003,100,62.0,train
+k=24,2003,150,69.33333333333333,train
+k=24,2003,200,71.0,train
+k=24,2003,250,73.2,train
+k=24,2004,25,40.0,train
+k=24,2004,50,52.0,train
+k=24,2004,100,57.0,train
+k=24,2004,150,62.0,train
+k=24,2004,200,67.0,train
+k=24,2004,250,70.4,train
+k=24,2005,25,20.0,train
+k=24,2005,50,46.0,train
+k=24,2005,100,60.0,train
+k=24,2005,150,66.66666666666667,train
+k=24,2005,200,67.5,train
+k=24,2005,250,70.0,train
+k=24,2006,25,44.0,train
+k=24,2006,50,50.0,train
+k=24,2006,100,56.0,train
+k=24,2006,150,64.66666666666667,train
+k=24,2006,200,65.0,train
+k=24,2006,250,68.0,train
+k=24,2007,25,24.0,train
+k=24,2007,50,46.0,train
+k=24,2007,100,57.0,train
+k=24,2007,150,60.0,train
+k=24,2007,200,66.0,train
+k=24,2007,250,68.0,train
+k=24,2008,25,28.0,train
+k=24,2008,50,52.0,train
+k=24,2008,100,57.0,train
+k=24,2008,150,56.666666666666664,train
+k=24,2008,200,61.5,train
+k=24,2008,250,67.6,train
+k=24,2009,25,36.0,train
+k=24,2009,50,52.0,train
+k=24,2009,100,58.0,train
+k=24,2009,150,59.333333333333336,train
+k=24,2009,200,65.0,train
+k=24,2009,250,70.4,train
+k=24,2010,25,36.0,train
+k=24,2010,50,50.0,train
+k=24,2010,100,58.0,train
+k=24,2010,150,64.66666666666667,train
+k=24,2010,200,72.5,train
+k=24,2010,250,73.6,train
+k=24,2011,25,40.0,train
+k=24,2011,50,46.0,train
+k=24,2011,100,59.0,train
+k=24,2011,150,59.333333333333336,train
+k=24,2011,200,66.5,train
+k=24,2011,250,72.4,train
+k=24,2012,25,44.0,train
+k=24,2012,50,46.0,train
+k=24,2012,100,57.0,train
+k=24,2012,150,64.0,train
+k=24,2012,200,63.0,train
+k=24,2012,250,66.4,train
+k=24,2013,25,36.0,train
+k=24,2013,50,50.0,train
+k=24,2013,100,60.0,train
+k=24,2013,150,63.333333333333336,train
+k=24,2013,200,69.0,train
+k=24,2013,250,70.4,train
+k=32,2001,25,44.0,train
+k=32,2001,50,44.0,train
+k=32,2001,100,54.0,train
+k=32,2001,150,62.0,train
+k=32,2001,200,65.0,train
+k=32,2001,250,66.0,train
+k=32,2002,25,48.0,train
+k=32,2002,50,60.0,train
+k=32,2002,100,65.0,train
+k=32,2002,150,60.666666666666664,train
+k=32,2002,200,66.0,train
+k=32,2002,250,66.8,train
+k=32,2003,25,48.0,train
+k=32,2003,50,60.0,train
+k=32,2003,100,62.0,train
+k=32,2003,150,68.66666666666667,train
+k=32,2003,200,71.0,train
+k=32,2003,250,73.2,train
+k=32,2004,25,40.0,train
+k=32,2004,50,50.0,train
+k=32,2004,100,56.0,train
+k=32,2004,150,61.333333333333336,train
+k=32,2004,200,67.0,train
+k=32,2004,250,70.4,train
+k=32,2005,25,24.0,train
+k=32,2005,50,44.0,train
+k=32,2005,100,58.0,train
+k=32,2005,150,66.0,train
+k=32,2005,200,67.0,train
+k=32,2005,250,70.0,train
+k=32,2006,25,44.0,train
+k=32,2006,50,46.0,train
+k=32,2006,100,54.0,train
+k=32,2006,150,62.666666666666664,train
+k=32,2006,200,64.5,train
+k=32,2006,250,68.0,train
+k=32,2007,25,20.0,train
+k=32,2007,50,46.0,train
+k=32,2007,100,54.0,train
+k=32,2007,150,58.0,train
+k=32,2007,200,65.0,train
+k=32,2007,250,68.0,train
+k=32,2008,25,28.0,train
+k=32,2008,50,50.0,train
+k=32,2008,100,57.0,train
+k=32,2008,150,57.333333333333336,train
+k=32,2008,200,61.0,train
+k=32,2008,250,67.6,train
+k=32,2009,25,36.0,train
+k=32,2009,50,50.0,train
+k=32,2009,100,57.0,train
+k=32,2009,150,58.666666666666664,train
+k=32,2009,200,65.0,train
+k=32,2009,250,70.4,train
+k=32,2010,25,36.0,train
+k=32,2010,50,52.0,train
+k=32,2010,100,58.0,train
+k=32,2010,150,64.0,train
+k=32,2010,200,71.0,train
+k=32,2010,250,73.6,train
+k=32,2011,25,36.0,train
+k=32,2011,50,38.0,train
+k=32,2011,100,59.0,train
+k=32,2011,150,59.333333333333336,train
+k=32,2011,200,66.0,train
+k=32,2011,250,72.4,train
+k=32,2012,25,40.0,train
+k=32,2012,50,44.0,train
+k=32,2012,100,56.0,train
+k=32,2012,150,62.666666666666664,train
+k=32,2012,200,62.5,train
+k=32,2012,250,66.4,train
+k=32,2013,25,32.0,train
+k=32,2013,50,48.0,train
+k=32,2013,100,60.0,train
+k=32,2013,150,63.333333333333336,train
+k=32,2013,200,70.0,train
+k=32,2013,250,70.4,train
+A_carry_forward,2014,25,36.0,test
+A_carry_forward,2014,50,58.0,test
+A_carry_forward,2014,100,63.0,test
+A_carry_forward,2014,150,64.66666666666667,test
+A_carry_forward,2014,200,63.5,test
+A_carry_forward,2014,250,63.6,test
+A_carry_forward,2015,25,32.0,test
+A_carry_forward,2015,50,48.0,test
+A_carry_forward,2015,100,55.0,test
+A_carry_forward,2015,150,62.666666666666664,test
+A_carry_forward,2015,200,67.0,test
+A_carry_forward,2015,250,66.4,test
+A_carry_forward,2016,25,48.0,test
+A_carry_forward,2016,50,56.0,test
+A_carry_forward,2016,100,59.0,test
+A_carry_forward,2016,150,63.333333333333336,test
+A_carry_forward,2016,200,65.0,test
+A_carry_forward,2016,250,66.4,test
+A_carry_forward,2017,25,32.0,test
+A_carry_forward,2017,50,62.0,test
+A_carry_forward,2017,100,62.0,test
+A_carry_forward,2017,150,64.0,test
+A_carry_forward,2017,200,64.5,test
+A_carry_forward,2017,250,66.8,test
+A_carry_forward,2018,25,40.0,test
+A_carry_forward,2018,50,50.0,test
+A_carry_forward,2018,100,54.0,test
+A_carry_forward,2018,150,60.0,test
+A_carry_forward,2018,200,64.5,test
+A_carry_forward,2018,250,65.2,test
+A_carry_forward,2019,25,44.0,test
+A_carry_forward,2019,50,46.0,test
+A_carry_forward,2019,100,64.0,test
+A_carry_forward,2019,150,68.0,test
+A_carry_forward,2019,200,69.5,test
+A_carry_forward,2019,250,68.0,test
+A_carry_forward,2020,25,48.0,test
+A_carry_forward,2020,50,52.0,test
+A_carry_forward,2020,100,62.0,test
+A_carry_forward,2020,150,64.66666666666667,test
+A_carry_forward,2020,200,67.5,test
+A_carry_forward,2020,250,70.8,test
+A_carry_forward,2021,25,48.0,test
+A_carry_forward,2021,50,50.0,test
+A_carry_forward,2021,100,62.0,test
+A_carry_forward,2021,150,64.66666666666667,test
+A_carry_forward,2021,200,67.0,test
+A_carry_forward,2021,250,68.0,test
+A_carry_forward,2022,25,48.0,test
+A_carry_forward,2022,50,54.0,test
+A_carry_forward,2022,100,68.0,test
+A_carry_forward,2022,150,66.66666666666667,test
+A_carry_forward,2022,200,70.5,test
+A_carry_forward,2022,250,69.2,test
+A_carry_forward,2023,25,36.0,test
+A_carry_forward,2023,50,44.0,test
+A_carry_forward,2023,100,60.0,test
+A_carry_forward,2023,150,65.33333333333333,test
+A_carry_forward,2023,200,69.0,test
+A_carry_forward,2023,250,68.8,test
+A_carry_forward,2024,25,28.0,test
+A_carry_forward,2024,50,42.0,test
+A_carry_forward,2024,100,60.0,test
+A_carry_forward,2024,150,66.66666666666667,test
+A_carry_forward,2024,200,70.0,test
+A_carry_forward,2024,250,71.2,test
+A_carry_forward,2025,25,48.0,test
+A_carry_forward,2025,50,52.0,test
+A_carry_forward,2025,100,63.0,test
+A_carry_forward,2025,150,66.0,test
+A_carry_forward,2025,200,69.0,test
+A_carry_forward,2025,250,71.2,test
+B_raw_ppg (k=0),2014,25,44.0,test
+B_raw_ppg (k=0),2014,50,64.0,test
+B_raw_ppg (k=0),2014,100,59.0,test
+B_raw_ppg (k=0),2014,150,61.333333333333336,test
+B_raw_ppg (k=0),2014,200,62.0,test
+B_raw_ppg (k=0),2014,250,63.6,test
+B_raw_ppg (k=0),2015,25,28.0,test
+B_raw_ppg (k=0),2015,50,44.0,test
+B_raw_ppg (k=0),2015,100,55.0,test
+B_raw_ppg (k=0),2015,150,61.333333333333336,test
+B_raw_ppg (k=0),2015,200,66.5,test
+B_raw_ppg (k=0),2015,250,66.4,test
+B_raw_ppg (k=0),2016,25,52.0,test
+B_raw_ppg (k=0),2016,50,60.0,test
+B_raw_ppg (k=0),2016,100,60.0,test
+B_raw_ppg (k=0),2016,150,62.0,test
+B_raw_ppg (k=0),2016,200,63.5,test
+B_raw_ppg (k=0),2016,250,66.4,test
+B_raw_ppg (k=0),2017,25,40.0,test
+B_raw_ppg (k=0),2017,50,58.0,test
+B_raw_ppg (k=0),2017,100,65.0,test
+B_raw_ppg (k=0),2017,150,63.333333333333336,test
+B_raw_ppg (k=0),2017,200,64.0,test
+B_raw_ppg (k=0),2017,250,66.8,test
+B_raw_ppg (k=0),2018,25,40.0,test
+B_raw_ppg (k=0),2018,50,58.0,test
+B_raw_ppg (k=0),2018,100,58.0,test
+B_raw_ppg (k=0),2018,150,60.666666666666664,test
+B_raw_ppg (k=0),2018,200,65.0,test
+B_raw_ppg (k=0),2018,250,65.2,test
+B_raw_ppg (k=0),2019,25,36.0,test
+B_raw_ppg (k=0),2019,50,56.0,test
+B_raw_ppg (k=0),2019,100,65.0,test
+B_raw_ppg (k=0),2019,150,66.0,test
+B_raw_ppg (k=0),2019,200,68.0,test
+B_raw_ppg (k=0),2019,250,68.0,test
+B_raw_ppg (k=0),2020,25,44.0,test
+B_raw_ppg (k=0),2020,50,50.0,test
+B_raw_ppg (k=0),2020,100,59.0,test
+B_raw_ppg (k=0),2020,150,64.0,test
+B_raw_ppg (k=0),2020,200,66.0,test
+B_raw_ppg (k=0),2020,250,70.8,test
+B_raw_ppg (k=0),2021,25,48.0,test
+B_raw_ppg (k=0),2021,50,56.0,test
+B_raw_ppg (k=0),2021,100,63.0,test
+B_raw_ppg (k=0),2021,150,63.333333333333336,test
+B_raw_ppg (k=0),2021,200,67.0,test
+B_raw_ppg (k=0),2021,250,68.0,test
+B_raw_ppg (k=0),2022,25,48.0,test
+B_raw_ppg (k=0),2022,50,60.0,test
+B_raw_ppg (k=0),2022,100,64.0,test
+B_raw_ppg (k=0),2022,150,68.0,test
+B_raw_ppg (k=0),2022,200,68.5,test
+B_raw_ppg (k=0),2022,250,69.2,test
+B_raw_ppg (k=0),2023,25,40.0,test
+B_raw_ppg (k=0),2023,50,50.0,test
+B_raw_ppg (k=0),2023,100,58.0,test
+B_raw_ppg (k=0),2023,150,65.33333333333333,test
+B_raw_ppg (k=0),2023,200,65.5,test
+B_raw_ppg (k=0),2023,250,68.8,test
+B_raw_ppg (k=0),2024,25,36.0,test
+B_raw_ppg (k=0),2024,50,48.0,test
+B_raw_ppg (k=0),2024,100,62.0,test
+B_raw_ppg (k=0),2024,150,63.333333333333336,test
+B_raw_ppg (k=0),2024,200,69.5,test
+B_raw_ppg (k=0),2024,250,71.2,test
+B_raw_ppg (k=0),2025,25,48.0,test
+B_raw_ppg (k=0),2025,50,50.0,test
+B_raw_ppg (k=0),2025,100,63.0,test
+B_raw_ppg (k=0),2025,150,66.0,test
+B_raw_ppg (k=0),2025,200,69.0,test
+B_raw_ppg (k=0),2025,250,71.2,test
+D_shrunk k=0 (obj 1),2014,25,44.0,test
+D_shrunk k=0 (obj 1),2014,50,64.0,test
+D_shrunk k=0 (obj 1),2014,100,59.0,test
+D_shrunk k=0 (obj 1),2014,150,61.333333333333336,test
+D_shrunk k=0 (obj 1),2014,200,62.0,test
+D_shrunk k=0 (obj 1),2014,250,63.6,test
+D_shrunk k=0 (obj 1),2015,25,28.0,test
+D_shrunk k=0 (obj 1),2015,50,44.0,test
+D_shrunk k=0 (obj 1),2015,100,55.0,test
+D_shrunk k=0 (obj 1),2015,150,61.333333333333336,test
+D_shrunk k=0 (obj 1),2015,200,66.5,test
+D_shrunk k=0 (obj 1),2015,250,66.4,test
+D_shrunk k=0 (obj 1),2016,25,52.0,test
+D_shrunk k=0 (obj 1),2016,50,60.0,test
+D_shrunk k=0 (obj 1),2016,100,60.0,test
+D_shrunk k=0 (obj 1),2016,150,62.0,test
+D_shrunk k=0 (obj 1),2016,200,63.5,test
+D_shrunk k=0 (obj 1),2016,250,66.4,test
+D_shrunk k=0 (obj 1),2017,25,40.0,test
+D_shrunk k=0 (obj 1),2017,50,58.0,test
+D_shrunk k=0 (obj 1),2017,100,65.0,test
+D_shrunk k=0 (obj 1),2017,150,63.333333333333336,test
+D_shrunk k=0 (obj 1),2017,200,64.0,test
+D_shrunk k=0 (obj 1),2017,250,66.8,test
+D_shrunk k=0 (obj 1),2018,25,40.0,test
+D_shrunk k=0 (obj 1),2018,50,58.0,test
+D_shrunk k=0 (obj 1),2018,100,58.0,test
+D_shrunk k=0 (obj 1),2018,150,60.666666666666664,test
+D_shrunk k=0 (obj 1),2018,200,65.0,test
+D_shrunk k=0 (obj 1),2018,250,65.2,test
+D_shrunk k=0 (obj 1),2019,25,36.0,test
+D_shrunk k=0 (obj 1),2019,50,56.0,test
+D_shrunk k=0 (obj 1),2019,100,65.0,test
+D_shrunk k=0 (obj 1),2019,150,66.0,test
+D_shrunk k=0 (obj 1),2019,200,68.0,test
+D_shrunk k=0 (obj 1),2019,250,68.0,test
+D_shrunk k=0 (obj 1),2020,25,44.0,test
+D_shrunk k=0 (obj 1),2020,50,50.0,test
+D_shrunk k=0 (obj 1),2020,100,59.0,test
+D_shrunk k=0 (obj 1),2020,150,64.0,test
+D_shrunk k=0 (obj 1),2020,200,66.0,test
+D_shrunk k=0 (obj 1),2020,250,70.8,test
+D_shrunk k=0 (obj 1),2021,25,48.0,test
+D_shrunk k=0 (obj 1),2021,50,56.0,test
+D_shrunk k=0 (obj 1),2021,100,63.0,test
+D_shrunk k=0 (obj 1),2021,150,63.333333333333336,test
+D_shrunk k=0 (obj 1),2021,200,67.0,test
+D_shrunk k=0 (obj 1),2021,250,68.0,test
+D_shrunk k=0 (obj 1),2022,25,48.0,test
+D_shrunk k=0 (obj 1),2022,50,60.0,test
+D_shrunk k=0 (obj 1),2022,100,64.0,test
+D_shrunk k=0 (obj 1),2022,150,68.0,test
+D_shrunk k=0 (obj 1),2022,200,68.5,test
+D_shrunk k=0 (obj 1),2022,250,69.2,test
+D_shrunk k=0 (obj 1),2023,25,40.0,test
+D_shrunk k=0 (obj 1),2023,50,50.0,test
+D_shrunk k=0 (obj 1),2023,100,58.0,test
+D_shrunk k=0 (obj 1),2023,150,65.33333333333333,test
+D_shrunk k=0 (obj 1),2023,200,65.5,test
+D_shrunk k=0 (obj 1),2023,250,68.8,test
+D_shrunk k=0 (obj 1),2024,25,36.0,test
+D_shrunk k=0 (obj 1),2024,50,48.0,test
+D_shrunk k=0 (obj 1),2024,100,62.0,test
+D_shrunk k=0 (obj 1),2024,150,63.333333333333336,test
+D_shrunk k=0 (obj 1),2024,200,69.5,test
+D_shrunk k=0 (obj 1),2024,250,71.2,test
+D_shrunk k=0 (obj 1),2025,25,48.0,test
+D_shrunk k=0 (obj 1),2025,50,50.0,test
+D_shrunk k=0 (obj 1),2025,100,63.0,test
+D_shrunk k=0 (obj 1),2025,150,66.0,test
+D_shrunk k=0 (obj 1),2025,200,69.0,test
+D_shrunk k=0 (obj 1),2025,250,71.2,test
+F_shrunk k=4 (obj 2),2014,25,40.0,test
+F_shrunk k=4 (obj 2),2014,50,64.0,test
+F_shrunk k=4 (obj 2),2014,100,58.0,test
+F_shrunk k=4 (obj 2),2014,150,61.333333333333336,test
+F_shrunk k=4 (obj 2),2014,200,62.5,test
+F_shrunk k=4 (obj 2),2014,250,63.6,test
+F_shrunk k=4 (obj 2),2015,25,32.0,test
+F_shrunk k=4 (obj 2),2015,50,48.0,test
+F_shrunk k=4 (obj 2),2015,100,53.0,test
+F_shrunk k=4 (obj 2),2015,150,61.333333333333336,test
+F_shrunk k=4 (obj 2),2015,200,66.5,test
+F_shrunk k=4 (obj 2),2015,250,66.4,test
+F_shrunk k=4 (obj 2),2016,25,56.0,test
+F_shrunk k=4 (obj 2),2016,50,62.0,test
+F_shrunk k=4 (obj 2),2016,100,59.0,test
+F_shrunk k=4 (obj 2),2016,150,61.333333333333336,test
+F_shrunk k=4 (obj 2),2016,200,64.0,test
+F_shrunk k=4 (obj 2),2016,250,66.4,test
+F_shrunk k=4 (obj 2),2017,25,44.0,test
+F_shrunk k=4 (obj 2),2017,50,56.0,test
+F_shrunk k=4 (obj 2),2017,100,64.0,test
+F_shrunk k=4 (obj 2),2017,150,62.666666666666664,test
+F_shrunk k=4 (obj 2),2017,200,63.5,test
+F_shrunk k=4 (obj 2),2017,250,66.8,test
+F_shrunk k=4 (obj 2),2018,25,48.0,test
+F_shrunk k=4 (obj 2),2018,50,54.0,test
+F_shrunk k=4 (obj 2),2018,100,58.0,test
+F_shrunk k=4 (obj 2),2018,150,61.333333333333336,test
+F_shrunk k=4 (obj 2),2018,200,65.0,test
+F_shrunk k=4 (obj 2),2018,250,65.2,test
+F_shrunk k=4 (obj 2),2019,25,36.0,test
+F_shrunk k=4 (obj 2),2019,50,52.0,test
+F_shrunk k=4 (obj 2),2019,100,64.0,test
+F_shrunk k=4 (obj 2),2019,150,67.33333333333333,test
+F_shrunk k=4 (obj 2),2019,200,68.0,test
+F_shrunk k=4 (obj 2),2019,250,68.0,test
+F_shrunk k=4 (obj 2),2020,25,44.0,test
+F_shrunk k=4 (obj 2),2020,50,50.0,test
+F_shrunk k=4 (obj 2),2020,100,58.0,test
+F_shrunk k=4 (obj 2),2020,150,64.0,test
+F_shrunk k=4 (obj 2),2020,200,66.5,test
+F_shrunk k=4 (obj 2),2020,250,70.8,test
+F_shrunk k=4 (obj 2),2021,25,48.0,test
+F_shrunk k=4 (obj 2),2021,50,52.0,test
+F_shrunk k=4 (obj 2),2021,100,63.0,test
+F_shrunk k=4 (obj 2),2021,150,64.0,test
+F_shrunk k=4 (obj 2),2021,200,67.0,test
+F_shrunk k=4 (obj 2),2021,250,68.0,test
+F_shrunk k=4 (obj 2),2022,25,44.0,test
+F_shrunk k=4 (obj 2),2022,50,58.0,test
+F_shrunk k=4 (obj 2),2022,100,65.0,test
+F_shrunk k=4 (obj 2),2022,150,68.0,test
+F_shrunk k=4 (obj 2),2022,200,68.5,test
+F_shrunk k=4 (obj 2),2022,250,69.2,test
+F_shrunk k=4 (obj 2),2023,25,36.0,test
+F_shrunk k=4 (obj 2),2023,50,50.0,test
+F_shrunk k=4 (obj 2),2023,100,59.0,test
+F_shrunk k=4 (obj 2),2023,150,64.66666666666667,test
+F_shrunk k=4 (obj 2),2023,200,65.5,test
+F_shrunk k=4 (obj 2),2023,250,68.8,test
+F_shrunk k=4 (obj 2),2024,25,40.0,test
+F_shrunk k=4 (obj 2),2024,50,46.0,test
+F_shrunk k=4 (obj 2),2024,100,61.0,test
+F_shrunk k=4 (obj 2),2024,150,62.666666666666664,test
+F_shrunk k=4 (obj 2),2024,200,69.0,test
+F_shrunk k=4 (obj 2),2024,250,71.2,test
+F_shrunk k=4 (obj 2),2025,25,52.0,test
+F_shrunk k=4 (obj 2),2025,50,54.0,test
+F_shrunk k=4 (obj 2),2025,100,61.0,test
+F_shrunk k=4 (obj 2),2025,150,66.0,test
+F_shrunk k=4 (obj 2),2025,200,69.0,test
+F_shrunk k=4 (obj 2),2025,250,71.2,test
+E_shrunk per-position k,2014,25,40.0,test
+E_shrunk per-position k,2014,50,60.0,test
+E_shrunk per-position k,2014,100,58.0,test
+E_shrunk per-position k,2014,150,61.333333333333336,test
+E_shrunk per-position k,2014,200,62.5,test
+E_shrunk per-position k,2014,250,63.6,test
+E_shrunk per-position k,2015,25,28.0,test
+E_shrunk per-position k,2015,50,48.0,test
+E_shrunk per-position k,2015,100,54.0,test
+E_shrunk per-position k,2015,150,61.333333333333336,test
+E_shrunk per-position k,2015,200,65.5,test
+E_shrunk per-position k,2015,250,66.4,test
+E_shrunk per-position k,2016,25,52.0,test
+E_shrunk per-position k,2016,50,60.0,test
+E_shrunk per-position k,2016,100,59.0,test
+E_shrunk per-position k,2016,150,62.0,test
+E_shrunk per-position k,2016,200,63.5,test
+E_shrunk per-position k,2016,250,66.4,test
+E_shrunk per-position k,2017,25,44.0,test
+E_shrunk per-position k,2017,50,56.0,test
+E_shrunk per-position k,2017,100,64.0,test
+E_shrunk per-position k,2017,150,62.666666666666664,test
+E_shrunk per-position k,2017,200,63.0,test
+E_shrunk per-position k,2017,250,66.8,test
+E_shrunk per-position k,2018,25,48.0,test
+E_shrunk per-position k,2018,50,58.0,test
+E_shrunk per-position k,2018,100,58.0,test
+E_shrunk per-position k,2018,150,60.666666666666664,test
+E_shrunk per-position k,2018,200,64.5,test
+E_shrunk per-position k,2018,250,65.2,test
+E_shrunk per-position k,2019,25,36.0,test
+E_shrunk per-position k,2019,50,56.0,test
+E_shrunk per-position k,2019,100,65.0,test
+E_shrunk per-position k,2019,150,66.0,test
+E_shrunk per-position k,2019,200,67.0,test
+E_shrunk per-position k,2019,250,68.0,test
+E_shrunk per-position k,2020,25,52.0,test
+E_shrunk per-position k,2020,50,52.0,test
+E_shrunk per-position k,2020,100,59.0,test
+E_shrunk per-position k,2020,150,63.333333333333336,test
+E_shrunk per-position k,2020,200,66.0,test
+E_shrunk per-position k,2020,250,70.8,test
+E_shrunk per-position k,2021,25,48.0,test
+E_shrunk per-position k,2021,50,52.0,test
+E_shrunk per-position k,2021,100,62.0,test
+E_shrunk per-position k,2021,150,63.333333333333336,test
+E_shrunk per-position k,2021,200,66.5,test
+E_shrunk per-position k,2021,250,68.0,test
+E_shrunk per-position k,2022,25,48.0,test
+E_shrunk per-position k,2022,50,56.0,test
+E_shrunk per-position k,2022,100,64.0,test
+E_shrunk per-position k,2022,150,67.33333333333333,test
+E_shrunk per-position k,2022,200,68.0,test
+E_shrunk per-position k,2022,250,69.2,test
+E_shrunk per-position k,2023,25,40.0,test
+E_shrunk per-position k,2023,50,48.0,test
+E_shrunk per-position k,2023,100,58.0,test
+E_shrunk per-position k,2023,150,65.33333333333333,test
+E_shrunk per-position k,2023,200,66.0,test
+E_shrunk per-position k,2023,250,68.8,test
+E_shrunk per-position k,2024,25,36.0,test
+E_shrunk per-position k,2024,50,42.0,test
+E_shrunk per-position k,2024,100,61.0,test
+E_shrunk per-position k,2024,150,62.666666666666664,test
+E_shrunk per-position k,2024,200,68.5,test
+E_shrunk per-position k,2024,250,71.2,test
+E_shrunk per-position k,2025,25,44.0,test
+E_shrunk per-position k,2025,50,52.0,test
+E_shrunk per-position k,2025,100,62.0,test
+E_shrunk per-position k,2025,150,66.66666666666667,test
+E_shrunk per-position k,2025,200,68.0,test
+E_shrunk per-position k,2025,250,71.2,test

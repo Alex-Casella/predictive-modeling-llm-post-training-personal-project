@@ -1,0 +1,8 @@
+# Tested on Python 3.11.15 with:
+#   pandas 3.0.5, scikit-learn 1.9.0, scipy 1.17.1
+#
+# scipy is not imported directly anywhere -- pandas needs it for
+# .corr(method='spearman') in step3_yoy.py and step7_truncation.py.
+pandas>=2.2
+scikit-learn>=1.4
+scipy>=1.11

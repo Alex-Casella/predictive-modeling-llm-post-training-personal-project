@@ -165,6 +165,47 @@ Shared modules: `checks.py` (assert harness), `common.py`, `evaluate.py`
 
 ---
 
+---
+
+## The agent (stages 3–5)
+
+Draft decisions were reconstructed from 19 replayed seasons: a board built only
+from seasons <= n-1, a simulated 10-team snake draft, and every pick labelled
+with which of its 12 candidates turned out best. 2,850 examples, split by
+season (train 2007–2019, val 2020–2022, test 2023–2025) because consecutive
+picks share most of their candidate list and a random split would put
+near-duplicates on both sides.
+
+**The bar, fixed before any model was trained** (`eval_agent.py`, 450 held-out
+picks). Each pick offers 12 candidates; score is where the chosen player lands
+once the season is played out, lower is better:
+
+| | validity | mean rank (of 12) | best of 12 |
+|---|---|---|---|
+| random | 100% | 6.36 | 8.4% |
+| deterministic board (`draft.py`) | 100% | **6.00** | 9.6% |
+| `llama3.1:8b` un-tuned base | — | *pending* | |
+| fine-tuned adapter | — | *pending* | |
+
+Random landing at 6.36 / 8.4% against a theoretical 6.50 / 8.3% is the check
+that the metric is wired up correctly.
+
+**The board beats random by 0.52 ranks out of 12.** Once VBD has sorted twelve
+players into a narrow band, choosing between them is close to a coin flip. That
+is both the opportunity for the agent and the reason to expect the fine-tune
+may not beat 6.00. §11g: *"If the agent doesn't beat the number it was handed,
+the language layer is decoration."*
+
+A labelling error was caught and is documented in `step9_draft_examples.py`:
+the first version labelled each pick with the best actual outcome over all ~200
+available players, which returns whoever won the season rather than the right
+pick — in 2021 the label was Cooper Kupp for ten consecutive picks, and a
+150-pick draft carried only 4–11 distinct labels. Restricting the label to the
+12 candidates actually shown fixed it (21–37 distinct labels), and an assert
+guards the regression.
+
+See `SERVING.md` for the conversion and serving runbook.
+
 ## What is NOT done
 
 - **Rookies.** 23.2% of a real top 250 cannot appear on the board. Needs PFR

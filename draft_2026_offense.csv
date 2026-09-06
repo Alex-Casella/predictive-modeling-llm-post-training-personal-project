@@ -1,0 +1,82 @@
+draft_year,rnd,pick,team,player,pos,age,college,pfr_id
+2026,1,1,LVR,Fernando Mendoza,QB,22,Indiana,MendFe00
+2026,1,3,ARI,Jeremiyah Love,RB,21,Notre Dame,LoveJe00
+2026,1,4,TEN,Carnell Tate,WR,21,Ohio St.,TateCa00
+2026,1,8,NOR,Jordyn Tyson,WR,22,Arizona St.,TysoJo00
+2026,1,13,LAR,Ty Simpson,QB,23,Alabama,SimpTy00
+2026,1,16,NYJ,Kenyon Sadiq,TE,21,Oregon,SadiKe00
+2026,1,20,PHI,Makai Lemon,WR,22,USC,LemoMa00
+2026,1,24,CLE,KC Concepcion,WR,21,Texas A&M,ConcKC00
+2026,1,30,NYJ,Omar Cooper Jr.,WR,22,Indiana,CoopOm00
+2026,1,32,SEA,Jadarian Price,RB,22,Notre Dame,PricJa02
+2026,2,33,SFO,De'Zhaun Stribling,WR,23,Mississippi,StriDe01
+2026,2,39,CLE,Denzel Boston,WR,22,Washington,BostDe00
+2026,2,47,PIT,Germie Bernard,WR,22,Alabama,BernGe00
+2026,2,54,PHI,Eli Stowers,TE,23,Vanderbilt,StowEl00
+2026,2,56,JAX,Nate Boerkircher,TE,25,Texas A&M,BoerNa00
+2026,2,59,HOU,Marlin Klein,TE,23,Michigan,KleiMa00
+2026,2,61,LAR,Max Klare,TE,23,Ohio St.,KlarMa00
+2026,3,65,ARI,Carson Beck,QB,24,Miami (FL),BeckCa01
+2026,3,69,CHI,Sam Roush,TE,23,Stanford,RousSa00
+2026,3,71,WAS,Antonio Williams,WR,22,Clemson,WillAn04
+2026,3,73,NOR,Oscar Delp,TE,23,Georgia,DelpOs01
+2026,3,74,NYG,Malachi Fields,WR,23,Notre Dame,FielMa00
+2026,3,75,MIA,Caleb Douglas,WR,22,Texas Tech,DougCa00
+2026,3,76,PIT,Drew Allar,QB,22,Penn St.,AllaDr00
+2026,3,79,ATL,Zachariah Branch,WR,22,Georgia,BranZa00
+2026,3,80,BAL,Ja'Kobi Lane,WR,22,USC,LaneJa01
+2026,3,83,CAR,Chris Brazzell II,WR,22,Tennessee,BrazCh01
+2026,3,84,TAM,Ted Hurst,WR,22,Georgia St.,HursTe00
+2026,3,87,MIA,Will Kacmarek,TE,23,Ohio St.,KacmWi00
+2026,3,89,CHI,Zavion Thomas,WR,21,LSU,ThomZa05
+2026,3,90,SFO,Kaelon Black,RB,24,Indiana,BlacKa00
+2026,3,94,MIA,Chris Bell,WR,22,Louisville,BellCh00
+2026,3,95,NWE,Eli Raridon,TE,22,Notre Dame,RariEl00
+2026,4,105,LAC,Brenen Thompson,WR,23,Mississippi St.,ThomBr07
+2026,4,108,DEN,Jonah Coleman,RB,23,Washington,ColeJo00
+2026,4,110,NYJ,Cade Klubnik,QB,22,Clemson,KlubCa00
+2026,4,115,BAL,Elijah Sarratt,WR,23,Indiana,SarrEl00
+2026,4,121,PIT,Kaden Wetjen,WR,24,Iowa,WetjKa00
+2026,4,122,LVR,Mike Washington Jr.,RB,23,Arkansas,WashMi00
+2026,4,125,BUF,Skyler Bell,WR,24,Connecticut,BellSk00
+2026,4,133,BAL,Matthew Hibner,TE,24,SMU,HibnMa00
+2026,4,136,NOR,Bryce Lance,WR,24,North Dakota St.,LancBr00
+2026,4,140,CIN,Colbie Young,WR,24,Georgia,YounCo01
+2026,5,143,ARI,Reggie Virgil,WR,22,Texas Tech,VirgRe00
+2026,5,152,DEN,Justin Joly,TE,22,North Carolina St.,JolyJu00
+2026,5,159,MIN,Max Bredeson,TE,23,Michigan,BredMa00
+2026,5,161,KAN,Emmett Johnson,RB,22,Nebraska,JohnEm01
+2026,5,164,JAX,Tanner Koziol,TE,,Houston,KoziTa00
+2026,5,165,TEN,Nicholas Singleton,RB,22,Penn St.,SingNi01
+2026,5,168,DET,Kendrick Law,WR,23,Kentucky,LawxKe00
+2026,5,169,PIT,Riley Nowakowski,TE,24,Indiana,NowaRi00
+2026,5,170,CLE,Joe Royer,TE,24,Cincinnati,RoyeJo01
+2026,5,173,BAL,Josh Cuevas,TE,22,Alabama,CuevJo00
+2026,5,174,BAL,Adam Randall,RB,22,Clemson,RandAd00
+2026,5,176,KAN,Cyrus Allen,WR,23,Cincinnati,AlleCy00
+2026,5,177,MIA,Kevin Coleman Jr.,WR,22,Missouri,ColeKe03
+2026,5,178,PHI,Cole Payton,QB,23,North Dakota St.,PaytCo00
+2026,5,180,MIA,Seydou Traore,TE,24,Mississippi St.,TraoSe00
+2026,6,182,CLE,Taylen Green,QB,23,Arkansas,GreeTa00
+2026,6,185,TAM,Bauer Sharp,TE,23,LSU,SharBa00
+2026,6,187,WAS,Kaytron Allen,RB,23,Penn St.,AlleKa01
+2026,6,190,NOR,Barion Brown,WR,22,LSU,BrowBa02
+2026,6,191,JAX,Josh Cameron,WR,23,Baylor,CameJo01
+2026,6,195,LVR,Malik Benson,WR,23,Oregon,BensMa00
+2026,6,197,LAR,CJ Daniels,WR,24,Miami (FL),DaniCJ00
+2026,6,198,MIN,Demond Claiborne,RB,22,Wake Forest,ClaiDe00
+2026,6,199,SEA,Emmanuel Henderson Jr.,WR,22,Kansas,HendEm00
+2026,6,203,JAX,CJ Williams,WR,,Stanford,WillCJ00
+2026,6,204,HOU,Lewis Bond,WR,23,Boston Col.,BondLe00
+2026,7,218,DAL,Anthony Smith,WR,24,East Carolina,SmitAn05
+2026,7,221,CIN,Jack Endries,TE,22,Texas,EndrJa00
+2026,7,223,WAS,Athan Kaliakmanis,QB,23,Rutgers,KaliAt00
+2026,7,225,TEN,Jaren Kanak,TE,22,Oklahoma,KanaJa00
+2026,7,230,PIT,Eli Heidenreich,FB,23,Navy,HeidEl00
+2026,7,234,NWE,Behren Morton,QB,24,Texas Tech,MortBe00
+2026,7,237,IND,Seth McGowan,RB,24,Kentucky,McGoSe01
+2026,7,245,NWE,Jam Miller,RB,22,Alabama,MillJa03
+2026,7,248,CLE,Carsen Ryan,TE,23,BYU,RyanCa00
+2026,7,249,KAN,Garrett Nussmeier,QB,,LSU,NussGa00
+2026,7,254,IND,Deion Burks,WR,23,Oklahoma,BurkDe02
+2026,7,256,DEN,Dallen Bentley,TE,25,Utah,BentDa00

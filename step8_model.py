@@ -33,6 +33,7 @@ import numpy as np
 import pandas as pd
 from sklearn.ensemble import (HistGradientBoostingClassifier,
                               HistGradientBoostingRegressor)
+from sklearn.metrics import r2_score
 
 import features
 from checks import Checks
@@ -155,12 +156,27 @@ def main():
         err = pr - test['next_ppr']
         rows.append(dict(n=n, n_test=len(test), mae=abs(err).mean(),
                          rmse=np.sqrt((err ** 2).mean()),
-                         r2=np.corrcoef(pr, test['next_ppr'])[0, 1] ** 2))
+                         # Two different things, both routinely called "r2":
+                         #   pearson_sq  = corr(pred, actual) ** 2. Scale- and
+                         #     bias-blind: add 50 points to every prediction and
+                         #     it does not move.
+                         #   R2          = 1 - SSres/SStot. Penalises bias, and
+                         #     goes NEGATIVE if you do worse than the mean.
+                         # Reporting the first while calling it the second
+                         # flatters the model. Both are printed.
+                         pearson_sq=np.corrcoef(pr, test['next_ppr'])[0, 1] ** 2,
+                         R2=r2_score(test['next_ppr'], pr),
+                         bias=err.mean()))
     diag = pd.DataFrame(rows)
     print(diag.round(2).to_string(index=False))
-    print(f"\n  mean MAE {diag['mae'].mean():.1f}  RMSE {diag['rmse'].mean():.1f}  "
-          f"r2 {diag['r2'].mean():.3f}")
-    print('  (diagnostics only -- set overlap is the metric that counts)')
+    print(f"\n  mean MAE {diag['mae'].mean():.1f}   RMSE {diag['rmse'].mean():.1f}"
+          f"   pearson_sq {diag['pearson_sq'].mean():.3f}"
+          f"   R2 {diag['R2'].mean():.3f}"
+          f"   bias {diag['bias'].mean():+.1f}")
+    print('  diagnostics only -- set overlap is the metric that counts.')
+    print('  NOTE: computed on SURVIVORS ONLY (players who made the next top')
+    print('  250). That excludes the ~31% hardest cases and flatters every')
+    print('  number here. It is not comparable to a published projection MAE.')
 
     res.to_csv(OUT, index=False)
     c.report()

@@ -26,11 +26,10 @@ divide by T.
 import pandas as pd
 
 from checks import Checks
+from evaluate import TIERS, order_by
 
 SRC = 'fantasy_top250_derived.csv'
 OUT = 'step4_results.csv'
-
-TIERS = [25, 50, 100, 150, 200, 250]
 
 # CLAUDE.md's stated baseline, to be reproduced (README.md next-step 1).
 DOC_BASELINE = {25: 42.1, 50: 51.2, 100: 61.4, 150: 65.1, 200: 67.6, 250: 68.8}
@@ -68,12 +67,14 @@ def main():
     targets = seasons[1:]                      # 2001..2025, 25 pairs
     c.check('25 target seasons', len(targets) == 25, f'got {len(targets)}')
 
+    # rk is the final tiebreak on every ordering -- exact ppr ties exist and some
+    # straddle a tier boundary. See evaluate.TIEBREAK.
     methods = {
-        'A_carry_forward': lambda p: p.sort_values('ppr', ascending=False),
-        'B_ppg':           lambda p: p.sort_values('ppg', ascending=False),
-        'C_ppg_x_games':   lambda p: p.assign(
-            score=lambda d: d['ppg'] * d['career_mean_g']
-        ).sort_values('score', ascending=False),
+        'A_carry_forward': lambda p: order_by(p, ['ppr'], [False]),
+        'B_ppg':           lambda p: order_by(p, ['ppg'], [False]),
+        'C_ppg_x_games':   lambda p: order_by(
+            p.assign(score=lambda d: d['ppg'] * d['career_mean_g']),
+            ['score'], [False]),
     }
 
     rows = []
@@ -87,7 +88,7 @@ def main():
             assert len(actual_top[t]) == t
 
         for name, order_fn in methods.items():
-            order = order_fn(prior)['pid'].tolist()
+            order = order_fn(prior)
             for t in TIERS:
                 rows.append(dict(target=target, method=name, tier=t,
                                  overlap=100 * overlap(order, actual_top, t)))

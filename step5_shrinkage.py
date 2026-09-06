@@ -27,7 +27,7 @@ prediction time.
 import pandas as pd
 
 from checks import Checks
-from evaluate import (MOVABLE_TIERS, TIERS, carry_forward, evaluate,
+from evaluate import (MOVABLE_TIERS, TIERS, carry_forward, evaluate, order_by,
                       score_for_tuning, summarise)
 
 SRC = 'fantasy_top250_derived.csv'
@@ -46,10 +46,9 @@ def shrunk_order(k_by_pos):
         k = prior['pos'].map(k_by_pos).astype(float)
         w = prior['g'] / (prior['g'] + k)
         prior['shrunk'] = w * prior['ppg'] + (1 - w) * pos_mean
-        # ppr breaks ties deterministically; at large k many players collapse to
-        # their positional mean and the shrunk value alone stops discriminating.
-        return (prior.sort_values(['shrunk', 'ppr'], ascending=False)['pid']
-                .tolist())
+        # ppr then rk break ties deterministically; at large k many players
+        # collapse to their positional mean and `shrunk` stops discriminating.
+        return order_by(prior, ['shrunk', 'ppr'], [False, False])
     return order_fn
 
 

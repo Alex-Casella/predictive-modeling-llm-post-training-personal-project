@@ -524,7 +524,10 @@ Five stages. Sequential — each depends on the one above it.
 | 4 | Fine-tune LoRA adapter | Modal, cloud GPU |
 | 5 | Serve the adapter | Ollama, local |
 
-**Currently at stage 1.**
+**Currently at stage 4.** Stages 1–3 are complete: the pipeline, a backtested
+tabular model (69.1% set overlap @250 vs a 68.8% baseline — see `RESULTS.md`),
+a working VBD board and draft CLI, and 2,850 draft-decision examples in
+`draft_examples.jsonl`. Stage 4 is blocked only on a base-model choice.
 
 Stage 4 cannot begin until stage 3 produces a dataset. Ollama does not train models —
 per Unsloth's Ollama tutorial and the `Modelfile` `ADAPTER` directive, a LoRA adapter is

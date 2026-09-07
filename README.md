@@ -28,10 +28,10 @@ what was done, what was found, and what is still open.
 > in any output, chart, or write-up derived from this data. See
 > `ATTRIBUTION.md`.
 
-> **License:** none. The repository is public to be read, not reused — with no
-> license file, all rights are reserved by default. The data is a separate
-> matter and was never this project's to license; each CSV carries its source's
-> terms. See `ATTRIBUTION.md`.
+> **Copyright © 2026 Alex Casella. All rights reserved.** The code is published
+> to be read, not reused; no license is granted. The data and the base model
+> weights were never mine to license and carry their own terms. See
+> `COPYRIGHT.txt` and `ATTRIBUTION.md`.
 
 ---
 

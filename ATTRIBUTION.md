@@ -38,11 +38,12 @@ the season `ppr` column from Pro-Football-Reference to a median difference of
 
 ## No license is granted on the code
 
-This repository carries **no license file**, which under copyright means all
-rights are reserved by default. The code is public to be read, not to be
-reused: nobody is granted permission to copy, modify, or redistribute it.
-(Forking within GitHub is separately permitted by GitHub's own terms of
-service, which is a narrower thing than a license.)
+**Copyright © 2026 Alex Casella. All rights reserved.** See `COPYRIGHT.txt`.
+
+The code is published to be read, as a record of the work, not to be reused.
+Permission to copy, modify, or redistribute it is not given. (Forking within
+GitHub is separately permitted by GitHub's terms of service, which is narrower
+than a license.)
 
 This is a deliberate choice, not an oversight. Adding a permissive license
 later is one file; withdrawing one already granted is not.

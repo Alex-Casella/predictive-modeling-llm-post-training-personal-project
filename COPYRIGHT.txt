@@ -1,0 +1,48 @@
+Copyright (c) 2026 Alex Casella. All rights reserved.
+
+
+THE CODE
+
+All source code, scripts, and written documentation in this repository are the
+work of Alex Casella and remain his property.
+
+No license is granted. This repository is published to be READ -- as a record
+of the work and how it was done -- not to be reused. Permission to copy,
+modify, redistribute, or make commercial use of this code is not given, and
+must be requested in writing.
+
+Viewing and forking within GitHub are permitted by GitHub's own Terms of
+Service, which every public repository grants automatically. That is narrower
+than a license and confers no rights beyond GitHub's platform.
+
+
+THE DATA IS NOT COVERED BY THIS NOTICE
+
+The NFL statistics in this repository were never Alex Casella's to license or
+to reserve, and nothing above applies to them.
+
+  fantasy_top250.csv, fantasy_top250_derived.csv, board_2026.csv
+      Pro-Football-Reference / Sports Reference LLC
+      https://www.sports-reference.com/data_use.html
+
+  weekly_ppr.csv
+      nflverse, retrieved via nfl_data_py, released under CC BY 4.0
+      https://github.com/nflverse/nflverse-data
+
+Every file derived from those carries its original source's terms. Credit
+both sources in any output, chart, or write-up built on this data. See
+ATTRIBUTION.md.
+
+
+THE MODEL WEIGHTS ARE NOT COVERED EITHER
+
+The fine-tuned adapters are trained on Meta's Llama 3.1 8B Instruct, which is
+distributed under the Llama 3.1 Community License -- an open-weights license
+with use restrictions, not an OSI open-source license. Any distribution or use
+of an adapter built here is bound by Meta's terms in addition to anything
+above.
+
+  https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
+
+
+Nothing in this file is legal advice.

@@ -1,0 +1,3197 @@
+draft_year,draft_round,draft_pick,draft_team,draft_pos,college,draft_age,pfr_id,pid
+1985,1,10,NYJ,WR,Wisconsin,22.0,ToonAl00,
+1985,1,13,CIN,WR,Miami (FL),22.0,BrowEd00,
+1985,1,15,KAN,TE,North Carolina,22.0,HortEt00,
+1985,1,16,SFO,WR,Miss. Valley St.,22.0,RiceJe00,P0058
+1985,1,19,NYG,RB,Kentucky,22.0,AdamGe00,
+1985,1,23,RAI,WR,Florida St.,22.0,HestJe00,
+1985,1,26,DEN,RB,Oklahoma,22.0,SeweSt00,
+1985,1,27,MIA,RB,Florida,23.0,HampLo00,
+1985,2,31,DEN,WR,Arizona,22.0,JohnVa00,
+1985,2,35,CLE,RB,Florida St.,22.0,AlleGr21,
+1985,2,37,PHI,QB,UNLV,22.0,CunnRa00,P0189
+1985,2,41,KAN,TE,Iowa,23.0,HayeJo00,
+1985,2,42,BUF,WR,Jackson St.,23.0,BurkCh00,
+1985,2,46,NYG,WR,North Dakota St.,23.0,RobiSt00,
+1985,2,50,RAM,WR,Vanderbilt,22.0,ScotCh22,
+1985,2,53,SEA,RB,Iowa,23.0,GillOw20,
+1985,3,57,BUF,QB,Maryland,23.0,ReicFr00,
+1985,3,75,SFO,RB,Alabama,22.0,MoorRi00,
+1985,3,78,CHI,WR,TCU,22.0,ManeJa20,
+1985,3,79,RAI,WR,Mississippi,23.0,MoffTi00,
+1985,3,81,SEA,WR,Washington,23.0,GreeDa23,
+1985,4,85,MIN,WR,Oklahoma,23.0,RhymBu20,
+1985,4,86,BUF,WR,Kutztown (PA),21.0,ReedAn00,
+1985,4,89,ATL,WR,Stanford,22.0,HarrEm00,
+1985,4,98,GNB,WR,Colorado Mesa,22.0,StanWa00,
+1985,4,100,NYG,TE,Notre Dame,22.0,BavaMa00,
+1985,4,103,DAL,RB,Georgia Tech,21.0,LaveRo20,
+1985,4,104,STL,RB,West Virginia,22.0,WolfRo00,
+1985,4,110,DEN,TE,Colorado St.,22.0,McGrKe20,
+1985,5,114,DAL,RB,Georgia,23.0,WalkHe00,
+1985,5,116,STL,TE,Clemson,22.0,DunnKD00,
+1985,5,118,DET,RB,North Carolina St.,22.0,McInJo20,
+1985,5,126,KAN,RB,Purdue,22.0,KingBr00,
+1985,5,130,BUF,WR,Texas A&M,23.0,TealJi00,
+1985,5,135,RAI,RB,Delaware,24.0,ReedDa20,
+1985,6,142,MIN,QB,UCLA,23.0,BonoSt00,
+1985,6,143,RAI,QB,Oklahoma St.,23.0,HilgRu00,
+1985,6,145,MIA,WR,Missouri,23.0,ShorGe20,
+1985,6,154,CIN,TE,Murray St.,23.0,LestKe20,
+1985,6,155,GNB,TE,Texas A&M,24.0,LewiMa21,
+1985,6,158,STL,TE,Wyoming,22.0,NovaJa00,
+1985,6,161,RAM,WR,UCLA,23.0,YounMi00,
+1985,6,162,RAM,TE,Cal Poly-San Luis Obispo,23.0,JohnDa01,
+1985,6,163,WAS,TE,Lamar,22.0,LeexDa20,
+1985,6,167,MIA,RB,Louisville,22.0,DaveRo00,
+1985,7,170,HOU,WR,Hawaii,23.0,AkiuMi20,
+1985,7,173,IND,WR,Mississippi,22.0,HarbJa20,
+1985,7,175,CLE,WR,Elizabeth City St.,22.0,LangRe00,
+1985,7,178,DAL,WR,Alabama St.,23.0,PoweKa20,
+1985,7,179,NOR,WR,LSU,23.0,MartEr00,
+1985,7,182,GNB,RB,Wisconsin,22.0,ElleGa00,
+1985,7,185,WAS,RB,Nicholls St.,22.0,VitaLi20,
+1985,7,188,RAI,WR,Washington,23.0,PattMa00,
+1985,7,189,RAM,RB,Oklahoma,22.0,BradDa21,
+1985,8,197,BUF,FB,Washington,22.0,RobiJa21,
+1985,8,200,IND,WR,East Carolina,23.0,NichRi20,
+1985,8,202,DET,RB,Texas-Arlington,22.0,CaldSc20,
+1985,8,203,CLE,WR,Liberty,23.0,BankFr00,
+1985,8,204,TAM,WR,Arizona,22.0,FreePh00,
+1985,8,207,SDG,RB,Central Michigan,23.0,AdamCu00,
+1985,8,210,KAN,WR,South Carolina,22.0,HillIr00,
+1985,8,213,NYG,RB,Colorado,22.0,RousLe00,
+1985,8,216,DAL,WR,Bethune-Cookman,21.0,GonzLe20,
+1985,8,223,MIA,TE,TCU,23.0,SharDa20,
+1985,9,226,HOU,WR,Northwestern,23.0,TaskSt00,
+1985,9,227,MIN,RB,Syracuse,22.0,CoviJa20,
+1985,9,229,IND,TE,USC,22.0,BoyeMa00,
+1985,9,235,NYJ,TE,San Diego St.,23.0,WateMi20,
+1985,9,244,STL,RB,Georgia,23.0,WillSc00,
+1985,9,250,CHI,RB,Texas A&M,23.0,SandTh00,
+1985,10,258,DET,WR,Auburn,22.0,BeauCl20,
+1985,10,263,WAS,TE,Texas,23.0,OrrxTe00,
+1985,10,267,KAN,RB,Nebraska,23.0,SmitJe00,
+1985,10,270,DAL,TE,Virginia Tech,23.0,JoneJo22,
+1985,11,281,HOU,WR,West Virginia,22.0,DrewWi00,
+1985,11,285,RAM,QB,Boston Col.,22.0,FlutDo00,P0128
+1985,11,287,CLE,TE,Southern Connecticut St.,21.0,TuckTr20,
+1985,11,289,PHI,RB,Tennessee St.,24.0,HuntHe00,
+1985,11,294,GNB,QB,Trinity (CT),23.0,ShieJo20,
+1985,11,303,RAI,RB,Boston Col.,22.0,StraSt00,
+1985,12,313,ATL,TE,Georgia Tech,23.0,WhisKe00,
+1985,12,315,CLE,WR,Nebraska,22.0,SwanSh20,
+1985,12,321,KAN,TE,Colorado St.,22.0,LexBHa00,
+1985,12,328,NWE,RB,Penn St.,22.0,MumfTo20,
+1986,1,1,TAM,RB,Auburn,23.0,JackBo00,
+1986,1,3,HOU,QB,Purdue,23.0,EverJi00,
+1986,1,10,PHI,RB,Ohio St.,22.0,ByarKe00,
+1986,1,12,DET,QB,Iowa,23.0,LongCh00,
+1986,1,15,SEA,FB,Florida,21.0,WillJo00,
+1986,1,16,BUF,RB,Iowa,22.0,HarmRo00,
+1986,1,18,DAL,WR,UCLA,23.0,SherMi00,
+1986,1,21,CIN,WR,Tennessee,22.0,McGeTi00,
+1986,1,26,NWE,RB,SMU,22.0,DupaRe00,
+1986,1,27,CHI,RB,Florida,22.0,AndeNe00,
+1986,2,29,DET,RB,LSU,23.0,JameGa00,
+1986,2,31,NOR,RB,LSU,22.0,HillDa00,
+1986,2,33,DAL,RB,Arizona St.,22.0,ClacDa00,
+1986,2,34,HOU,WR,Louisville,22.0,GiviEr00,
+1986,2,37,PHI,RB,Texas A&M,23.0,ToneAn00,
+1986,2,41,GNB,RB,TCU,24.0,DaviKe00,
+1986,2,43,CLE,WR,San Diego St.,21.0,SlauWe00,
+1986,2,45,WAS,WR,Hawaii,23.0,MurrWa00,
+1986,2,47,IND,QB,Illinois,23.0,TrudJa00,
+1986,3,56,SFO,RB,Nebraska,23.0,RathTo00,
+1986,3,57,NOR,RB,Washington St.,23.0,MayeRu00,
+1986,3,61,HOU,RB,Notre Dame,22.0,PinkAl00,
+1986,3,62,NOR,RB,Virginia,23.0,WordBa00,
+1986,3,67,PIT,QB,La-Monroe,24.0,BrisBu00,
+1986,3,71,RAM,QB,Washington,22.0,MillHu00,
+1986,3,76,SFO,WR,Delaware St.,24.0,TaylJo00,
+1986,3,82,CHI,WR,Illinois,23.0,WillDa00,
+1986,4,86,IND,WR,Boston Univ.,22.0,BrooBi00,
+1986,4,88,NOR,WR,Liberty,22.0,EdwaKe00,
+1986,4,90,KAN,WR,Furman,22.0,FoxxCh20,
+1986,4,91,CIN,TE,Michigan,23.0,KattEr00,
+1986,4,99,CIN,QB,Long Beach St.,23.0,GaynDo20,
+1986,4,103,RAI,RB,Occidental,22.0,MuelVa00,
+1986,4,107,MIA,WR,Cal State-Fullerton,22.0,PruiJa00,
+1986,4,108,RAI,RB,Navy,22.0,McCaNa00,
+1986,5,111,BUF,RB,Miss. Valley St.,23.0,ByruCa00,
+1986,5,114,HOU,TE,Auburn,21.0,ParkJe23,
+1986,5,119,DET,RB,Nicholls St.,23.0,SmitOs20,
+1986,5,120,MIN,WR,Florida St.,22.0,JoneHa00,
+1986,5,126,SEA,RB,Arkansas,21.0,EdmoBo00,
+1986,5,130,NYG,WR,San Diego St.,23.0,WarrVi20,
+1986,5,135,PIT,TE,Santa Clara,23.0,JoneBr00,
+1986,5,138,CHI,WR,Oregon,23.0,BarnLe20,
+1986,6,139,NYG,WR,Colorado,23.0,BrowRo23,
+1986,6,140,DAL,TE,Alabama,22.0,ChanTh00,
+1986,6,142,NOR,WR,Youngstown St.,23.0,ThomBo20,
+1986,6,145,HOU,RB,Purdue,22.0,WallRa00,
+1986,6,146,WAS,QB,Washington St.,23.0,RypiMa00,
+1986,6,150,DAL,QB,Maryland,23.0,GelbSt00,
+1986,6,151,DEN,TE,Salem,23.0,MoblOr00,
+1986,6,154,ATL,WR,S.F. Austin,22.0,DixoFl00,
+1986,6,155,SDG,WR,Northern Illinois,22.0,PardCu20,
+1986,6,157,NYG,WR,Utah St.,21.0,MillSo00,
+1986,6,159,ATL,WR,Missouri State,21.0,WillKe01,
+1986,6,161,DEN,WR,Purdue,23.0,JackMa00,
+1986,6,166,CHI,RB,Tennessee,23.0,PoweJe21,
+1986,7,169,PHI,WR,Cal State-Fullerton,22.0,RediCo20,
+1986,7,170,STL,WR,Tennessee,23.0,SwanEr20,
+1986,7,173,NOR,RB,Holy Cross,23.0,FeneGi00,
+1986,7,174,CLE,QB,Kansas,22.0,NorsMi20,
+1986,7,175,PIT,RB,Purdue,21.0,CartRo00,
+1986,7,177,CIN,RB,Houston,23.0,FranPa21,
+1986,7,179,MIN,TE,Houston,22.0,HiltCa00,
+1986,7,180,BUF,TE,Michigan St.,22.0,RollBu00,
+1986,7,184,NYG,RB,Boise St.,22.0,FranJo21,
+1986,7,186,WAS,RB,Maryland,24.0,BadaRi00,
+1986,8,207,PIT,TE,Illinois,22.0,BosoCa00,
+1986,8,212,DAL,RB,Wake Forest,22.0,ClemTo21,
+1986,8,220,NWE,TE,Stanford,22.0,BatyGr00,
+1986,9,222,BUF,WR,Oregon St.,22.0,BynuRe20,
+1986,9,240,SFO,RB,Oregon,23.0,CherTo20,
+1986,9,244,DEN,WR,Miss. Valley St.,23.0,ThomJo20,
+1986,9,245,NYJ,RB,Hawaii,22.0,FaaoNu00,
+1986,10,252,ATL,RB,East Carolina,22.0,BakeTo20,
+1986,10,254,STL,RB,BYU,24.0,SikaVa00,
+1986,10,255,STL,WR,East Texas A&M,23.0,SmitWe21,
+1986,10,260,PIT,TE,Missouri,23.0,SeitWa20,
+1986,10,261,PHI,RB,Washington St.,24.0,TautJu00,
+1986,10,265,CLE,TE,Miami (FL),22.0,SmitWi22,
+1986,11,291,SEA,QB,UCLA,22.0,NorrDa20,
+1986,11,293,SDG,RB,Slippery Rock,22.0,SandCh21,
+1986,11,303,MIA,TE,North Carolina,22.0,FranAr20,
+1986,11,305,CHI,WR,BYU,23.0,KozlGl00,
+1986,12,308,ATL,WR,Purdue,21.0,GrifSt22,
+1986,12,310,HOU,RB,West Virginia Tech,22.0,BankCh00,
+1986,12,312,STL,QB,Mississippi,23.0,AustKe20,
+1986,12,313,BUF,QB,Bowling Green,22.0,McClBr20,
+1986,12,316,CIN,QB,Indiana,23.0,BradSt20,
+1986,12,323,WAS,WR,Idaho,22.0,YarbEr20,
+1986,12,324,TAM,RB,Arizona St.,22.0,CrawMi20,
+1986,12,325,PHI,RB,Indiana,22.0,HowaBo00,
+1986,12,327,RAM,RB,Southern Miss,22.0,DuprMa00,
+1986,12,329,MIA,RB,North Carolina St.,22.0,IsomRi20,
+1987,1,1,TAM,QB,Miami (FL),23.0,TestVi00,P0068
+1987,1,3,HOU,RB,Miami (FL),22.0,HighAl00,
+1987,1,4,GNB,RB,Auburn,23.0,FullBr00,
+1987,1,6,STL,QB,Colorado St.,23.0,StouKe00,
+1987,1,13,ATL,QB,Oregon,22.0,MillCh00,
+1987,1,14,MIN,RB,Penn St.,21.0,DoziDJ00,
+1987,1,19,KAN,RB,Temple,22.0,PalmPa00,
+1987,1,20,HOU,WR,North Carolina St.,22.0,JeffHa00,
+1987,1,21,NYJ,RB,Texas A&M,23.0,VickRo00,
+1987,1,24,SDG,RB,Texas A&M,22.0,BernRo00,
+1987,1,25,SFO,RB,Clemson,22.0,FlagTe00,
+1987,1,26,CHI,QB,Michigan,23.0,HarbJi00,P0188
+1987,1,27,DEN,WR,Florida,21.0,NattRi00,
+1987,1,28,NYG,WR,Michigan St.,22.0,IngrMa00,
+1987,2,31,ATL,RB,Clemson,23.0,FlowKe00,
+1987,2,35,KAN,RB,Azusa Pacific,26.0,OkoyCh00,
+1987,2,40,NOR,WR,Washington,21.0,HillLo00,
+1987,2,51,TAM,RB,Mississippi St.,23.0,SmitDo00,
+1987,2,54,CHI,WR,SMU,22.0,MorrRo00,
+1987,2,56,MIA,WR,Syracuse,22.0,SchwSc00,
+1987,3,57,TAM,WR,Nicholls St.,21.0,CarrMa00,
+1987,3,62,STL,TE,San Diego St.,23.0,AwalRo00,
+1987,3,64,HOU,QB,Baylor,23.0,CarlCo00,
+1987,3,66,PIT,WR,Long Beach St.,21.0,LockCh00,
+1987,3,71,GNB,WR,Fort Hays St.,21.0,NealFr20,
+1987,3,78,BUF,RB,Benedictine,22.0,MuelJa00,
+1987,3,79,NWE,RB,Michigan,22.0,PerrBo00,
+1987,3,80,CLE,RB,Penn St.,22.0,ManoTi00,
+1987,3,81,RAI,RB,Penn St.,23.0,SmitSt00,
+1987,3,83,NYG,WR,Fresno St.,23.0,BakeSt00,
+1987,4,87,TAM,TE,Hawaii,23.0,HallRo00,
+1987,4,88,SDG,QB,Iowa,23.0,VlasMa00,
+1987,4,95,DAL,WR,Boston Col.,22.0,MartKe00,
+1987,4,98,NWE,QB,Delaware,21.0,GannRi00,P0014
+1987,4,99,MIA,RB,Boston Col.,22.0,StraTr00,
+1987,4,103,CIN,TE,Clemson,23.0,RiggJi20,
+1987,4,106,TAM,WR,Arizona St.,23.0,HillBr00,
+1987,4,110,RAI,QB,Notre Dame,22.0,BeueSt00,P0059
+1987,4,112,NYG,WR,Northwestern St. (LA),22.0,TurnOd00,
+1987,5,114,IND,WR,Eastern Illinois,21.0,BankRo21,
+1987,5,117,WAS,RB,Texas Tech,23.0,SmitTi00,
+1987,5,118,STL,RB,Miami (OH),23.0,SwarGe20,
+1987,5,119,SEA,RB,Auburn,23.0,AgeeTo00,
+1987,5,124,DAL,WR,Texas,22.0,GayxEv00,
+1987,5,128,KAN,WR,Washington St.,23.0,TaylKi00,
+1987,5,130,CIN,RB,Kentucky,22.0,LogaMa00,
+1987,5,133,HOU,RB,Oklahoma,23.0,TillSp00,
+1987,6,143,TAM,RB,Colorado St.,23.0,BartSt01,
+1987,6,152,NOR,WR,Stanford,22.0,HenlTh20,
+1987,6,156,MIN,WR,Alabama,22.0,RichGr21,
+1987,6,161,NYJ,WR,North Dakota,22.0,MartTr20,
+1987,6,163,NWE,WR,Fresno St.,24.0,TaylGe20,
+1987,6,166,RAM,TE,Colorado,21.0,EmbrJo21,
+1987,6,167,DEN,RB,James Madison,23.0,MarsWa20,
+1987,7,170,IND,WR,BYU,23.0,BellMa00,
+1987,7,171,BUF,RB,Washington St.,22.0,PortKe20,
+1987,7,173,SDG,WR,Ohio St.,23.0,HollJa00,
+1987,7,178,PIT,TE,Akron,22.0,KellCh20,
+1987,7,180,DAL,QB,Fresno St.,23.0,SweeKe00,
+1987,7,182,MIA,RB,Pittsburgh,22.0,BrowTo00,
+1987,7,185,SEA,TE,UCLA,23.0,TennDe00,
+1987,7,186,KAN,QB,Nicholls St.,22.0,HudsDo20,
+1987,7,194,DEN,TE,Georgia,22.0,StroWi21,
+1987,7,195,STL,TE,Bishop,22.0,HarrWi00,
+1987,8,196,NYJ,RB,Virginia Tech,22.0,HuntEd20,
+1987,8,210,MIA,TE,Notre Dame,22.0,WillJo25,
+1987,8,211,MIN,RB,Washington,22.0,FennRi00,
+1987,8,216,SEA,QB,Texas-El Paso,22.0,GarzSa20,
+1987,8,218,KAN,RB,William & Mary,22.0,ClemMi20,
+1987,8,223,NYG,TE,Washington,23.0,JoneRo00,
+1987,9,227,BUF,TE,Jacksonville St.,23.0,McKeKe01,
+1987,9,230,DET,RB,Cal State-Fullerton,24.0,CalhRi20,
+1987,9,233,PIT,WR,Tennessee,23.0,ClinJo20,
+1987,9,235,DAL,RB,Maryland,22.0,BlouAl20,
+1987,9,238,RAI,TE,Eastern New Mexico,24.0,EcclSc20,
+1987,9,249,CHI,RB,BYU,22.0,HeimLa20,
+1987,9,251,NYG,RB,Findlay,24.0,WrigDa20,
+1987,10,255,GNB,QB,Virginia,23.0,MajkDo00,
+1987,10,258,HOU,WR,Northwestern,22.0,DuncCu00,
+1987,10,259,DET,WR,South Carolina,22.0,BrowRa23,
+1987,10,261,PIT,RB,Idaho St.,22.0,HogeMe00,
+1987,10,263,NOR,WR,North Carolina Central,22.0,ClarRo00,
+1987,10,269,CIN,RB,Georgia,23.0,McClDa22,
+1987,10,270,SEA,WR,Mississippi St.,23.0,ClarLo00,
+1987,10,271,KAN,RB,Southern,24.0,EvanJa22,
+1987,10,274,WAS,WR,Central Florida,23.0,WilsTe20,
+1987,11,282,GNB,WR,Grambling St.,22.0,ScotPa00,
+1987,11,288,RAI,RB,Arizona,23.0,McLeCh20,
+1987,11,290,NOR,TE,Grambling St.,24.0,WellAr20,
+1987,11,294,RAI,TE,Mississippi,23.0,PerrMa20,
+1987,11,295,MIN,QB,Montana,22.0,PeasBr00,
+1987,11,297,SEA,RB,Miami (FL),23.0,OlivDa20,
+1987,11,301,SFO,WR,Grambling St.,23.0,NichCa20,
+1987,11,304,WAS,WR,Texas,23.0,BrowLa21,
+1987,11,305,CHI,RB,Auburn,24.0,JessTi20,
+1987,11,307,NYG,QB,Michigan Tech,22.0,WaltDa20,
+1987,12,309,IND,RB,Arizona,23.0,AdamDa20,
+1987,12,314,HOU,RB,Texas A&M,24.0,ValeIr20,
+1987,12,315,DET,WR,Georgia Tech,22.0,LeexGa00,
+1987,12,316,PHI,RB,Michigan St.,21.0,MorsBo00,
+1987,12,317,PIT,TE,Arkansas,22.0,YounTh20,
+1987,12,320,ATL,RB,Wisconsin,23.0,EmerLa20,
+1987,12,324,SEA,RB,Middle Tenn. St.,22.0,BursTo20,
+1987,12,326,RAM,RB,Colorado Mesa,24.0,WillAl22,
+1987,12,328,CIN,RB,West Virginia,23.0,HoliJo20,
+1987,12,329,NYG,RB,North Dakota St.,22.0,StarCh20,
+1987,12,330,NWE,RB,Central Florida,21.0,DaviEl20,
+1988,1,6,RAI,WR,Notre Dame,22.0,BrowTi00,P0032
+1988,1,7,GNB,WR,South Carolina,23.0,SharSt00,
+1988,1,11,DAL,WR,Miami (FL),22.0,IrviMi00,
+1988,1,13,PHI,TE,Oklahoma,23.0,JackKe00,
+1988,1,14,RAM,RB,UCLA,22.0,GreeGa00,
+1988,1,15,SDG,WR,Tennessee,23.0,MillAn00,
+1988,1,17,NWE,RB,Northwestern St. (LA),22.0,StepJo00,
+1988,1,20,RAM,WR,Arizona St.,23.0,CoxxAa00,
+1988,1,22,HOU,RB,Michigan St.,22.0,WhitLo00,
+1988,1,23,CHI,RB,Stanford,23.0,MustBr00,
+1988,1,24,NOR,RB,Pittsburgh,21.0,HeywCr00,
+1988,1,27,CHI,WR,LSU,22.0,DaviWe00,
+1988,2,31,CIN,RB,UNLV,22.0,WoodIc00,
+1988,2,32,DET,TE,Florida St.,22.0,CartPa00,
+1988,2,38,PHO,RB,TCU,24.0,JeffTo20,
+1988,2,40,BUF,RB,Oklahoma St.,22.0,ThomTh00,P0232
+1988,2,46,RAM,WR,UCLA,23.0,AndeFl00,
+1988,2,49,SEA,WR,Miami (FL),23.0,BladBr00,
+1988,2,52,NOR,WR,Miami (FL),22.0,PerrBr00,
+1988,2,53,TAM,RB,Georgia,22.0,TateLa00,
+1988,3,56,ATL,TE,Ohio St.,21.0,HigdAl20,
+1988,3,58,DET,WR,Penn St.,22.0,RounRa21,
+1988,3,60,SDG,WR,Iowa,23.0,EarlQu00,
+1988,3,61,GNB,RB,Texas A&M,24.0,WoodKe00,
+1988,3,65,BUF,WR,Central Florida,22.0,FordBe00,
+1988,3,66,WAS,RB,Puget Sound,25.0,OlipMi00,
+1988,3,68,PHO,QB,Ohio St.,22.0,TupaTo20,
+1988,3,73,MIA,TE,Maryland,23.0,EdmuFe00,
+1988,3,75,SEA,WR,Syracuse,24.0,KaneTo00,
+1988,3,76,IND,QB,Washington,22.0,ChanCh00,P0130
+1988,4,97,NWE,WR,LSU,23.0,MartSa00,
+1988,4,101,SEA,RB,Iowa,21.0,HarmKe20,
+1988,4,105,CHI,TE,Cal State-Fullerton,23.0,ThorJa00,
+1988,4,106,NOR,RB,Oklahoma,23.0,CarrLy20,
+1988,4,109,WAS,RB,Michigan,23.0,MorrJa00,
+1988,5,112,NOR,TE,Wake Forest,22.0,ScalGr00,
+1988,5,113,TAM,RB,Tennessee,24.0,HowaWi00,
+1988,5,117,RAM,RB,Missouri,22.0,DelpRo00,
+1988,5,130,HOU,TE,Cal State-Chico,22.0,VerhCh20,
+1988,5,132,PHO,RB,Kansas St.,23.0,JordTo00,
+1988,6,138,ATL,WR,UNLV,24.0,ThomGe00,
+1988,6,139,KAN,FB,San Jose St.,22.0,SaxoJa00,
+1988,6,142,DET,RB,Hampton,24.0,PainCa20,
+1988,6,147,RAM,RB,Nebraska,22.0,JoneKe00,
+1988,6,151,DAL,QB,Virginia,23.0,SecuSc00,
+1988,6,153,MIA,RB,Miami (FL),23.0,BratMe00,
+1988,6,154,NWE,TE,Virginia Tech,23.0,JohnSt21,
+1988,6,155,PIT,RB,Miami (FL),23.0,WillWa00,
+1988,6,159,WAS,QB,La-Monroe,23.0,HumpSt00,
+1988,7,166,ATL,WR,Northern Arizona,22.0,HaynMi00,
+1988,7,167,TAM,RB,Alabama,23.0,GoodKe00,
+1988,7,174,DEN,TE,Syracuse,22.0,KellPa21,
+1988,7,179,PHO,WR,Indiana,23.0,JoneEr00,
+1988,7,180,MIA,QB,Florida,23.0,BellKe00,
+1988,7,181,NWE,WR,Illinois,23.0,UsheDa20,
+1988,7,183,MIN,TE,Nebraska-Omaha,23.0,BeckBr00,
+1988,7,186,NYG,TE,Miss. Valley St.,24.0,WhitDa00,
+1988,8,197,KAN,TE,Miami (FL),23.0,RobeAl00,
+1988,8,199,RAI,WR,Penn St.,23.0,AlexMi00,
+1988,8,200,GNB,RB,Oklahoma,22.0,CollPa20,
+1988,8,203,NYJ,TE,Nebraska,23.0,NeubKe00,
+1988,8,205,DAL,RB,Kentucky,22.0,HiggMa00,
+1988,8,211,PIT,TE,Temple,21.0,HinnMi20,
+1988,8,215,SEA,TE,South Carolina St.,22.0,TyleRo00,
+1988,8,216,CLE,WR,Oregon,23.0,BirdJJ00,
+1988,9,222,ATL,RB,UCLA,24.0,PrimJa00,
+1988,9,248,DEN,RB,UCLA,22.0,FarrMe20,
+1988,10,251,KAN,RB,Colgate,23.0,GambKe00,
+1988,10,254,DET,WR,UCLA,23.0,CraiPa20,
+1988,10,260,PHO,WR,Miami (OH),23.0,SchiAn20,
+1988,11,278,ATL,WR,Maryland,23.0,MillJa00,
+1988,11,279,TAM,WR,Tennessee St.,23.0,PillFr00,
+1988,11,294,NWE,RB,Tulane,22.0,AlleMa01,
+1988,11,297,IND,TE,Tulsa,23.0,DeexDo20,
+1988,12,307,CIN,WR,Vanderbilt,23.0,ParkCa20,
+1988,12,312,GNB,WR,Auburn,23.0,BoltSc20,
+1988,12,320,MIA,TE,LSU,23.0,KincBr00,
+1989,1,1,DAL,QB,UCLA,22.0,AikmTr00,P0190
+1989,1,3,DET,RB,Oklahoma St.,21.0,SandBa00,
+1989,1,7,PIT,RB,Georgia,22.0,WorlTi00,
+1989,1,9,MIA,RB,Florida St.,22.0,SmitSa00,
+1989,1,13,CLE,RB,Texas,21.0,MetcEr00,
+1989,1,16,NWE,WR,Oklahoma St.,23.0,DykeHa00,
+1989,1,22,IND,WR,Michigan St.,22.0,RisoAn00,P0107
+1989,1,26,RAM,RB,Miami (FL),23.0,GaryCl00,
+1989,1,27,ATL,WR,Northern Arizona,22.0,CollSh00,
+1989,2,30,DET,WR,Virginia,23.0,FordJo20,
+1989,2,31,CLE,WR,Auburn,23.0,TillLa00,
+1989,2,32,KAN,QB,Wake Forest,23.0,ElkiMi00,
+1989,2,33,TAM,WR,North Carolina St.,23.0,PeebDa00,
+1989,2,35,CIN,RB,UCLA,23.0,BallEr00,
+1989,2,39,DAL,RB,Syracuse,23.0,JohnDa00,
+1989,2,40,PHO,TE,Auburn,23.0,ReevWa00,
+1989,2,51,SDG,QB,Texas Tech,23.0,TollBi00,
+1989,2,56,SFO,TE,Mississippi,23.0,WallWe00,P0157
+1989,3,60,KAN,WR,North Carolina St.,23.0,WortNa20,
+1989,3,61,PIT,WR,Arizona,21.0,HillDe00,
+1989,3,62,ATL,RB,Illinois,23.0,JoneKe01,
+1989,3,63,NWE,TE,Iowa,23.0,CookMa00,
+1989,3,71,SEA,RB,Eastern Kentucky,23.0,HarrEl21,
+1989,3,74,GNB,QB,Duke,24.0,DilwAn00,
+1989,3,76,PHI,RB,Syracuse,22.0,DrumRo00,
+1989,3,82,BUF,WR,Chadron St.,24.0,BeebDo00,
+1989,3,83,CIN,QB,Oregon St.,23.0,WilhEr00,
+1989,3,84,SFO,RB,Georgia,23.0,HendKe00,
+1989,4,93,NYG,RB,Jackson St.,23.0,TillLe00,
+1989,4,100,NWE,WR,Penn St.,22.0,TimpMi00,
+1989,4,101,SEA,TE,Chattanooga,22.0,McNeTr00,
+1989,4,102,RAM,QB,Weber St.,23.0,CarlJe00,
+1989,4,104,HOU,WR,Texas A&M,22.0,HarrRo21,
+1989,4,108,MIN,TE,California,23.0,IngrDa00,
+1989,4,110,WAS,WR,USC,23.0,AffhEr00,
+1989,4,112,SFO,WR,Marshall,22.0,BarbMi00,
+1989,5,113,DAL,TE,Clemson,23.0,JennKe00,
+1989,5,116,CLE,WR,Maryland,24.0,JoinVe20,
+1989,5,117,TAM,RB,Nicholls St.,23.0,LawsJa20,
+1989,5,124,GNB,WR,Millikin,22.0,QuerJe00,
+1989,5,126,NYJ,WR,Colorado Mesa,24.0,MartTo00,P0187
+1989,5,127,GNB,RB,Ohio St.,21.0,WorkVi00,
+1989,5,130,CHI,RB,Notre Dame,22.0,GreeMa00,
+1989,5,132,NYG,RB,Towson,23.0,MeggDa00,
+1989,5,135,RAM,WR,San Diego St.,22.0,JackAl22,
+1989,6,140,RAI,QB,Tennessee,23.0,FranJe20,
+1989,6,141,DET,QB,USC,23.0,PeetRo00,P0352
+1989,6,143,KAN,WR,Oregon St.,23.0,ThomRo01,
+1989,6,144,PIT,WR,VMI,23.0,StocMa20,
+1989,6,145,ATL,TE,Georgia,23.0,SadoTr00,
+1989,6,153,NYJ,WR,Troy,23.0,DixoTi20,
+1989,6,156,RAI,RB,North Dakota St.,24.0,LloyDo20,
+1989,6,158,NYG,TE,Alabama,22.0,CrosHo00,
+1989,6,159,NOR,WR,Northwestern St. (LA),23.0,TurnFl00,
+1989,6,162,PHI,RB,Texas A&M-Kingsville,22.0,SherHe00,
+1989,6,166,CIN,RB,West Virginia,23.0,TaylCr00,
+1989,7,172,ATL,RB,West Virginia,23.0,JohnUn20,
+1989,7,182,IND,RB,Kentucky,22.0,HuntIv00,
+1989,7,183,SDG,RB,Florida St.,23.0,ButtMa00,
+1989,7,194,CIN,WR,Utah St.,23.0,SmitKe00,
+1989,8,204,SDG,WR,Nebraska,24.0,BrinDa00,
+1989,8,205,RAI,RB,Florida A&M,23.0,GainDe00,
+1989,8,208,DEN,TE,USC,22.0,GreePa00,
+1989,8,209,NYJ,RB,West Virginia,23.0,BrowAB00,
+1989,8,220,KAN,RB,Temple,23.0,McNaTo00,
+1989,9,230,TAM,RB,Nevada,22.0,EguxPa00,
+1989,9,244,HOU,TE,Penn St.,23.0,MrosBo00,
+1989,10,253,DET,WR,Houston,22.0,PhilJa00,
+1989,10,268,SEA,RB,North Carolina,22.0,FennDe00,
+1989,10,269,RAM,WR,Northeastern,22.0,WillMi00,
+1989,10,271,HOU,RB,Clemson,22.0,JohnTr00,
+1989,11,286,ATL,RB,Slippery Rock,22.0,PateGr20,
+1989,11,287,SDG,RB,Florida St.,23.0,FloyVi20,
+1989,11,303,MIN,RB,Alabama St.,22.0,BaxtBr00,
+1989,12,308,DAL,WR,TCU,23.0,AnkrSc20,
+1989,12,311,KAN,RB,Texas St.,22.0,JoneBi00,
+1989,12,316,WAS,TE,Howard,22.0,JohnJi00,
+1989,12,317,WAS,RB,Mississippi,23.0,MickJo21,
+1990,1,1,IND,QB,Illinois,22.0,GeorJe00,P0177
+1990,1,2,NYJ,RB,Penn St.,22.0,ThomBl00,
+1990,1,7,DET,QB,Houston,22.0,WareAn00,
+1990,1,17,DAL,RB,Florida,21.0,SmitEm00,P0067
+1990,1,19,GNB,RB,Minnesota,22.0,ThomDa01,
+1990,1,20,ATL,RB,Washington St.,23.0,BrouSt00,
+1990,1,21,PIT,TE,Liberty,23.0,GreeEr00,
+1990,1,24,NYG,RB,Georgia,21.0,HampRo00,
+1990,1,25,SFO,RB,Florida St.,22.0,CartDe00,
+1990,2,26,DAL,WR,Auburn,23.0,WrigAl00,
+1990,2,28,NYJ,WR,West Virginia,23.0,RembRe00,
+1990,2,30,TAM,RB,Tennessee,22.0,CobbRe00,
+1990,2,31,PHO,RB,Indiana,23.0,ThomAn00,
+1990,2,36,IND,RB,Notre Dame,22.0,JohnAn00,P0234
+1990,2,38,CIN,RB,South Carolina,22.0,GreeHa00,
+1990,2,42,BUF,FB,Louisville,23.0,GardCa00,
+1990,2,45,CLE,RB,Michigan,22.0,HoarLe00,
+1990,2,50,PHI,WR,Illinois,24.0,BellMi21,
+1990,3,54,MIN,TE,Texas A&M,23.0,JoneMi01,
+1990,3,58,PHO,WR,Wake Forest,22.0,ProeRi00,P0142
+1990,3,59,NWE,QB,LSU,23.0,HodsTo00,
+1990,3,63,CHI,QB,Florida St.,23.0,WillPe00,
+1990,3,67,SDG,TE,East Carolina,23.0,WilsWa01,
+1990,3,68,SFO,WR,Florida St.,22.0,LewiRo01,
+1990,3,70,PIT,QB,Maryland,24.0,ODonNe00,
+1990,3,77,PHI,WR,Arkansas St.,24.0,BarnFr00,
+1990,3,80,NWE,WR,Michigan,22.0,McMuGr00,
+1990,4,83,IND,WR,Florida,22.0,SimmSt20,
+1990,4,84,NYJ,QB,California,22.0,TaylTr00,
+1990,4,86,WAS,QB,Washington,22.0,ConkCa00,
+1990,4,87,TAM,TE,Mississippi St.,24.0,AndeJe00,
+1990,4,89,SEA,RB,Ferrum,22.0,WarrCh00,P0134
+1990,4,93,MIA,QB,Utah,22.0,MitcSc00,P0246
+1990,4,96,KAN,WR,Grambling St.,23.0,JoneFr01,
+1990,4,97,PIT,WR,Michigan,22.0,CallCh00,
+1990,4,100,BUF,RB,LSU,22.0,FullEd20,
+1990,4,102,GNB,TE,La-Monroe,22.0,HarrJa00,P0140
+1990,5,115,PHO,FB,S.F. Austin,22.0,CentLa00,P0076
+1990,5,116,MIN,WR,Bowling Green,22.0,ThorRe20,
+1990,5,117,CHI,RB,Oregon St.,23.0,ChafPa00,
+1990,5,118,DET,WR,Colorado,22.0,CampJe00,
+1990,5,122,CIN,WR,Arizona St.,25.0,JameLy00,
+1990,5,125,NOR,TE,UCLA,21.0,ArbuCh00,
+1990,5,128,PIT,RB,Arkansas,21.0,FostBa00,
+1990,5,130,WAS,RB,Louisiana,22.0,MitcBr00,P0182
+1990,5,131,MIN,FB,Florida,22.0,SmitCe00,
+1990,5,132,GNB,WR,Memphis,22.0,WilsCh00,
+1990,5,133,PHI,WR,Purdue,23.0,WillCa00,
+1990,5,135,NYG,QB,Pacific Lutheran,23.0,KuppCr20,
+1990,6,138,SDG,QB,Idaho,23.0,FrieJo00,
+1990,6,139,ATL,RB,Cal State-Fullerton,22.0,PrinMi20,
+1990,6,140,NYJ,WR,New Mexico,23.0,MathTe00,P0094
+1990,6,141,TAM,RB,Louisiana Tech,22.0,DougDe20,
+1990,6,142,PHO,WR,Lamar,22.0,ShavTy20,
+1990,6,149,RAI,RB,Virginia,22.0,WilsMa20,
+1990,6,153,HOU,WR,Texas,24.0,JoneTo00,
+1990,6,156,NOR,QB,Maine,23.0,BuckMi00,
+1990,6,161,RAM,WR,Washington St.,24.0,StalTi20,
+1990,6,163,SDG,TE,Michigan,23.0,WalkDe00,
+1990,6,164,DEN,TE,LSU,22.0,HaliRo20,
+1990,7,169,PHO,RB,San Jose St.,22.0,JohnJo00,
+1990,7,178,CLE,TE,USC,23.0,GalbSc00,
+1990,7,187,SDG,WR,Oregon Tech,23.0,LewiNa00,
+1990,7,192,DEN,TE,Savannah St.,22.0,SharSh00,P0072
+1990,8,194,DET,WR,Mississippi,24.0,GreeWi00,
+1990,8,200,CHI,RB,Arkansas,23.0,RousJa20,
+1990,8,204,CIN,TE,Washington St.,23.0,WellDo21,
+1990,8,206,IND,TE,Nebraska,24.0,ClarKe00,
+1990,9,223,NYJ,WR,Miami (FL),23.0,DawkDa00,
+1990,9,228,CHI,RB,Texas A&M-Kingsville,23.0,BailJo00,
+1990,9,232,IND,WR,Boston Univ.,23.0,HuffDa20,
+1990,9,237,HOU,WR,Mississippi,23.0,ColePa00,
+1990,9,240,CLE,WR,Southern Miss,22.0,RoweEu20,
+1990,9,241,MIN,RB,Clemson,22.0,AlleTe00,P0277
+1990,9,245,RAM,WR,Florida,22.0,LomaTo20,
+1990,10,249,MIN,WR,Utah St.,21.0,NewmPa00,
+1990,11,281,TAM,WR,Florida St.,22.0,AnthTe21,
+1990,11,283,SDG,TE,Missouri,23.0,StowTo20,
+1990,11,292,BUF,WR,Northwestern St. (LA),23.0,EdwaAl00,
+1990,12,313,DET,WR,San Diego St.,23.0,ClaiRo20,
+1990,12,319,PIT,RB,Nebraska,23.0,BellRi00,
+1990,12,328,RAM,RB,Northern Arizona,22.0,LangDa00,
+1991,1,10,DET,WR,Virginia,21.0,MoorHe00,P0141
+1991,1,12,DAL,WR,Tennessee,23.0,HarpAl00,
+1991,1,13,ATL,WR,Colorado,21.0,PritMi00,
+1991,1,14,NWE,RB,Arizona St.,21.0,RussLe00,
+1991,1,16,SEA,QB,San Diego St.,23.0,McGwDa00,
+1991,1,21,KAN,RB,LSU,24.0,WillHa00,
+1991,1,23,MIA,WR,Miami (FL),21.0,HillRa00,
+1991,1,24,RAI,QB,USC,22.0,MariTo00,
+1991,1,27,NYG,FB,Michigan,23.0,BuncJa00,
+1991,2,30,DEN,TE,Florida St.,23.0,JohnRe00,
+1991,2,33,ATL,QB,Southern Miss,21.0,FavrBr00,P0053
+1991,2,34,NYJ,QB,Louisville,23.0,NaglBr00,
+1991,2,39,SDG,RB,Colorado,22.0,BienEr00,
+1991,2,42,NOR,WR,Miami (FL),24.0,CarrWe00,
+1991,2,43,RAI,RB,Iowa,23.0,BellNi00,
+1991,2,45,SFO,RB,Notre Dame,22.0,WattRi00,P0013
+1991,2,46,PIT,WR,Ohio St.,22.0,GrahJe00,P0077
+1991,2,51,SEA,WR,Clemson,21.0,ThomDo00,
+1991,3,58,DET,WR,Texas-El Paso,22.0,BarrRe00,
+1991,3,60,MIA,RB,Fresno St.,22.0,CravAa00,
+1991,3,66,TAM,WR,Florida St.,23.0,DawsLa00,
+1991,3,68,MIN,WR,Grambling St.,23.0,ReedJa00,P0304
+1991,3,73,PIT,WR,Florida,22.0,MillEr00,
+1991,3,74,SEA,WR,Penn St.,21.0,DaniDa00,
+1991,3,76,WAS,RB,USC,22.0,ErviRi00,
+1991,3,77,KAN,WR,Jackson St.,23.0,BarnTi00,
+1991,3,80,TAM,RB,Texas A&M,22.0,WilsRo00,
+1991,3,81,GNB,FB,Tennessee,21.0,WebbCh20,
+1991,3,83,NYG,WR,Stanford,23.0,McCaEd00,P0017
+1991,4,84,NWE,QB,Maryland,23.0,ZolaSc00,
+1991,4,89,DEN,WR,Arkansas,22.0,RussDe00,
+1991,4,90,SDG,WR,Winston-Salem St.,22.0,ThigYa00,P0209
+1991,4,92,MIN,RB,Mississippi,24.0,BaldRa00,
+1991,4,97,DAL,RB,Pittsburgh,22.0,RichCu00,
+1991,4,99,CIN,QB,Rice,23.0,HollDo00,
+1991,4,100,RAI,WR,Notre Dame,21.0,IsmaRa00,P0172
+1991,4,103,PIT,TE,Oklahoma,23.0,CoopAd00,
+1991,4,106,DAL,QB,Oregon,23.0,MusgBi00,
+1991,4,109,CIN,WR,Syracuse,23.0,CarpRo00,
+1991,5,112,NWE,RB,Michigan,21.0,VaugJo00,
+1991,5,115,DEN,RB,Washington,22.0,LewiGr00,
+1991,5,123,SDG,TE,Michigan St.,23.0,YounDu00,
+1991,5,124,NWE,TE,Livingstone,22.0,CoatBe00,
+1991,5,125,IND,TE,Texas,22.0,CashKe01,
+1991,5,129,HOU,WR,USC,24.0,WellGa00,
+1991,5,131,PHI,QB,Miami (FL),22.0,EricCr00,
+1991,5,134,CHI,WR,Tennessee,23.0,MorgAn00,
+1991,6,141,CLE,WR,Southern Miss,22.0,JackMi00,
+1991,6,145,ATL,RB,North Texas,22.0,PegrEr00,
+1991,6,149,GNB,RB,Grambling St.,23.0,DeanWa20,
+1991,6,154,NOR,RB,Mississippi Col.,23.0,McAfFr00,
+1991,6,158,PIT,RB,Penn St.,22.0,ThomLe00,
+1991,6,161,CHI,RB,Texas A&M,22.0,LewiDa00,
+1991,7,171,PHO,RB,Ark-Pine Bluff,22.0,BrowIv00,
+1991,7,177,SDG,TE,Delaware St.,22.0,JoneDa24,
+1991,7,187,PHI,RB,Auburn,23.0,JoseJa00,
+1991,7,188,WAS,TE,Texas,22.0,CashKe00,
+1991,7,190,CHI,QB,Arizona St.,23.0,JustPa00,
+1991,7,193,SFO,RB,San Jose St.,23.0,CanlSh20,
+1991,8,204,PHO,TE,Toledo,22.0,EvanJe00,
+1991,8,205,DET,RB,TCU,23.0,JackCe20,
+1991,8,210,NOR,TE,Northern Colorado,23.0,WainFr00,
+1991,8,211,CIN,RB,South Carolina,22.0,DingMi00,
+1991,8,214,HOU,RB,Penn St.,22.0,BrowGa00,
+1991,8,221,SFO,WR,Oregon,23.0,HargTo00,
+1991,8,222,BUF,WR,Anderson (IN),23.0,LambBr00,
+1991,9,235,DAL,WR,Missouri,23.0,MaysDa20,
+1991,9,236,IND,RB,Illinois,23.0,GrifHo00,
+1991,9,238,PIT,TE,Virginia,23.0,McGoBr20,
+1991,9,240,HOU,WR,Central Florida,22.0,JeffSh00,P0090
+1991,9,241,CIN,WR,Texas A&M,23.0,GarrSh20,
+1991,9,242,PHI,RB,Houston,23.0,WeatCh20,
+1991,9,246,MIA,WR,UCLA,22.0,MillSc00,
+1991,10,274,RAI,TE,Grambling St.,24.0,GlovAn00,P0174
+1991,11,284,DEN,QB,Virginia,23.0,MoorSh00,
+1991,11,300,KAN,WR,Ohio St.,22.0,OlivBo20,
+1991,11,306,NYG,TE,Portland St.,24.0,PopsTe00,
+1991,12,310,ATL,RB,Northwestern,22.0,ChriBo00,P0165
+1991,12,312,RAM,RB,Indiana,21.0,ThomEr00,
+1991,12,317,SDG,RB,Texas,22.0,SamuCh20,
+1991,12,325,HOU,WR,Miami (FL),23.0,JohnAl24,
+1991,12,326,WAS,WR,UNLV,21.0,McCaKe00,P0038
+1992,1,4,WAS,WR,Michigan,22.0,HowaDe00,
+1992,1,6,CIN,QB,Houston,23.0,KlinDa00,
+1992,1,9,CLE,RB,Stanford,23.0,VardTo00,
+1992,1,14,NYG,TE,Notre Dame,22.0,BrowDe00,
+1992,1,15,NYJ,TE,Nebraska,21.0,MitcJo00,
+1992,1,19,ATL,RB,Southern Miss,22.0,SmitTo00,
+1992,1,21,NOR,RB,Indiana,24.0,DunbVa00,
+1992,1,25,DEN,QB,UCLA,21.0,MaddTo00,P0343
+1992,2,31,CIN,WR,Tennessee,22.0,PickCa00,
+1992,2,36,DAL,WR,Jackson St.,23.0,SmitJi00,P0029
+1992,2,40,KAN,QB,Virginia,23.0,BlunMa00,
+1992,2,44,TAM,WR,Michigan St.,22.0,HawkCo00,P0218
+1992,2,45,SFO,RB,Florida St.,20.0,LeexAm00,
+1992,2,46,PHO,QB,Penn St.,22.0,SaccTo00,
+1992,2,48,PHI,RB,Alabama,24.0,StacSi20,
+1992,2,52,CLE,WR,San Diego St.,23.0,RowePa20,
+1992,3,60,RAM,WR,LSU,23.0,KincTo00,
+1992,3,62,GNB,WR,South Carolina,22.0,BrooRo00,
+1992,3,63,SDG,WR,Pasadena CC,23.0,EthrRa20,
+1992,3,69,NYG,TE,Washington,23.0,PierAa00,
+1992,3,71,NWE,FB,Alabama,23.0,TurnKe00,
+1992,3,79,TAM,TE,Mississippi,21.0,ArmsTy00,
+1992,3,81,DET,TE,Southern,22.0,McLeTh20,
+1992,4,85,IND,RB,Notre Dame,22.0,CulvRo00,
+1992,4,92,PHI,RB,Notre Dame,23.0,BrooTo21,
+1992,4,94,PIT,WR,North Carolina St.,23.0,DaveCh00,
+1992,4,102,PHI,QB,Florida St.,23.0,WeldCa00,
+1992,4,103,GNB,RB,Florida St.,23.0,BennEd00,
+1992,4,107,CHI,QB,Virginia Tech,24.0,FurrWi00,
+1992,5,115,CIN,TE,North Carolina A&T,23.0,ThomCr00,
+1992,5,119,GNB,FB,Florida,23.0,McNaDe20,
+1992,5,134,CHI,TE,North Carolina St.,23.0,HarrTo21,
+1992,5,138,NOR,WR,Alcorn St.,22.0,SmalTo00,P0126
+1992,6,143,CLE,WR,Colorado,23.0,SmitRi00,
+1992,6,150,SEA,RB,Arizona,22.0,BateMi00,
+1992,6,157,GNB,TE,Boston Col.,23.0,ChmuMa00,
+1992,6,160,PHI,WR,Hawaii,22.0,SyndJe00,
+1992,6,166,NYJ,QB,East Carolina,21.0,BlakJe00,P0106
+1992,6,167,BUF,TE,Nebraska,23.0,TurnNa00,
+1992,6,168,WAS,TE,San Diego St.,23.0,RoweRa20,
+1992,7,174,SDG,TE,North Carolina,23.0,MayxDe00,
+1992,7,175,PHO,TE,Central Oklahoma,24.0,WareDe00,
+1992,7,179,PIT,TE,Kansas St.,23.0,CampRu20,
+1992,7,185,RAI,TE,UCLA,23.0,SmitKe24,
+1992,7,188,PIT,RB,Ohio St.,23.0,GrahSc00,
+1992,7,191,MIA,TE,Pittsburgh,22.0,MoorDa00,P0168
+1992,8,200,TAM,RB,Texas Tech,23.0,McDoAn00,
+1992,8,202,PHO,WR,North Carolina,21.0,BlouEr00,
+1992,8,204,NWE,RB,USC,24.0,LockSc00,
+1992,8,205,NWE,FB,Penn St.,23.0,GashSa00,
+1992,8,211,NYG,QB,Ohio St.,23.0,GrahKe00,
+1992,8,212,IND,RB,Miss. Valley St.,23.0,HumpRo00,
+1992,8,216,ATL,RB,NE State (OK),24.0,MoorDe00,
+1992,8,220,HOU,QB,Texas A&M,23.0,RichBu00,
+1992,9,225,IND,WR,South Carolina,23.0,MillEd21,
+1992,9,226,CIN,RB,Houston,22.0,MileOs00,
+1992,9,227,MIN,QB,Florida St.,23.0,JohnBr00,P0123
+1992,9,228,RAM,QB,Tulsa,23.0,RublTJ00,
+1992,9,230,GNB,QB,BYU,24.0,DetmTy00,
+1992,9,231,SDG,WR,Hampton,24.0,BarnJo00,
+1992,9,237,MIN,WR,Pittsburg St.,24.0,WestRo20,
+1992,9,239,PHO,WR,Western Ontario,22.0,WillTy22,
+1992,9,251,BUF,WR,Stanford,23.0,WalsCh00,
+1992,10,255,RAM,RB,Eastern Kentucky,24.0,LestTi00,
+1992,10,276,NOR,WR,Tennessee St.,22.0,DowdMa00,
+1992,10,279,BUF,WR,Wisconsin–Stevens Point,24.0,RoseBa20,
+1992,11,284,TAM,RB,USC,22.0,RoysMa00,
+1992,11,292,NYG,WR,Grambling St.,24.0,SingNa00,
+1992,11,295,MIN,RB,Clark (GA),25.0,EvanCh00,
+1992,11,305,DEN,WR,Alcorn St.,22.0,TillCe00,
+1992,11,306,DET,FB,NW Missouri St.,23.0,TillEd20,
+1992,11,307,BUF,TE,Toledo,24.0,MarrVi20,
+1992,12,323,NYG,WR,Indiana St.,21.0,SwanCh20,
+1992,12,334,DEN,WR,Virginia Tech,23.0,GranJo20,
+1993,1,1,NWE,QB,Washington St.,21.0,BledDr00,P0057
+1993,1,2,SEA,QB,Notre Dame,23.0,MireRi00,P0438
+1993,1,3,PHO,RB,Georgia,22.0,HearGa00,P0252
+1993,1,7,CHI,WR,USC,22.0,ConwCu00,P0086
+1993,1,10,RAM,RB,Notre Dame,21.0,BettJe00,P0055
+1993,1,16,IND,WR,California,22.0,DawkSe00,P0078
+1993,1,20,NOR,TE,Notre Dame,21.0,SmitIr00,
+1993,1,21,MIN,RB,Ohio St.,21.0,SmitRo00,P0021
+1993,1,25,MIA,WR,Penn St.,23.0,McDuO.00,
+1993,2,37,CIN,TE,Michigan,22.0,McGeTo00,P0196
+1993,2,39,RAM,TE,Penn St.,23.0,DrayTr00,
+1993,2,41,SDG,RB,North Carolina,21.0,MeanNa00,
+1993,2,43,DEN,RB,Stanford,22.0,MilbGl00,
+1993,2,45,WAS,RB,Notre Dame,22.0,BrooRe00,
+1993,2,46,DAL,WR,Miami (FL),22.0,WillKe00,
+1993,2,49,IND,RB,La-Monroe,22.0,PottRo00,
+1993,2,50,PHI,WR,Missouri,23.0,BailVi00,
+1993,2,52,MIN,WR,Syracuse,22.0,IsmaQa00,P0101
+1993,2,56,NWE,WR,La-Monroe,22.0,BrisVi00,
+1993,3,58,RAI,QB,Washington,22.0,HobeBi00,
+1993,3,60,TAM,WR,Miami (FL),23.0,ThomLa00,
+1993,3,61,CHI,TE,Syracuse,23.0,GednCh00,
+1993,3,73,RAM,RB,California,22.0,WhitRu20,
+1993,3,76,PIT,WR,Georgia,22.0,HastAn00,
+1993,3,78,MIA,RB,Virginia,23.0,KirbTe00,
+1993,4,87,PHO,RB,Pittsburg St.,23.0,MoorRo01,
+1993,4,89,NOR,FB,Fresno St.,22.0,NealLo00,P0552
+1993,4,91,TAM,RB,Clemson,21.0,HarrRu20,
+1993,4,94,DAL,RB,Alabama,23.0,LassDe00,
+1993,4,98,DEN,TE,Idaho,23.0,RobiJe00,
+1993,4,102,HOU,WR,USC,23.0,HannTr00,
+1993,4,104,TAM,WR,Miami (FL),22.0,CopeHo00,
+1993,4,109,NOR,RB,Nebraska,22.0,BrowDe01,
+1993,4,111,BUF,WR,Memphis,21.0,CopeRu00,
+1993,5,114,SEA,WR,Hampton,24.0,WarrTe20,
+1993,5,115,NYJ,TE,Auburn,22.0,BaxtFr00,P0328
+1993,5,118,GNB,QB,Washington,22.0,BrunMa00,P0042
+1993,5,120,NYJ,RB,West Virginia,22.0,MurrAd00,
+1993,5,122,RAM,WR,UCLA,23.0,LaChSe00,
+1993,5,125,RAI,WR,Mississippi St.,22.0,TruiOl00,
+1993,5,126,DEN,RB,UCLA,23.0,WillKe23,
+1993,5,129,NYJ,WR,Northern Iowa,22.0,ShedKe00,
+1993,5,138,NWE,TE,Arizona,24.0,GrifRi00,
+1993,6,144,NYJ,FB,Penn St.,21.0,AndeRi00,P0065
+1993,6,151,ATL,TE,Michigan St.,23.0,LyonMi00,
+1993,6,154,DEN,WR,Baylor,23.0,BonnMe20,
+1993,6,157,IND,TE,Miami (FL),23.0,EtheCa20,
+1993,6,160,WAS,TE,Maryland,21.0,WychFr00,P0084
+1993,7,169,DEN,TE,Washington St.,24.0,WillCl21,
+1993,7,174,DET,RB,Michigan St.,22.0,HallTy00,
+1993,7,176,TAM,WR,Central Arkansas,22.0,DaviTy20,
+1993,7,182,DEN,WR,Jackson St.,22.0,KimbTo00,
+1993,7,186,KAN,WR,Iowa,22.0,HughDa00,
+1993,7,187,HOU,WR,Tennessee St.,23.0,RobiPa20,
+1993,7,189,PIT,TE,Lenoir-Rhyne,22.0,KeitCr20,
+1993,7,190,PHI,TE,Oklahoma,22.0,MickJo20,
+1993,7,192,MIN,QB,Miami (FL),23.0,ToreGi00,
+1993,8,198,NWE,WR,Marshall,22.0,BrowTr00,P0050
+1993,8,205,ATL,WR,Florida St.,22.0,BakeSh20,
+1993,8,208,RAI,RB,La-Monroe,24.0,RobiGr00,
+1993,8,210,DEN,WR,Ohio St.,23.0,StabBr00,
+1993,8,215,PHO,WR,Grambling St.,23.0,AndeSt00,
+1993,8,216,PIT,QB,Pittsburgh,23.0,VanPAl00,P0273
+1993,8,219,SFO,QB,Michigan,23.0,GrbaEl00,P0028
+1993,8,222,SDG,QB,Indiana,23.0,GreeTr00,P0100
+1994,1,2,IND,RB,San Diego St.,21.0,FaulMa00,P0001
+1994,1,3,WAS,QB,Tennessee,22.0,ShulHe00,
+1994,1,6,TAM,QB,Fresno St.,22.0,DilfTr00,P0151
+1994,1,17,PIT,WR,Colorado,22.0,JohnCh00,P0081
+1994,1,21,DET,WR,USC,22.0,MortJo00,P0083
+1994,1,24,NYG,WR,Indiana,22.0,LewiTh00,
+1994,1,25,KAN,RB,Texas A&M,22.0,HillGr00,
+1994,1,28,SFO,FB,Florida St.,22.0,FloyWi00,P0238
+1994,1,29,CLE,WR,Michigan,22.0,AlexDe00,P0020
+1994,2,30,CIN,WR,San Diego St.,22.0,ScotDa00,P0262
+1994,2,33,RAM,WR,Memphis,21.0,BrucIs00,P0019
+1994,2,34,TAM,RB,Florida,23.0,RhetEr00,P0222
+1994,2,35,NWE,WR,Alabama,23.0,LeexKe00,
+1994,2,38,ARI,RB,Arizona,22.0,LevyCh00,
+1994,2,40,MIN,WR,Alabama,21.0,PalmDa00,
+1994,2,41,NYJ,WR,Wyoming,23.0,YarbRy00,
+1994,2,42,PHI,RB,Tennessee,22.0,GarnCh00,P0012
+1994,2,44,NOR,RB,Arizona St.,21.0,BateMa00,P0215
+1994,2,45,ATL,WR,Rice,23.0,EmanBe00,P0332
+1994,2,58,KAN,RB,Miami (FL),21.0,BennDo00,
+1994,2,61,BUF,TE,Florida St.,23.0,JohnLo00,
+1994,3,66,CIN,FB,Ohio St.,23.0,CothJe00,
+1994,3,68,WAS,WR,Fresno St.,22.0,WinaTy00,
+1994,3,69,TAM,TE,LSU,24.0,BishHa00,
+1994,3,70,SDG,WR,Kansas St.,21.0,ColeAn00,
+1994,3,73,SEA,RB,Houston,23.0,SmitLa00,P0033
+1994,3,80,RAI,RB,Nebraska,23.0,JoneCa00,
+1994,3,83,RAM,RB,Auburn,22.0,BostJa00,
+1994,3,84,GNB,RB,Northern Illinois,23.0,JohnLe01,
+1994,3,87,SFO,WR,Tennessee,23.0,FlemCo20,
+1994,3,91,PIT,RB,Texas Tech,22.0,MorrBa00,
+1994,3,92,KAN,WR,Notre Dame,22.0,DawsLa01,
+1994,3,95,NYG,RB,North Carolina St.,22.0,DownGa00,
+1994,3,96,KAN,WR,Tulsa,23.0,PennCh00,
+1994,3,101,HOU,WR,Fresno St.,21.0,FloyMa01,
+1994,4,105,WAS,TE,Utah,24.0,HawsKu20,
+1994,4,106,IND,TE,USC,23.0,BantBr00,
+1994,4,108,RAM,WR,Rutgers,23.0,BranCh00,
+1994,4,109,DAL,WR,Florida,23.0,JackWi00,P0120
+1994,4,111,ATL,QB,C.W. Post,23.0,KleiPe20,
+1994,4,114,CHI,RB,Ohio St.,23.0,HarrRa00,
+1994,4,116,NOR,QB,Idaho,23.0,NussDo00,
+1994,4,117,NYJ,WR,Troy,22.0,ParkOr20,
+1994,4,121,NWE,TE,Virginia Tech,23.0,BurkJo00,
+1994,5,137,SDG,TE,New Mexico St.,23.0,LainAa00,
+1994,5,146,GNB,WR,Florida A&M,23.0,MickTe00,
+1994,5,149,GNB,RB,Georgia Tech,24.0,LeveDo00,P0179
+1994,5,157,HOU,TE,Arizona,23.0,LewiRo00,
+1994,5,158,BUF,TE,Missouri,20.0,OfodA.00,
+1994,5,160,SDG,RB,Towson,23.0,VinsTo00,
+1994,6,164,IND,RB,Colorado,21.0,WarrLa00,P0271
+1994,6,166,NWE,WR,Western Michigan,23.0,HawkSt20,
+1994,6,167,RAM,TE,Oklahoma,23.0,BradRi20,
+1994,6,172,ARI,TE,Kentucky,23.0,SamuTe20,
+1994,6,176,NOR,WR,Texas Tech,22.0,MitcDe00,
+1994,6,178,PIT,QB,Michigan St.,23.0,MillJi00,P0272
+1994,6,179,MIN,TE,Western Carolina,22.0,JordAn00,
+1994,6,181,GNB,WR,Wisconsin–LaCrosse,23.0,SchrBi00,P0063
+1994,6,185,KAN,RB,Fresno St.,24.0,DaigAn20,
+1994,6,192,BUF,WR,Florida St.,23.0,KnoxKe20,
+1994,7,197,WAS,QB,Tulsa,23.0,FrerGu00,P0143
+1994,7,198,NWE,QB,Howard,22.0,WalkJa22,
+1994,7,199,KAN,QB,Memphis,23.0,MattSt00,
+1994,7,201,ATL,RB,Utah,21.0,AndeJa00,P0048
+1994,7,202,SEA,TE,East Carolina,23.0,CrumCa00,
+1994,7,204,ARI,RB,Georgia,23.0,HarvFr20,
+1994,7,208,NYJ,QB,Boston Col.,23.0,FoleGl00,
+1994,7,212,DEN,RB,Ohio St.,21.0,BynoBu20,
+1994,7,219,KAN,TE,Grambling St.,21.0,GreeTr01,
+1995,1,1,CIN,RB,Penn St.,21.0,CartKi00,P0299
+1995,1,3,HOU,QB,Alcorn St.,22.0,McNaSt00,P0070
+1995,1,4,WAS,WR,Colorado,23.0,WestMi00,P0263
+1995,1,5,CAR,QB,Penn St.,22.0,CollKe00,P0046
+1995,1,8,SEA,WR,Ohio St.,23.0,GallJo00,P0265
+1995,1,9,NYJ,TE,Penn St.,23.0,BradKy00,P0087
+1995,1,10,SFO,WR,UCLA,22.0,StokJ.00,P0138
+1995,1,17,NYG,RB,Michigan,23.0,WheaTy00,P0056
+1995,1,18,OAK,RB,Washington,22.0,KaufNa00,P0163
+1995,1,19,JAX,RB,Tennessee,23.0,StewJa00,P0036
+1995,1,21,CHI,RB,Colorado,20.0,SalaRa00,
+1995,1,27,PIT,TE,Washington,22.0,BrueMa00,P0213
+1995,2,39,SEA,TE,Colorado,23.0,FaurCh00,P0194
+1995,2,44,NOR,RB,Notre Dame,22.0,ZellRa00,
+1995,2,45,BUF,QB,Michigan,23.0,CollTo00,
+1995,2,46,DAL,RB,Alabama,22.0,WillSh00,
+1995,2,47,ARI,WR,Auburn,22.0,SandFr00,P0080
+1995,2,48,IND,TE,Illinois,24.0,DilgKe00,P0124
+1995,2,51,SDG,RB,Wisconsin,21.0,FletTe00,P0104
+1995,2,59,DAL,TE,Mississippi St.,22.0,WatkKe20,
+1995,2,60,PIT,QB,Colorado,22.0,StewKo00,P0069
+1995,3,66,GNB,FB,North Carolina,24.0,HendWi00,P0193
+1995,3,67,HOU,WR,Ohio St.,23.0,SandCh00,P0156
+1995,3,70,DET,TE,New Mexico,23.0,SloaDa00,P0161
+1995,3,74,NWE,RB,Pittsburgh,22.0,MartCu00,P0011
+1995,3,78,PHI,WR,Miami (FL),24.0,JoneCh01,
+1995,3,79,IND,FB,Florida St.,22.0,CrocZa00,P0178
+1995,3,80,ARI,QB,New Mexico,23.0,CaseSt00,
+1995,3,81,KAN,WR,Florida St.,21.0,VanoTa00,
+1995,3,84,CLE,QB,Georgia,23.0,ZeieEr00,
+1995,3,86,OAK,RB,Central Oklahoma,23.0,AskaJo00,
+1995,3,89,HOU,RB,Texas A&M,22.0,ThomRo00,
+1995,3,90,GNB,WR,Virginia Tech,23.0,FreeAn00,P0052
+1995,4,99,JAX,QB,USC,22.0,JohnRo00,P0095
+1995,4,101,HOU,TE,Wisconsin,23.0,RoanMi00,
+1995,4,104,SDG,RB,Tennessee,22.0,HaydAa00,
+1995,4,107,NYJ,TE,Virginia,23.0,DaviTy00,P0229
+1995,4,110,DAL,TE,Washington,23.0,BjorEr00,P0226
+1995,4,113,BUF,WR,Stanford,22.0,ArmoJu00,
+1995,4,115,STL,TE,Texas,23.0,PinkLo20,
+1995,4,116,CHI,WR,Florida,22.0,JackJa20,
+1995,4,119,PHI,QB,California,23.0,BarrDa20,
+1995,4,122,MIA,TE,Boston Col.,23.0,MitcPe00,P0211
+1995,4,131,BUF,TE,Stanford,23.0,ClinTo00,
+1995,4,134,KAN,QB,Stanford,23.0,StenSt00,
+1995,5,137,WAS,TE,Louisville,22.0,AsheJa00,
+1995,5,139,CIN,WR,Fresno St.,23.0,DunnDa00,
+1995,5,145,ATL,WR,Mississippi,23.0,PresRo00,
+1995,5,156,DET,WR,Florida St.,23.0,McCoKe20,
+1995,5,157,MIN,RB,Miami (FL),23.0,StewJa20,
+1995,5,162,SDG,WR,Florida St.,23.0,ElliOm20,
+1995,5,169,JAX,RB,Wyoming,23.0,ChriRy20,
+1995,5,170,GNB,RB,The Citadel,23.0,JervTr00,
+1995,6,184,NOR,WR,Wisconsin,23.0,DeRaLe00,
+1995,6,186,DET,TE,Navy,24.0,HickKe00,
+1995,6,192,DET,FB,Nebraska,23.0,SchlCo00,P0266
+1995,6,195,NWE,RB,Oregon,24.0,PhilDi00,
+1995,6,196,DEN,RB,Georgia,22.0,DaviTe00,P0248
+1995,6,197,SDG,QB,Pacific,24.0,WhelCr00,
+1995,6,206,NYG,RB,Virginia,22.0,WayxCh00,
+1995,6,208,PHI,FB,Mississippi St.,22.0,McCrFr00,P0243
+1995,7,210,PHI,RB,Mississippi St.,24.0,BouiKe20,
+1995,7,212,ARI,WR,Tennessee,24.0,WillBi20,
+1995,7,217,NYJ,WR,Grambling St.,23.0,CeasCu20,
+1995,7,219,JAX,WR,Utah,24.0,MarsCu00,
+1995,7,222,DEN,TE,Missouri,23.0,ChamBy00,P0207
+1995,7,235,PIT,WR,UNLV,22.0,BailHe00,
+1995,7,240,STL,WR,Arizona St.,23.0,ThomJ.00,
+1995,7,244,BUF,RB,Portland St.,24.0,HolmDa00,
+1996,1,1,NYJ,WR,USC,24.0,JohnKe00,P0054
+1996,1,6,STL,RB,Nebraska,21.0,PhilLa00,
+1996,1,7,NWE,WR,Ohio St.,22.0,GlenTe00,P0045
+1996,1,8,CAR,RB,Michigan,22.0,BiakTi00,P0096
+1996,1,9,OAK,TE,Ohio St.,24.0,DudlRi00,P0153
+1996,1,14,HOU,RB,Ohio St.,22.0,GeorEd00,P0005
+1996,1,18,STL,WR,LSU,23.0,KennEd00,P0114
+1996,1,19,IND,WR,Syracuse,24.0,HarrMa00,P0006
+1996,1,24,BUF,WR,Mississippi St.,23.0,MoulEr00,P0030
+1996,2,31,NYJ,WR,Nevada,22.0,VanDAl00,
+1996,2,32,ARI,RB,Texas A&M,22.0,McElLe00,
+1996,2,34,NYG,WR,Michigan,21.0,ToomAm00,P0037
+1996,2,35,TAM,RB,Purdue,22.0,AlstMi00,P0148
+1996,2,39,CIN,TE,Rutgers,23.0,BattMa00,
+1996,2,41,SDG,WR,Virginia Tech,22.0,StilBr00,
+1996,2,42,STL,QB,Michigan St.,23.0,BankTo00,P0155
+1996,2,43,CAR,WR,Michigan St.,23.0,MuhaMu00,P0031
+1996,2,52,CHI,WR,Penn St.,23.0,EngrBo00,P0298
+1996,2,54,PHI,TE,Eastern Kentucky,22.0,DunnJa00,
+1996,2,56,GNB,WR,Notre Dame,22.0,MayeDe00,P0199
+1996,2,59,STL,TE,Washington,24.0,ConwEr00,P0274
+1996,3,64,ARI,TE,USC,23.0,McWiJo00,P0204
+1996,3,65,DEN,RB,Texas A&M,22.0,SmitDe00,
+1996,3,73,CAR,RB,New Mexico,23.0,OlivWi00,
+1996,3,75,MIN,RB,Kentucky,22.0,WillMo00,P0296
+1996,3,80,MIA,RB,UCLA,22.0,AbduKa00,
+1996,3,81,SDG,TE,San Jose St.,23.0,RochBr00,
+1996,3,82,IND,TE,Iowa,23.0,SlutSc00,
+1996,3,83,STL,RB,Oklahoma,21.0,MoorJe00,
+1996,3,85,PHI,QB,Ohio St.,23.0,HoyiBo00,
+1996,3,89,SFO,WR,Chattanooga,22.0,OwenTe00,P0008
+1996,3,91,SEA,RB,Fresno St.,23.0,BrowRe00,
+1996,3,92,PIT,RB,Penn St.,24.0,WitmJo00,
+1996,3,94,DAL,WR,La-Monroe,23.0,WillSt00,
+1996,4,97,MIN,TE,Texas A&M,23.0,GoodHu00,
+1996,4,100,DEN,QB,Northern Arizona,23.0,LewiJe01,
+1996,4,102,WAS,RB,Auburn,22.0,DaviSt00,P0034
+1996,4,103,NOR,RB,Oregon,24.0,WhitRi00,
+1996,4,110,JAX,WR,Alabama St.,23.0,BarlRe00,
+1996,4,114,SDG,WR,Fresno St.,23.0,JoneCh00,
+1996,4,115,IND,RB,Penn St.,23.0,MilnBr00,
+1996,4,117,ATL,RB,Winston-Salem St.,23.0,HuntRi00,P0202
+1996,4,118,MIA,FB,South Carolina,22.0,PritSt00,P0180
+1996,4,124,NWE,RB,West Virginia,22.0,BarbKa20,
+1996,4,130,NYG,QB,Florida St.,22.0,KaneDa00,
+1996,4,132,PIT,WR,Fresno St.,23.0,ArnoJa00,
+1996,5,134,MIA,RB,East Carolina,24.0,McPhJe00,
+1996,5,135,KAN,WR,Itawamba (MS),24.0,HornJo00,P0024
+1996,5,136,NOR,WR,Michigan,23.0,HayeMe21,
+1996,5,153,BAL,WR,Maryland,21.0,LewiJe00,P0206
+1996,5,159,DEN,WR,Virginia,23.0,JeffPa00,
+1996,5,160,SFO,WR,California,23.0,UwaeIh00,
+1996,5,165,NOR,WR,Gardner-Webb,21.0,GuesTe00,
+1996,6,175,STL,RB,Miami (FL),23.0,HarrDe00,
+1996,6,176,KAN,WR,Pittsburgh,24.0,JellDi00,
+1996,6,180,TAM,WR,Tennessee,22.0,SilvNi20,
+1996,6,183,OAK,RB,Robert Morris,22.0,HallTi20,
+1996,6,185,JAX,WR,Florida,23.0,DoerCh00,P0401
+1996,6,186,BAL,WR,Norfolk St.,23.0,RoexJa00,
+1996,6,193,CAR,RB,Michigan St.,24.0,GreeSc00,
+1996,6,195,NWE,RB,Chattanooga,24.0,GrieMa00,
+1996,6,196,BUF,RB,Washington,23.0,NealLe20,
+1996,6,197,PHI,TE,Alabama,24.0,JohnTo00,
+1996,6,199,PHI,WR,Florida St.,23.0,RilePh20,
+1996,6,201,STL,TE,Texas A&M,23.0,ClayHa00,
+1996,7,212,ARI,TE,North Alabama,23.0,HayeJa00,
+1996,7,216,NWE,TE,West Virginia,24.0,PurnLo00,
+1996,7,218,HOU,RB,Penn St.,23.0,ArchMi00,
+1996,7,231,SDG,RB,Sonoma St.,26.0,BradFr00,
+1996,7,239,SFO,TE,New Mexico St.,22.0,ManuSe20,
+1996,7,244,BUF,TE,Michigan,23.0,RiemJa00,P0146
+1996,7,246,NOR,TE,Utah,24.0,LuskHe00,
+1996,7,251,MIA,WR,Georgia,22.0,HuntBr00,
+1996,7,253,CHI,RB,South Carolina St.,23.0,HickMi20,
+1997,1,7,NYG,WR,Florida,21.0,HillIk00,P0066
+1997,1,12,TAM,RB,Florida St.,22.0,DunnWa00,P0035
+1997,1,13,KAN,TE,California,21.0,GonzTo00,P0027
+1997,1,15,MIA,WR,Miami (FL),23.0,GreeYa00,
+1997,1,16,TAM,WR,Florida,20.0,AnthRe00,P0197
+1997,1,22,DAL,TE,LSU,23.0,LaFlDa00,
+1997,1,23,BUF,RB,Houston,25.0,SmitAn00,P0192
+1997,1,26,SFO,QB,Virginia Tech,24.0,DrucJi00,
+1997,1,27,CAR,WR,Colorado,23.0,CarrRa00,
+1997,2,36,NYG,RB,Virginia,22.0,BarbTi00,P0016
+1997,2,38,CHI,TE,USC,22.0,AllrJo00,
+1997,2,41,ATL,RB,Texas Tech,21.0,HansBy00,
+1997,2,42,ARI,QB,Arizona St.,22.0,PlumJa00,P0105
+1997,2,43,CIN,RB,Washington,22.0,DillCo00,P0047
+1997,2,45,SDG,TE,North Carolina,22.0,JoneFr00,P0074
+1997,2,46,TEN,WR,Tennessee,23.0,KentJo00,
+1997,2,47,KAN,WR,Kansas St.,22.0,LockKe00,P0154
+1997,2,53,PIT,WR,San Diego St.,22.0,BlacWi00,
+1997,2,55,SFO,FB,Notre Dame,22.0,EdwaMa00,P0301
+1997,3,61,NWE,RB,Iowa,23.0,ShawSe00,
+1997,3,62,NOR,RB,Iowa St.,21.0,DaviTr00,
+1997,3,64,BAL,RB,Tennessee,22.0,GrahJa00,
+1997,3,70,ATL,TE,Kent St.,23.0,SantO.00,P0333
+1997,3,71,PHI,RB,South Carolina,22.0,StalDu00,P0162
+1997,3,77,SFO,TE,Stanford,25.0,ClarGr00,P0160
+1997,3,88,NYJ,WR,Northern Iowa,22.0,WardDe00,P0093
+1997,4,98,TEN,WR,Michigan St.,23.0,MasoDe00,P0062
+1997,4,99,NOR,QB,Florida,23.0,WuerDa00,
+1997,4,104,NYJ,RB,North Carolina,23.0,JohnLe00,P0382
+1997,4,105,CHI,RB,Northwestern,21.0,AutrDa00,P0133
+1997,4,108,CHI,WR,South Carolina,22.0,RobiMa00,P0085
+1997,4,110,KAN,QB,California,22.0,BarnPa20,
+1997,4,115,WAS,WR,Texas A&M,23.0,ConnAl00,P0110
+1997,4,116,NOR,WR,Arizona St.,23.0,PoolKe00,P0208
+1997,4,123,OAK,RB,Cornell,21.0,LeviCh20,
+1997,4,127,DAL,WR,James Madison,22.0,BrooMa00,P0223
+1997,4,129,DAL,RB,Ohio St.,22.0,SualNi00,
+1997,5,135,DET,TE,Notre Dame,23.0,ChryPe00,
+1997,5,137,TAM,TE,Alabama,23.0,HapePa00,P0334
+1997,5,138,SDG,RB,South Carolina St.,23.0,BynuKe00,
+1997,5,147,JAX,TE,Southern Illinois,22.0,JoneDa00,
+1997,5,150,IND,WR,San Diego St.,22.0,JacqNa00,
+1997,5,154,PIT,RB,San Diego St.,23.0,JoneGe00,
+1997,5,155,PHI,TE,Furman,22.0,BrouLu00,
+1997,5,163,KAN,RB,Kansas,22.0,HenlJu00,
+1997,6,165,NOR,TE,LSU,23.0,SavoNi20,
+1997,6,170,MIA,WR,Stanford,22.0,MannBr00,
+1997,6,171,NYG,QB,Murray St.,23.0,CherMi00,
+1997,6,174,SEA,TE,BYU,24.0,MiliIt00,P0170
+1997,6,177,MIA,TE,James Madison,23.0,PerrEd00,
+1997,6,184,JAX,FB,Sacramento St.,24.0,ShelDa00,
+1997,6,190,PHI,WR,Bethune-Cookman,22.0,WyatAn20,
+1997,6,191,NYJ,QB,Houston,23.0,ClemCh21,
+1997,6,192,NWE,WR,Miami (FL),23.0,GaitTo00,
+1997,6,195,KAN,WR,Kansas,22.0,ByrdIs00,P0203
+1997,7,204,ATL,QB,Oregon,23.0,GrazTo00,
+1997,7,207,PHI,QB,Colorado,24.0,DetmKo00,
+1997,7,223,PIT,WR,Texas,23.0,AdamMi00,
+1997,7,228,CAR,TE,Mississippi,24.0,MangKr00,P0230
+1997,7,231,GNB,FB,Tulane,23.0,SoweJe00,P0416
+1997,7,234,BAL,QB,Penn St.,23.0,RichWa00,
+1997,7,235,MIN,WR,Langston,23.0,HatcMa00,P0227
+1998,1,1,IND,QB,Tennessee,22.0,MannPe00,P0015
+1998,1,2,SDG,QB,Washington St.,22.0,LeafRy00,P0166
+1998,1,5,CHI,RB,Penn St.,22.0,EnisCu00,
+1998,1,9,JAX,RB,Florida,22.0,TaylFr00,P0022
+1998,1,16,TEN,WR,Utah,23.0,DysoKe00,P0256
+1998,1,18,NWE,RB,Georgia,23.0,EdwaRo00,P0397
+1998,1,21,MIN,WR,Marshall,21.0,MossRa00,P0010
+1998,1,29,MIA,RB,Mississippi,22.0,AverJo00,
+1998,1,30,DEN,WR,Tennessee,22.0,NashMa00,
+1998,2,32,IND,WR,Washington,22.0,PathJe00,P0111
+1998,2,34,TAM,WR,Florida,22.0,GreeJa00,P0108
+1998,2,37,STL,RB,Illinois,22.0,HolcRo00,P0221
+1998,2,40,NOR,TE,Washington,23.0,CleeCa00,P0327
+1998,2,42,BAL,WR,Oregon,22.0,JohnPa00,
+1998,2,48,WAS,TE,Oklahoma,22.0,AlexSt00,P0132
+1998,2,50,DET,WR,Virginia,21.0,CrowGe00,P0145
+1998,2,52,NWE,WR,Wisconsin,23.0,SimmTo00,P0242
+1998,2,54,NWE,TE,Alabama,23.0,RutlRo00,
+1998,2,55,NYG,WR,Penn St.,23.0,JureJo00,P0212
+1998,2,59,SDG,TE,S.F. Austin,23.0,RickMi00,P0326
+1998,2,60,DET,QB,Eastern Michigan,23.0,BatcCh00,P0098
+1998,3,63,OAK,FB,Stanford,24.0,RitcJo00,P0240
+1998,3,69,WAS,RB,UCLA,23.0,HickSk00,P0331
+1998,3,70,NYG,WR,Purdue,23.0,AlfoBr00,
+1998,3,71,IND,WR,Florida St.,23.0,GreeE.00,P0235
+1998,3,74,ATL,WR,Miami (FL),24.0,GermJa00,
+1998,3,76,SEA,RB,Nebraska,21.0,GreeAh00,P0009
+1998,3,81,NWE,RB,Michigan,23.0,FloyCh00,
+1998,3,82,MIA,WR,East Carolina,23.0,ShanLa20,
+1998,3,86,JAX,QB,Middle Tenn. St.,23.0,QuinJo00,
+1998,3,88,KAN,RB,Washington,23.0,ShehRa00,
+1998,3,91,DEN,QB,Michigan,23.0,GrieBr00,P0064
+1998,3,92,PIT,WR,Georgia,22.0,WardHi00,P0103
+1998,4,94,CHI,TE,Oklahoma St.,23.0,MayeAl00,
+1998,4,95,ARI,RB,Fresno St.,23.0,PittMi00,P0040
+1998,4,96,STL,WR,San Diego St.,21.0,HakiAz00,P0097
+1998,4,98,STL,TE,Syracuse,23.0,WillRo01,P0291
+1998,4,101,JAX,RB,Iowa,24.0,BankTa00,
+1998,4,106,CAR,WR,Wisconsin,23.0,HayeDo00,P0073
+1998,4,114,ATL,WR,Iowa,23.0,DwigTi00,P0152
+1998,4,123,PIT,RB,North Carolina St.,24.0,KingCa00,
+1998,5,125,ARI,TE,Southern Miss,22.0,HardTe00,P0228
+1998,5,127,OAK,TE,Washington,23.0,BrigJe00,
+1998,5,131,BUF,RB,North Carolina,23.0,LintJo00,
+1998,5,132,NOR,RB,Livingstone,23.0,PerrWi00,
+1998,5,146,NYJ,TE,Oregon,23.0,SpenBl00,
+1998,5,150,GNB,WR,Jackson St.,22.0,BradCo00,P0282
+1998,5,153,DEN,RB,Michigan,23.0,HowaCh00,
+1998,6,160,BUF,WR,Washington,23.0,ColeFr00,
+1998,6,167,CIN,WR,TCU,22.0,TuckJa00,
+1998,6,169,SEA,WR,California,23.0,ShawBo00,P0117
+1998,6,174,NYJ,WR,Angelo State (TX),22.0,BrazCh00,
+1998,6,176,NWE,RB,Southern Miss,24.0,ShawHa00,
+1998,6,178,PIT,RB,Utah,21.0,FuamCh00,P0247
+1998,6,180,SFO,FB,Auburn,23.0,BeasFr00,P0136
+1998,6,182,JAX,FB,Auburn,23.0,McLeKe00,
+1998,6,183,NYJ,FB,BYU,25.0,JohnDu20,
+1998,6,187,GNB,QB,Boston Col.,22.0,HassMa00,P0278
+1998,7,192,JAX,WR,North Carolina St.,24.0,WhitAl00,P0244
+1998,7,195,NYJ,TE,Southern,21.0,HartLa20,
+1998,7,201,ATL,RB,Virginia Tech,22.0,OxenKe00,
+1998,7,204,NOR,WR,Tennessee,22.0,McCuAn00,
+1998,7,215,SFO,WR,Minnesota,25.0,ThelRy00,
+1998,7,218,GNB,RB,Purdue,21.0,WatsEd00,
+1998,7,232,CHI,QB,Colorado St.,23.0,MoreMo00,
+1998,7,237,DAL,TE,Cincinnati,22.0,MonrRo00,
+1998,7,238,BUF,WR,Cal Poly-San Luis Obispo,22.0,LoudKa00,
+1999,1,1,CLE,QB,Kentucky,22.0,CoucTi00,P0171
+1999,1,2,PHI,QB,Syracuse,22.0,McNaDo00,P0018
+1999,1,3,CIN,QB,Oregon,24.0,SmitAk00,P0205
+1999,1,4,IND,RB,Miami (FL),21.0,JameEd00,P0002
+1999,1,5,NOR,RB,Texas,22.0,WillRi00,P0039
+1999,1,6,STL,WR,North Carolina St.,23.0,HoltTo00,P0023
+1999,1,8,ARI,WR,Ohio St.,21.0,BostDa00,P0041
+1999,1,11,MIN,QB,Central Florida,22.0,CulpDa00,P0004
+1999,1,12,CHI,QB,UCLA,22.0,McNoCa00,P0119
+1999,1,13,PIT,WR,Louisiana Tech,22.0,EdwaTr00,P0309
+1999,2,32,CLE,WR,Syracuse,23.0,JohnKe01,P0122
+1999,2,39,MIA,RB,Mississippi St.,25.0,JohnJ.00,
+1999,2,42,ATL,TE,Mississippi St.,22.0,KellRe00,P0169
+1999,2,43,MIA,FB,Syracuse,22.0,KonrRo00,P0375
+1999,2,44,MIN,TE,North Dakota,22.0,KleiJi00,P0319
+1999,2,46,NWE,RB,LSU,23.0,FaulKe00,P0071
+1999,2,49,NYG,RB,Ohio St.,23.0,MontJo00,
+1999,2,50,TAM,QB,Tulane,22.0,KingSh00,P0044
+1999,2,53,BUF,WR,Tennessee,22.0,PricPe00,P0102
+1999,2,54,KAN,RB,Boston Col.,24.0,ClouMi00,
+1999,2,60,SDG,RB,Oklahoma,24.0,FazaJe00,P0173
+1999,3,69,SDG,TE,South Dakota St.,22.0,HeidSt00,P0478
+1999,3,71,CHI,WR,Northwestern,23.0,BateDW00,P0349
+1999,3,77,SEA,QB,Washington,23.0,HuarBr00,
+1999,3,78,CHI,WR,La-Monroe,23.0,BookMa00,P0135
+1999,3,79,NYG,TE,Texas A&M,23.0,CampDa00,P0594
+1999,3,82,SEA,WR,Auburn,22.0,BailKa00,
+1999,3,86,BUF,RB,Tennessee,22.0,BrysSh00,P0112
+1999,3,92,ATL,FB,Arizona St.,23.0,PaulJe20,
+1999,3,93,DEN,WR,Florida,23.0,McGrTr00,
+1999,3,95,PIT,RB,West Virginia,22.0,ZereAm00,P0292
+1999,4,98,CIN,WR,Kentucky,22.0,YeasCr00,P0214
+1999,4,101,STL,QB,Ohio St.,24.0,GermJo00,
+1999,4,102,OAK,WR,California,23.0,DougDa00,
+1999,4,103,DET,RB,Michigan St.,21.0,IrviSe00,
+1999,4,105,BAL,WR,Louisiana,23.0,StokBr00,P0297
+1999,4,108,KAN,WR,USC,23.0,ParkLa00,P0330
+1999,4,112,NYG,RB,Northwestern,23.0,BennSe00,
+1999,4,116,ARI,FB,Nebraska,23.0,MakoJo00,
+1999,4,118,DAL,WR,Texas,22.0,McGaWa00,P0175
+1999,4,122,BUF,TE,North Alabama,23.0,CollBo00,
+1999,4,127,DEN,RB,Georgia,24.0,GaryOl00,P0396
+1999,4,130,PHI,WR,North Carolina,22.0,BrowNa00,
+1999,4,131,GNB,QB,Virginia,23.0,BrooAa00,P0129
+1999,5,134,MIA,RB,McNeese St.,22.0,CollCe00,
+1999,5,135,CIN,FB,Miami (FL),22.0,WillNi00,
+1999,5,136,PIT,TE,Michigan,23.0,TumaJe00,
+1999,5,148,CLE,WR,Colorado,21.0,ChiaDa00,
+1999,5,152,SEA,RB,Georgia Tech,23.0,RogeCh00,
+1999,5,157,SFO,FB,Florida,23.0,JackTe00,P0322
+1999,5,159,GNB,RB,Oklahoma,22.0,ParkDe00,
+1999,5,164,ATL,WR,Kent St.,23.0,BakeEu00,
+1999,5,166,PIT,WR,Notre Dame,22.0,JohnMa00,
+1999,6,171,SFO,WR,Michigan,22.0,StreTa00,P0231
+1999,6,172,PHI,FB,Wisconsin,24.0,MartCe00,P0201
+1999,6,179,DEN,TE,Wake Forest,22.0,ClarDe00,P0164
+1999,6,191,CLE,TE,Tarleton St.,23.0,DearJa00,
+1999,6,193,DAL,WR,Nebraska-Omaha,24.0,JenkMa00,P0281
+1999,6,201,PHI,WR,East Carolina,22.0,SmitTr00,
+1999,6,204,DEN,WR,Cincinnati,23.0,PlumCh20,
+1999,6,206,ARI,FB,Mississippi St.,22.0,McKiDe00,
+1999,7,207,CLE,RB,Arkansas,23.0,HillMa20,
+1999,7,208,PHI,TE,Oregon,23.0,WeavJe00,P0325
+1999,7,213,GNB,WR,Alcorn St.,24.0,DrivDo00,P0198
+1999,7,218,DEN,TE,USC,22.0,MillBi00,P0350
+1999,7,227,NWE,QB,Kansas St.,23.0,BishMi00,
+1999,7,229,DAL,TE,Arizona,23.0,LuckMi00,
+1999,7,230,BUF,TE,Nebraska,23.0,JackSh00,
+1999,7,233,TAM,RB,Notre Dame,22.0,DensAu00,
+1999,7,238,DEN,TE,Kansas St.,24.0,SwifJu00,
+1999,7,239,ARI,QB,NW Missouri St.,23.0,GreiCh00,
+1999,7,240,TAM,WR,Kansas St.,23.0,McDoDa00,
+1999,7,241,NWE,WR,Brown,23.0,MoreSe00,
+1999,7,245,CIN,QB,Miami (FL),23.0,CoviSc00,
+1999,7,253,CHI,FB,Pennsylvania,22.0,FinnJi00,
+2000,1,4,CIN,WR,Florida St.,23.0,WarrPe00,P0079
+2000,1,5,BAL,RB,Tennessee,21.0,LewiJa00,P0043
+2000,1,7,ARI,RB,Virginia,22.0,JoneTh00,P0147
+2000,1,8,PIT,WR,Michigan St.,23.0,BurrPl00,P0224
+2000,1,10,BAL,WR,Florida,22.0,TaylTr01,P0176
+2000,1,11,NYG,RB,Wisconsin,22.0,DaynRo00,P0131
+2000,1,14,GNB,TE,Miami (FL),22.0,FranBu00,P0167
+2000,1,18,NYJ,QB,Marshall,24.0,PennCh01,P0337
+2000,1,19,SEA,RB,Alabama,23.0,AlexSh00,P0220
+2000,1,21,KAN,WR,Jackson St.,22.0,MorrSy00,P0115
+2000,1,27,NYJ,TE,West Virginia,23.0,BechAn00,P0249
+2000,1,29,JAX,WR,USC,22.0,SowaR.00,
+2000,1,31,STL,RB,Arizona,23.0,CaniTr00,P0276
+2000,2,32,CLE,WR,Arizona,22.0,NortDe00,P0158
+2000,2,36,PHI,WR,Southern Miss,23.0,PinkTo00,P0270
+2000,2,47,OAK,WR,West Virginia,22.0,PortJe00,P0335
+2000,3,63,CLE,RB,Miami (OH),23.0,PrenTr00,P0091
+2000,3,66,CIN,WR,Florida St.,23.0,DugaRo00,P0302
+2000,3,68,TEN,TE,Florida,23.0,KinnEr00,P0245
+2000,3,69,CHI,WR,Georgia Tech,21.0,WhitDe00,P0288
+2000,3,70,DEN,WR,Texas A&M,22.0,ColeCh00,
+2000,3,73,NYG,WR,Lambuth,24.0,DixoRo00,P0377
+2000,3,75,BAL,QB,Louisville,23.0,RedmCh00,P0389
+2000,3,76,NWE,RB,Arizona St.,22.0,RedmJ.00,P0150
+2000,3,78,NYJ,WR,Florida St.,22.0,ColeLa00,P0183
+2000,3,79,CLE,WR,Tulane,22.0,DawsJa00,P0314
+2000,3,80,SEA,WR,Florida,21.0,JackDa00,P0088
+2000,3,81,DET,RB,Oregon,22.0,DrouRe00,P0454
+2000,3,87,CHI,TE,Wake Forest,24.0,LymaDu00,
+2000,3,88,MIN,RB,Marshall,23.0,ChapDo00,P0315
+2000,4,96,NOR,FB,Arizona St.,22.0,SmitTe00,
+2000,4,97,CIN,RB,James Madison,23.0,KeatCu00,
+2000,4,99,PHI,WR,Michigan St.,22.0,ScotGa00,
+2000,4,103,PIT,WR,UCLA,23.0,FarmDa00,P0237
+2000,4,110,CLE,TE,Michigan,23.0,SheaAa00,P0181
+2000,4,111,SDG,WR,Miami (OH),22.0,GaylTr00,P0373
+2000,4,115,KAN,RB,Louisville,23.0,MoreFr00,
+2000,4,117,MIA,FB,North Carolina,22.0,DyerDe00,
+2000,4,121,BUF,WR,Tennessee St.,23.0,BlacAv00,
+2000,5,132,SFO,RB,Texas-El Paso,22.0,SmitPa00,
+2000,5,141,NWE,TE,Boise St.,23.0,StacDa00,
+2000,5,143,NYJ,WR,USC,23.0,HayeWi00,
+2000,5,144,DAL,RB,Ohio St.,22.0,WileMi00,P0317
+2000,5,153,KAN,WR,Texas A&M,21.0,HallDa00,P0366
+2000,5,156,BUF,RB,Texas Tech,23.0,MorrSa00,P0113
+2000,5,157,TAM,TE,Kentucky,22.0,WhalJa00,
+2000,5,158,NOR,TE,Iowa,22.0,WheaAu20,
+2000,5,163,PIT,QB,Tennessee,22.0,MartTe00,
+2000,5,164,ARI,TE,Northwestern,22.0,TantJa00,
+2000,5,165,MIN,WR,Stanford,23.0,WaltTr00,P0415
+2000,5,166,NOR,RB,USC,23.0,MortCh00,P0195
+2000,6,168,NOR,QB,West Virginia,23.0,BulgMa00,P0354
+2000,6,170,CHI,WR,Kansas St.,23.0,MurpFr00,
+2000,6,172,ATL,WR,Troy,22.0,PhilMa20,
+2000,6,175,SEA,WR,Marshall,22.0,WillJa01,
+2000,6,183,CLE,QB,Texas St.,22.0,WynnSp00,
+2000,6,189,DEN,RB,Utah,26.0,AndeMi00,P0026
+2000,6,196,JAX,WR,Arkansas,24.0,SmitEm20,
+2000,6,199,NWE,QB,Michigan,23.0,BradTo00,P0260
+2000,6,202,WAS,QB,Stanford,22.0,HusaTo20,
+2000,7,210,CIN,TE,Missouri State,24.0,StLoBr00,
+2000,7,212,SFO,QB,Louisiana Tech,23.0,RattTi00,P0444
+2000,7,213,TEN,RB,Houston,24.0,GreeMi00,
+2000,7,214,DEN,QB,Notre Dame,23.0,JackJa01,
+2000,7,227,OAK,TE,Miami (FL),23.0,FulcMo20,
+2000,7,230,SFO,TE,Arizona St.,23.0,JennBr00,
+2000,7,233,BUF,WR,Buffalo,22.0,HaddDr00,
+2000,7,234,TAM,QB,Georgia Tech,23.0,HamiJo20,
+2000,7,239,NWE,FB,Georgia,22.0,PassPa00,P0488
+2000,7,242,GNB,WR,Central Florida,22.0,LeexCh00,P0420
+2000,7,243,JAX,RB,Virginia Tech,22.0,StitSh00,
+2000,7,252,GNB,RB,LSU,23.0,MealRo00,
+2001,1,1,ATL,QB,Virginia Tech,21.0,VickMi00,P0310
+2001,1,5,SDG,RB,TCU,22.0,TomlLa00,P0251
+2001,1,8,CHI,WR,Michigan,22.0,TerrDa00,P0280
+2001,1,9,SEA,WR,North Carolina St.,21.0,RobiKo00,P0279
+2001,1,15,WAS,WR,Clemson,23.0,GardRo00,P0264
+2001,1,16,NYJ,WR,Miami (FL),22.0,MossSa00,P0356
+2001,1,23,NOR,RB,Mississippi,22.0,McAlDe00,P0312
+2001,1,25,PHI,WR,UCLA,22.0,MitcFr00,P0316
+2001,1,27,MIN,RB,Wisconsin,23.0,BennMi00,P0267
+2001,1,30,IND,WR,Miami (FL),22.0,WaynRe00,P0308
+2001,1,31,BAL,TE,Arizona St.,21.0,HeapTo00,P0339
+2001,2,32,SDG,QB,Purdue,22.0,BreeDr00,P0340
+2001,2,33,CLE,WR,Kansas St.,23.0,MorgQu00,P0289
+2001,2,35,ATL,TE,North Carolina,23.0,CrumAl00,P0295
+2001,2,36,CIN,WR,Oregon St.,23.0,JohnCh01,P0303
+2001,2,38,CHI,RB,Michigan,23.0,ThomAn01,P0254
+2001,2,41,GNB,WR,Texas A&M,21.0,FergRo00,P0378
+2001,2,49,NYJ,RB,Maryland,22.0,JordLa00,P0318
+2001,2,52,MIA,WR,Wisconsin,23.0,ChamCh00,P0257
+2001,2,53,DAL,QB,Georgia,23.0,CartQu00,P0300
+2001,2,58,BUF,RB,Tennessee,22.0,HenrTr00,P0268
+2001,2,59,OAK,QB,Washington,22.0,TuiaMa00,
+2001,3,65,CLE,RB,Miami (FL),25.0,JackJa00,P0294
+2001,3,66,CIN,TE,San Jose St.,23.0,BrewSe20,
+2001,3,74,CAR,WR,Utah,22.0,SmitSt01,P0342
+2001,3,77,KAN,WR,Florida St.,24.0,MinnMa00,P0287
+2001,3,80,SFO,RB,Pittsburgh,22.0,BarlKe00,P0269
+2001,3,82,SEA,FB,Auburn,22.0,EvanHe00,
+2001,3,85,MIA,RB,Florida St.,22.0,MinoTr00,P0275
+2001,3,90,TEN,TE,Kansas St.,23.0,MeieSh00,P0500
+2001,4,100,CIN,RB,Auburn,21.0,JohnRu00,P0407
+2001,4,106,CAR,QB,Florida St.,29.0,WeinCh00,P0258
+2001,4,108,KAN,RB,TCU,22.0,LaynGe00,
+2001,4,109,WAS,QB,Iowa St.,23.0,RoseSa00,P0632
+2001,4,115,NOR,FB,Kansas,23.0,NorrMo00,
+2001,4,116,STL,WR,Washington St.,22.0,WynnMi00,
+2001,4,119,NWE,TE,Notre Dame,22.0,HollJa01,
+2001,4,121,PHI,RB,Nebraska,22.0,BuckCo00,P0285
+2001,4,124,TEN,WR,Northern Illinois,22.0,McCaJu00,P0386
+2001,4,125,NYG,QB,Florida,22.0,PalmJe00,
+2001,4,129,STL,TE,Arizona,21.0,ManuBr00,P0433
+2001,4,131,MIN,WR,TCU,22.0,JameCe00,
+2001,5,136,ATL,WR,Purdue,23.0,SuthVi00,
+2001,5,140,SEA,WR,Eastern Kentucky,22.0,BannAl00,
+2001,5,141,KAN,TE,Virginia,22.0,BabeBi00,
+2001,5,147,PHI,TE,Penn St.,22.0,StewTo00,
+2001,5,148,DET,WR,Grambling St.,21.0,AndeSc00,P0385
+2001,5,149,DET,QB,Rutgers,22.0,McMaMi00,P0320
+2001,5,150,KAN,RB,S.F. Austin,22.0,BlayDe00,P0440
+2001,5,154,WAS,WR,Delaware St.,24.0,McCaDa00,P0393
+2001,5,155,PHI,QB,Oregon,24.0,FeelA.00,P0399
+2001,5,159,TEN,WR,Northern Iowa,23.0,BerlEd00,P0494
+2001,5,162,NYG,WR,Troy,22.0,CartJo01,
+2001,6,169,SFO,WR,Tennessee,22.0,WilsCe00,P0419
+2001,6,174,TAM,FB,Illinois,22.0,CookJa00,
+2001,6,175,CAR,RB,Syracuse,23.0,BrowDe02,P0372
+2001,6,190,DEN,WR,Iowa,23.0,KaspKe00,P0400
+2001,6,192,TEN,RB,Nebraska,23.0,AlexDa21,
+2001,6,195,BUF,TE,Notre Dame,24.0,OLeaDa20,
+2001,6,198,GNB,TE,Tennessee,22.0,MartDa00,P0540
+2001,7,204,CIN,WR,Oregon St.,23.0,HousTJ00,P0365
+2001,7,214,BUF,WR,Ohio St.,23.0,GermRe00,
+2001,7,218,PIT,WR,Texas A&M,22.0,TaylCh04,
+2001,7,224,SFO,TE,Yale,21.0,JohnEr00,P0283
+2001,7,227,CAR,TE,Idaho,23.0,RobeMi00,
+2001,7,229,OAK,WR,Ohio St.,22.0,RambKe00,
+2001,7,236,ATL,WR,Kentucky,23.0,McCoQu00,
+2001,7,245,CLE,WR,Miami (FL),27.0,KingAn00,
+2002,1,1,HOU,QB,Fresno St.,23.0,CarrDa00,P0348
+2002,1,3,DET,QB,Oregon,23.0,HarrJo00,P0359
+2002,1,13,NOR,WR,Tennessee,21.0,StalDo00,P0346
+2002,1,14,NYG,TE,Miami (FL),22.0,ShocJe00,P0341
+2002,1,16,CLE,RB,Boston Col.,22.0,GreeWi01,P0347
+2002,1,18,ATL,RB,Michigan St.,21.0,DuckT.00,P0368
+2002,1,19,DEN,WR,Hawaii,22.0,LeliAs00,P0361
+2002,1,20,GNB,WR,Florida St.,23.0,WalkJa00,P0391
+2002,1,21,NWE,TE,Colorado,23.0,GrahDa00,P0414
+2002,1,28,SEA,TE,Washington,22.0,StevJe00,P0379
+2002,1,32,WAS,QB,Tulane,23.0,RamsPa00,P0374
+2002,2,33,HOU,WR,Florida,21.0,GaffJa00,P0362
+2002,2,34,CAR,RB,UCLA,22.0,FostDe00,P0418
+2002,2,36,BUF,WR,LSU,22.0,ReedJo01,P0364
+2002,2,46,NYG,WR,Auburn,22.0,CartTi00,P0445
+2002,2,47,CLE,WR,Virginia Tech,23.0,DaviAn01,P0353
+2002,2,48,SDG,WR,Florida,23.0,CaldRe00,P0392
+2002,2,51,DEN,RB,Miami (FL),21.0,PortCl00,P0336
+2002,2,54,SEA,RB,Oregon,22.0,MorrMa00,P0595
+2002,2,55,OAK,TE,BYU,23.0,JollDo00,P0369
+2002,2,56,WAS,RB,Iowa,23.0,BettLa00,P0383
+2002,2,62,PIT,WR,Indiana,23.0,RandAn00,P0351
+2002,2,63,DAL,WR,Pittsburgh,21.0,BryaAn00,P0345
+2002,2,65,NWE,WR,Louisville,23.0,BranDe00,P0360
+2002,3,67,CIN,TE,TCU,23.0,SchoMa00,P0390
+2002,3,81,ARI,QB,Sam Houston St.,23.0,McCoJo01,P0431
+2002,3,84,STL,RB,North Dakota St.,22.0,GordLa00,P0367
+2002,3,87,WAS,WR,Utah,23.0,RussCl00,
+2002,3,88,NYJ,TE,Michigan St.,22.0,BakeCh00,P0492
+2002,3,91,PHI,RB,Villanova,23.0,WestBr00,P0405
+2002,4,99,HOU,RB,Ohio St.,23.0,WellJo00,P0371
+2002,4,103,SDG,TE,Oregon,23.0,PeelJu00,P0658
+2002,4,107,KAN,FB,Penn St.,24.0,EasyOm00,
+2002,4,108,JAX,QB,East Carolina,24.0,GarrDa00,P0521
+2002,4,114,MIA,TE,Georgia,23.0,McMiRa01,P0357
+2002,4,117,NWE,QB,LSU,24.0,DaveRo01,
+2002,4,118,JAX,TE,Virginia,23.0,LuzaCh00,
+2002,4,119,TAM,RB,Tennessee,24.0,StepTr01,
+2002,4,122,CLE,TE,Ohio St.,23.0,SandDa00,
+2002,4,123,BAL,WR,Minnesota,22.0,JohnRo03,
+2002,4,129,DAL,FB,Ohio St.,22.0,MartJa01,
+2002,4,135,GNB,RB,Miami (FL),23.0,DaveNa00,P0442
+2002,5,136,HOU,FB,New Mexico,23.0,BaxtJa00,
+2002,5,137,CAR,QB,Stanford,23.0,FasaRa00,
+2002,5,138,DET,TE,Notre Dame,22.0,OwenJo00,
+2002,5,144,DEN,WR,Michigan St.,24.0,HaygHe20,
+2002,5,145,CAR,RB,Syracuse,23.0,JohnKy00,P0539
+2002,5,149,ARI,WR,Alabama,23.0,McAdJa00,P0380
+2002,5,151,TEN,WR,Akron,22.0,SchiJa20,
+2002,5,155,BAL,TE,Alabama,22.0,JoneTe00,P0447
+2002,5,158,ATL,QB,Illinois,22.0,KittKu00,
+2002,5,160,WAS,TE,LSU,23.0,RoyaRo00,P0602
+2002,5,164,GNB,QB,LSU,23.0,NallCr00,
+2002,5,166,PIT,RB,Georgia,23.0,HaynVe00,P0484
+2002,5,169,SEA,TE,Northern Iowa,22.0,HannRy00,
+2002,5,170,MIA,WR,Northwestern,22.0,SimmSa20,
+2002,6,174,CAR,TE,Sam Houston St.,23.0,HeinKe00,
+2002,6,184,ATL,WR,Iowa,23.0,HillKa20,
+2002,6,185,ARI,RB,Kansas St.,22.0,ScobJo00,
+2002,6,186,NOR,QB,UC Davis,23.0,OSulJ.00,P0707
+2002,6,191,DEN,TE,Boise St.,23.0,PutzJe00,P0470
+2002,6,196,NOR,TE,Penn St.,22.0,GilmJo00,
+2002,6,197,OAK,RB,San Diego St.,24.0,NedxLa00,
+2002,6,199,CHI,RB,Georgia Southern,23.0,PeteAd00,P0545
+2002,6,201,SFO,TE,Wisconsin,23.0,AnelMa20,
+2002,6,202,PIT,WR,Texas-El Paso,23.0,MaysLe00,
+2002,6,203,CHI,WR,Delaware,22.0,ElliJa00,
+2002,6,204,IND,RB,Stanford,22.0,AlleBr20,
+2002,6,206,BAL,WR,Notre Dame,22.0,HuntJa00,
+2002,6,207,BAL,RB,Toledo,22.0,TaylCh01,P0402
+2002,6,210,CHI,TE,UCLA,23.0,FletBr00,P0550
+2002,7,222,JAX,WR,Middle Tenn. St.,22.0,NewsKe00,
+2002,7,223,ARI,TE,Iowa St.,22.0,BankMi20,
+2002,7,225,TEN,WR,Northern Illinois,23.0,HillDa20,
+2002,7,226,NYG,WR,Miami (FL),23.0,JoneDa02,
+2002,7,232,SEA,QB,Southern Miss,23.0,KellJe21,
+2002,7,235,OAK,WR,North Carolina,23.0,CurrRo01,P0465
+2002,7,241,MIA,RB,East Carolina,24.0,HenrLe20,
+2002,7,243,STL,RB,Marshall,23.0,MassCh00,
+2002,7,252,DET,TE,Maryland,22.0,MurpMa00,
+2002,7,253,NWE,WR,Notre Dame,22.0,GiveDa00,P0410
+2002,7,257,WAS,FB,Kansas St.,22.0,CartRo01,P0417
+2003,1,1,CIN,QB,USC,23.0,PalmCa00,P0464
+2003,1,2,DET,WR,Michigan St.,22.0,RogeCh01,P0434
+2003,1,3,HOU,WR,Miami (FL),22.0,JohnAn02,P0406
+2003,1,7,JAX,QB,Marshall,23.0,LeftBy00,P0409
+2003,1,17,ARI,WR,Penn St.,22.0,JohnBr02,P0422
+2003,1,19,BAL,QB,California,22.0,BollKy00,P0437
+2003,1,22,CHI,QB,Florida,23.0,GrosRe00,P0570
+2003,1,23,BUF,RB,Miami (FL),21.0,McGaWi00,P0453
+2003,1,24,IND,TE,Iowa,24.0,ClarDa00,P0430
+2003,1,27,KAN,RB,Penn St.,23.0,JohnLa00,P0460
+2003,2,41,HOU,TE,Michigan,23.0,JoppBe00,
+2003,2,44,WAS,WR,Florida,22.0,JacoTa00,
+2003,2,45,NWE,WR,Texas A&M,24.0,JohnBe00,P0446
+2003,2,54,ARI,WR,Florida St.,22.0,BoldAn00,P0403
+2003,2,60,TEN,WR,Middle Tenn. St.,22.0,CaliTy00,P0426
+2003,2,61,PHI,TE,Rutgers,23.0,SmitL.00,P0435
+2003,2,63,OAK,TE,Stanford,21.0,JohnTe00,
+2003,3,65,CIN,WR,Tennessee,24.0,WashKe00,P0424
+2003,3,69,DAL,TE,Tennessee,21.0,WittJa00,P0425
+2003,3,71,MIN,WR,Nevada,22.0,BurlNa00,P0421
+2003,3,74,STL,WR,Utah St.,25.0,CurtKe00,P0476
+2003,3,76,CAR,TE,UCLA,22.0,SeidMi00,
+2003,3,77,BAL,RB,Georgia,21.0,SmitMu00,P0614
+2003,3,85,NYJ,FB,Michigan,23.0,AskeB.00,
+2003,3,88,HOU,QB,Louisville,23.0,RagoDa00,
+2003,3,91,NYG,TE,Morgan St.,23.0,ShiaVi00,P0659
+2003,3,93,TEN,RB,Colorado,22.0,BrowCh03,P0461
+2003,3,95,PHI,WR,Virginia,23.0,McMuBi00,P0557
+2003,3,96,OAK,FB,USC,23.0,FargJu00,P0586
+2003,3,97,TAM,QB,Texas,23.0,SimmCh00,P0515
+2003,4,99,DET,RB,Kentucky,25.0,PinnAr00,P0501
+2003,4,101,HOU,RB,LSU,22.0,DaviDo01,P0404
+2003,4,104,JAX,TE,Oregon,22.0,WrigGe00,P0587
+2003,4,105,MIN,RB,Oregon,22.0,SmitOn00,P0411
+2003,4,106,STL,WR,Arizona St.,22.0,McDoSh00,P0472
+2003,4,108,DEN,RB,Oklahoma,22.0,GrifQu00,P0491
+2003,4,110,SEA,QB,Iowa St.,23.0,WallSe00,P0606
+2003,4,115,CLE,RB,Virginia Tech,23.0,SuggLe00,P0469
+2003,4,118,CIN,FB,Western Kentucky,23.0,JohnJe00,
+2003,4,121,ATL,FB,Mississippi St.,23.0,GrifJu00,P0441
+2003,4,124,SFO,WR,Illinois,22.0,LloyBr00,P0451
+2003,4,127,BUF,WR,North Carolina,22.0,AikeSa00,P0770
+2003,4,132,JAX,RB,LSU,22.0,ToefLa00,P0436
+2003,4,134,BAL,FB,Wake Forest,23.0,MughOv00,P0608
+2003,5,139,CHI,WR,Arizona,22.0,WadeBo00,P0474
+2003,5,143,CHI,WR,Missouri,22.0,GageJu00,P0443
+2003,5,148,STL,FB,Eastern Washington,25.0,CurlDa20,
+2003,5,156,MIA,TE,Mississippi St.,23.0,LeexDo00,P0535
+2003,5,158,DEN,WR,TCU,23.0,MadiAd00,
+2003,5,161,SFO,TE,Florida,23.0,WalkAa00,
+2003,5,163,PIT,QB,Boston Col.,23.0,St.PBr20,
+2003,5,165,SEA,FB,Syracuse,23.0,DaviCh24,
+2003,5,167,OAK,WR,Central Florida,23.0,GabrDo00,P0473
+2003,6,175,DET,WR,Grand Valley St.,23.0,KircDa00,
+2003,6,186,DAL,WR,Hampton,23.0,SmitZu00,
+2003,6,192,HOU,QB,Michigan,23.0,HensDr00,
+2003,6,196,ATL,WR,TCU,23.0,DunbLa20,
+2003,6,197,SFO,WR,Notre Dame,23.0,BattAr00,P0525
+2003,6,199,NYG,WR,SE Missouri St.,23.0,PondWi00,
+2003,6,200,NYJ,QB,Wisconsin,23.0,BollBr00,P0523
+2003,6,201,NWE,QB,Texas Tech,24.0,KingKl00,
+2003,6,206,CHI,RB,Boise St.,23.0,ForsBr00,
+2003,6,211,NYG,WR,Syracuse,23.0,TyreDa00,P0612
+2003,7,218,JAX,FB,USC,24.0,MacKMa20,
+2003,7,221,MIN,WR,Oregon,22.0,HowrKe00,
+2003,7,223,BAL,TE,Oklahoma,23.0,SmitTr01,
+2003,7,224,SEA,WR,Kansas St.,22.0,WallTa00,
+2003,7,226,CAR,WR,Illinois,23.0,YounWa00,
+2003,7,229,SDG,FB,South Carolina,23.0,PinnAn00,
+2003,7,231,NOR,WR,Florida St.,23.0,GardTa00,
+2003,7,232,WAS,QB,Indiana,22.0,HamdGi00,
+2003,7,234,NWE,FB,BYU,25.0,NeadSp00,
+2003,7,241,SFO,QB,Miami (FL),22.0,DorsKe00,P0498
+2003,7,254,STL,TE,Western New Mexico,23.0,AnguRi00,
+2003,7,255,NYG,WR,Eastern Michigan,22.0,WaltKe00,P0623
+2003,7,256,GNB,WR,Toledo,22.0,FordCa00,
+2004,1,1,SDG,QB,Mississippi,23.0,MannEl00,P0499
+2004,1,3,ARI,WR,Pittsburgh,21.0,FitzLa00,P0458
+2004,1,4,NYG,QB,North Carolina St.,22.0,RivePh00,P0566
+2004,1,6,CLE,TE,Miami (FL),21.0,WinsKe01,P0568
+2004,1,7,DET,WR,Texas,22.0,WillRo04,P0459
+2004,1,9,JAX,WR,Washington,21.0,WillRe00,P0487
+2004,1,11,PIT,QB,Miami (OH),22.0,RoetBe00,P0462
+2004,1,13,BUF,WR,Wisconsin,23.0,EvanLe00,P0457
+2004,1,15,TAM,WR,LSU,21.0,ClayMi00,P0452
+2004,1,22,BUF,QB,Tulane,23.0,LosmJ.00,P0531
+2004,1,24,STL,RB,Oregon St.,21.0,JackSt00,P0468
+2004,1,26,CIN,RB,Michigan,22.0,PerrCh00,P0506
+2004,1,29,ATL,WR,Ohio St.,22.0,JenkMi00,P0517
+2004,1,30,DET,RB,Virginia Tech,22.0,JoneKe02,P0456
+2004,1,31,SFO,WR,Oklahoma St.,23.0,WoodRa00,
+2004,1,32,NWE,TE,Georgia,23.0,WatsBe00,P0520
+2004,2,40,TEN,TE,Florida,22.0,TrouBe00,P0483
+2004,2,41,DEN,RB,Oklahoma St.,23.0,BellTa00,P0486
+2004,2,43,DAL,RB,Notre Dame,23.0,JoneJu01,P0467
+2004,2,50,NOR,WR,LSU,22.0,HendDe00,P0534
+2004,2,54,DEN,WR,Marshall,22.0,WattDa00,P0480
+2004,2,55,JAX,RB,Florida St.,23.0,JoneGr01,P0519
+2004,2,61,KAN,TE,Pittsburgh,23.0,WilsKr00,
+2004,2,62,CAR,WR,USC,22.0,ColbKe00,P0466
+2004,3,68,IND,TE,Ohio St.,24.0,HartBe00,
+2004,3,77,SFO,WR,Clemson,22.0,HamiDe20,
+2004,3,78,CHI,WR,Fresno St.,23.0,BerrBe00,P0496
+2004,3,81,WAS,TE,Utah St.,22.0,CoolCh00,P0471
+2004,3,82,BAL,WR,Washington St.,22.0,DarlDe00,P0654
+2004,3,90,ATL,QB,Virginia,23.0,SchaMa00,P0633
+2004,4,99,OAK,WR,Texas Tech,23.0,FranCa20,
+2004,4,105,KAN,WR,Oregon,23.0,ParkSa00,P0514
+2004,4,106,CLE,QB,Louisiana Tech,23.0,McCoLu00,P0661
+2004,4,108,NYJ,WR,North Carolina St.,22.0,CotcJe00,P0565
+2004,4,109,BUF,TE,Oregon St.,23.0,EuhuTi00,
+2004,4,119,MIN,RB,Tulane,22.0,MoorMe00,P0475
+2004,4,120,JAX,WR,Virginia Tech,25.0,WilfEr00,P0490
+2004,4,128,NWE,RB,Arkansas,23.0,CobbCe00,
+2004,5,134,OAK,WR,Syracuse,22.0,MoraJo00,
+2004,5,144,DAL,TE,Boston Col.,24.0,RyanSe00,
+2004,5,148,CHI,QB,Ohio St.,23.0,KrenCr00,
+2004,5,149,CIN,WR,Nevada,21.0,MannMa00,
+2004,5,151,WAS,TE,California,23.0,WilsMa21,
+2004,5,154,SDG,RB,Northern Illinois,22.0,TurnMi00,P0553
+2004,5,156,NOR,FB,Arizona St.,23.0,KarnMi00,
+2004,5,157,SEA,WR,Colorado,23.0,HackD.00,P0529
+2004,5,162,PHI,FB,Minnesota,24.0,TapeTh00,
+2004,5,163,CAR,WR,Ohio St.,23.0,CartDr00,P0590
+2004,5,164,NWE,WR,Florida St.,20.0,SamxP.20,
+2004,6,168,NYG,WR,Texas A&M,23.0,TaylJa00,
+2004,6,169,SDG,TE,Nebraska-Omaha,23.0,KrauRy00,
+2004,6,171,DEN,WR,Alabama,22.0,LukeTr00,
+2004,6,181,TAM,TE,Yale,22.0,LawrNa00,
+2004,6,185,PHI,QB,Delaware,23.0,HallAn00,
+2004,6,191,TEN,RB,Tennessee,23.0,FlemTr00,P0497
+2004,6,193,IND,QB,Wisconsin,23.0,SorgJi00,
+2004,6,194,PIT,TE,Penn St.,24.0,KranMa00,
+2004,6,199,BAL,WR,Northern Arizona,21.0,MoorCl00,P0479
+2004,7,202,ARI,QB,Michigan,23.0,NavaJo00,
+2004,7,206,TAM,WR,Tennessee,23.0,JoneMa01,
+2004,7,208,CLE,RB,California,23.0,EcheAd00,
+2004,7,211,HOU,WR,Texas,22.0,ThomSl00,
+2004,7,214,BUF,WR,Georgia Tech,22.0,SmitJo00,
+2004,7,216,DAL,WR,NW Oklahoma St.,25.0,CrayPa00,P0542
+2004,7,217,SFO,QB,Washington,24.0,PickCo00,
+2004,7,219,ATL,RB,West Virginia,23.0,WilsQu00,
+2004,7,220,MIN,TE,Maryland,23.0,DugaJe00,
+2004,7,225,DEN,QB,LSU,25.0,MaucMa00,
+2004,7,228,TAM,RB,Dartmouth,22.0,CramCa00,
+2004,7,232,CAR,TE,Central Florida,24.0,GainMi00,P0665
+2004,7,235,NYJ,RB,Ottawa (KS),24.0,WardDe01,P0628
+2004,7,241,TEN,FB,Penn St.,22.0,McHuSe00,
+2004,7,242,PHI,RB,Maryland,23.0,PerrBr01,
+2004,7,245,OAK,TE,San Jose St.,23.0,AndeCo00,P0538
+2004,7,247,DEN,RB,Pittsburgh,23.0,MireBr00,
+2004,7,250,DEN,QB,Colorado St.,24.0,VanPBr00,
+2005,1,1,SFO,QB,Utah,21.0,SmitAl03,P0571
+2005,1,2,MIA,RB,Auburn,23.0,BrowRo05,P0504
+2005,1,3,CLE,WR,Michigan,22.0,EdwaBr00,P0518
+2005,1,4,CHI,RB,Texas,22.0,BensCe00,P0581
+2005,1,5,TAM,RB,Auburn,23.0,WillCa02,P0503
+2005,1,7,MIN,WR,South Carolina,22.0,WillTr01,P0533
+2005,1,10,DET,WR,USC,21.0,WillMi03,P0543
+2005,1,21,JAX,WR,Arkansas,22.0,JoneMa00,P0509
+2005,1,22,BAL,WR,Oklahoma,23.0,ClayMa01,P0511
+2005,1,24,GNB,QB,California,21.0,RodgAa00,P0671
+2005,1,25,WAS,QB,Auburn,23.0,CampJa00,P0588
+2005,1,27,ATL,WR,Ala-Birmingham,23.0,WhitRo00,P0522
+2005,1,30,PIT,TE,Virginia,22.0,MillHe00,P0507
+2005,2,35,PHI,WR,Georgia,24.0,BrowRe01,P0505
+2005,2,39,CHI,WR,Oklahoma,23.0,BradMa00,P0607
+2005,2,44,ARI,RB,California,22.0,ArriJ.00,P0526
+2005,2,54,CAR,RB,Louisville,22.0,ShelEr00,
+2005,2,55,BUF,WR,Miami (FL),23.0,ParrRo00,P0597
+2005,2,58,GNB,WR,Texas A&M,22.0,MurpTe00,
+2005,2,61,SDG,WR,Northern Colorado,22.0,JackVi00,P0582
+2005,3,65,SFO,RB,Miami (FL),22.0,GoreFr00,P0516
+2005,3,67,CLE,QB,Akron,24.0,FryeCh00,P0554
+2005,3,68,TEN,WR,Indiana,22.0,RobyCo00,P0549
+2005,3,69,OAK,QB,Arizona St.,23.0,WaltAn00,
+2005,3,71,TAM,TE,Stanford,23.0,SmitAl02,P0524
+2005,3,73,HOU,RB,Oklahoma St.,25.0,MoreVe00,P0556
+2005,3,77,PHI,RB,Louisiana Tech,22.0,MoatRy00,P0558
+2005,3,83,CIN,WR,West Virginia,22.0,HenrCh00,P0513
+2005,3,86,BUF,TE,Miami (FL),23.0,EverKe00,
+2005,3,96,TEN,WR,Oklahoma,23.0,JoneBr02,P0544
+2005,4,106,CHI,QB,Purdue,22.0,OrtoKy00,P0530
+2005,4,109,DAL,RB,Minnesota,22.0,BarbMa01,P0510
+2005,4,110,NYG,RB,Southern Illinois,23.0,JacoBr00,P0555
+2005,4,112,MIN,RB,Florida,22.0,FasoCi00,
+2005,4,114,HOU,WR,Hampton,22.0,MathJe00,
+2005,4,116,KAN,WR,Florida St.,22.0,ThorCr00,
+2005,4,127,JAX,RB,Virginia,23.0,PearAl00,P0536
+2005,4,130,SDG,RB,Kansas St.,22.0,SproDa00,P0669
+2005,4,136,TEN,WR,Tulane,24.0,WillRo05,P0546
+2005,5,140,CHI,WR,Clemson,22.0,CurrAi00,
+2005,5,142,TEN,RB,Missouri,23.0,NashDa00,
+2005,5,144,STL,TE,Notre Dame,23.0,CollJe00,
+2005,5,145,DET,QB,Connecticut,22.0,OrloDa00,P0704
+2005,5,158,BAL,FB,Montana,23.0,GreeJu00,
+2005,5,174,SFO,WR,West Virginia,24.0,MarsRa00,
+2005,6,179,TEN,TE,Texas,24.0,ScaiBo00,P0532
+2005,6,182,NYJ,RB,Tennessee,23.0,HousCe00,P0551
+2005,6,185,JAX,WR,Hawaii,23.0,OwenCh00,
+2005,6,190,CIN,WR,UCLA,23.0,PerrTa00,
+2005,6,192,STL,WR,Ball St.,21.0,RidgDa00,
+2005,6,198,NYJ,TE,Colorado St.,23.0,DreeJo00,P0772
+2005,6,201,ATL,RB,Michigan St.,24.0,CobbDe00,
+2005,6,213,BAL,QB,Oregon St.,22.0,AndeDe00,P0617
+2005,7,222,WAS,FB,The Citadel,22.0,BrouNe00,
+2005,7,223,SFO,WR,Oregon,22.0,MaxwMa00,
+2005,7,225,TAM,WR,Utah,23.0,WarrPa00,
+2005,7,226,ARI,WR,Indiana (PA),23.0,McCoLe00,
+2005,7,230,NWE,QB,USC,23.0,CassMa00,P0674
+2005,7,236,BUF,RB,Louisville,23.0,GateLi00,
+2005,7,240,NYJ,WR,Tuskegee,23.0,WillHa20,
+2005,7,244,PIT,RB,Northwestern,23.0,HerrNo00,P0591
+2005,7,248,SFO,TE,Virginia,22.0,EstePa00,
+2005,7,249,SFO,TE,Oklahoma St.,22.0,BajeBi00,
+2005,7,250,STL,QB,Harvard,22.0,FitzRy00,P0559
+2005,7,251,STL,FB,North Carolina,24.0,HedgMa00,
+2006,1,2,NOR,RB,USC,21.0,BushRe00,P0561
+2006,1,3,TEN,QB,Texas,23.0,YounVi00,P0567
+2006,1,6,SFO,TE,Maryland,22.0,DaviVe00,P0603
+2006,1,10,ARI,QB,USC,23.0,LeinMa00,P0576
+2006,1,11,DEN,QB,Vanderbilt,23.0,CutlJa00,P0601
+2006,1,21,NWE,RB,Minnesota,21.0,MaroLa00,P0572
+2006,1,25,PIT,WR,Ohio St.,22.0,HolmSa00,P0574
+2006,1,27,CAR,RB,Memphis,23.0,WillDe02,P0577
+2006,1,28,JAX,TE,UCLA,22.0,LewiMa00,P0642
+2006,1,30,IND,RB,LSU,23.0,AddaJo00,P0563
+2006,2,36,NWE,WR,Florida,21.0,JackCh00,P0616
+2006,2,44,NYG,WR,Miami (FL),22.0,MossSi00,
+2006,2,45,TEN,RB,USC,21.0,WhitLe01,P0624
+2006,2,46,STL,TE,Colorado,22.0,KlopJo00,P0615
+2006,2,49,NYJ,QB,Oregon,23.0,ClemKe00,P0650
+2006,2,52,GNB,WR,Western Michigan,22.0,JennGr00,P0578
+2006,2,53,DAL,TE,Notre Dame,22.0,FasaAn00,P0692
+2006,2,60,JAX,RB,UCLA,21.0,DrewMa00,P0560
+2006,2,61,DEN,TE,Western Michigan,23.0,ScheTo00,P0599
+2006,2,64,MIN,QB,Alabama St.,23.0,JackTa00,P0627
+2006,3,72,ARI,TE,Georgia,22.0,PopeLe00,P0651
+2006,3,74,DET,RB,Wisconsin,22.0,CalhBr00,
+2006,3,78,CLE,WR,Oklahoma,22.0,WilsTr00,
+2006,3,79,ATL,RB,Mississippi St.,23.0,NorwJe00,P0585
+2006,3,81,SDG,QB,Clemson,24.0,WhitCh02,P1049
+2006,3,82,MIA,WR,Arizona St.,21.0,HagaDe00,P0613
+2006,3,84,SFO,WR,Wisconsin,22.0,WillBr01,
+2006,3,85,KAN,QB,Alabama,23.0,CroyBr00,P0666
+2006,3,86,NWE,TE,Texas,23.0,ThomDa02,P0760
+2006,3,90,TAM,WR,Notre Dame,21.0,StovMa00,P0769
+2006,3,93,STL,TE,USC,22.0,ByrdDo00,
+2006,3,95,PIT,WR,Florida St.,23.0,ReidWi00,
+2006,4,98,HOU,TE,Wisconsin,23.0,DaniOw00,P0584
+2006,4,100,SFO,WR,Penn St.,23.0,RobiMi00,
+2006,4,103,NYJ,QB,Missouri,22.0,SmitBr01,P0645
+2006,4,106,NWE,FB,Tulsa,22.0,MillGa01,
+2006,4,109,PHI,WR,Michigan,23.0,AvanJa00,P0662
+2006,4,111,BAL,WR,Oregon,23.0,WillDe03,P0596
+2006,4,117,NYJ,RB,Florida St.,24.0,WashLe00,P0575
+2006,4,119,DEN,WR,Central Florida,22.0,MarsBr00,P0600
+2006,4,125,DAL,WR,LSU,21.0,GreeSk20,
+2006,4,130,DEN,WR,Akron,21.0,HixoDo00,P0695
+2006,4,132,BAL,RB,Georgia Tech,23.0,DaniP.00,
+2006,5,144,STL,WR,Virginia,23.0,HagaMa00,
+2006,5,145,CLE,RB,Washington St.,23.0,HarrJe00,P0717
+2006,5,148,GNB,QB,Furman,24.0,MartIn00,
+2006,5,150,NYJ,TE,Wisconsin,23.0,PociJa00,
+2006,5,155,CAR,TE,Virginia Tech,23.0,KingJe00,P0637
+2006,5,163,SEA,RB,USC,23.0,KirtDa00,
+2006,5,166,BAL,TE,Colorado,24.0,SypnQu00,P0660
+2006,6,170,HOU,RB,Virginia,22.0,LundWa00,P0579
+2006,6,171,NOR,WR,Oregon St.,23.0,HassMi00,
+2006,6,175,SFO,WR,Central Missouri St.,22.0,WalkHu00,P0825
+2006,6,180,CLE,FB,Colorado,23.0,VickLa00,
+2006,6,184,ATL,WR,Fresno St.,23.0,JennAd00,
+2006,6,190,KAN,WR,San Diego St.,24.0,WebbJe00,P0657
+2006,6,193,CIN,QB,Texas A&M,22.0,McNeRe00,
+2006,6,194,TAM,QB,Toledo,23.0,GradBr00,P0589
+2006,6,195,CHI,RB,Oklahoma,22.0,RunnJ.00,
+2006,7,209,CIN,WR,Penn St.,23.0,KilmEt00,
+2006,7,218,ARI,WR,BYU,23.0,WatkTo20,
+2006,7,233,MIA,WR,Auburn,22.0,AromDe00,P0758
+2006,7,244,TAM,TE,Michigan,24.0,MassTi20,
+2006,7,246,TEN,RB,Utah,22.0,GantQu00,P0779
+2006,7,249,SEA,WR,Auburn,22.0,ObomBe00,P0802
+2006,7,251,HOU,WR,Colorado St.,23.0,AndeDa01,P0720
+2006,7,252,NOR,WR,Hofstra,23.0,ColsMa00,P0564
+2007,1,1,OAK,QB,LSU,22.0,RussJa00,P0688
+2007,1,2,DET,WR,Georgia Tech,21.0,JohnCa00,P0625
+2007,1,7,MIN,RB,Oklahoma,22.0,PeteAd01,P0618
+2007,1,9,MIA,WR,Ohio St.,22.0,GinnTe00,P0640
+2007,1,12,BUF,RB,California,21.0,LyncMa00,P0621
+2007,1,22,CLE,QB,Notre Dame,22.0,QuinBr00,P0755
+2007,1,23,KAN,WR,LSU,22.0,BoweDw00,P0620
+2007,1,27,NOR,WR,Tennessee,22.0,MeacRo00,P0713
+2007,1,30,SDG,WR,LSU,21.0,DaviCr00,
+2007,1,31,CHI,TE,Miami (FL),22.0,OlseGr00,P0638
+2007,1,32,IND,WR,Ohio St.,22.0,GonzAn00,P0630
+2007,2,36,PHI,QB,Houston,23.0,KolbKe00,P0824
+2007,2,38,OAK,TE,Arizona St.,21.0,MillZa01,P0634
+2007,2,40,MIA,QB,BYU,26.0,BeckJo00,
+2007,2,43,DET,QB,Michigan St.,23.0,StanDr00,P0834
+2007,2,44,MIN,WR,South Carolina,21.0,RiceSi01,P0635
+2007,2,45,CAR,WR,USC,20.0,JarrDw00,
+2007,2,50,TEN,RB,Arizona,22.0,HenrCh01,
+2007,2,51,NYG,WR,USC,22.0,SmitSt02,P0693
+2007,2,52,STL,RB,Rutgers,23.0,LeonBr00,P0647
+2007,2,63,GNB,RB,Nebraska,21.0,JackBr00,P0663
+2007,3,71,MIA,RB,Florida St.,23.0,BookLo00,P0656
+2007,3,73,HOU,WR,Lane,23.0,JoneJa03,P0747
+2007,3,74,BAL,WR,Kansas St.,24.0,FiguYa00,
+2007,3,75,ATL,WR,Illinois St.,22.0,RobiLa01,P0643
+2007,3,76,SFO,WR,Washington St.,22.0,HillJa00,P0709
+2007,3,77,PIT,TE,Minnesota,23.0,SpaeMa00,
+2007,3,78,GNB,WR,San Jose St.,23.0,JoneJa04,P0629
+2007,3,79,JAX,WR,Central Florida,22.0,WalkMi01,P0727
+2007,3,80,TEN,WR,Fresno St.,23.0,WillPa00,
+2007,3,90,PHI,RB,Penn St.,21.0,HuntTo01,
+2007,3,92,BUF,QB,Stanford,23.0,EdwaTr01,P0644
+2007,3,93,CHI,RB,Northern Illinois,23.0,WolfGa00,
+2007,3,99,OAK,WR,Texas-El Paso,23.0,HiggJo00,P0700
+2007,4,100,OAK,RB,Louisville,23.0,BushMi00,P0702
+2007,4,103,DAL,QB,Washington,23.0,StanIs00,
+2007,4,107,NOR,RB,Ohio St.,21.0,PittAn00,P0716
+2007,4,111,BUF,RB,Fresno St.,24.0,WrigDw01,
+2007,4,118,CAR,WR,Miami (OH),22.0,RobiRy00,
+2007,4,128,TEN,WR,Florida St.,23.0,DaviCh02,
+2007,4,129,SDG,TE,Iowa,22.0,ChanSc00,P0858
+2007,4,133,ATL,TE,Georgia,23.0,MilnMa00,
+2007,4,137,BAL,RB,Alabama,22.0,McClLe00,P0680
+2007,5,142,ARI,WR,Michigan,24.0,BreaSt00,P0678
+2007,5,146,MIN,WR,East Carolina,21.0,AlliAu00,
+2007,5,148,KAN,RB,Louisville,22.0,SmitKo00,P0641
+2007,5,151,CIN,QB,Nevada,23.0,RoweJe00,
+2007,5,153,NYG,TE,Western Oregon,23.0,BossKe00,P0697
+2007,5,155,CAR,TE,Oregon,22.0,RosaDa00,P0768
+2007,5,157,GNB,WR,Virginia Tech,22.0,ClowDa00,
+2007,5,162,PHI,TE,Cincinnati,22.0,CeleBr00,P0714
+2007,5,169,IND,WR,Ohio St.,23.0,HallRo02,
+2007,5,172,SDG,WR,Boise St.,23.0,NaanLe00,P0775
+2007,5,174,BAL,QB,Ohio St.,23.0,SmitTr02,P0817
+2007,6,175,OAK,FB,Arkansas St.,23.0,ONeaOr00,
+2007,6,181,MIA,RB,Hawaii,23.0,MauiRe00,
+2007,6,186,SFO,RB,Kansas St.,23.0,ClayTh00,
+2007,6,195,DAL,FB,Connecticut,24.0,AndeDe01,
+2007,6,197,SEA,WR,Auburn,23.0,TaylCo00,
+2007,6,205,WAS,QB,Texas-El Paso,23.0,PalmJo20,
+2007,6,210,SEA,WR,Oregon,23.0,KentJo20,
+2007,7,215,ARI,TE,Delaware,23.0,PatrBe00,
+2007,7,217,MIN,QB,Coastal Carolina,23.0,ThigTy00,P0676
+2007,7,222,BUF,TE,Boise St.,22.0,SchoDe00,
+2007,7,227,PIT,WR,Florida,24.0,BakeDa01,
+2007,7,228,GNB,RB,Florida,23.0,WynnDe00,P0664
+2007,7,229,JAX,WR,San Jose St.,23.0,BrouJo00,
+2007,7,234,CLE,WR,Arizona,22.0,StepSy20,
+2007,7,235,NYJ,WR,Clemson,23.0,StucCh20,P0705
+2007,7,243,GNB,TE,Rutgers,23.0,HarrCl20,
+2007,7,244,ATL,RB,Virginia,23.0,SnelJa00,P0738
+2007,7,246,TAM,RB,Alabama,24.0,DarbKe00,P0723
+2007,7,249,STL,WR,Wisconsin–Whitewater,22.0,StanDe00,
+2007,7,250,NYG,RB,Marshall,21.0,BradAh00,P0719
+2007,7,254,OAK,WR,Louisiana Tech,22.0,HollJo01,
+2008,1,3,ATL,QB,Boston Col.,23.0,RyanMa00,P0679
+2008,1,4,OAK,RB,Arkansas,21.0,McFaDa00,P0690
+2008,1,13,CAR,RB,Oregon,21.0,StewJo00,P0684
+2008,1,18,BAL,QB,Delaware,23.0,FlacJo00,P0681
+2008,1,22,DAL,RB,Arkansas,21.0,JoneFe00,P0721
+2008,1,23,PIT,RB,Illinois,21.0,MendRa00,P0724
+2008,1,24,TEN,RB,East Carolina,22.0,JohnCh04,P0673
+2008,1,30,NYJ,TE,Purdue,23.0,KellDu00,P0694
+2008,2,33,STL,WR,Houston,24.0,AverDo00,P0685
+2008,2,34,WAS,WR,Michigan St.,21.0,ThomDe02,P0763
+2008,2,36,GNB,WR,Kansas St.,23.0,NelsJo00,P0706
+2008,2,38,SEA,TE,Notre Dame,24.0,CarlJo00,P0686
+2008,2,41,BUF,WR,Indiana,22.0,HardJa00,
+2008,2,42,DEN,WR,Virginia Tech,22.0,RoyaEd00,P0675
+2008,2,44,CHI,RB,Tulane,22.0,FortMa00,P0670
+2008,2,46,CIN,WR,Coastal Carolina,22.0,SimpJe00,P0826
+2008,2,48,WAS,TE,USC,22.0,DaviFr01,P0741
+2008,2,49,PHI,WR,California,21.0,JackDe00,P0682
+2008,2,51,WAS,WR,Oklahoma,21.0,KellMa01,P0777
+2008,2,53,PIT,WR,Texas,23.0,SweeLi00,
+2008,2,55,BAL,RB,Rutgers,21.0,RiceRa00,P0698
+2008,2,56,GNB,QB,Louisville,22.0,BrohBr00,
+2008,2,57,MIA,QB,Michigan,23.0,HennCh01,P0739
+2008,2,58,TAM,WR,Appalachian St.,22.0,JackDe01,
+2008,2,61,DAL,TE,Texas A&M,21.0,BennMa00,P0711
+2008,3,64,DET,RB,Central Florida,21.0,SmitKe02,P0677
+2008,3,69,SDG,FB,LSU,23.0,HestJa00,
+2008,3,70,CHI,WR,Vanderbilt,21.0,BennEa00,P0737
+2008,3,73,KAN,RB,Texas,21.0,CharJa00,P0703
+2008,3,76,KAN,TE,Tennessee,23.0,CottBr00,
+2008,3,81,ARI,WR,LSU,22.0,DoucEa00,P0827
+2008,3,84,ATL,WR,Louisville,23.0,DougHa00,P0708
+2008,3,85,TEN,TE,California,24.0,StevCr00,P0949
+2008,3,89,HOU,RB,West Virginia,22.0,SlatSt00,P0672
+2008,3,91,GNB,TE,Texas,21.0,FinlJe00,P0735
+2008,3,94,NWE,QB,San Diego St.,23.0,OConKe00,
+2008,3,95,NYG,WR,Michigan,22.0,MannMa01,P0729
+2008,3,97,CIN,WR,Florida,23.0,CaldAn00,P0750
+2008,4,105,KAN,WR,Missouri,22.0,FranWi00,
+2008,4,106,BAL,WR,New Mexico,23.0,SmitMa01,
+2008,4,111,CLE,TE,Missouri,23.0,RuckMa00,
+2008,4,122,DAL,RB,Georgia Tech,23.0,ChoiTa00,P0701
+2008,4,125,OAK,WR,Richmond,23.0,ShieAr00,
+2008,4,126,TEN,WR,California,22.0,HawkLa00,P0861
+2008,4,127,IND,TE,Kentucky,23.0,TammJa00,P0789
+2008,4,128,STL,WR,Kentucky,23.0,BurtKe00,P0782
+2008,4,132,BUF,TE,Kansas,25.0,FineDe00,
+2008,5,136,DET,WR,Wake Forest,23.0,MoorKe00,
+2008,5,139,DEN,RB,Arizona St.,22.0,ToraRy00,P0794
+2008,5,141,CAR,TE,Louisville,22.0,BarnGa01,P1078
+2008,5,146,DET,FB,Furman,22.0,FeltJe00,
+2008,5,149,ARI,RB,Richmond,22.0,HighTi00,P0683
+2008,5,153,NWE,WR,UCLA,22.0,SlatMa00,
+2008,5,156,PIT,QB,Oregon,23.0,DixoDe00,
+2008,5,158,CHI,TE,Michigan St.,22.0,DaviKe01,P0882
+2008,5,160,TAM,QB,San Diego,22.0,JohnJo05,
+2008,5,162,NYJ,QB,Tennessee,22.0,AingEr00,
+2008,5,163,SEA,FB,West Virginia,23.0,SchmOw00,
+2008,5,166,SDG,RB,Texas-El Paso,24.0,ThomMa01,
+2008,6,171,NYJ,WR,Kansas,22.0,HenrMa00,
+2008,6,172,ATL,RB,Georgia,22.0,BrowTh01,
+2008,6,174,SFO,WR,Virginia Tech,23.0,MorgJo00,P0712
+2008,6,176,MIA,RB,Toledo,22.0,ParmJa00,
+2008,6,179,BUF,RB,NW Missouri St.,23.0,OmonXa00,
+2008,6,182,KAN,WR,Utah St.,23.0,RobiKe00,
+2008,6,186,WAS,QB,Hawaii,25.0,BrenCo00,
+2008,6,191,CLE,WR,Wisconsin,23.0,HubbPa00,
+2008,6,193,MIN,WR,Jackson St.,24.0,JohnJa01,
+2008,6,196,IND,TE,Virginia,22.0,SantTo00,
+2008,6,198,NYG,QB,Kentucky,24.0,WoodAn00,
+2008,6,202,IND,RB,Michigan,22.0,HartMi00,
+2008,6,204,MIA,RB,Montana,24.0,HillLe00,P0774
+2008,6,205,IND,WR,Mount Union,22.0,GarcPi00,P0736
+2008,6,207,CIN,TE,Villanova,23.0,SherMa00,
+2008,7,209,GNB,QB,LSU,23.0,FlynMa00,P0999
+2008,7,213,JAX,RB,USC,23.0,WashCh00,
+2008,7,215,BAL,WR,Virginia Tech,23.0,HarpJu01,
+2008,7,217,GNB,WR,San Diego St.,23.0,SwaiBr00,
+2008,7,223,HOU,QB,Washington St.,23.0,BrinAl00,
+2008,7,224,BUF,WR,Kentucky,21.0,JohnSt00,P0783
+2008,7,226,OAK,WR,San Diego St.,22.0,SchiCh00,P0722
+2008,7,227,DEN,FB,Arkansas,22.0,HillPe00,P0699
+2008,7,232,ATL,TE,LSU,23.0,ZingKe20,
+2008,7,233,SEA,RB,California,22.0,ForsJu00,P0730
+2008,7,237,NOR,WR,Michigan,22.0,ArriAd00,
+2008,7,238,TAM,RB,South Carolina,23.0,BoydCo01,
+2008,7,239,KAN,TE,Central Florida,24.0,MerrMi01,
+2008,7,240,BAL,RB,Oklahoma,24.0,PatrAl00,
+2008,7,246,CIN,WR,Louisville,22.0,UrruMa00,
+2008,7,248,CHI,WR,Arkansas,22.0,MonkMa00,
+2009,1,1,DET,QB,Georgia,21.0,StafMa00,P0745
+2009,1,5,NYJ,QB,USC,22.0,SancMa00,P0742
+2009,1,7,OAK,WR,Maryland,22.0,HeywDa00,P0820
+2009,1,10,SFO,WR,Texas Tech,21.0,CrabMi00,P0746
+2009,1,12,DEN,RB,Georgia,22.0,MoreKn00,P0726
+2009,1,17,TAM,QB,Kansas St.,21.0,FreeJo00,P0754
+2009,1,19,PHI,WR,Missouri,21.0,MaclJe00,P0733
+2009,1,20,DET,TE,Oklahoma St.,24.0,PettBr00,P0759
+2009,1,22,MIN,WR,Florida,21.0,HarvPe00,P0725
+2009,1,27,IND,RB,Connecticut,22.0,BrowDo00,P0765
+2009,1,29,NYG,WR,North Carolina,21.0,NickHa01,P0731
+2009,1,30,TEN,WR,Rutgers,20.0,BritKe00,P0744
+2009,1,31,ARI,RB,Ohio St.,21.0,WellCh00,P0740
+2009,2,36,CLE,WR,Ohio St.,21.0,RobiBr00,P0816
+2009,2,44,MIA,QB,West Virginia,23.0,WhitPa01,
+2009,2,50,CLE,WR,Georgia,22.0,MassMo00,P0749
+2009,2,53,PHI,RB,Pittsburgh,21.0,McCoLe01,P0732
+2009,2,64,DEN,TE,North Carolina,23.0,QuinRi00,
+2009,3,65,NYJ,RB,Iowa,24.0,GreeSh00,P0776
+2009,3,74,SFO,RB,Alabama,22.0,CoffGl00,
+2009,3,82,DET,WR,Penn St.,23.0,WillDe05,
+2009,3,83,NWE,WR,North Carolina,21.0,TateBr00,P0805
+2009,3,84,PIT,WR,Mississippi,23.0,WallMi00,P0734
+2009,3,85,NYG,WR,Cal Poly-San Luis Obispo,23.0,BardRa00,
+2009,3,87,MIA,WR,USC,22.0,TurnPa00,
+2009,3,89,TEN,TE,South Carolina,22.0,CookJa02,P0821
+2009,3,91,SEA,WR,Penn St.,23.0,ButlDe00,P0807
+2009,3,98,CIN,TE,Missouri,22.0,CoffCh00,
+2009,3,99,CHI,WR,Oklahoma,22.0,IgleJu00,
+2009,3,100,NYG,TE,Wisconsin,22.0,BeckTr00,
+2009,4,101,DAL,QB,Texas A&M,23.0,McGeSt00,
+2009,4,107,JAX,WR,Arizona,22.0,ThomMi01,P0752
+2009,4,108,MIA,WR,Ohio St.,22.0,HartBr00,P0751
+2009,4,111,CAR,RB,Texas A&M,22.0,GoodMi00,P0797
+2009,4,121,BUF,TE,Southern Miss,23.0,NelsSh00,
+2009,4,122,HOU,TE,North Carolina St.,24.0,HillAn00,
+2009,4,124,OAK,WR,Florida,22.0,MurpLo00,P0748
+2009,4,127,IND,WR,BYU,23.0,CollAu00,P0728
+2009,4,128,CAR,RB,Syracuse,23.0,FiamTo00,
+2009,4,129,NYG,RB,North Carolina St.,22.0,BrowAn03,P0916
+2009,4,134,SDG,RB,Colorado St.,23.0,JohnGa01,
+2009,5,140,CHI,WR,Abilene Christian,22.0,KnoxJo00,P0743
+2009,5,141,DEN,WR,South Carolina,22.0,McKiKe00,
+2009,5,144,JAX,WR,Rice,23.0,DillJa00,P0886
+2009,5,145,GNB,RB,LSU,22.0,JohnQu00,
+2009,5,149,BAL,TE,East Carolina,23.0,DrewDa00,
+2009,5,151,NYG,QB,Sam Houston St.,24.0,BomaRh00,
+2009,5,152,HOU,TE,Rice,24.0,CaseJa00,P0924
+2009,5,153,PHI,TE,Florida,24.0,IngrCo00,
+2009,5,160,STL,WR,North Carolina,23.0,FostBr00,
+2009,5,161,MIA,TE,Monmouth,23.0,NalbJo00,
+2009,5,169,PIT,RB,UNLV,24.0,SummFr00,
+2009,5,171,SFO,QB,Ball St.,22.0,DaviNa00,
+2009,5,173,TEN,RB,Michigan St.,22.0,RingJa00,P0879
+2009,6,174,DEN,QB,Fresno St.,24.0,BranTo00,
+2009,6,175,KAN,WR,McNeese St.,24.0,LawrQu00,
+2009,6,178,SEA,QB,Rutgers,23.0,TeelMi00,
+2009,6,180,JAX,TE,Nebraska-Omaha,24.0,MillZa02,P0780
+2009,6,184,SFO,TE,Fresno St.,23.0,PascBe00,
+2009,6,185,BAL,RB,Virginia,22.0,PeerCe00,
+2009,6,192,DET,RB,TCU,23.0,BrowAa00,
+2009,6,194,PHI,WR,Washington St.,22.0,GibsBr00,P0766
+2009,6,195,CLE,RB,Clemson,23.0,DaviJa03,
+2009,6,196,STL,QB,West Texas A&M,23.0,NullKe00,
+2009,6,201,IND,QB,Purdue,24.0,PainCu00,P0875
+2009,6,202,OAK,TE,Iowa,24.0,MyerBr00,P0899
+2009,6,206,TEN,WR,S.F. Austin,23.0,EdisDo00,
+2009,6,208,DAL,TE,Virginia,22.0,PhilJo00,
+2009,6,209,CIN,RB,Abilene Christian,25.0,ScotBe00,P0874
+2009,7,211,STL,RB,Texas,23.0,OgboCh00,P0872
+2009,7,212,KAN,RB,Tennessee St.,23.0,WillJa05,
+2009,7,215,CIN,RB,BYU,25.0,VakaFu00,
+2009,7,221,WAS,RB,Idaho,22.0,WillEd00,
+2009,7,229,DAL,WR,Oklahoma,22.0,JohnMa04,
+2009,7,232,NWE,WR,Kent St.,23.0,EdelJu00,P0757
+2009,7,233,TAM,WR,Oregon St.,23.0,StroSa00,P0762
+2009,7,237,KAN,TE,Miami (OH),23.0,OConJa00,
+2009,7,240,ARI,RB,Pittsburgh,22.0,StepLa00,P0835
+2009,7,241,PIT,TE,Arkansas St.,22.0,JohnDa05,
+2009,7,243,WAS,WR,Nevada,24.0,MitcMa00,
+2009,7,248,SEA,TE,California,22.0,MorrCa00,
+2009,7,250,JAX,RB,Liberty,24.0,JennRa00,P0781
+2009,7,253,JAX,WR,Rutgers,22.0,UndeTi00,P0926
+2009,7,255,DET,TE,Maryland,24.0,GronDa00,
+2010,1,1,STL,QB,Oklahoma,22.0,BradSa00,P0786
+2010,1,9,BUF,RB,Clemson,23.0,SpilC.00,P0819
+2010,1,12,SDG,RB,Fresno St.,22.0,MathRy00,P0793
+2010,1,21,CIN,TE,Oklahoma,22.0,GresJe00,P0800
+2010,1,22,DEN,WR,Georgia Tech,22.0,ThomDe03,P0830
+2010,1,24,DAL,WR,Oklahoma St.,21.0,BryaDe01,P0791
+2010,1,25,DEN,QB,Florida,23.0,TeboTi00,P0808
+2010,1,30,DET,RB,California,21.0,BestJa00,P0785
+2010,2,36,KAN,WR,Mississippi,21.0,McClDe00,P0829
+2010,2,39,TAM,WR,Illinois,21.0,BennAr00,P0815
+2010,2,42,NWE,TE,Arizona,21.0,GronRo00,P0788
+2010,2,48,CAR,QB,Notre Dame,22.0,ClauJi00,P0831
+2010,2,51,MIN,RB,Stanford,23.0,GerhTo00,P0822
+2010,2,58,HOU,RB,Auburn,22.0,TateBe00,P0851
+2010,2,59,CLE,RB,Tennessee,23.0,HardMo00,
+2010,2,60,SEA,WR,Notre Dame,22.0,TateGo00,P0864
+2010,3,70,BAL,TE,Oregon,23.0,DickEd00,P0850
+2010,3,77,TEN,WR,USC,22.0,WillDa04,P0852
+2010,3,78,CAR,WR,LSU,23.0,LaFeBr00,P0810
+2010,3,82,PIT,WR,SMU,23.0,SandEm00,P0818
+2010,3,84,CIN,WR,Texas,24.0,ShipJo00,P0796
+2010,3,85,CLE,QB,Texas,24.0,McCoCo00,P0812
+2010,3,87,DEN,WR,Minnesota,23.0,DeckEr00,P0844
+2010,3,88,ARI,WR,The Citadel,22.0,RobeAn00,P0823
+2010,3,89,CAR,WR,Appalachian St.,22.0,EdwaAr00,
+2010,3,90,NWE,WR,Ohio,22.0,PricTa00,
+2010,3,93,KAN,TE,Iowa,23.0,MoeaTo00,P0801
+2010,3,95,NOR,TE,Miami (FL),23.0,GrahJi00,P0809
+2010,4,99,STL,WR,Cincinnati,23.0,GilyMa00,
+2010,4,101,TAM,WR,Syracuse,23.0,WillMi04,P0784
+2010,4,107,BUF,WR,Connecticut,22.0,EaslMa00,
+2010,4,108,OAK,WR,Clemson,23.0,FordJa01,P0798
+2010,4,112,NYJ,RB,USC,22.0,McKnJo00,
+2010,4,113,NWE,TE,Florida,20.0,HernAa00,P0792
+2010,4,114,BAL,TE,BYU,25.0,PittDe00,P0862
+2010,4,118,HOU,TE,Wisconsin,24.0,GrahGa00,P0933
+2010,4,122,PHI,QB,Northwestern,23.0,KafkMi00,
+2010,4,125,PHI,TE,Missouri State,23.0,HarbCl00,P1004
+2010,5,132,STL,TE,Illinois,22.0,HoomMi00,
+2010,5,139,NYJ,RB,Kentucky,23.0,ConnJo00,
+2010,5,154,GNB,TE,Penn St.,21.0,QuarAn00,P0996
+2010,5,155,ARI,QB,Fordham,22.0,SkelJo00,P0860
+2010,5,156,BAL,WR,Utah,23.0,ReedDa00,
+2010,5,159,PHI,WR,Florida,22.0,CoopRi00,P0942
+2010,5,162,IND,TE,Oklahoma,23.0,EldrBr00,
+2010,5,165,ATL,WR,Kansas,23.0,MeieKe00,
+2010,5,168,SDG,QB,Tennessee,23.0,CromJo00,
+2010,6,170,STL,TE,Houston,23.0,OnobFe00,
+2010,6,173,SFO,RB,Mississippi St.,22.0,DixoAn00,P1066
+2010,6,176,TEN,QB,Florida Atlantic,23.0,SmitRu01,
+2010,6,177,CLE,WR,South Florida,22.0,MitcCa00,
+2010,6,180,JAX,RB,Southern Illinois,23.0,KariDe00,
+2010,6,181,CHI,QB,Central Michigan,23.0,LeFeDa00,
+2010,6,182,SFO,TE,Pittsburgh,22.0,ByhaNa00,
+2010,6,185,SEA,TE,USC,22.0,McCoAn00,P0943
+2010,6,188,PIT,RB,Georgia Tech,21.0,DwyeJo00,P0918
+2010,6,191,CIN,WR,Kansas,21.0,BrisDe00,P0859
+2010,6,193,GNB,RB,Buffalo,24.0,StarJa00,P0856
+2010,6,195,PIT,WR,Central Michigan,22.0,BrowAn04,P0840
+2010,6,197,HOU,WR,LSU,24.0,HollTr00,
+2010,6,198,CAR,WR,Baylor,23.0,GettDa00,P0803
+2010,6,199,MIN,WR,Ala-Birmingham,23.0,WebbJo00,
+2010,6,204,CAR,QB,Cincinnati,24.0,PikeTo00,
+2010,6,206,SFO,WR,Arizona St.,22.0,WillKy01,P0883
+2010,7,209,BUF,QB,Troy,23.0,BrowLe00,
+2010,7,214,MIN,TE,Penn St.,23.0,ShulMi01,
+2010,7,219,WAS,WR,UCLA,22.0,AustTe00,
+2010,7,222,TEN,WR,Montana,23.0,MariMa00,
+2010,7,227,HOU,WR,Pittsburgh,22.0,DickDo00,
+2010,7,233,ARI,TE,Stanford,23.0,DrayJi00,
+2010,7,235,SDG,TE,Miami (FL),22.0,EppsDe00,
+2010,7,237,MIN,RB,Rutgers,23.0,DImpRy00,
+2010,7,239,NOR,QB,Oregon St.,24.0,CanfSe00,
+2010,7,245,SEA,TE,Kent St.,24.0,KonzJa00,
+2010,7,250,NWE,QB,Oklahoma St.,23.0,RobiZa00,
+2010,7,255,DET,WR,Weber St.,25.0,ToonTi00,
+2011,1,1,CAR,QB,Auburn,22.0,NewtCa00,P0836
+2011,1,4,CIN,WR,Georgia,23.0,GreeA.00,P0838
+2011,1,6,ATL,WR,Alabama,22.0,JoneJu02,P0841
+2011,1,8,TEN,QB,Washington,23.0,LockJa00,P0908
+2011,1,10,JAX,QB,Missouri,21.0,GabbBl00,P0855
+2011,1,12,MIN,QB,Florida St.,23.0,PondCh00,P0854
+2011,1,26,KAN,WR,Pittsburgh,22.0,BaldJo00,P0948
+2011,1,28,NOR,RB,Alabama,21.0,IngrMa01,P0865
+2011,2,35,CIN,QB,TCU,23.0,DaltAn00,P0839
+2011,2,36,SFO,QB,Nevada,23.0,KaepCo00,P0902
+2011,2,38,ARI,RB,Virginia Tech,21.0,WillRy00,
+2011,2,43,MIN,TE,Notre Dame,21.0,RudoKy00,P0880
+2011,2,44,DET,WR,Boise St.,22.0,YounTi00,P0846
+2011,2,47,STL,TE,Wisconsin,23.0,KendLa00,P0887
+2011,2,56,NWE,RB,California,22.0,VereSh00,P0936
+2011,2,57,DET,RB,Illinois,21.0,LeshMi00,P0900
+2011,2,58,BAL,WR,Maryland,22.0,SmitTo02,P0842
+2011,2,59,CLE,WR,North Carolina,22.0,LittGr00,P0848
+2011,2,62,MIA,RB,Kansas St.,23.0,ThomDa03,P0869
+2011,2,64,GNB,WR,Kentucky,21.0,CobbRa00,P0873
+2011,3,69,ARI,TE,Florida Atlantic,23.0,HousRo01,P0921
+2011,3,71,DAL,RB,Oklahoma,23.0,MurrDe00,P0847
+2011,3,73,NWE,RB,LSU,22.0,RidlSt00,P0895
+2011,3,74,NWE,QB,Arkansas,23.0,MallRy00,P1127
+2011,3,78,STL,WR,Boise St.,23.0,PettAu00,P0927
+2011,3,79,WAS,WR,Miami (FL),22.0,HankLe00,P0914
+2011,3,82,SDG,WR,San Diego St.,22.0,BrowVi00,P0885
+2011,3,83,NYG,WR,Troy,22.0,JernJe00,P0990
+2011,3,96,GNB,RB,Hawaii,23.0,GreeAl00,P0930
+2011,4,102,CLE,TE,USC,23.0,CameJo00,P0958
+2011,4,104,TAM,TE,Tennessee,23.0,StocLu00,
+2011,4,105,WAS,RB,Nebraska,22.0,HeluRo00,P0843
+2011,4,107,SEA,WR,Georgia,23.0,DurhKr00,P0986
+2011,4,111,MIA,WR,Abilene Christian,25.0,GateCl00,
+2011,4,112,STL,WR,Hawaii,23.0,SalaGr00,
+2011,4,114,JAX,WR,Mount Union,23.0,ShorCe00,P0896
+2011,4,115,SFO,RB,Oklahoma St.,22.0,HuntKe00,P0863
+2011,4,119,IND,RB,Syracuse,24.0,CartDe01,
+2011,4,123,BAL,WR,Indiana,21.0,DossTa00,
+2011,4,124,CLE,RB,Stanford,22.0,MareOw00,
+2011,4,125,OAK,RB,Eastern Washington,23.0,JoneTa00,
+2011,4,126,NYJ,RB,Louisville,22.0,PoweBi00,P0919
+2011,4,129,DEN,TE,Portland St.,23.0,ThomJu00,P0957
+2011,4,130,TEN,RB,Clemson,21.0,HarpJa01,
+2011,5,132,CAR,WR,Hawaii,23.0,PilaKe00,
+2011,5,133,BUF,RB,North Carolina,23.0,WhitJo01,
+2011,5,135,KAN,QB,Iowa,24.0,StanRi00,
+2011,5,136,ARI,RB,Connecticut,22.0,SherAn00,
+2011,5,141,GNB,TE,Arkansas,22.0,WillD.00,
+2011,5,145,ATL,RB,Oregon St.,21.0,RodgJa00,P0877
+2011,5,148,OAK,WR,Tennessee,22.0,MoorDe02,P0849
+2011,5,149,PHI,RB,Pittsburgh,20.0,LewiDi00,P1097
+2011,5,152,HOU,QB,North Carolina,24.0,YateT.00,
+2011,5,153,NYJ,WR,TCU,22.0,KerlJe00,P0881
+2011,5,155,WAS,WR,Nebraska,22.0,PaulNi00,P1045
+2011,5,159,NWE,TE,Marshall,23.0,SmitLe00,
+2011,5,160,CHI,QB,Idaho,23.0,EndeNa00,
+2011,6,167,CIN,WR,Stanford,22.0,WhalRy00,
+2011,6,174,MIA,TE,Tulsa,22.0,ClayCh00,P0888
+2011,6,176,DAL,WR,East Carolina,23.0,HarrDw00,P1102
+2011,6,177,WAS,RB,Penn St.,23.0,RoysEv00,
+2011,6,178,WAS,WR,SMU,22.0,RobiAl00,P0951
+2011,6,180,BAL,QB,Virginia Tech,22.0,TaylTy00,P1077
+2011,6,181,OAK,TE,Miami (FL),24.0,GordRi00,
+2011,6,182,SFO,WR,USC,23.0,JohnRo05,
+2011,6,183,SDG,RB,Connecticut,21.0,TodmJo00,P1001
+2011,6,187,TAM,RB,USC,23.0,BradAl00,
+2011,7,204,DEN,TE,Nevada,23.0,GreeVi00,
+2011,7,208,NYJ,QB,Alabama,23.0,McElGr00,
+2011,7,218,GNB,TE,North Carolina,23.0,TaylRy00,
+2011,7,220,DAL,RB,Georgia,23.0,ChapSh00,
+2011,7,221,NYG,RB,Maryland,23.0,ScotDa01,
+2011,7,223,KAN,RB,Yale,22.0,BannSh00,
+2011,7,225,BAL,RB,Georgia Tech,23.0,AlleAn01,
+2011,7,227,NYJ,WR,Colorado,23.0,McKnSc00,
+2011,7,232,PIT,RB,Texas Tech,23.0,BatcBa00,
+2011,7,236,MIN,WR,Long Beach CC,21.0,BurtSt00,
+2011,7,238,TAM,TE,Idaho,24.0,HardDa00,
+2011,7,240,PHI,RB,USC,23.0,HaviSt00,
+2011,7,241,OAK,WR,USC,23.0,AusbDa00,
+2011,7,246,CIN,RB,Baylor,23.0,FinlJa00,
+2011,7,249,ARI,WR,San Diego St.,25.0,SampDe00,
+2012,1,1,IND,QB,Stanford,22.0,LuckAn00,P0892
+2012,1,2,WAS,QB,Baylor,22.0,GrifRo01,P0889
+2012,1,3,CLE,RB,Alabama,22.0,RichTr00,P0893
+2012,1,5,JAX,WR,Oklahoma St.,22.0,BlacJu00,P0898
+2012,1,8,MIA,QB,Texas A&M,24.0,TannRy00,P0901
+2012,1,13,ARI,WR,Notre Dame,22.0,FloyMi00,P0913
+2012,1,20,TEN,WR,Baylor,22.0,WrigKe01,P0906
+2012,1,22,CLE,QB,Oklahoma St.,28.0,WeedBr00,P0903
+2012,1,30,SFO,WR,Illinois,22.0,JenkA.00,
+2012,1,31,TAM,RB,Boise St.,23.0,MartDo00,P0890
+2012,1,32,NYG,RB,Virginia Tech,21.0,WilsDa01,P0929
+2012,2,33,STL,WR,Appalachian St.,23.0,QuicBr00,P1054
+2012,2,34,IND,TE,Stanford,23.0,FleeCo00,P0939
+2012,2,43,NYJ,WR,Georgia Tech,21.0,HillSt00,P0945
+2012,2,45,CHI,WR,South Carolina,22.0,JeffAl00,P0928
+2012,2,50,STL,RB,Cincinnati,22.0,PeadIs00,
+2012,2,54,DET,WR,Oklahoma,24.0,BroyRy00,P0944
+2012,2,57,DEN,QB,Arizona St.,21.0,OsweBr00,P1099
+2012,2,61,SFO,RB,Oregon,22.0,JameLa00,
+2012,2,63,NYG,WR,LSU,21.0,RandRu00,P0938
+2012,3,64,IND,TE,Clemson,22.0,AlleDw00,P0911
+2012,3,67,DEN,RB,San Diego St.,20.0,HillRo00,P1038
+2012,3,68,HOU,WR,Ohio St.,22.0,PoseDe00,
+2012,3,69,BUF,WR,North Carolina St.,23.0,GrahT.00,P0937
+2012,3,75,SEA,QB,Wisconsin,23.0,WilsRu00,P0891
+2012,3,78,MIA,TE,Missouri,22.0,EgneMi00,
+2012,3,83,CIN,WR,Rutgers,23.0,SanuMo00,P0946
+2012,3,84,BAL,RB,Temple,21.0,PierBe00,P0934
+2012,3,88,PHI,QB,Arizona,23.0,FoleNi00,P0922
+2012,3,92,IND,WR,Florida International,22.0,HiltT.00,P0897
+2012,4,96,STL,WR,Wake Forest,22.0,GiveCh00,P0907
+2012,4,97,MIA,RB,Miami (FL),21.0,MillLa01,P0974
+2012,4,100,CLE,WR,Miami (FL),22.0,BenjTr00,P0935
+2012,4,102,WAS,QB,Michigan St.,24.0,CousKi00,P1047
+2012,4,104,CAR,WR,Arkansas,22.0,AdamJo01,
+2012,4,106,SEA,RB,Utah St.,22.0,TurbRo00,P0932
+2012,4,107,KAN,WR,Fresno St.,24.0,WyliDe00,
+2012,4,110,SDG,TE,Louisiana,22.0,GreeLa00,P0998
+2012,4,111,CHI,TE,Temple,23.0,RodrEv00,
+2012,4,116,CIN,TE,Georgia,21.0,CharOr00,
+2012,4,118,MIN,WR,Arkansas,22.0,WrigJa02,P0940
+2012,4,121,HOU,WR,Michigan St.,22.0,MartKe01,P1003
+2012,4,122,NOR,WR,Wisconsin,23.0,ToonNi00,
+2012,4,127,NYG,TE,Cincinnati,23.0,RobiAd00,
+2012,4,128,MIN,RB,USC,23.0,ElliRh00,P1251
+2012,4,134,MIN,WR,Arkansas,22.0,ChilGr00,
+2012,5,145,TEN,TE,SMU,22.0,ThomTa00,
+2012,5,152,DAL,WR,Virginia Tech,24.0,CoalDa00,
+2012,5,157,ATL,RB,Wisconsin,22.0,EwinBr00,
+2012,5,159,PIT,RB,Florida,24.0,RainCh00,
+2012,5,166,CIN,WR,California,22.0,JoneMa02,P0960
+2012,5,168,OAK,WR,Arizona,22.0,CrinJu00,
+2012,5,170,IND,RB,Mississippi St.,22.0,BallVi00,P0909
+2012,6,173,WAS,RB,Florida Atlantic,23.0,MorrAl00,P0894
+2012,6,182,KAN,RB,Texas A&M,22.0,GrayCy00,
+2012,6,183,MIA,WR,Michigan St.,23.0,CunnB.00,
+2012,6,185,ARI,QB,San Diego St.,23.0,LindRy00,
+2012,6,186,DAL,TE,Oklahoma,23.0,HannJa00,
+2012,6,191,CIN,RB,Ohio St.,23.0,HerrDa00,P1058
+2012,6,194,PHI,WR,Iowa,23.0,McNuMa00,
+2012,6,198,BAL,WR,Miami (FL),22.0,StreTo00,
+2012,6,202,NYJ,RB,Baylor,23.0,GanaTe00,
+2012,6,206,IND,WR,Ohio,23.0,BrazLa00,
+2012,7,212,TAM,RB,Utah St.,24.0,SmitMi01,
+2012,7,227,MIA,WR,Nevada,22.0,MattRi00,P0985
+2012,7,229,PHI,RB,Kansas St.,21.0,BrowBr02,P0920
+2012,7,231,PIT,WR,Colorado,23.0,ClemTo00,
+2012,7,233,TAM,TE,Northwestern,23.0,DunsDr00,
+2012,7,235,NWE,WR,Northwestern,23.0,EberJe00,
+2012,7,238,KAN,WR,Michigan,23.0,HemiJu00,
+2012,7,240,PIT,TE,Oregon,23.0,PaulDa01,
+2012,7,243,GNB,QB,Chattanooga,23.0,ColeB.00,
+2012,7,244,NYJ,WR,Western Michigan,24.0,WhitJo02,
+2012,7,247,CLE,TE,Alabama,23.0,SmelBr00,
+2012,7,250,SDG,RB,Michigan St.,21.0,BakeEd01,
+2012,7,252,STL,RB,Abilene Christian,22.0,RichDa00,P0923
+2012,7,253,IND,QB,Northern Illinois,24.0,HarnCh00,
+2013,1,8,STL,WR,West Virginia,23.0,AustTa00,P0972
+2013,1,16,BUF,QB,Florida St.,23.0,ManuEJ00,P0971
+2013,1,21,CIN,TE,Notre Dame,22.0,EifeTy00,P0987
+2013,1,27,HOU,WR,Clemson,21.0,HopkDe00,P0968
+2013,1,29,MIN,WR,Tennessee,22.0,PattCo00,P0963
+2013,2,34,TEN,WR,Tennessee,22.0,HuntJu00,P0995
+2013,2,35,PHI,TE,Stanford,22.0,ErtzZa00,P0981
+2013,2,37,CIN,RB,North Carolina,21.0,BernGi00,P0954
+2013,2,39,NYJ,QB,West Virginia,22.0,SmitGe00,P0959
+2013,2,41,BUF,WR,USC,21.0,WoodRo02,P0975
+2013,2,47,DAL,TE,San Diego St.,22.0,EscoGa00,
+2013,2,48,PIT,RB,Michigan St.,21.0,BellLe00,P0956
+2013,2,55,SFO,TE,Rice,23.0,McDoVa00,P1118
+2013,2,58,DEN,RB,Wisconsin,22.0,BallMo00,P0980
+2013,2,59,NWE,WR,Marshall,22.0,DobsAa00,P0977
+2013,2,61,GNB,RB,Alabama,23.0,LacyEd00,P0953
+2013,2,62,SEA,RB,Texas A&M,22.0,MichCh00,P1151
+2013,3,63,KAN,TE,Cincinnati,23.0,KelcTr00,P1016
+2013,3,73,TAM,QB,North Carolina St.,23.0,GlenMi00,P0964
+2013,3,74,DAL,WR,Baylor,23.0,WillTe01,P0965
+2013,3,76,SDG,WR,California,21.0,AlleKe00,P0955
+2013,3,78,BUF,WR,Texas,22.0,GoodMa00,P1005
+2013,3,79,PIT,WR,Oregon St.,22.0,WheaMa00,P1028
+2013,3,85,WAS,TE,Florida,23.0,ReedJo02,P0976
+2013,3,92,STL,WR,West Virginia,22.0,BailSt01,P1050
+2013,3,96,KAN,RB,Arkansas,21.0,DaviKn00,P1000
+2013,4,98,PHI,QB,USC,22.0,BarkMa00,P1183
+2013,4,101,JAX,WR,South Carolina,21.0,SandAc00,P0978
+2013,4,102,NWE,WR,TCU,22.0,BoycJo00,
+2013,4,106,MIA,TE,Michigan St.,22.0,SimsDi00,P1070
+2013,4,110,NYG,QB,Syracuse,23.0,NassRy00,
+2013,4,112,OAK,QB,Arkansas,24.0,WilsTy00,
+2013,4,115,PIT,QB,Oklahoma,24.0,JoneLa02,
+2013,4,123,SEA,WR,Kansas St.,23.0,HarpCh00,
+2013,4,125,GNB,RB,UCLA,23.0,FranJo01,
+2013,4,128,SFO,WR,Louisiana Tech,23.0,PattQu00,P1123
+2013,4,130,BAL,RB,Harvard,22.0,JuszKy00,P1110
+2013,4,131,SFO,RB,South Carolina,21.0,LattMa00,
+2013,4,133,ATL,TE,Stanford,22.0,ToilLe00,P1068
+2013,5,135,JAX,WR,Michigan,22.0,RobiDe00,P1033
+2013,5,140,ARI,RB,Stanford,22.0,TaylSt00,P1067
+2013,5,144,NOR,WR,Oklahoma,21.0,StilKe00,P0973
+2013,5,151,DAL,RB,Oklahoma St.,21.0,RandJo01,P1125
+2013,5,154,WAS,RB,Florida St.,22.0,ThomCh03,P1114
+2013,5,158,SEA,TE,Rice,23.0,WillLu00,P1056
+2013,5,160,STL,RB,Vanderbilt,22.0,StacZa00,P0961
+2013,5,161,DEN,WR,Georgia,23.0,KingTa00,P1250
+2013,5,164,MIA,RB,Florida,22.0,GillMi00,P1158
+2013,6,171,DET,WR,Virginia Tech,23.0,FullCo00,
+2013,6,172,OAK,TE,Colorado,22.0,KasaNi00,
+2013,6,174,ARI,WR,Texas A&M,22.0,SwopRy00,
+2013,6,181,OAK,RB,Central Florida,23.0,MurrLa00,P1052
+2013,6,182,CAR,RB,Oregon,24.0,BarnKe00,
+2013,6,184,OAK,TE,Tennessee,22.0,RiveMy00,P0983
+2013,6,186,PIT,WR,Oklahoma,22.0,BrowJu00,
+2013,6,187,ARI,RB,Clemson,24.0,ElliAn00,P0962
+2013,6,189,TAM,RB,Miami (FL),22.0,JameMi00,
+2013,6,190,CIN,RB,Nebraska,23.0,BurkRe00,P1180
+2013,6,194,SEA,RB,LSU,21.0,WareSp00,P1117
+2013,6,195,HOU,WR,Jacksonville St.,22.0,BonnAl00,
+2013,6,197,CIN,WR,Arkansas,22.0,HamiCo00,
+2013,6,199,DET,RB,Notre Dame,22.0,RiddTh00,P1043
+2013,6,201,HOU,TE,Connecticut,23.0,GrifRy00,P1164
+2013,6,204,KAN,FB,Kansas St.,23.0,WilsBr00,
+2013,7,209,OAK,WR,San Diego St.,23.0,ButlBr00,P1074
+2013,7,211,DET,TE,Alabama,22.0,WillMi06,
+2013,7,215,NYJ,RB,Wake Forest,22.0,BohaTo00,
+2013,7,216,GNB,WR,Grand Valley St.,24.0,JohnCh08,P1046
+2013,7,219,ARI,TE,Rutgers,24.0,JeffD.00,
+2013,7,221,SDG,QB,Southern Utah,25.0,SoreBr00,
+2013,7,222,BUF,TE,Arkansas,23.0,GragCh00,
+2013,7,224,GNB,WR,Maryland,23.0,DorsKe01,
+2013,7,228,WAS,RB,Rutgers,21.0,JamiJa00,
+2013,7,230,IND,RB,Utah St.,22.0,WillKe05,P1241
+2013,7,234,DEN,QB,Miami (OH),23.0,DyseZa00,
+2013,7,236,CHI,WR,Washington St.,20.0,WilsMa02,P1119
+2013,7,237,SFO,QB,South Florida,24.0,DaniB.00,
+2013,7,238,BAL,WR,Elon,23.0,MellAa00,
+2013,7,249,ATL,QB,Duke,23.0,RenfSe00,
+2013,7,253,NYG,RB,Massachusetts,24.0,CoxxMi00,
+2013,7,254,IND,TE,South Carolina,22.0,CunnJu00,
+2014,1,3,JAX,QB,Central Florida,22.0,BortBl00,P1019
+2014,1,4,BUF,WR,Clemson,21.0,WatkSa00,P1013
+2014,1,7,TAM,WR,Texas A&M,21.0,EvanMi00,P1008
+2014,1,10,DET,TE,North Carolina,21.0,EbroEr00,P1093
+2014,1,12,NYG,WR,LSU,21.0,BeckOd00,P1007
+2014,1,20,NOR,WR,Oregon St.,20.0,CookBr00,P1026
+2014,1,22,CLE,QB,Texas A&M,21.0,ManzJo00,P1111
+2014,1,28,CAR,WR,Florida St.,23.0,BenjKe00,P1009
+2014,1,32,MIN,QB,Louisville,21.0,BridTe00,P1018
+2014,2,36,OAK,QB,Fresno St.,23.0,CarrDe02,P1015
+2014,2,38,TAM,TE,Washington,21.0,SefeAu00,P1121
+2014,2,39,JAX,WR,USC,22.0,LeexMa00,P1051
+2014,2,42,PHI,WR,Vanderbilt,22.0,MattJo00,P1012
+2014,2,45,SEA,WR,Colorado,22.0,RichPa01,P1071
+2014,2,49,NYJ,TE,Texas Tech,22.0,AmarJa00,P1053
+2014,2,52,ARI,TE,Notre Dame,21.0,NiklTr00,
+2014,2,53,GNB,WR,Fresno St.,21.0,AdamDa01,P1039
+2014,2,54,TEN,RB,Washington,21.0,SankBi00,P1041
+2014,2,55,CIN,RB,LSU,21.0,HillJe01,P1011
+2014,2,56,DEN,WR,Indiana,21.0,LatiCo00,P1248
+2014,2,57,SFO,RB,Ohio St.,23.0,HydeCa00,P1059
+2014,2,61,JAX,WR,Penn St.,21.0,RobiAl02,P1032
+2014,2,62,NWE,QB,Eastern Illinois,22.0,GaroJi00,P1230
+2014,2,63,MIA,WR,LSU,21.0,LandJa00,P1017
+2014,3,65,HOU,TE,Iowa,22.0,FiedC.00,P1152
+2014,3,69,TAM,RB,West Virginia,23.0,SimsCh00,P1075
+2014,3,75,STL,RB,Auburn,21.0,MasoTr00,P1027
+2014,3,86,PHI,WR,Oregon,22.0,HuffJo00,P1122
+2014,3,90,IND,WR,Mississippi,21.0,MoncDo00,P1042
+2014,3,91,ARI,WR,Pittsburg St.,24.0,BrowJo02,P1023
+2014,3,94,CLE,RB,Towson,23.0,WestTe00,P1034
+2014,3,96,MIN,RB,Georgia Southern,22.0,McKiJe00,P1044
+2014,3,97,PIT,WR,Kent St.,23.0,ArchDr00,
+2014,3,98,GNB,TE,California,22.0,RodgRi00,P1086
+2014,3,99,BAL,TE,Colorado St.,22.0,GillCr00,P1109
+2014,4,103,ATL,RB,Florida St.,22.0,FreeDe00,P1048
+2014,4,104,NYJ,WR,Oklahoma,21.0,SaunJa00,
+2014,4,106,SFO,WR,South Carolina,23.0,ElliBr00,P1237
+2014,4,113,NYG,RB,Boston Col.,22.0,WillAn00,P1025
+2014,4,115,NYJ,WR,UCLA,23.0,EvanSh00,
+2014,4,117,CHI,RB,Arizona,21.0,CareKa00,
+2014,4,118,PIT,WR,Clemson,22.0,BryaMa00,P1029
+2014,4,120,ARI,QB,Virginia Tech,23.0,ThomLo00,P1389
+2014,4,123,SEA,WR,Alabama,24.0,NorwKe00,
+2014,4,124,KAN,RB,Oregon,21.0,ThomDe05,P1072
+2014,4,130,NWE,RB,Wisconsin,22.0,WhitJa02,P1096
+2014,4,135,HOU,QB,Pittsburgh,24.0,SavaTo00,
+2014,4,138,BAL,RB,Coastal Carolina,22.0,TaliLo00,P1064
+2014,5,142,WAS,WR,Tulane,23.0,GranRy01,P1132
+2014,5,146,DAL,WR,Pittsburgh,23.0,StreDe00,
+2014,5,155,MIA,TE,Georgia,24.0,LyncAr00,
+2014,5,163,KAN,QB,Georgia,23.0,MurrAa00,
+2014,5,164,CIN,QB,Alabama,23.0,McCaA.00,
+2014,5,176,GNB,WR,Wisconsin,23.0,AbbrJa00,
+2014,6,178,TEN,QB,LSU,23.0,MettZa00,P1063
+2014,6,181,HOU,RB,LSU,23.0,BlueAl00,P1040
+2014,6,183,CHI,QB,San Jose St.,23.0,FaleDa00,
+2014,6,185,TAM,WR,Wyoming,22.0,HerrRo00,
+2014,6,186,WAS,RB,Baylor,23.0,SeasLa00,
+2014,6,189,DET,WR,Notre Dame,22.0,JoneT.00,P1234
+2014,6,190,MIA,WR,Coastal Carolina,22.0,HazeMa01,
+2014,6,194,BAL,QB,Ball St.,23.0,WennKe00,
+2014,6,196,ARI,WR,Murray St.,22.0,PoweWa00,
+2014,6,201,SDG,RB,Arizona St.,23.0,GricMa00,
+2014,6,204,CAR,RB,Stanford,23.0,GaffTy00,
+2014,6,209,NYJ,WR,Nebraska,22.0,EnunQu00,P1146
+2014,6,211,HOU,FB,Auburn,22.0,ProsJa00,
+2014,6,213,NYJ,QB,Clemson,23.0,BoydTa00,
+2014,6,214,STL,QB,SMU,23.0,GilbGa01,
+2014,7,217,WAS,TE,Indiana,23.0,BolsTe00,
+2014,7,218,BAL,WR,Wake Forest,23.0,CampMi02,
+2014,7,222,JAX,RB,Central Florida,22.0,JohnSt03,
+2014,7,227,SEA,RB,Arkansas,25.0,SmalKi00,
+2014,7,230,PIT,TE,Massachusetts,24.0,BlanRo01,
+2014,7,236,GNB,WR,Saginaw Valley St.,23.0,JaniJe00,
+2014,7,239,CIN,WR,LSU,22.0,WrigJa03,
+2014,7,240,SDG,WR,Baylor,23.0,ReesTe00,
+2014,7,244,NWE,WR,Michigan,24.0,GallJe00,
+2014,7,245,SFO,FB,Oklahoma,23.0,MillTr00,
+2015,1,1,TAM,QB,Florida St.,21.0,WinsJa00,P1076
+2015,1,2,TEN,QB,Oregon,21.0,MariMa01,P1081
+2015,1,4,OAK,WR,Alabama,21.0,CoopAm00,P1080
+2015,1,7,CHI,WR,West Virginia,23.0,WhitKe00,
+2015,1,10,STL,RB,Georgia,21.0,GurlTo01,P1082
+2015,1,14,MIA,WR,Louisville,22.0,ParkDe01,P1113
+2015,1,15,SDG,RB,Wisconsin,22.0,GordMe00,P1105
+2015,1,20,PHI,WR,USC,22.0,AghoNe00,P1174
+2015,1,26,BAL,WR,Central Florida,21.0,PerrBr02,P1166
+2015,1,29,IND,WR,Miami (FL),22.0,DorsPh00,P1167
+2015,2,36,JAX,RB,Alabama,21.0,YeldT.00,P1087
+2015,2,37,NYJ,WR,Ohio St.,23.0,SmitDe04,
+2015,2,40,TEN,WR,Oklahoma,22.0,GreeDo00,P1101
+2015,2,41,CAR,WR,Michigan,21.0,FuncDe00,P1106
+2015,2,54,DET,RB,Nebraska,22.0,AbduAm00,P1098
+2015,2,55,BAL,TE,Minnesota,21.0,WillMa04,P1131
+2015,3,68,OAK,TE,Miami (FL),23.0,WalfCl00,P1120
+2015,3,69,SEA,WR,Kansas St.,22.0,LockTy00,P1084
+2015,3,70,HOU,WR,Arizona St.,21.0,StroJa01,
+2015,3,73,ATL,RB,Indiana,22.0,ColeTe01,P1143
+2015,3,75,NOR,QB,Colorado St.,24.0,GrayGa00,
+2015,3,76,KAN,WR,Georgia,22.0,ConlCh00,P1168
+2015,3,77,CLE,RB,Miami (FL),21.0,JohnDu00,P1085
+2015,3,85,CIN,TE,Rutgers,22.0,KrofTy00,P1211
+2015,3,86,ARI,RB,Northern Iowa,23.0,JohnDa08,P1079
+2015,3,87,PIT,WR,Auburn,22.0,CoatSa00,P1177
+2015,3,89,STL,QB,Oregon St.,23.0,MannSe00,
+2015,3,92,DEN,TE,Ohio St.,22.0,HeueJe00,P1306
+2015,3,94,GNB,WR,Stanford,22.0,MontTy01,P1149
+2015,3,95,WAS,RB,Florida,22.0,JoneMa04,P1100
+2015,4,103,NYJ,QB,Baylor,24.0,PettBr01,
+2015,4,105,WAS,WR,Duke,22.0,CrowJa00,P1091
+2015,4,106,CHI,RB,Michigan St.,23.0,LangJe00,P1089
+2015,4,107,ATL,WR,East Carolina,23.0,HardJu00,P1185
+2015,4,108,TEN,FB,Alabama,25.0,FowlJa00,
+2015,4,117,SFO,TE,Oklahoma,24.0,BellBl00,
+2015,4,123,CLE,WR,Washington St.,24.0,MaylVi00,
+2015,4,125,BAL,RB,USC,24.0,AlleJa01,P1090
+2015,4,126,SFO,RB,South Carolina,22.0,DaviMi01,P1270
+2015,4,132,SFO,WR,Georgia Tech,23.0,SmelDe00,
+2015,5,138,TEN,RB,Minnesota,22.0,CobbDa00,
+2015,5,139,JAX,WR,Florida St.,22.0,GreeRa00,
+2015,5,143,MIN,TE,Southern Illinois,23.0,PruiMy00,
+2015,5,146,MIN,WR,Maryland,21.0,DiggSt00,P1088
+2015,5,147,GNB,QB,UCLA,22.0,HundBr00,P1210
+2015,5,149,MIA,RB,Boise St.,22.0,AjayJa00,P1139
+2015,5,155,BUF,RB,Florida St.,22.0,WillKa01,P1095
+2015,5,156,MIA,WR,Michigan St.,23.0,LippTo00,
+2015,5,157,CIN,TE,Auburn,22.0,UzomC.00,P1282
+2015,5,159,ARI,WR,Ala-Birmingham,23.0,NelsJJ00,P1150
+2015,5,160,PIT,TE,Penn St.,21.0,JameJe00,P1173
+2015,5,162,TAM,WR,Nebraska,23.0,BellKe02,
+2015,5,168,DET,FB,Rutgers,23.0,BurtMi00,
+2015,5,171,BAL,TE,Delaware,22.0,BoylNi00,P1362
+2015,5,173,KAN,TE,Illinois St.,23.0,O'ShJa00,
+2015,5,174,CAR,RB,Auburn,25.0,ArtiCa00,
+2015,5,175,HOU,WR,Michigan St.,23.0,MumpKe00,
+2015,6,184,TAM,WR,Utah,23.0,ClayKa00,
+2015,6,186,NYG,WR,Connecticut,23.0,DaviGe00,
+2015,6,187,WAS,WR,Ohio St.,22.0,SpenEv00,
+2015,6,194,BUF,TE,Florida St.,23.0,OLeaNi00,P1246
+2015,6,195,CLE,TE,Mississippi St.,23.0,JohnMa06,
+2015,6,198,CLE,TE,USC,23.0,TelfRa00,
+2015,6,201,STL,WR,Missouri,,SassBu00,
+2015,6,202,NWE,TE,Arkansas,23.0,DerbA.00,
+2015,6,204,BAL,WR,Georgia Tech,22.0,WallDa01,P1321
+2015,6,205,IND,RB,Mississippi St.,23.0,RobiJo02,
+2015,6,206,GNB,FB,Oklahoma,22.0,RipkAa00,
+2015,6,213,GNB,TE,Ala-Birmingham,22.0,BackKe00,
+2015,7,220,JAX,WR,Monmouth,23.0,SterNe00,
+2015,7,221,OAK,WR,Florida,,DeboAn00,
+2015,7,229,JAX,TE,Notre Dame,22.0,KoyaBe00,
+2015,7,230,NOR,RB,Missouri,23.0,MurpMa03,
+2015,7,231,TAM,FB,Hawaii,24.0,IoseJo00,
+2015,7,233,KAN,WR,Northern Illinois,23.0,BrowDa03,
+2015,7,234,BUF,WR,Central Arkansas,22.0,LewiDe02,
+2015,7,235,HOU,RB,LSU,23.0,HillKe01,
+2015,7,238,CIN,WR,West Virginia,23.0,AlfoMa00,
+2015,7,245,TEN,WR,William & Mary,22.0,McBrTr00,
+2015,7,246,DAL,TE,Texas,21.0,SwaiGe00,P1483
+2015,7,250,DEN,QB,Northwestern,23.0,SiemTr00,P1142
+2015,7,254,SFO,TE,South Carolina,22.0,AndeRo01,
+2015,7,256,ARI,TE,Louisville,24.0,ChriGe00,
+2016,1,1,LAR,QB,California,21.0,GoffJa00,P1193
+2016,1,2,PHI,QB,North Dakota St.,23.0,WentCa00,P1140
+2016,1,4,DAL,RB,Ohio St.,21.0,ElliEz00,P1133
+2016,1,15,CLE,WR,Baylor,22.0,ColeCo00,P1171
+2016,1,21,HOU,WR,Notre Dame,22.0,FullWi01,P1156
+2016,1,22,WAS,WR,TCU,23.0,DoctJo00,P1212
+2016,1,23,MIN,WR,Mississippi,21.0,TreaLa00,P1305
+2016,1,26,DEN,QB,Memphis,22.0,LyncPa00,
+2016,2,35,SDG,TE,Arkansas,21.0,HenrHu00,P1155
+2016,2,40,NYG,WR,Oklahoma,23.0,ShepSt00,P1144
+2016,2,45,TEN,RB,Alabama,22.0,HenrDe00,P1162
+2016,2,47,NOR,WR,Ohio St.,23.0,ThomMi05,P1135
+2016,2,51,NYJ,QB,Penn St.,21.0,HackCh01,
+2016,2,55,CIN,WR,Pittsburgh,21.0,BoydTy00,P1159
+2016,3,73,MIA,RB,Alabama,22.0,DrakKe00,P1205
+2016,3,81,ATL,TE,Stanford,21.0,HoopAu00,P1186
+2016,3,85,HOU,WR,Ohio St.,23.0,MillBr03,
+2016,3,86,MIA,WR,Rutgers,22.0,CarrLe00,
+2016,3,90,SEA,RB,Notre Dame,22.0,ProsC.00,P1187
+2016,3,91,NWE,QB,North Carolina St.,23.0,BrisJa00,P1196
+2016,3,93,CLE,QB,USC,23.0,KessCo00,P1178
+2016,3,94,SEA,TE,Ohio St.,23.0,VannNi00,P1303
+2016,4,100,OAK,QB,Michigan St.,23.0,CookCo00,
+2016,4,107,BAL,WR,Cincinnati,23.0,MoorCh00,P1243
+2016,4,110,LAR,TE,Western Kentucky,23.0,HigbTy00,P1249
+2016,4,112,NWE,WR,Georgia,24.0,MitcMa01,P1169
+2016,4,114,CLE,WR,Auburn,22.0,LouiRi00,P1247
+2016,4,117,LAR,WR,South Carolina,21.0,CoopPh00,
+2016,4,119,HOU,RB,San Jose St.,22.0,ErviTy00,
+2016,4,126,KAN,WR,Florida,21.0,RobiDe01,P1301
+2016,4,134,BAL,RB,Louisiana Tech,22.0,DixoKe00,P1165
+2016,4,135,DAL,QB,Mississippi St.,23.0,PresDa01,P1134
+2016,4,136,DEN,RB,Utah,24.0,BookDe00,P1148
+2016,4,138,CLE,TE,Princeton,23.0,DevaSe00,P1235
+2016,4,139,BUF,QB,Ohio St.,23.0,JoneCa01,
+2016,5,140,TEN,WR,Massachusetts,21.0,SharTa00,P1163
+2016,5,143,OAK,RB,Texas Tech,23.0,WashDe00,P1175
+2016,5,149,NYG,RB,UCLA,21.0,PerkPa00,P1179
+2016,5,150,CHI,RB,Indiana,21.0,HowaJo00,P1136
+2016,5,153,PHI,RB,West Virginia,22.0,SmalWe00,P1276
+2016,5,154,CLE,WR,UCLA,23.0,PaytJo00,
+2016,5,156,BUF,RB,Arkansas,22.0,WillJo07,
+2016,5,162,KAN,QB,Stanford,23.0,HogaKe00,
+2016,5,163,GNB,WR,California,23.0,DaviTr03,
+2016,5,165,KAN,WR,West Alabama,22.0,HillTy00,P1137
+2016,5,171,SEA,RB,Arkansas,22.0,CollAl00,P1201
+2016,5,172,CLE,WR,Colorado St.,21.0,HiggRa00,P1240
+2016,6,176,DEN,FB,Nebraska,23.0,JanoAn00,
+2016,6,177,LAR,TE,South Carolina St.,23.0,HemiTe00,
+2016,6,180,MIN,WR,,22.0,BoehMo00,
+2016,6,182,BAL,RB,Navy,22.0,ReynKe00,
+2016,6,184,NYG,TE,South Carolina,23.0,AdamJe01,
+2016,6,186,MIA,WR,Texas Tech,23.0,GranJa00,P1304
+2016,6,187,WAS,QB,Indiana,22.0,SudfNa00,
+2016,6,188,MIN,TE,Texas-San Antonio,23.0,MorgDa01,
+2016,6,191,DET,QB,Michigan,23.0,RudoJa00,
+2016,6,192,BUF,WR,TCU,22.0,ListKo00,
+2016,6,197,TAM,FB,Northwestern,22.0,VitaDa00,
+2016,6,198,SDG,FB,Wisconsin,23.0,WattDe00,
+2016,6,199,CIN,WR,Mississippi,22.0,CoreCo00,
+2016,6,201,JAX,QB,Arkansas,24.0,AlleBr00,
+2016,6,206,LAR,WR,Southern Miss,22.0,ThomMi04,
+2016,6,207,SFO,QB,Louisiana Tech,23.0,DrisJe00,P1296
+2016,6,211,SFO,RB,Florida,22.0,TaylKe01,
+2016,6,213,SFO,WR,Michigan St.,22.0,BurbAa00,
+2016,6,216,DAL,RB,Eastern Michigan,22.0,JackDa01,
+2016,6,217,DAL,TE,Baylor,22.0,GathRi00,
+2016,7,223,MIA,QB,Western Kentucky,24.0,DougBr00,
+2016,7,225,NWE,WR,Arizona St.,23.0,LuciDe00,
+2016,7,229,PIT,WR,Houston,22.0,AyerDe00,
+2016,7,230,CHI,WR,Western Michigan,22.0,BravDa00,
+2016,7,231,MIA,TE,UCLA,21.0,DuarTh00,
+2016,7,236,DET,RB,Washington,22.0,WashDw00,
+2016,7,237,NOR,RB,California,23.0,LascDa00,
+2016,7,238,ATL,WR,UCLA,22.0,FullDe00,
+2016,7,241,NYJ,WR,Clemson,23.0,PeakCh00,
+2016,7,242,WAS,RB,Georgia,22.0,MarsKe00,
+2016,7,243,SEA,WR,California,22.0,LawlKe00,
+2016,7,247,SEA,RB,Clemson,23.0,BrooZa00,
+2016,7,252,CAR,TE,Montana St.,23.0,SandBe00,
+2017,1,2,CHI,QB,North Carolina,23.0,TrubMi00,P1208
+2017,1,4,JAX,RB,LSU,22.0,FourLe00,P1194
+2017,1,5,TEN,WR,Western Michigan,22.0,DaviCo03,P1239
+2017,1,7,LAC,WR,Clemson,22.0,WillMi07,P1262
+2017,1,8,CAR,RB,Stanford,21.0,McCaCh01,P1195
+2017,1,9,CIN,WR,Washington,21.0,RossJo00,P1297
+2017,1,10,KAN,QB,Texas Tech,21.0,MahoPa00,P1253
+2017,1,12,HOU,QB,Clemson,21.0,WatsDe00,P1202
+2017,1,19,TAM,TE,Alabama,22.0,HowaO.00,P1220
+2017,1,23,NYG,TE,Mississippi,23.0,EngrEv00,P1200
+2017,1,29,CLE,TE,Miami (FL),21.0,NjokDa00,P1223
+2017,2,37,BUF,WR,East Carolina,22.0,JoneZa00,P1238
+2017,2,40,CAR,WR,Ohio St.,21.0,SamuCu00,P1269
+2017,2,41,MIN,RB,Florida St.,22.0,CookDa01,P1244
+2017,2,44,LAR,TE,South Alabama,23.0,EverGe00,P1295
+2017,2,45,CHI,TE,Ashland,22.0,ShahAd00,
+2017,2,48,CIN,RB,Oklahoma,21.0,MixoJo00,P1206
+2017,2,52,CLE,QB,Notre Dame,21.0,KizeDe00,P1199
+2017,2,62,PIT,WR,USC,20.0,SmitJu00,P1197
+2017,3,67,NOR,RB,Tennessee,22.0,KamaAl00,P1191
+2017,3,69,LAR,WR,Eastern Washington,24.0,KuppCo00,P1198
+2017,3,72,TEN,WR,Western Kentucky,22.0,TaylTa00,P1294
+2017,3,79,NYJ,WR,Alabama,23.0,StewAr00,
+2017,3,82,DEN,WR,Louisiana Tech,22.0,HendCa01,
+2017,3,84,TAM,WR,Penn St.,21.0,GodwCh00,P1225
+2017,3,86,KAN,RB,Toledo,22.0,HuntKa00,P1192
+2017,3,87,NYG,QB,California,22.0,WebbDa00,
+2017,3,89,HOU,RB,Texas,21.0,ForeDO00,P1466
+2017,3,96,DET,WR,Northern Illinois,23.0,GollKe00,P1224
+2017,3,98,ARI,WR,Grambling St.,22.0,WillCh05,
+2017,3,100,TEN,TE,Florida International,22.0,SmitJo01,P1312
+2017,3,104,SFO,QB,Iowa,23.0,BeatC.00,P1229
+2017,3,105,PIT,RB,Pittsburgh,22.0,ConnJa00,P1255
+2017,3,106,SEA,WR,Michigan,23.0,DarbAm00,
+2017,4,110,JAX,WR,Oklahoma,23.0,WestDe00,P1242
+2017,4,114,WAS,RB,Oklahoma,21.0,PeriSa00,P1213
+2017,4,117,LAR,WR,Texas A&M,22.0,ReynJo00,P1287
+2017,4,118,PHI,WR,North Carolina,23.0,HollMa00,P1494
+2017,4,119,CHI,RB,North Carolina A&T,22.0,CoheTa00,P1203
+2017,4,121,SFO,RB,Utah,24.0,WillJo12,
+2017,4,127,DET,TE,Toledo,23.0,RobeMi01,
+2017,4,128,CIN,WR,Tennessee,21.0,MaloJo00,
+2017,4,132,PHI,RB,San Diego St.,22.0,PumpDo00,
+2017,4,133,DAL,WR,North Carolina,22.0,SwitRy00,P1308
+2017,4,134,GNB,RB,BYU,22.0,WillJa06,P1204
+2017,4,135,PIT,QB,Tennessee,22.0,DobbJo00,P1550
+2017,4,139,KAN,WR,Michigan,23.0,ChesJe00,
+2017,4,140,NYG,RB,Clemson,22.0,GallWa00,P1216
+2017,4,141,NYJ,WR,California,22.0,HansCh00,
+2017,4,143,IND,RB,South Florida,21.0,MackMa00,P1218
+2017,5,145,DEN,TE,Michigan,22.0,ButtJa00,
+2017,5,146,SFO,TE,Iowa,23.0,KittGe00,P1215
+2017,5,150,NYJ,TE,Clemson,22.0,LeggJo00,
+2017,5,154,WAS,TE,Arkansas,23.0,SpriJe00,
+2017,5,156,ATL,RB,Wyoming,21.0,HillBr02,P1370
+2017,5,162,TAM,RB,Boise St.,21.0,McNiJe00,P1479
+2017,5,166,PHI,WR,West Virginia,23.0,GibsSh00,
+2017,5,170,MIN,WR,South Florida,22.0,AdamRo01,
+2017,5,171,BUF,QB,Pittsburgh,23.0,PeteNa00,
+2017,5,172,DEN,WR,Georgia,22.0,McKeIs00,P1372
+2017,5,174,ATL,TE,Drake,23.0,SaubEr00,
+2017,5,175,GNB,WR,Purdue,22.0,YancDe00,
+2017,5,177,SFO,WR,Louisiana Tech,23.0,TaylTr02,P1222
+2017,5,179,ARI,RB,North Carolina,23.0,LogaT.00,
+2017,5,182,GNB,RB,Texas-El Paso,22.0,JoneAa00,P1233
+2017,6,188,NYJ,RB,Louisiana,23.0,McGuEl00,P1236
+2017,6,192,CAR,FB,West Georgia,23.0,ArmaAl00,
+2017,6,201,MIN,TE,Virginia Tech,22.0,HodgBu00,
+2017,6,203,DEN,RB,Coastal Carolina,24.0,HendDe01,
+2017,6,206,LAR,FB,Virginia Tech,22.0,RogeSa00,
+2017,6,207,CIN,RB,Houston,23.0,WilsBr01,
+2017,6,209,WAS,WR,Georgia St.,22.0,DaviRo00,
+2017,6,215,DET,QB,Miami (FL),22.0,KaayBr00,
+2017,7,219,MIN,WR,Miami (FL),23.0,ColeSt00,
+2017,7,226,SEA,WR,East Central (OK),22.0,MoorDa03,P1285
+2017,7,237,MIA,WR,Virginia Tech,21.0,FordIs00,
+2017,7,238,GNB,RB,Utah St.,23.0,MaysDe00,
+2017,7,239,DAL,WR,Ohio St.,21.0,BrowNo00,P1502
+2017,7,240,JAX,FB,Miami (FL),23.0,WillMa09,
+2017,7,241,TEN,RB,California,22.0,MuhaKh00,
+2017,7,242,OAK,RB,North Carolina,21.0,HoodEl00,
+2017,7,247,GNB,WR,LSU,21.0,DuprMa01,
+2017,7,249,SEA,RB,Oklahoma St.,22.0,CarsCh00,P1260
+2017,7,251,CIN,TE,Buffalo,23.0,SchrMa00,
+2017,7,252,CLE,RB,North Carolina St.,23.0,DayeMa00,
+2017,7,253,DEN,QB,Mississippi,23.0,KellCh00,
+2018,1,1,CLE,QB,Oklahoma,23.0,MayfBa00,P1256
+2018,1,2,NYG,RB,Penn St.,21.0,BarkSa00,P1254
+2018,1,3,NYJ,QB,USC,21.0,DarnSa00,P1263
+2018,1,7,BUF,QB,Wyoming,22.0,AlleJo02,P1258
+2018,1,10,ARI,QB,UCLA,21.0,RoseJo01,P1279
+2018,1,24,CAR,WR,Maryland,21.0,MoorD.00,P1266
+2018,1,25,BAL,TE,South Carolina,25.0,HursHa00,P1358
+2018,1,26,ATL,WR,Alabama,23.0,RidlCa00,P1259
+2018,1,27,SEA,RB,San Diego St.,22.0,PennRa00,P1307
+2018,1,31,NWE,RB,Georgia,23.0,MichSo00,P1268
+2018,1,32,BAL,QB,Louisville,21.0,JackLa00,P1265
+2018,2,35,CLE,RB,Georgia,22.0,ChubNi00,P1261
+2018,2,38,TAM,RB,USC,21.0,JoneRo01,P1332
+2018,2,40,DEN,WR,SMU,22.0,SuttCo00,P1271
+2018,2,42,MIA,TE,Penn St.,22.0,GesiMi00,P1337
+2018,2,43,DET,RB,Auburn,21.0,JohnKe06,P1267
+2018,2,44,SFO,WR,Washington,22.0,PettDa00,P1283
+2018,2,47,ARI,WR,Texas A&M,21.0,KirkCh01,P1273
+2018,2,49,PHI,TE,South Dakota St.,23.0,GoedDa00,P1291
+2018,2,51,CHI,WR,Memphis,23.0,MillAn02,P1275
+2018,2,59,WAS,RB,LSU,21.0,GuicDe00,P1378
+2018,2,60,PIT,WR,Oklahoma St.,22.0,WashJa00,P1339
+2018,2,61,JAX,WR,LSU,21.0,CharDJ00,P1320
+2018,3,71,DEN,RB,Oregon,22.0,FreeRo00,P1284
+2018,3,76,PIT,QB,Oklahoma St.,23.0,RudoMa00,P1343
+2018,3,81,DAL,WR,Colorado St.,22.0,GallMi00,P1290
+2018,3,86,BAL,TE,Oklahoma,23.0,AndrMa00,P1281
+2018,3,91,NOR,WR,Central Florida,22.0,SmitTr03,P1286
+2018,3,98,HOU,TE,Central Florida,26.0,AkinJo00,P1352
+2018,4,101,CAR,TE,Indiana,22.0,ThomIa00,P1299
+2018,4,103,HOU,WR,Texas Tech,21.0,CoutKe00,P1314
+2018,4,104,IND,RB,North Carolina St.,21.0,HineNy00,P1264
+2018,4,105,CLE,WR,Florida,21.0,CallAn00,P1272
+2018,4,107,NYJ,TE,Miami (FL),22.0,HernCh00,P1278
+2018,4,108,NYG,QB,Richmond,23.0,LaulKy00,
+2018,4,112,CIN,RB,Miami (FL),21.0,WaltMa00,
+2018,4,113,DEN,WR,Penn St.,23.0,HamiDa01,P1310
+2018,4,120,SEA,TE,Washington,22.0,DissWi00,P1363
+2018,4,123,MIA,TE,Notre Dame,23.0,SmytDu00,P1482
+2018,4,126,ATL,RB,Southern Miss,22.0,SmitIt00,P1289
+2018,4,131,MIA,RB,Arizona St.,22.0,BallKa00,P1413
+2018,4,132,BAL,WR,New Mexico St.,23.0,ScotJa02,
+2018,4,133,GNB,WR,Missouri,23.0,MoorJM00,
+2018,4,134,ARI,RB,Fordham,22.0,EdmoCh00,P1313
+2018,4,137,DAL,TE,Stanford,22.0,SchuDa00,P1399
+2018,5,144,TAM,WR,Pennsylvania,22.0,WatsJu01,P1577
+2018,5,156,DEN,TE,Wisconsin,23.0,FumaTr00,
+2018,5,157,MIN,TE,Central Michigan,23.0,ConkTy00,P1449
+2018,5,159,IND,WR,Northern Iowa,22.0,FounDa00,
+2018,5,162,BAL,WR,UCLA,21.0,LaslJo00,
+2018,5,165,PIT,TE,North Carolina St.,22.0,SamuJa00,P1293
+2018,5,169,IND,RB,Mississippi,24.0,WilkJo01,
+2018,5,171,DAL,QB,Western Kentucky,23.0,WhitMi01,
+2018,5,174,GNB,WR,South Florida,23.0,ValdMa00,P1280
+2018,6,175,CLE,WR,Texas A&M,23.0,RatlDa00,
+2018,6,176,LAR,RB,Tennessee,21.0,KellJo00,
+2018,6,185,IND,WR,Clemson,22.0,CainDe00,
+2018,6,187,BUF,WR,Clemson,21.0,McClRa00,P1484
+2018,6,191,LAC,WR,Texas Tech,24.0,CantDy00,
+2018,6,194,ATL,WR,LSU,22.0,GageRu00,P1347
+2018,6,196,KAN,WR,Central Arkansas,22.0,SmitTr04,
+2018,6,199,TEN,QB,Washington St.,23.0,FalkLu00,
+2018,6,201,NOR,RB,Louisiana Tech,23.0,ScotBo02,P1348
+2018,6,203,JAX,QB,Nebraska,23.0,LeexTa00,
+2018,6,204,NYJ,RB,Virginia St.,24.0,CannTr00,
+2018,6,207,GNB,WR,Notre Dame,21.0,St.BEq00,P1528
+2018,6,208,DAL,WR,Boise St.,22.0,WilsCe01,P1448
+2018,6,210,NWE,WR,Miami (FL),22.0,BerrBr00,P1410
+2018,6,211,HOU,TE,Mississippi St.,22.0,ThomJo05,P1311
+2018,7,219,NWE,QB,LSU,24.0,EtliDa00,
+2018,7,220,SEA,QB,Florida International,22.0,McGoAl00,
+2018,7,224,CHI,WR,Georgia,23.0,WimsJa00,
+2018,7,226,DEN,RB,Arkansas,24.0,WillDa011,
+2018,7,228,OAK,WR,Oklahoma St.,23.0,AtemMa00,
+2018,7,236,DAL,RB,Alabama,23.0,ScarBo01,
+2018,7,237,DET,RB,San Diego St.,22.0,BawdNi00,
+2018,7,240,SFO,WR,Middle Tenn. St.,23.0,JameRi00,P1428
+2018,7,249,CIN,QB,Toledo,23.0,WoodLo00,
+2018,7,250,NWE,TE,Florida St.,22.0,IzzoRy00,
+2018,7,251,LAC,RB,Northwestern,22.0,JackJu01,P1317
+2018,7,253,CIN,WR,Florida St.,21.0,TateAu00,P1346
+2018,7,255,BUF,WR,North Carolina,22.0,ProeAu00,
+2018,7,256,WAS,WR,SMU,22.0,QuinTr00,
+2019,1,1,ARI,QB,Oklahoma,22.0,MurrKy00,P1318
+2019,1,6,NYG,QB,Duke,22.0,JoneDa05,P1324
+2019,1,8,DET,TE,Iowa,22.0,HockTJ00,P1354
+2019,1,15,WAS,QB,Ohio St.,22.0,HaskDw00,P1359
+2019,1,20,DEN,TE,Iowa,21.0,FantNo00,P1341
+2019,1,24,OAK,RB,Alabama,21.0,JacoJo01,P1326
+2019,1,25,BAL,WR,Oklahoma,22.0,BrowMa04,P1336
+2019,1,32,NWE,WR,Arizona St.,21.0,HarrNK00,P1424
+2019,2,36,SFO,WR,South Carolina,23.0,SamuDe00,P1327
+2019,2,42,DEN,QB,Missouri,22.0,LockDr00,P1368
+2019,2,50,MIN,TE,Alabama,21.0,SmitIr01,P1356
+2019,2,51,TEN,WR,Mississippi,22.0,BrowAJ00,P1323
+2019,2,52,CIN,TE,Washington,23.0,SampDr00,P1423
+2019,2,53,PHI,RB,Penn St.,22.0,SandMi01,P1322
+2019,2,56,KAN,WR,Georgia,21.0,HardMe00,P1340
+2019,2,57,PHI,WR,Stanford,22.0,ArceJJ00,
+2019,2,59,IND,WR,Ohio St.,22.0,CampPa00,P1496
+2019,2,62,ARI,WR,Massachusetts,22.0,IsabAn00,
+2019,2,64,SEA,WR,Mississippi,21.0,MetcDK00,P1328
+2019,3,66,PIT,WR,Toledo,23.0,JohnDi01,P1334
+2019,3,67,SFO,WR,Baylor,23.0,HurdJa00,
+2019,3,69,JAX,TE,San Jose St.,22.0,OlivJo00,P1643
+2019,3,70,LAR,RB,Memphis,22.0,HendDa00,P1403
+2019,3,73,CHI,RB,Iowa St.,22.0,MontDa01,P1330
+2019,3,74,BUF,RB,Florida Atlantic,22.0,SingDe00,P1335
+2019,3,75,GNB,TE,Texas A&M,23.0,SterJa00,
+2019,3,76,WAS,WR,Ohio St.,23.0,McLaTe00,P1325
+2019,3,86,HOU,TE,San Diego St.,22.0,WarrKa00,
+2019,3,87,NWE,RB,Alabama,22.0,HarrDa06,P1414
+2019,3,93,BAL,WR,Notre Dame,22.0,BoykMi00,P1425
+2019,3,96,BUF,TE,Mississippi,22.0,KnoxDa00,P1355
+2019,3,100,CAR,QB,West Virginia,24.0,GrieWi00,
+2019,3,102,MIN,RB,Boise St.,21.0,MattAl01,P1365
+2019,4,103,ARI,WR,Iowa St.,23.0,ButlHa00,
+2019,4,104,CIN,QB,North Carolina St.,24.0,FinlRy00,
+2019,4,112,WAS,RB,Stanford,22.0,LoveBr00,
+2019,4,113,BAL,RB,Oklahoma St.,21.0,HillJu00,P1566
+2019,4,120,SEA,WR,West Virginia,22.0,JennGa00,
+2019,4,121,NYJ,TE,West Virginia,23.0,WescTr00,
+2019,4,122,PIT,RB,Kentucky,21.0,SnelBe00,P1377
+2019,4,126,CHI,WR,Georgia,23.0,RidlRi00,
+2019,4,128,DAL,RB,Memphis,22.0,PollTo00,P1353
+2019,4,133,NWE,QB,Auburn,23.0,StidJa00,
+2019,4,137,OAK,TE,LSU,22.0,MoreFo00,P1366
+2019,5,140,JAX,RB,Temple,22.0,ArmsRy00,
+2019,5,141,PIT,TE,Michigan,22.0,GentZa00,
+2019,5,149,OAK,WR,Clemson,23.0,RenfHu00,P1338
+2019,5,152,ATL,RB,Pittsburgh,22.0,OlliQa00,
+2019,5,154,CAR,RB,Florida,23.0,ScarJo00,
+2019,5,166,LAC,QB,North Dakota St.,23.0,SticEa00,P1593
+2019,5,167,PHI,QB,Northwestern,24.0,ThorCl00,
+2019,5,171,NYG,WR,Auburn,22.0,SlayDa01,P1331
+2019,6,174,ARI,WR,Fresno St.,22.0,JohnKe07,
+2019,6,176,SFO,TE,Stanford,22.0,SmitKa00,P1360
+2019,6,178,JAX,QB,Washington St.,23.0,MinsGa00,P1319
+2019,6,182,CIN,RB,Texas A&M,21.0,WillTr06,
+2019,6,184,DET,WR,Old Dominion,23.0,FulgTr00,P1404
+2019,6,186,DET,RB,Maryland,21.0,JohnTy02,P1374
+2019,6,187,DEN,WR,Colorado,23.0,WinfJu00,
+2019,6,194,GNB,RB,Notre Dame,22.0,WillDe07,
+2019,6,197,BAL,QB,Penn St.,24.0,McSoTr00,
+2019,6,203,ATL,WR,La-Monroe,23.0,GreeMa02,
+2019,6,204,SEA,RB,Miami (FL),21.0,HomeTr00,
+2019,6,206,WAS,WR,North Carolina St.,22.0,HarmKe00,P1371
+2019,6,208,TAM,WR,Bowling Green,22.0,MillSc01,P1406
+2019,6,211,CIN,RB,Oklahoma,22.0,AndeRo02,
+2019,6,214,KAN,RB,Utah St.,22.0,ThomDa06,
+2019,7,218,DAL,RB,Ohio St.,22.0,WebeMi00,
+2019,7,220,HOU,RB,Texas A&M,24.0,GillCu00,
+2019,7,222,CHI,RB,Florida Atlantic,22.0,WhytKe00,
+2019,7,224,DET,TE,Georgia,22.0,NautIs00,
+2019,7,228,BUF,TE,Boston Col.,24.0,SweeTo00,
+2019,7,231,NOR,TE,Notre Dame,22.0,MackAl00,
+2019,7,233,MIA,RB,Auburn,23.0,CoxxCh01,
+2019,7,234,MIA,RB,Washington,22.0,GaskMy00,P1394
+2019,7,236,SEA,WR,Hawaii,25.0,UrsuJo00,
+2019,7,237,CAR,WR,Georgia,22.0,GodwTe00,
+2019,7,239,MIN,WR,Oregon,22.0,MitcDi00,
+2019,7,247,MIN,WR,Colorado St.,22.0,JohnOl00,P1357
+2019,7,254,ARI,TE,UCLA,23.0,WilsCa00,
+2020,1,1,CIN,QB,LSU,23.0,BurrJo01,P1392
+2020,1,5,MIA,QB,Alabama,22.0,TagoTu00,P1402
+2020,1,6,LAC,QB,Oregon,22.0,HerbJu00,P1379
+2020,1,12,LVR,WR,Alabama,21.0,RuggHe00,P1418
+2020,1,15,DEN,WR,Alabama,21.0,JeudJe00,P1396
+2020,1,17,DAL,WR,Oklahoma,21.0,LambCe00,P1383
+2020,1,21,PHI,WR,TCU,21.0,ReagJa00,P1416
+2020,1,22,MIN,WR,LSU,21.0,JeffJu00,P1380
+2020,1,25,SFO,WR,Arizona St.,22.0,AiyuBr00,P1388
+2020,1,26,GNB,QB,Utah St.,21.0,LoveJo03,P1537
+2020,1,32,KAN,RB,LSU,21.0,EdwaCl00,P1391
+2020,2,33,CIN,WR,Clemson,21.0,HiggTe00,P1386
+2020,2,34,IND,WR,USC,22.0,PittMi01,P1409
+2020,2,35,DET,RB,Georgia,21.0,SwifDA00,P1387
+2020,2,41,IND,RB,Wisconsin,21.0,TaylJo02,P1381
+2020,2,42,JAX,WR,Colorado,21.0,ShenLa00,P1397
+2020,2,43,CHI,TE,Notre Dame,21.0,KmetCo00,P1456
+2020,2,46,DEN,WR,Penn St.,21.0,HamlKJ00,P1415
+2020,2,49,PIT,WR,Notre Dame,22.0,ClayCh01,P1384
+2020,2,52,LAR,RB,Florida St.,21.0,AkerCa00,P1407
+2020,2,53,PHI,QB,Oklahoma,22.0,HurtJa00,P1405
+2020,2,55,BAL,RB,Ohio St.,21.0,DobbJK00,P1393
+2020,2,57,LAR,WR,Florida,24.0,JeffVa00,P1440
+2020,2,59,NYJ,WR,Baylor,22.0,MimsDe00,
+2020,2,62,GNB,RB,Boston Col.,22.0,DillAJ00,P1437
+2020,3,66,WAS,RB,Memphis,22.0,GibsAn00,P1385
+2020,3,76,TAM,RB,Illinois,23.0,VaugKe00,
+2020,3,80,LVR,WR,Kentucky,22.0,BowdLy00,
+2020,3,81,LVR,WR,South Carolina,21.0,EdwaBr01,P1461
+2020,3,86,BUF,RB,Utah,22.0,MossZa00,P1408
+2020,3,91,NWE,TE,UCLA,23.0,AsiaDe00,
+2020,3,92,BAL,WR,Texas,22.0,DuveDe00,P1472
+2020,3,93,TEN,RB,Appalachian St.,22.0,EvanDa02,
+2020,3,94,GNB,TE,Cincinnati,23.0,DeguJo00,
+2020,3,101,NWE,TE,Virginia Tech,21.0,KeenDa00,
+2020,3,105,NOR,TE,Dayton,23.0,TrauAd00,P1596
+2020,4,112,LAC,RB,UCLA,22.0,KellJo01,P1420
+2020,4,115,CLE,TE,Florida Atlantic,22.0,BryaHa00,P1532
+2020,4,118,DEN,TE,Missouri,22.0,OkwuAl00,P1477
+2020,4,120,NYJ,RB,Florida,22.0,PeriLa00,
+2020,4,122,IND,QB,Washington,22.0,EasoJa00,
+2020,4,124,PIT,RB,Maryland,22.0,McFaAn00,
+2020,4,125,NYJ,QB,Florida International,23.0,MorgJa00,
+2020,4,128,BUF,WR,Central Florida,21.0,DaviGa01,P1401
+2020,4,133,SEA,TE,Stanford,21.0,ParkCo02,P1526
+2020,4,136,LAR,TE,Purdue,23.0,HopkBr01,
+2020,4,142,WAS,WR,Liberty,22.0,GandAn00,
+2020,4,144,SEA,RB,Miami (FL),21.0,DallDe00,
+2020,5,151,LAC,WR,Virginia,22.0,ReedJo03,
+2020,5,161,TAM,WR,Minnesota,22.0,JohnTy00,P1481
+2020,5,165,JAX,WR,Texas,22.0,JohnCo01,
+2020,5,166,DET,WR,Wisconsin,22.0,CephQu00,P1427
+2020,5,167,BUF,QB,Georgia,22.0,FromJa00,
+2020,5,168,PHI,WR,Boise St.,24.0,HighJo00,
+2020,5,171,HOU,WR,Rhode Island,21.0,CoulIs00,
+2020,5,172,DET,RB,New Mexico St.,22.0,HuntJa01,
+2020,5,173,CHI,WR,Tulane,22.0,MoonDa00,P1398
+2020,5,176,MIN,WR,Miami (FL),23.0,OsboKJ00,P1442
+2020,6,187,CLE,WR,Michigan,21.0,PeopDo00,P1460
+2020,6,189,JAX,QB,Oregon St.,24.0,LutoJa00,
+2020,6,190,SFO,TE,Georgia,22.0,WoerCh00,
+2020,6,200,PHI,WR,Southern Miss,22.0,WatkQu00,P1457
+2020,6,201,BAL,WR,SMU,23.0,ProcJa00,
+2020,6,206,JAX,TE,Georgia Tech,23.0,DaviTy02,
+2020,6,207,BUF,WR,Oregon St.,21.0,HodgIs00,P1510
+2020,6,212,IND,WR,Washington St.,22.0,PatmDe00,
+2020,6,214,SEA,WR,Florida,22.0,SwaiFr00,P1470
+2020,7,217,SFO,WR,Tennessee,23.0,JennJa00,P1475
+2020,7,220,LAC,WR,Ohio St.,22.0,HillKJ00,
+2020,7,222,ARI,RB,Arizona St.,21.0,BenjEn00,P1516
+2020,7,224,TEN,QB,Hawaii,22.0,McDoCo00,
+2020,7,231,DAL,QB,James Madison,23.0,DiNuBe00,
+2020,7,240,NOR,QB,Mississippi St.,23.0,StevTo01,
+2020,7,244,MIN,QB,Iowa,23.0,StanNa00,
+2020,7,245,TAM,RB,Louisiana,22.0,CalaRa00,
+2020,7,246,MIA,RB,Navy,23.0,PerrMa00,
+2020,7,251,SEA,TE,LSU,23.0,SullSt00,
+2020,7,252,DEN,WR,Florida,22.0,ClevTy00,
+2021,1,1,JAX,QB,Clemson,21.0,LawrTr00,P1436
+2021,1,2,NYJ,QB,BYU,22.0,WilsZa00,P1445
+2021,1,3,SFO,QB,North Dakota St.,21.0,LancTr00,
+2021,1,4,ATL,TE,Florida,20.0,PittKy00,P1439
+2021,1,5,CIN,WR,LSU,21.0,ChasJa00,P1429
+2021,1,6,MIA,WR,Alabama,22.0,WaddJa00,P1431
+2021,1,10,PHI,WR,Alabama,22.0,SmitDe07,P1438
+2021,1,11,CHI,QB,Ohio St.,22.0,FielJu00,P1454
+2021,1,15,NWE,QB,Alabama,23.0,JoneMa05,P1433
+2021,1,20,NYG,WR,Florida,22.0,ToneKa00,P1474
+2021,1,24,PIT,RB,Alabama,23.0,HarrNa00,P1430
+2021,1,25,JAX,RB,Clemson,22.0,EtieTr00,P1486
+2021,1,27,BAL,WR,Minnesota,21.0,BateRa00,P1465
+2021,2,34,NYJ,WR,Mississippi,21.0,MoorEl00,P1450
+2021,2,35,DEN,RB,North Carolina,21.0,WillJa10,P1435
+2021,2,49,ARI,WR,Purdue,21.0,MoorRo02,P1462
+2021,2,55,PIT,TE,Penn St.,22.0,FreiPa00,P1447
+2021,2,56,SEA,WR,Western Michigan,24.0,EskrDW00,
+2021,2,57,LAR,WR,Louisville,21.0,AtweTu00,P1531
+2021,2,59,CAR,WR,LSU,21.0,MarsTe00,P1521
+2021,2,64,TAM,QB,Florida,23.0,TrasKy00,
+2021,3,66,MIN,QB,Texas A&M,22.0,MondKe00,
+2021,3,67,HOU,QB,Stanford,22.0,MillDa02,P1443
+2021,3,77,LAC,WR,Tennessee,21.0,PalmJo00,P1467
+2021,3,81,MIA,TE,Boston Col.,23.0,LongHu00,
+2021,3,82,WAS,WR,North Carolina,21.0,BrowDy00,P1640
+2021,3,83,CAR,TE,Notre Dame,21.0,TremTo00,P1597
+2021,3,85,GNB,WR,Clemson,21.0,RodgAm00,
+2021,3,88,SFO,RB,Ohio St.,22.0,SermTr00,
+2021,3,89,HOU,WR,Michigan,22.0,CollNi00,P1471
+2021,3,91,CLE,WR,Auburn,21.0,SchwAn00,
+2021,3,97,LAC,TE,Georgia,22.0,McKiTr00,
+2021,4,107,NYJ,RB,North Carolina,22.0,CartMi03,P1444
+2021,4,109,TEN,WR,Louisville,23.0,FitzDe00,
+2021,4,112,DET,WR,USC,21.0,StxxAm00,P1432
+2021,4,119,MIN,RB,Iowa St.,23.0,NwanKe00,
+2021,4,120,NWE,RB,Oklahoma,23.0,StevRh00,P1458
+2021,4,124,WAS,TE,Boise St.,23.0,BateJo00,
+2021,4,126,CAR,RB,Oklahoma St.,22.0,HubbCh01,P1451
+2021,4,127,IND,TE,SMU,23.0,GranKy00,P1535
+2021,4,129,TAM,WR,North Texas,22.0,DardJa00,
+2021,4,131,BAL,WR,Oklahoma St.,22.0,WallTy00,
+2021,4,133,NOR,QB,Notre Dame,23.0,BookIa00,
+2021,4,141,LAR,WR,Central Florida,24.0,HarrJa03,
+2021,5,145,JAX,TE,Ohio St.,23.0,FarrLu00,
+2021,5,147,HOU,TE,Miami (FL),21.0,JordBr00,
+2021,5,150,PHI,RB,Memphis,22.0,GainKe00,P1455
+2021,5,157,MIN,WR,Iowa,22.0,SmitIh00,
+2021,5,162,KAN,TE,Duke,22.0,GrayNo00,P1525
+2021,5,168,MIN,TE,Central Missouri St.,23.0,DaviZa00,
+2021,5,179,DAL,WR,Stanford,23.0,FehoSi00,
+2021,5,181,KAN,WR,Clemson,23.0,PoweCo00,
+2021,5,184,BAL,FB,Michigan,22.0,MasoBe00,
+2021,6,187,ATL,WR,Arizona St.,23.0,DarbFr00,
+2021,6,194,SFO,RB,Louisiana,23.0,MitcEl00,P1441
+2021,6,196,NYG,RB,Arizona,22.0,BrigGa00,
+2021,6,198,LAC,RB,Missouri,22.0,RounLa00,
+2021,6,202,CIN,RB,Michigan,23.0,EvanCh02,
+2021,6,203,BUF,WR,Houston,23.0,StevMa00,
+2021,6,204,CAR,WR,South Carolina,22.0,SmitSh03,P1533
+2021,6,205,TEN,WR,LSU,22.0,McMaRa00,
+2021,6,209,JAX,WR,Georgia Tech,23.0,CampJa03,
+2021,6,211,CLE,RB,UCLA,23.0,FeltDe00,
+2021,6,217,CHI,RB,Virginia Tech,23.0,HerbKh00,P1476
+2021,6,218,IND,QB,Texas,22.0,EhliSa00,
+2021,6,219,DEN,WR,Auburn,21.0,WillSe00,
+2021,6,221,CHI,WR,North Carolina,22.0,NewsDa00,
+2021,7,229,IND,WR,Charleston (WV),24.0,StraMi03,
+2021,7,233,LAR,RB,Maryland,23.0,FunkJa00,
+2021,7,242,NWE,WR,Central Florida,23.0,NixoTr01,
+2021,7,244,MIA,RB,Cincinnati,23.0,DoakGe00,
+2021,7,249,LAR,WR,Notre Dame,24.0,SkowBe00,P1519
+2021,7,255,NOR,WR,South Alabama,23.0,BakeKa00,
+2021,7,256,GNB,RB,Mississippi St.,23.0,HillKy00,
+2021,7,257,DET,RB,Oregon St.,21.0,JeffJe00,
+2021,7,258,WAS,WR,BYU,22.0,MilnDa00,
+2022,1,8,ATL,WR,USC,21.0,LondDr00,P1489
+2022,1,10,NYJ,WR,Ohio St.,22.0,WilsGa00,P1485
+2022,1,11,NOR,WR,Ohio St.,22.0,OlavCh00,P1488
+2022,1,12,DET,WR,Alabama,21.0,WillJa11,P1579
+2022,1,16,WAS,WR,Penn St.,22.0,DotsJa00,P1500
+2022,1,18,TEN,WR,Arkansas,22.0,BurkTr00,P1512
+2022,1,20,PIT,QB,Pittsburgh,24.0,PickKe00,P1495
+2022,2,34,GNB,WR,North Dakota St.,23.0,WatsCh00,P1492
+2022,2,36,NYJ,RB,Iowa St.,21.0,HallBr03,P1501
+2022,2,41,SEA,RB,Michigan St.,21.0,WalkKe00,P1487
+2022,2,43,NYG,WR,Kentucky,21.0,RobiWa01,P1561
+2022,2,44,HOU,WR,Alabama,22.0,MetcJo00,P1688
+2022,2,50,NWE,WR,Baylor,21.0,ThorTy00,P1527
+2022,2,52,PIT,WR,Georgia,21.0,PickGe00,P1490
+2022,2,53,IND,WR,Cincinnati,22.0,PierAl00,P1505
+2022,2,54,KAN,WR,Western Michigan,21.0,MoorSk01,
+2022,2,55,ARI,TE,Colorado St.,22.0,McBrTr01,P1534
+2022,2,63,BUF,RB,Georgia,22.0,CookJa01,P1507
+2022,3,71,CHI,WR,Tennessee,25.0,JoneVe00,
+2022,3,73,IND,TE,Virginia,23.0,WoodJe01,P1523
+2022,3,74,ATL,QB,Cincinnati,23.0,RiddDe00,P1552
+2022,3,80,DEN,TE,UCLA,22.0,DulcGr00,P1517
+2022,3,86,TEN,QB,Liberty,23.0,WillMa12,
+2022,3,88,DAL,WR,South Alabama,23.0,TolbJa00,P1600
+2022,3,91,TAM,RB,Arizona St.,23.0,WhitRa01,P1497
+2022,3,93,SFO,RB,LSU,21.0,DaviTy03,
+2022,3,94,CAR,QB,Mississippi,23.0,CorrMa00,
+2022,3,98,WAS,RB,Alabama,23.0,RobiBr01,P1504
+2022,3,99,CLE,WR,Purdue,21.0,BellDa02,
+2022,3,101,NYJ,TE,Ohio St.,22.0,RuckJe00,
+2022,3,105,SFO,WR,SMU,23.0,GrayDa02,
+2022,4,106,TAM,TE,Washington,23.0,OttoCa00,P1514
+2022,4,107,HOU,RB,Florida,22.0,PierDa01,P1491
+2022,4,112,NYG,TE,San Diego St.,21.0,BellDa00,P1522
+2022,4,122,LVR,RB,Georgia,22.0,WhitZa01,P1584
+2022,4,123,LAC,RB,Texas A&M,21.0,SpilIs00,
+2022,4,125,MIA,WR,Texas Tech,22.0,EzukEr00,
+2022,4,127,NWE,RB,South Dakota St.,23.0,StroPi00,
+2022,4,128,BAL,TE,Iowa St.,23.0,KolaCh00,
+2022,4,129,DAL,TE,Wisconsin,23.0,FergJa00,P1553
+2022,4,131,TEN,RB,Michigan,22.0,HaskHa00,
+2022,4,132,GNB,WR,Nevada,22.0,DoubRo00,P1508
+2022,4,137,NWE,QB,Western Kentucky,23.0,ZappBa00,P1592
+2022,4,138,PIT,WR,Memphis,23.0,AustCa00,P1621
+2022,4,139,BAL,TE,Coastal Carolina,22.0,LikeIs00,P1515
+2022,4,143,TEN,TE,Maryland,22.0,OkonCh00,P1511
+2022,5,144,WAS,QB,North Carolina,21.0,HoweSa00,P1540
+2022,5,148,BUF,WR,Boise St.,22.0,ShakKh00,P1565
+2022,5,149,WAS,TE,Nevada,22.0,TurnCo00,
+2022,5,151,ATL,RB,BYU,22.0,AllgTy00,P1493
+2022,5,154,JAX,RB,Mississippi,22.0,ConnSn00,
+2022,5,156,CLE,RB,Cincinnati,22.0,FordJe00,P1548
+2022,5,162,DEN,WR,Samford,23.0,WashMo00,
+2022,5,163,TEN,WR,UCLA,23.0,PhilKy01,
+2022,5,164,LAR,RB,Notre Dame,22.0,WillKy02,P1541
+2022,5,169,MIN,RB,North Carolina,24.0,ChanTy01,P1572
+2022,5,170,HOU,TE,Oregon St.,22.0,QuitTe00,
+2022,5,177,DET,TE,Virginia Tech,23.0,MitcJa00,
+2022,6,183,NWE,RB,South Carolina,21.0,HarrKe01,
+2022,6,191,MIN,WR,Michigan St.,23.0,NailJa00,P1627
+2022,6,192,IND,TE,Youngstown St.,24.0,OgleAn00,
+2022,6,196,BAL,RB,Missouri,22.0,BadiTy00,
+2022,6,198,PHI,TE,SMU,23.0,CalcGr00,P1646
+2022,6,201,ARI,RB,USC,22.0,IngrKe01,
+2022,6,202,CLE,WR,Oklahoma,22.0,WoodMi00,
+2022,6,203,CHI,RB,Baylor,23.0,EbneTr00,
+2022,6,208,PIT,TE,Michigan St.,23.0,HeywCo00,
+2022,6,213,ATL,TE,Georgia,22.0,FitzJo00,
+2022,6,218,TAM,TE,Minnesota,24.0,KiefKo00,
+2022,7,227,MIN,TE,South Carolina,23.0,MuseNi00,
+2022,7,229,SEA,WR,Rutgers,23.0,MeltBo00,
+2022,7,233,SEA,WR,Lenoir-Rhyne,23.0,YounDa02,
+2022,7,241,PIT,QB,South Dakota St.,25.0,OladCh00,
+2022,7,247,MIA,QB,Kansas St.,25.0,ThomSk00,
+2022,7,250,LVR,RB,UCLA,24.0,BrowBr06,
+2022,7,251,KAN,RB,Rutgers,23.0,PachIs00,P1498
+2022,7,258,GNB,WR,Nebraska,24.0,TourSa00,
+2022,7,260,LAC,RB,Purdue,23.0,HorvZa00,
+2022,7,262,SFO,QB,Iowa St.,22.0,PurdBr00,P1506
+2023,1,1,CAR,QB,Alabama,22.0,YounBr01,P1556
+2023,1,2,HOU,QB,Ohio St.,21.0,StroCJ00,P1539
+2023,1,4,IND,QB,Florida,21.0,RichAn03,P1587
+2023,1,8,ATL,RB,Texas,21.0,RobiBi01,P1542
+2023,1,12,DET,RB,Alabama,21.0,GibbJa01,P1543
+2023,1,20,SEA,WR,Ohio St.,21.0,SmitJa06,P1559
+2023,1,21,LAC,WR,TCU,22.0,JohnQu02,P1574
+2023,1,22,BAL,WR,Boston Col.,22.0,FlowZa00,P1549
+2023,1,23,MIN,WR,USC,21.0,AddiJo00,P1545
+2023,1,25,BUF,TE,Utah,23.0,KincDa00,P1558
+2023,2,33,TEN,QB,Kentucky,24.0,LeviWi00,P1571
+2023,2,34,DET,TE,Iowa,22.0,LaPoSa01,P1544
+2023,2,35,LVR,TE,Notre Dame,22.0,MayeMi00,P1589
+2023,2,39,CAR,WR,Mississippi,22.0,MingJo00,P1578
+2023,2,42,GNB,TE,Oregon St.,23.0,MusgLu00,P1583
+2023,2,50,GNB,WR,Michigan St.,23.0,ReedJa03,P1546
+2023,2,52,SEA,RB,UCLA,22.0,CharZa00,P1568
+2023,2,55,KAN,WR,SMU,23.0,RiceRa01,P1547
+2023,2,58,DAL,TE,Michigan,24.0,SchoLu00,
+2023,2,61,JAX,TE,Penn St.,22.0,StraBr00,P1633
+2023,2,63,DEN,WR,Oklahoma,21.0,MimsMa00,P1590
+2023,3,68,DET,QB,Tennessee,25.0,HookHe00,
+2023,3,69,HOU,WR,Houston,23.0,DellNa00,P1554
+2023,3,71,NOR,RB,TCU,21.0,MillKe01,
+2023,3,73,NYG,WR,Tennessee,21.0,HyatJa00,P1598
+2023,3,74,CLE,WR,Tennessee,23.0,TillCe01,P1635
+2023,3,78,GNB,TE,South Dakota St.,22.0,KrafTu00,P1582
+2023,3,79,IND,WR,North Carolina,22.0,DownJo00,P1555
+2023,3,81,TEN,RB,Tulane,22.0,SpeaTy00,P1557
+2023,3,84,MIA,RB,Texas A&M,21.0,AchaDe00,P1551
+2023,3,88,JAX,RB,Auburn,22.0,BigsTa00,P1617
+2023,3,93,PIT,TE,Georgia,22.0,WashDa03,P1687
+2023,3,94,ARI,WR,Stanford,23.0,WilsMi02,P1564
+2023,3,100,LVR,WR,Cincinnati,22.0,TuckTr00,P1588
+2023,3,101,SFO,TE,Alabama,23.0,LatuCa01,
+2023,4,115,CHI,RB,Texas,22.0,JohnRo07,P1570
+2023,4,125,LAC,WR,TCU,22.0,DaviDe02,
+2023,4,127,NOR,QB,Fresno St.,24.0,HaenJa00,
+2023,4,128,LAR,QB,Georgia,25.0,BennSt00,
+2023,4,131,CIN,WR,Purdue,24.0,JoneCh11,
+2023,4,133,CHI,WR,Cincinnati,21.0,ScotTy00,
+2023,4,135,LVR,QB,Purdue,25.0,OConAi00,P1562
+2023,5,139,ARI,QB,Houston,24.0,TuneCl00,
+2023,5,140,CLE,QB,UCLA,23.0,ThomDo02,
+2023,5,143,NYJ,RB,Pittsburgh,20.0,AbanIs00,
+2023,5,147,TEN,TE,Cincinnati,23.0,WhylJo01,P1645
+2023,5,149,GNB,QB,Penn St.,25.0,ClifSe00,
+2023,5,150,BUF,WR,Florida,23.0,ShorJu00,
+2023,5,159,GNB,WR,Virginia,22.0,WickDo00,P1563
+2023,5,162,IND,TE,Miami (FL),24.0,MallWi00,
+2023,5,163,CIN,RB,Illinois,23.0,BrowCh10,P1607
+2023,5,164,MIN,QB,BYU,25.0,HallJa00,
+2023,5,171,TAM,TE,Purdue,23.0,DurhPa00,
+2023,5,172,NYG,RB,Oklahoma,23.0,GrayEr01,
+2023,5,175,LAR,TE,Clemson,22.0,AlleDa02,P1697
+2023,5,176,IND,RB,Northwestern,22.0,HullEv00,
+2023,5,177,LAR,WR,BYU,22.0,NacuPu00,P1538
+2023,6,185,JAX,WR,Penn St.,21.0,WashPa01,P1628
+2023,6,187,NWE,WR,LSU,21.0,BoutKa00,P1619
+2023,6,188,PHI,QB,Stanford,23.0,McKeTa01,
+2023,6,191,TAM,WR,Nebraska,22.0,PalmTr00,P1573
+2023,6,193,WAS,RB,Kentucky,22.0,RodrCh00,P1678
+2023,6,195,NOR,WR,Wake Forest,23.0,PerrAT00,P1595
+2023,6,197,MIA,WR,Stanford,22.0,HiggEl00,
+2023,6,205,HOU,WR,Iowa St.,23.0,HutcXa00,P1675
+2023,6,206,CIN,WR,Princeton,23.0,IosiAn00,P1620
+2023,6,210,NWE,WR,Liberty,22.0,DougDe00,P1567
+2023,6,212,DAL,RB,Kansas St.,21.0,VaugDe00,
+2023,6,215,LAR,RB,Mississippi,22.0,EvanZa00,
+2023,7,219,DET,WR,North Carolina,23.0,GreeAn00,
+2023,7,220,NYJ,TE,Old Dominion,24.0,KuntZa00,
+2023,7,222,MIN,RB,Ala-Birmingham,22.0,McBrDe00,
+2023,7,228,TEN,WR,UT Martin,24.0,DoweCo00,
+2023,7,235,GNB,RB,Central Michigan,22.0,NichLe00,
+2023,7,237,SEA,RB,Georgia,23.0,McInKe00,
+2023,7,239,LAC,QB,TCU,22.0,DuggMa00,
+2023,7,244,DAL,WR,South Carolina,23.0,BrooJa03,
+2023,7,247,SFO,TE,Oklahoma,23.0,WillBr06,
+2023,7,253,SFO,WR,Michigan,23.0,BellRo01,
+2023,7,256,GNB,WR,Charlotte,22.0,DuboGr00,
+2024,1,1,CHI,QB,USC,22.0,WillCa03,P1608
+2024,1,2,WAS,QB,LSU,23.0,DaniJa02,P1602
+2024,1,3,NWE,QB,North Carolina,22.0,MayeDr00,P1614
+2024,1,4,ARI,WR,Ohio St.,22.0,HarrMa09,P1611
+2024,1,6,NYG,WR,LSU,21.0,NabeMa00,P1605
+2024,1,8,ATL,QB,Washington,24.0,PeniMi00,P1670
+2024,1,9,CHI,WR,Washington,22.0,OdunRo00,P1615
+2024,1,10,MIN,QB,Michigan,21.0,McCaJJ00,P1668
+2024,1,12,DEN,QB,Oregon,24.0,NixxBo00,P1603
+2024,1,13,LVR,TE,Georgia,21.0,BoweBr01,P1606
+2024,1,23,JAX,WR,LSU,21.0,ThomBr06,P1604
+2024,1,28,KAN,WR,Texas,21.0,WortXa00,P1612
+2024,1,31,SFO,WR,Florida,23.0,PearRi00,P1631
+2024,1,32,CAR,WR,South Carolina,23.0,LegeXa00,P1618
+2024,2,33,BUF,WR,Florida St.,21.0,ColeKe02,P1624
+2024,2,34,LAC,WR,Georgia,22.0,McCoLa00,P1610
+2024,2,37,NWE,WR,Washington,22.0,PolkJa00,
+2024,2,46,CAR,RB,Texas,21.0,BrooJo02,
+2024,2,52,IND,WR,Texas,21.0,MitcAd00,P1682
+2024,2,53,WAS,TE,Kansas St.,22.0,SinnBe00,
+2024,3,65,NYJ,WR,Western Kentucky,22.0,CorlMa00,
+2024,3,66,ARI,RB,Florida St.,22.0,BensTr01,
+2024,3,80,CIN,WR,Alabama,23.0,BurtJe01,
+2024,3,82,ARI,TE,Illinois,22.0,ReimTi00,
+2024,3,83,LAR,RB,Michigan,23.0,CoruBl00,P1669
+2024,3,84,PIT,WR,Michigan,23.0,WilsRo02,
+2024,3,88,GNB,RB,USC,23.0,LloyMa00,
+2024,3,92,TAM,WR,Washington,22.0,McMiJa01,P1616
+2024,3,100,WAS,WR,Rice,23.0,McCaLu00,
+2024,4,101,CAR,TE,Texas,21.0,SandJa01,P1637
+2024,4,102,DEN,WR,Oregon,21.0,FranTr00,P1642
+2024,4,107,NYG,TE,Penn St.,23.0,JohnTh00,P1639
+2024,4,110,NWE,WR,Central Florida,22.0,BakeJa00,
+2024,4,113,BAL,WR,North Carolina,23.0,WalkDe01,
+2024,4,115,CIN,TE,Iowa,23.0,AllxEr00,
+2024,4,120,MIA,RB,Tennessee,21.0,WrigJa04,
+2024,4,121,SEA,TE,Michigan,22.0,BarnAJ00,P1636
+2024,4,123,HOU,TE,Ohio St.,24.0,StovCa00,
+2024,4,125,TAM,RB,Oregon,22.0,IrviBu00,P1609
+2024,4,127,PHI,RB,Clemson,22.0,ShipWi00,
+2024,4,128,BUF,RB,Kentucky,24.0,DaviRa04,P1622
+2024,4,129,SFO,RB,Louisville,24.0,GuerIs00,P1630
+2024,4,131,KAN,TE,TCU,23.0,WileJa00,
+2024,4,134,NYJ,RB,Wisconsin,20.0,AlleBr05,P1634
+2024,4,135,SFO,WR,Arizona,23.0,CowiJa00,
+2024,5,142,IND,WR,Oregon St.,23.0,GoulAn00,
+2024,5,147,DEN,RB,Notre Dame,21.0,EstiAu00,
+2024,5,150,NOR,QB,South Carolina,23.0,RattSp00,P1641
+2024,5,152,PHI,WR,Texas A&M,23.0,SmitAi00,
+2024,5,156,CLE,WR,Louisville,23.0,ThraJa01,
+2024,5,165,BAL,RB,Marshall,23.0,AlixRa00,
+2024,5,166,NYG,RB,Purdue,24.0,TracTy00,P1613
+2024,5,167,JAX,RB,Texas,24.0,RobiKe03,
+2024,5,170,NOR,WR,Pittsburgh,23.0,MeanBu00,
+2024,5,171,NYJ,QB,Florida St.,24.0,TravJo00,
+2024,5,173,NYJ,RB,South Dakota St.,22.0,DaviIs00,P1689
+2024,6,181,LAC,RB,Troy,23.0,VidaKi00,P1671
+2024,6,182,TEN,WR,Tulane,24.0,JackJh00,
+2024,6,184,MIA,WR,Virginia,23.0,WashMa00,P1672
+2024,6,185,PHI,WR,Florida St.,23.0,WilsJo03,
+2024,6,186,ATL,RB,Alabama,22.0,McClJa05,
+2024,6,187,ATL,WR,Illinois,23.0,WashCa01,
+2024,6,191,ARI,WR,Ala-Birmingham,24.0,PalmTe00,
+2024,6,193,NWE,QB,Tennessee,24.0,MiltJo00,
+2024,6,194,CIN,TE,Arizona,25.0,McLaTa00,
+2024,6,205,HOU,RB,Louisville,25.0,JordJa00,
+2024,6,208,LVR,RB,New Hampshire,24.0,LaubDy00,
+2024,6,213,LAR,WR,Texas,23.0,WhitJo04,
+2024,6,216,DAL,WR,SE Missouri St.,24.0,FlouRy00,P1674
+2024,6,218,BAL,QB,Kentucky,24.0,LearDe00,
+2024,7,225,LAC,WR,USC,22.0,RiceBr00,
+2024,7,231,NWE,TE,Florida St.,23.0,BellJa00,
+2024,7,235,DEN,WR,Utah,26.0,VeleDe00,P1626
+2024,7,241,MIA,WR,USC,23.0,WashTa00,
+2024,7,245,GNB,QB,Tulane,22.0,PratMi00,
+2024,7,246,TAM,TE,Washington,24.0,CulpDe00,
+2024,7,253,LAC,WR,Michigan,23.0,JohnCo02,
+2025,1,1,TEN,QB,Miami (FL),23.0,WardCa00,P1654
+2025,1,2,JAX,WR,Colorado,22.0,HuntTr00,P1695
+2025,1,6,LVR,RB,Boise St.,21.0,JeanAs00,P1647
+2025,1,8,CAR,WR,Arizona,22.0,McMiTe00,P1649
+2025,1,10,CHI,TE,Michigan,21.0,LoveCo00,P1657
+2025,1,14,IND,TE,Penn St.,23.0,WarrTy00,P1653
+2025,1,19,TAM,WR,Ohio St.,22.0,EgbuEm01,P1652
+2025,1,22,LAC,RB,North Carolina,22.0,HampOm00,P1662
+2025,1,23,GNB,WR,Texas,22.0,GoldMa02,P1691
+2025,1,25,NYG,QB,Mississippi,22.0,DartJa00,P1648
+2025,2,34,HOU,WR,Iowa St.,22.0,HiggJa00,P1664
+2025,2,36,CLE,RB,Ohio St.,21.0,JudkQu00,P1656
+2025,2,38,NWE,RB,Ohio St.,22.0,HendTr02,P1651
+2025,2,39,CHI,WR,Missouri,21.0,BurdLu00,P1665
+2025,2,40,NOR,QB,Louisville,25.0,ShouTy00,P1658
+2025,2,42,NYJ,TE,LSU,21.0,TaylMa02,P1680
+2025,2,46,LAR,TE,Oregon,22.0,FergTe00,
+2025,2,50,SEA,TE,Miami (FL),22.0,ArroEl00,
+2025,2,55,LAC,WR,Mississippi,23.0,HarrTr03,P1692
+2025,2,58,LVR,WR,TCU,22.0,BechJa00,
+2025,2,60,DEN,RB,Central Florida,24.0,HarvRJ00,P1650
+2025,3,67,CLE,TE,Bowling Green,21.0,FannHa00,P1655
+2025,3,69,NWE,WR,Washington St.,22.0,WillKy03,
+2025,3,70,DET,WR,Arkansas,23.0,TeSlIs00,P1685
+2025,3,74,DEN,WR,Illinois,22.0,BryaPa00,P1686
+2025,3,79,HOU,WR,Iowa St.,23.0,NoelJa00,P1693
+2025,3,83,PIT,RB,Iowa,22.0,JohnKa03,
+2025,3,87,GNB,WR,TCU,23.0,WillSa01,
+2025,3,92,SEA,QB,Alabama,22.0,MilrJa00,
+2025,3,94,CLE,QB,Oregon,24.0,GabrDi00,P1690
+2025,3,102,MIN,WR,Maryland,22.0,FeltTa00,
+2025,4,103,TEN,WR,Florida,23.0,DikeCh00,P1667
+2025,4,104,JAX,RB,Virginia Tech,22.0,TuteBh00,P1681
+2025,4,105,NYG,RB,Arizona St.,23.0,SkatCa00,P1666
+2025,4,108,LVR,WR,Tennessee,22.0,ThorDo00,
+2025,4,110,NYJ,WR,Georgia,23.0,SmitAr01,
+2025,4,114,CAR,RB,Georgia,21.0,EtieTr01,
+2025,4,116,HOU,RB,USC,24.0,MarkWo00,P1659
+2025,4,117,LAR,RB,Auburn,22.0,HuntJa03,
+2025,4,120,TEN,TE,Texas,23.0,HelmGu00,P1679
+2025,4,126,CLE,RB,Tennessee,20.0,SampDy00,P1683
+2025,4,128,WAS,WR,Virginia Tech,23.0,LaneJa00,
+2025,4,133,KAN,WR,Utah St.,22.0,RoyaJa00,
+2025,4,136,TEN,WR,Stanford,22.0,AyomEl00,P1673
+2025,4,138,SFO,WR,Mississippi,23.0,WatkJo00,
+2025,5,144,CLE,QB,Colorado,23.0,SandSh00,P1684
+2025,5,147,SFO,RB,Oregon,21.0,JameJo01,
+2025,5,149,DAL,RB,Texas,21.0,BlueJa01,
+2025,5,151,IND,RB,Kansas St.,22.0,GiddDJ00,
+2025,5,158,LAC,WR,Auburn,23.0,LambKe01,
+2025,5,163,CAR,TE,Notre Dame,22.0,EvanMi01,
+2025,5,165,LAC,TE,Syracuse,22.0,GadsOr01,P1663
+2025,5,166,SEA,WR,Colorado St.,22.0,HortTo00,P1694
+2025,5,173,BUF,TE,Georgia Tech,24.0,HaweJa00,
+2025,5,175,SEA,TE,Alabama,23.0,OuztRo00,
+2025,6,179,MIA,RB,Oklahoma St.,21.0,GordOl00,
+2025,6,181,PHI,QB,Syracuse,22.0,McCoKy00,
+2025,6,184,NOR,RB,Kansas,22.0,NealDe00,P1698
+2025,6,185,PIT,QB,Ohio St.,23.0,HowaWi01,
+2025,6,188,TEN,RB,Michigan,22.0,MullKa00,
+2025,6,189,IND,QB,Notre Dame,22.0,LeonRi02,
+2025,6,193,CIN,RB,Texas Tech,23.0,BrooTa00,
+2025,6,197,HOU,QB,Florida,24.0,MertGr00,
+2025,6,202,MIN,TE,Pittsburgh,22.0,BartGa00,
+2025,6,203,BAL,WR,Colorado,23.0,WestLa01,
+2025,6,208,CAR,WR,Colorado,22.0,HornJi00,
+2025,6,213,LVR,QB,Montana St.,,MellTo00,
+2025,6,215,LVR,QB,North Dakota St.,24.0,MillCa00,
+2025,7,219,NYG,TE,Nebraska,22.0,FidoTh00,
+2025,7,223,SEA,RB,Miami (FL),21.0,MartDa02,
+2025,7,227,SFO,QB,Indiana,24.0,RourKu01,
+2025,7,228,KAN,RB,SMU,22.0,SmitBr09,P1696
+2025,7,231,MIA,QB,Texas,22.0,EwerQu00,
+2025,7,233,CHI,RB,Rutgers,23.0,MonaKy00,P1660
+2025,7,235,TAM,WR,Oregon,23.0,JohnTe03,P1677
+2025,7,236,JAX,RB,Syracuse,21.0,AlleLe01,
+2025,7,238,SEA,WR,UNLV,23.0,WhitRi01,
+2025,7,239,DAL,RB,Clemson,22.0,MafaPh00,
+2025,7,240,BUF,WR,Maryland,23.0,PratKa00,
+2025,7,241,DEN,TE,Utah,24.0,LohnCa00,
+2025,7,242,LAR,WR,Pittsburgh,22.0,MumpKo00,
+2025,7,244,DET,WR,Georgia,22.0,LoveDo00,
+2025,7,245,WAS,RB,Arizona,24.0,CrosJa00,P1661
+2025,7,248,NOR,TE,UCLA,22.0,MataMo00,
+2025,7,252,SFO,WR,Montana,,BergJu00,
+2025,7,255,HOU,TE,Iowa,24.0,LachLu00,

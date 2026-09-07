@@ -248,8 +248,12 @@ def main():
               .assign(best_pct=lambda d: (100 * d['best_pct']).round(1))
               .round(2).to_string())
 
-    tag = args.test.replace('_test.jsonl', '')
-    out = (f'eval_{tag}_'
+    # The default task keeps the original filename, so eval_board.csv and the
+    # two LLM runs already sitting on disk stay the files paired_test.py reads.
+    # Only a non-default --test earns a prefix.
+    tag = '' if args.test == TEST else \
+        args.test.replace('_test.jsonl', '') + '_'
+    out = (f'eval_{tag}'
            f'{args.model.replace(":", "_").replace("/", "_")}.csv')
     detail.to_csv(out, index=False)
     print(f'\nwrote {out}')

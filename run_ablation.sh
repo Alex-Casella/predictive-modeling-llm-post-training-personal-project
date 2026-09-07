@@ -2,12 +2,17 @@
 # One command per ablation: train -> download -> convert -> serve -> score ->
 # paired test against the run it is an ablation OF.
 #
-#   ./run_ablation.sh sit 1 e1      # the 1-epoch start/sit ablation
-#   ./run_ablation.sh draft 2 e2    # 2 epochs on draft, which was trained at 1
+#   ./run_ablation.sh sit 1 e1        # the 1-epoch start/sit ablation
+#   ./run_ablation.sh draft 2 e2      # 2 epochs on draft, which was trained at 1
+#   ./run_ablation.sh sit 1 e1s1 1    # SEED REPLICATE of the 1-epoch run
 #
 #   $1  dataset   draft | sit        (must match train_adapter.py DATASETS)
 #   $2  epochs    the value being varied
 #   $3  tag       short, unique, goes in the volume path and the model name
+#   $4  seed      optional, default 0. Varying ONLY this is the replicate that
+#                 tells you how much of any other gap was run-to-run noise --
+#                 without it, every score in RESULTS.md is a single draw with
+#                 no error bar, and a 0.13 gap has nothing to be judged against.
 #
 # WHY THIS EXISTS
 #
@@ -43,6 +48,7 @@ set -euo pipefail
 DATASET="${1:?usage: ./run_ablation.sh <dataset> <epochs> <tag>}"
 EPOCHS="${2:?epochs, e.g. 1}"
 TAG="${3:?a short tag, e.g. e1 -- it keys the volume path and the model name}"
+SEED="${4:-0}"
 
 PROJECT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONDA_PY="${CONDA_PY:-/opt/miniconda3/envs/pllmpp/bin/python}"
@@ -51,10 +57,18 @@ MODAL="${MODAL:-/opt/miniconda3/envs/pllmpp/bin/modal}"
 SUBDIR="${DATASET}_${TAG}"
 MODEL_NAME="fantasy-${DATASET}-${TAG}"
 
-# The run this is an ablation OF: the untagged adapter for the same dataset,
-# and the eval CSV it wrote. eval_agent.py only prefixes non-default tasks, so
-# draft keeps the bare filename.
-BASE_MODEL="fantasy-${DATASET}"
+# The run this is an ablation OF. Defaults to the untagged adapter for the
+# same dataset, which is right when varying epochs off the original run.
+#
+# IT IS WRONG FOR A SEED REPLICATE. A replicate of the 1-epoch run must be
+# compared against THE 1-EPOCH RUN -- comparing it to the untagged 2-epoch
+# adapter varies two dimensions at once and measures neither. Override it:
+#
+#   COMPARE=fantasy-sit-e1 ./run_ablation.sh sit 1 e1s1 1
+#
+# eval_agent.py only prefixes non-default tasks, so draft keeps the bare
+# filename.
+BASE_MODEL="${COMPARE:-fantasy-${DATASET}}"
 case "$DATASET" in
     draft) BASE_CSV="eval_${BASE_MODEL}.csv" ;;
     *)     BASE_CSV="eval_${DATASET}_${BASE_MODEL}.csv" ;;
@@ -100,10 +114,11 @@ ollama list >/dev/null 2>&1 || die "ollama is not serving. Run 'ollama serve'
   Delete it or pick a different tag. Overwriting it would destroy the only
   record of the earlier run with this name."
 
-printf '  dataset      %s\n  epochs       %s\n  volume path  fantasy-lora/%s\n' \
-       "$DATASET" "$EPOCHS" "$SUBDIR"
-printf '  ollama model %s\n  compare vs   %s\n  writes       %s\n' \
-       "$MODEL_NAME" "$BASE_CSV" "$NEW_CSV"
+printf '  dataset      %s\n  epochs       %s\n  seed         %s\n' \
+       "$DATASET" "$EPOCHS" "$SEED"
+printf '  volume path  fantasy-lora/%s\n  ollama model %s\n' \
+       "$SUBDIR" "$MODEL_NAME"
+printf '  compare vs   %s\n  writes       %s\n' "$BASE_CSV" "$NEW_CSV"
 
 # Installed models sharing a content ID are the same weights under two names.
 # Printed rather than enforced here -- the stale fantasy-sit-1ep and
@@ -115,16 +130,17 @@ ollama list | awk 'NR==1 {next} {n[$2]=n[$2] " " $1}
 echo "  Two names on one ID are ONE model. Nothing to fix; just do not score"
 echo "  both and call it a comparison."
 
-say "1/3  training on Modal -- $DATASET, $EPOCHS epoch(s), tag $TAG"
+say "1/3  training on Modal -- $DATASET, $EPOCHS epoch(s), seed $SEED, tag $TAG"
 echo "  Do not Ctrl+C. output_dir is container-local and volume.commit() runs"
 echo "  only after trainer.train() returns, so an interrupted run leaves"
 echo "  NOTHING recoverable -- not a checkpoint, not a partial adapter."
 cd "$PROJECT"
 "$MODAL" run train_adapter.py \
-    --dataset "$DATASET" --epochs "$EPOCHS" --tag "$TAG"
+    --dataset "$DATASET" --epochs "$EPOCHS" --tag "$TAG" --seed "$SEED"
 
 say "2/3  download, convert, serve and score"
-EXPECT_EPOCHS="$EPOCHS" ./finish_adapter.sh "$MODEL_NAME" "$SUBDIR"
+EXPECT_EPOCHS="$EPOCHS" EXPECT_SEED="$SEED" \
+    ./finish_adapter.sh "$MODEL_NAME" "$SUBDIR"
 
 [ -f "$PROJECT/$NEW_CSV" ] || die "the eval did not write $NEW_CSV.
   Training and conversion succeeded, so the adapter is fine -- re-run just
@@ -138,6 +154,21 @@ echo "  that is both the correct test and the more sensitive one."
 "$CONDA_PY" paired_test.py --a "$BASE_CSV" --b "$NEW_CSV"
 
 say "what this can and cannot tell you"
+if [ "$SEED" != 0 ]; then
+cat <<'NOTE'
+  THIS IS A SEED REPLICATE: same recipe, different draw. The gap it reports is
+  PURE RUN-TO-RUN NOISE, because nothing else was varied. That makes it the
+  yardstick every other gap in RESULTS.md has been missing.
+
+  Read it against them. If two identical configs differ by as much as the
+  epoch ablation did (0.126), then that ablation measured noise and the
+  epoch question is not merely underpowered, it is unasked. If they differ by
+  far less, the epoch gap keeps whatever weight its p-values allow.
+
+  A single replicate gives one difference, not a distribution. It bounds the
+  noise loosely; it does not estimate it. Two more would.
+NOTE
+else
 cat <<'NOTE'
   This compares TWO FINE-TUNES OF THE SAME BASE at different epoch counts.
   It answers "did the extra epoch help", and nothing else.
@@ -151,3 +182,4 @@ cat <<'NOTE'
 
   Then commit, score in the message, per CLAUDE.md -- including if it is worse.
 NOTE
+fi

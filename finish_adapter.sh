@@ -102,12 +102,16 @@ echo
 # ASSERTED, not printed and hoped for. The previous version of this script
 # printed the provenance and told a human to read it. A human read it, saw
 # epochs=2.0 where 1.0 was expected, and the script had already moved on.
-if [ -n "${EXPECT_EPOCHS:-}" ]; then
-    GOT="$(sed -n 's/.*epochs=\([0-9.]*\).*/\1/p' "$OUT/PROVENANCE.txt")"
+#
+# A SEED REPLICATE needs the second assertion: it varies nothing but `seed`, so
+# epochs match by design and EXPECT_EPOCHS cannot tell a fresh run from a stale
+# one. Each varied hyperparameter needs its own guard.
+assert_prov() {   # $1 = key in PROVENANCE.txt, $2 = expected value
+    local got
+    got="$(sed -n "s/.*$1=\([0-9.]*\).*/\1/p" "$OUT/PROVENANCE.txt")"
     # 1 and 1.0 are the same run. Compare numerically, not as strings.
-    if ! awk -v a="$GOT" -v b="$EXPECT_EPOCHS" \
-         'BEGIN{exit !(a+0==b+0 && a!="")}'; then
-        die "PROVENANCE says epochs=${GOT:-<missing>}, you expected $EXPECT_EPOCHS.
+    awk -v a="$got" -v b="$2" 'BEGIN{exit !(a+0==b+0 && a!="")}' || die \
+"PROVENANCE says $1=${got:-<missing>}, you expected $2.
 
   The volume still holds an older run. Training either never reached
   volume.commit() or wrote to a different path. Nothing was converted, so
@@ -115,9 +119,10 @@ if [ -n "${EXPECT_EPOCHS:-}" ]; then
 
   Check:  $MODAL volume ls fantasy-lora${SUBDIR:+/$SUBDIR}
           $MODAL app list          # did the run you launched actually finish?"
-    fi
-    echo "  epochs=$GOT matches EXPECT_EPOCHS=$EXPECT_EPOCHS"
-fi
+    echo "  $1=$got matches expected $2"
+}
+[ -z "${EXPECT_EPOCHS:-}" ] || assert_prov epochs "$EXPECT_EPOCHS"
+[ -z "${EXPECT_SEED:-}" ] || assert_prov seed "$EXPECT_SEED"
 echo "  run_id above is written by the training run itself. If it predates the"
 echo "  run you just launched, this is not that run's adapter."
 

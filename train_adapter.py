@@ -160,7 +160,7 @@ def check_access():
     secrets=[modal.Secret.from_name('huggingface')],
 )
 def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
-          lr: float = 2e-4, tag: str = ''):
+          lr: float = 2e-4, tag: str = '', seed: int = 0):
     import datetime
     import inspect
     import json
@@ -262,7 +262,12 @@ def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
         eval_strategy='epoch',
         save_strategy='epoch',
         report_to='none',
-        seed=0,
+        # Controls BOTH the data order and the LoRA A-matrix init, so two runs
+        # that differ only here are two independent draws of the same recipe.
+        # That is what gives every other number in this project an error bar:
+        # a 0.13 gap between epoch counts means nothing until you know what two
+        # IDENTICAL configs score against each other.
+        seed=seed,
         # Prompts are ~1,850 characters; 2048 tokens holds the whole exchange
         # with room to spare. Truncating here would silently cut the shortlist
         # and teach the model to answer from a partial list. The two names are
@@ -315,7 +320,8 @@ def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
                 f'run_id={datetime.datetime.utcnow():%Y-%m-%dT%H:%M:%SZ}\n'
                 f'base={BASE}\n'
                 f'ollama_base={OLLAMA_BASE}\n'
-                f'rank={rank} alpha={rank * 2} lr={lr} epochs={epochs}\n'
+                f'rank={rank} alpha={rank * 2} lr={lr} epochs={epochs} '
+                f'seed={seed}\n'
                 f'train={len(train_ds)} val={len(val_ds)}\n'
                 f'seasons: {spec["seasons"]}\n')
     volume.commit()
@@ -325,7 +331,7 @@ def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
 
 @app.local_entrypoint()
 def main(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
-         lr: float = 2e-4, tag: str = ''):
+         lr: float = 2e-4, tag: str = '', seed: int = 0):
     # Credentials before the GPU, always. A CPU container costs seconds; the
     # same failure discovered inside train() costs the image build, the A10G
     # allocation, and the walk to the coffee machine.
@@ -333,7 +339,8 @@ def main(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
           '(CPU container, no GPU) ...')
     check_access.remote()
 
-    train.remote(dataset=dataset, epochs=epochs, rank=rank, lr=lr, tag=tag)
+    train.remote(dataset=dataset, epochs=epochs, rank=rank, lr=lr, tag=tag,
+                 seed=seed)
     subdir = f'{dataset}{"_" + tag if tag else ""}'
     print('\nnext:')
     # The volume is MOUNTED at /adapter, so its own root IS that directory.

@@ -1,0 +1,480 @@
+450 test examples, seasons 2023-2025
+
+querying fantasy-draft via Ollama -- first call also loads
+the model into memory, so expect a slow start.
+
+  [  1/450] 2023 r1  Travis Kelce             rank   5   5.1s/ex, ~38.3 min left
+  [  2/450] 2023 r1  Christian McCaffrey      rank   1   3.9s/ex, ~29.2 min left
+  [  3/450] 2023 r1  Travis Kelce             rank   4   3.5s/ex, ~25.8 min left
+  [  4/450] 2023 r1  Travis Kelce             rank   4   3.2s/ex, ~24.1 min left
+  [  5/450] 2023 r1  Ja'Marr Chase            rank   5   3.1s/ex, ~22.9 min left
+  [  6/450] 2023 r1  Ja'Marr Chase            rank   6   2.9s/ex, ~21.7 min left
+  [  7/450] 2023 r1  Ja'Marr Chase            rank   6   2.8s/ex, ~20.9 min left
+  [  8/450] 2023 r1  Ja'Marr Chase            rank   5   2.8s/ex, ~20.6 min left
+  [  9/450] 2023 r1  Patrick Mahomes          rank   6   2.8s/ex, ~20.6 min left
+  [ 10/450] 2023 r1  Davante Adams            rank   4   2.8s/ex, ~20.3 min left
+  [ 11/450] 2023 r2  A.J. Brown               rank   2   2.7s/ex, ~20.0 min left
+  [ 12/450] 2023 r2  Saquon Barkley           rank   4   2.7s/ex, ~19.7 min left
+  [ 13/450] 2023 r2  Davante Adams            rank   3   2.7s/ex, ~19.3 min left
+  [ 14/450] 2023 r2  Davante Adams            rank   3   2.6s/ex, ~19.1 min left
+  [ 15/450] 2023 r2  Davante Adams            rank   4   2.6s/ex, ~18.9 min left
+  [ 16/450] 2023 r2  Davante Adams            rank   5   2.6s/ex, ~18.7 min left
+  [ 17/450] 2023 r2  Joe Mixon                rank   2   2.6s/ex, ~18.5 min left
+  [ 18/450] 2023 r2  Davante Adams            rank   3   2.6s/ex, ~18.4 min left
+  [ 19/450] 2023 r2  Davante Adams            rank   4   2.6s/ex, ~18.4 min left
+  [ 20/450] 2023 r2  Davante Adams            rank   4   2.5s/ex, ~18.3 min left
+  [ 21/450] 2023 r3  Davante Adams            rank   5   2.5s/ex, ~18.1 min left
+  [ 22/450] 2023 r3  Drake London             rank  10   2.5s/ex, ~18.0 min left
+  [ 23/450] 2023 r3  Drake London             rank  10   2.5s/ex, ~17.9 min left
+  [ 24/450] 2023 r3  Drake London             rank  11   2.5s/ex, ~17.8 min left
+  [ 25/450] 2023 r3  Drake London             rank  11   2.5s/ex, ~17.6 min left
+  [ 26/450] 2023 r3  Aaron Jones              rank  11   2.5s/ex, ~17.5 min left
+  [ 27/450] 2023 r3  Aaron Jones              rank  11   2.5s/ex, ~17.5 min left
+  [ 28/450] 2023 r3  Aaron Jones              rank  11   2.5s/ex, ~17.5 min left
+  [ 29/450] 2023 r3  George Kittle            rank   4   2.5s/ex, ~17.4 min left
+  [ 30/450] 2023 r3  Aaron Jones              rank  12   2.5s/ex, ~17.4 min left
+  [ 31/450] 2023 r4  Aaron Jones              rank  12   2.5s/ex, ~17.3 min left
+  [ 32/450] 2023 r4  CeeDee Lamb              rank   1   2.5s/ex, ~17.2 min left
+  [ 33/450] 2023 r4  George Kittle            rank   3   2.5s/ex, ~17.2 min left
+  [ 34/450] 2023 r4  George Kittle            rank   3   2.5s/ex, ~17.1 min left
+  [ 35/450] 2023 r4  Derrick Henry            rank   4   2.5s/ex, ~17.1 min left
+  [ 36/450] 2023 r4  Derrick Henry            rank   3   2.5s/ex, ~17.0 min left
+  [ 37/450] 2023 r4  Derrick Henry            rank   3   2.5s/ex, ~16.9 min left
+  [ 38/450] 2023 r4  Derrick Henry            rank   3   2.4s/ex, ~16.8 min left
+  [ 39/450] 2023 r4  Alvin Kamara             rank   4   2.4s/ex, ~16.7 min left
+  [ 40/450] 2023 r4  Tony Pollard             rank   5   2.4s/ex, ~16.7 min left
+  [ 41/450] 2023 r5  Derrick Henry            rank   4   2.4s/ex, ~16.6 min left
+  [ 42/450] 2023 r5  Derrick Henry            rank   4   2.4s/ex, ~16.6 min left
+  [ 43/450] 2023 r5  George Pickens           rank   6   2.4s/ex, ~16.5 min left
+  [ 44/450] 2023 r5  Travis Etienne           rank   1   2.4s/ex, ~16.4 min left
+  [ 45/450] 2023 r5  Travis Etienne           rank   1   2.4s/ex, ~16.3 min left
+  [ 46/450] 2023 r5  D.J. Moore               rank   2   2.4s/ex, ~16.3 min left
+  [ 47/450] 2023 r5  Christian Kirk           rank  10   2.4s/ex, ~16.3 min left
+  [ 48/450] 2023 r5  Travis Etienne           rank   1   2.4s/ex, ~16.2 min left
+  [ 49/450] 2023 r5  Joe Burrow               rank  12   2.4s/ex, ~16.1 min left
+  [ 50/450] 2023 r5  Amari Cooper             rank   6   2.4s/ex, ~16.0 min left
+  [ 51/450] 2023 r6  Travis Etienne           rank   1   2.4s/ex, ~16.0 min left
+  [ 52/450] 2023 r6  Travis Etienne           rank   1   2.4s/ex, ~16.0 min left
+  [ 53/450] 2023 r6  Amari Cooper             rank   5   2.4s/ex, ~15.9 min left
+  [ 54/450] 2023 r6  Jonathan Taylor          rank   9   2.4s/ex, ~15.9 min left
+  [ 55/450] 2023 r6  Tyler Lockett            rank   8   2.4s/ex, ~15.8 min left
+  [ 56/450] 2023 r6  Mike Evans               rank   2   2.4s/ex, ~15.8 min left
+  [ 57/450] 2023 r6  Jonathan Taylor          rank   8   2.4s/ex, ~15.7 min left
+  [ 58/450] 2023 r6  Chris Olave              rank   1   2.4s/ex, ~15.6 min left
+  [ 59/450] 2023 r6  Jonathan Taylor          rank   7   2.4s/ex, ~15.6 min left
+  [ 60/450] 2023 r6  Evan Engram              rank   1   2.4s/ex, ~15.5 min left
+  [ 61/450] 2023 r7  Mike Williams            rank  10   2.4s/ex, ~15.5 min left
+  [ 62/450] 2023 r7  D'Andre Swift            rank   2   2.4s/ex, ~15.5 min left
+  [ 63/450] 2023 r7  D'Andre Swift            rank   1   2.4s/ex, ~15.4 min left
+  [ 64/450] 2023 r7  D'Andre Swift            rank   2   2.4s/ex, ~15.4 min left
+  [ 65/450] 2023 r7  Dalton Schultz           rank   2   2.4s/ex, ~15.3 min left
+  [ 66/450] 2023 r7  Dalton Schultz           rank   2   2.4s/ex, ~15.3 min left
+  [ 67/450] 2023 r7  Rhamondre Stevenson      rank   6   2.4s/ex, ~15.3 min left
+  [ 68/450] 2023 r7  Juwan Johnson            rank   6   2.4s/ex, ~15.3 min left
+  [ 69/450] 2023 r7  Marquise Brown           rank   9   2.4s/ex, ~15.2 min left
+  [ 70/450] 2023 r7  Rhamondre Stevenson      rank   6   2.4s/ex, ~15.2 min left
+  [ 71/450] 2023 r8  Dawson Knox              rank   9   2.4s/ex, ~15.2 min left
+  [ 72/450] 2023 r8  Kyle Pitts               rank   3   2.4s/ex, ~15.2 min left
+  [ 73/450] 2023 r8  Justin Fields            rank   2   2.4s/ex, ~15.2 min left
+  [ 74/450] 2023 r8  Marquise Brown           rank   7   2.4s/ex, ~15.1 min left
+  [ 75/450] 2023 r8  Tom Brady                rank  12   2.4s/ex, ~15.1 min left
+  [ 76/450] 2023 r8  Kyle Pitts               rank   3   2.4s/ex, ~15.0 min left
+  [ 77/450] 2023 r8  Juwan Johnson            rank   4   2.4s/ex, ~15.0 min left
+  [ 78/450] 2023 r8  Marquise Brown           rank   7   2.4s/ex, ~15.0 min left
+  [ 79/450] 2023 r8  Marquise Brown           rank   8   2.4s/ex, ~15.0 min left
+  [ 80/450] 2023 r8  Christian Watson         rank  10   2.4s/ex, ~14.9 min left
+  [ 81/450] 2023 r9  Rhamondre Stevenson      rank   7   2.4s/ex, ~14.9 min left
+  [ 82/450] 2023 r9  Kyle Pitts               rank   3   2.4s/ex, ~14.8 min left
+  [ 83/450] 2023 r9  Josh Palmer              rank  10   2.4s/ex, ~14.8 min left
+  [ 84/450] 2023 r9  Josh Palmer              rank  10   2.4s/ex, ~14.7 min left
+  [ 85/450] 2023 r9  Tyler Higbee             rank   7   2.4s/ex, ~14.7 min left
+  [ 86/450] 2023 r9  Ezekiel Elliott          rank   5   2.4s/ex, ~14.7 min left
+  [ 87/450] 2023 r9  James Robinson           rank  10   2.4s/ex, ~14.7 min left
+  [ 88/450] 2023 r9  Dak Prescott             rank   2   2.4s/ex, ~14.6 min left
+  [ 89/450] 2023 r9  Tyler Conklin            rank   5   2.4s/ex, ~14.6 min left
+  [ 90/450] 2023 r9  Ezekiel Elliott          rank   4   2.4s/ex, ~14.6 min left
+  [ 91/450] 2023 r10 Ezekiel Elliott          rank   4   2.4s/ex, ~14.5 min left
+  [ 92/450] 2023 r10 James Robinson           rank  11   2.4s/ex, ~14.5 min left
+  [ 93/450] 2023 r10 David Montgomery         rank   7   2.4s/ex, ~14.4 min left
+  [ 94/450] 2023 r10 James Robinson           rank  10   2.4s/ex, ~14.4 min left
+  [ 95/450] 2023 r10 Breece Hall              rank   1   2.4s/ex, ~14.4 min left
+  [ 96/450] 2023 r10 DeAndre Hopkins          rank   2   2.4s/ex, ~14.3 min left
+  [ 97/450] 2023 r10 Deebo Samuel             rank   1   2.4s/ex, ~14.3 min left
+  [ 98/450] 2023 r10 Deebo Samuel             rank   1   2.4s/ex, ~14.3 min left
+  [ 99/450] 2023 r10 Aaron Rodgers            rank  12   2.4s/ex, ~14.2 min left
+  [100/450] 2023 r10 Treylon Burks            rank  11   2.4s/ex, ~14.2 min left
+  [101/450] 2023 r11 Treylon Burks            rank  11   2.4s/ex, ~14.2 min left
+  [102/450] 2023 r11 David Montgomery         rank   3   2.4s/ex, ~14.2 min left
+  [103/450] 2023 r11 David Montgomery         rank   4   2.4s/ex, ~14.1 min left
+  [104/450] 2023 r11 Deebo Samuel             rank   2   2.4s/ex, ~14.1 min left
+  [105/450] 2023 r11 Tyler Higbee             rank   4   2.4s/ex, ~14.0 min left
+  [106/450] 2023 r11 Aaron Rodgers            rank  12   2.4s/ex, ~14.0 min left
+  [107/450] 2023 r11 Antonio Gibson           rank   9   2.4s/ex, ~14.0 min left
+  [108/450] 2023 r11 Tyler Boyd               rank   9   2.4s/ex, ~13.9 min left
+  [109/450] 2023 r11 Tyler Boyd               rank   8   2.4s/ex, ~13.9 min left
+  [110/450] 2023 r11 Tyler Boyd               rank   9   2.4s/ex, ~13.8 min left
+  [111/450] 2023 r12 Tyler Boyd               rank   8   2.4s/ex, ~13.8 min left
+  [112/450] 2023 r12 Courtland Sutton         rank   6   2.4s/ex, ~13.8 min left
+  [113/450] 2023 r12 Tyler Boyd               rank   8   2.4s/ex, ~13.7 min left
+  [114/450] 2023 r12 Courtland Sutton         rank   5   2.4s/ex, ~13.7 min left
+  [115/450] 2023 r12 James Cook               rank   3   2.4s/ex, ~13.6 min left
+  [116/450] 2023 r12 James Cook               rank   2   2.4s/ex, ~13.6 min left
+  [117/450] 2023 r12 Tyler Boyd               rank   5   2.4s/ex, ~13.6 min left
+  [118/450] 2023 r12 James Cook               rank   3   2.4s/ex, ~13.6 min left
+  [119/450] 2023 r12 J.K. Dobbins             rank  12   2.5s/ex, ~13.5 min left
+  [120/450] 2023 r12 Courtland Sutton         rank   2   2.5s/ex, ~13.5 min left
+  [121/450] 2023 r13 Courtland Sutton         rank   1   2.5s/ex, ~13.4 min left
+  [122/450] 2023 r13 Elijah Moore             rank   3   2.4s/ex, ~13.4 min left
+  [123/450] 2023 r13 J.K. Dobbins             rank   9   2.4s/ex, ~13.3 min left
+  [124/450] 2023 r13 Jahan Dotson             rank   4   2.5s/ex, ~13.3 min left
+  [125/450] 2023 r13 Jahan Dotson             rank   5   2.4s/ex, ~13.3 min left
+  [126/450] 2023 r13 Kenneth Gainwell         rank   5   2.5s/ex, ~13.3 min left
+  [127/450] 2023 r13 Elijah Moore             rank   3   2.5s/ex, ~13.2 min left
+  [128/450] 2023 r13 J.K. Dobbins             rank   8   2.5s/ex, ~13.2 min left
+  [129/450] 2023 r13 Elijah Moore             rank   3   2.5s/ex, ~13.2 min left
+  [130/450] 2023 r13 Kenneth Gainwell         rank   5   2.5s/ex, ~13.2 min left
+  [131/450] 2023 r14 Kenneth Gainwell         rank   5   2.5s/ex, ~13.2 min left
+  [132/450] 2023 r14 Elijah Moore             rank   2   2.5s/ex, ~13.1 min left
+  [133/450] 2023 r14 Elijah Moore             rank   3   2.5s/ex, ~13.1 min left
+  [134/450] 2023 r14 Chase Claypool           rank  11   2.5s/ex, ~13.1 min left
+  [135/450] 2023 r14 Kenneth Gainwell         rank   4   2.5s/ex, ~13.1 min left
+  [136/450] 2023 r14 Elijah Moore             rank   3   2.5s/ex, ~13.0 min left
+  [137/450] 2023 r14 Kenneth Gainwell         rank   4   2.5s/ex, ~13.0 min left
+  [138/450] 2023 r14 Brian Robinson Jr.       rank   1   2.5s/ex, ~13.0 min left
+  [139/450] 2023 r14 Darius Slayton           rank   2   2.5s/ex, ~13.0 min left
+  [140/450] 2023 r14 Allen Lazard             rank   8   2.5s/ex, ~12.9 min left
+  [141/450] 2023 r15 Brian Robinson Jr.       rank   1   2.5s/ex, ~12.9 min left
+  [142/450] 2023 r15 Darius Slayton           rank   2   2.5s/ex, ~12.9 min left
+  [143/450] 2023 r15 Brian Robinson Jr.       rank   1   2.5s/ex, ~12.8 min left
+  [144/450] 2023 r15 Nyheim Hines             rank  11   2.5s/ex, ~12.8 min left
+  [145/450] 2023 r15 Romeo Doubs              rank   1   2.5s/ex, ~12.8 min left
+  [146/450] 2023 r15 Brian Robinson Jr.       rank   1   2.5s/ex, ~12.8 min left
+  [147/450] 2023 r15 Romeo Doubs              rank   2   2.5s/ex, ~12.7 min left
+  [148/450] 2023 r15 Laviska Shenault Jr.     rank  12   2.5s/ex, ~12.7 min left
+  [149/450] 2023 r15 Brian Robinson Jr.       rank   1   2.5s/ex, ~12.7 min left
+  [150/450] 2023 r15 Nyheim Hines             rank   9   2.5s/ex, ~12.7 min left
+  [151/450] 2024 r1  Travis Kelce             rank   9   2.5s/ex, ~12.6 min left
+  [152/450] 2024 r1  Travis Kelce             rank   8   2.5s/ex, ~12.6 min left
+  [153/450] 2024 r1  Patrick Mahomes          rank  10   2.5s/ex, ~12.6 min left
+  [154/450] 2024 r1  Christian McCaffrey      rank  12   2.5s/ex, ~12.5 min left
+  [155/450] 2024 r1  Christian McCaffrey      rank  12   2.5s/ex, ~12.5 min left
+  [156/450] 2024 r1  CeeDee Lamb              rank   7   2.5s/ex, ~12.4 min left
+  [157/450] 2024 r1  CeeDee Lamb              rank   8   2.5s/ex, ~12.4 min left
+  [158/450] 2024 r1  CeeDee Lamb              rank   8   2.5s/ex, ~12.3 min left
+  [159/450] 2024 r1  CeeDee Lamb              rank   7   2.5s/ex, ~12.3 min left
+  [160/450] 2024 r1  CeeDee Lamb              rank   6   2.5s/ex, ~12.3 min left
+  [161/450] 2024 r2  Tyreek Hill              rank   8   2.5s/ex, ~12.2 min left
+  [162/450] 2024 r2  Tyreek Hill              rank   7   2.5s/ex, ~12.2 min left
+  [163/450] 2024 r2  Tyreek Hill              rank   6   2.5s/ex, ~12.1 min left
+  [164/450] 2024 r2  Saquon Barkley           rank   3   2.5s/ex, ~12.1 min left
+  [165/450] 2024 r2  Saquon Barkley           rank   3   2.5s/ex, ~12.0 min left
+  [166/450] 2024 r2  Saquon Barkley           rank   3   2.5s/ex, ~12.0 min left
+  [167/450] 2024 r2  Ja'Marr Chase            rank   1   2.5s/ex, ~11.9 min left
+  [168/450] 2024 r2  George Kittle            rank   3   2.5s/ex, ~11.9 min left
+  [169/450] 2024 r2  Ja'Marr Chase            rank   1   2.5s/ex, ~11.9 min left
+  [170/450] 2024 r2  Ja'Marr Chase            rank   1   2.5s/ex, ~11.8 min left
+  [171/450] 2024 r3  Ja'Marr Chase            rank   1   2.5s/ex, ~11.8 min left
+  [172/450] 2024 r3  Ja'Marr Chase            rank   1   2.5s/ex, ~11.7 min left
+  [173/450] 2024 r3  Travis Etienne           rank   8   2.5s/ex, ~11.7 min left
+  [174/450] 2024 r3  Travis Etienne           rank   7   2.5s/ex, ~11.6 min left
+  [175/450] 2024 r3  Travis Etienne           rank   8   2.5s/ex, ~11.6 min left
+  [176/450] 2024 r3  Travis Etienne           rank   8   2.5s/ex, ~11.6 min left
+  [177/450] 2024 r3  Travis Etienne           rank   9   2.5s/ex, ~11.5 min left
+  [178/450] 2024 r3  Travis Etienne           rank   9   2.5s/ex, ~11.5 min left
+  [179/450] 2024 r3  Bijan Robinson           rank   1   2.5s/ex, ~11.4 min left
+  [180/450] 2024 r3  Travis Etienne           rank   8   2.5s/ex, ~11.4 min left
+  [181/450] 2024 r4  Travis Etienne           rank   7   2.5s/ex, ~11.3 min left
+  [182/450] 2024 r4  Travis Etienne           rank   6   2.5s/ex, ~11.3 min left
+  [183/450] 2024 r4  Travis Etienne           rank   7   2.5s/ex, ~11.3 min left
+  [184/450] 2024 r4  T.J. Hockenson           rank  10   2.5s/ex, ~11.2 min left
+  [185/450] 2024 r4  Amari Cooper             rank  10   2.5s/ex, ~11.2 min left
+  [186/450] 2024 r4  Bijan Robinson           rank   1   2.5s/ex, ~11.1 min left
+  [187/450] 2024 r4  D.K. Metcalf             rank   4   2.5s/ex, ~11.1 min left
+  [188/450] 2024 r4  D.K. Metcalf             rank   7   2.5s/ex, ~11.0 min left
+  [189/450] 2024 r4  Michael Pittman Jr.      rank   7   2.5s/ex, ~11.0 min left
+  [190/450] 2024 r4  Michael Pittman Jr.      rank   8   2.5s/ex, ~11.0 min left
+  [191/450] 2024 r5  Michael Pittman Jr.      rank   9   2.5s/ex, ~10.9 min left
+  [192/450] 2024 r5  Mike Evans               rank   4   2.5s/ex, ~10.9 min left
+  [193/450] 2024 r5  C.J. Stroud              rank  10   2.5s/ex, ~10.8 min left
+  [194/450] 2024 r5  James Cook               rank   3   2.5s/ex, ~10.8 min left
+  [195/450] 2024 r5  Derrick Henry            rank   1   2.5s/ex, ~10.7 min left
+  [196/450] 2024 r5  Derrick Henry            rank   1   2.5s/ex, ~10.7 min left
+  [197/450] 2024 r5  Derrick Henry            rank   1   2.5s/ex, ~10.7 min left
+  [198/450] 2024 r5  Tony Pollard             rank   5   2.5s/ex, ~10.6 min left
+  [199/450] 2024 r5  Derrick Henry            rank   1   2.5s/ex, ~10.6 min left
+  [200/450] 2024 r5  Derrick Henry            rank   1   2.5s/ex, ~10.5 min left
+  [201/450] 2024 r6  Derrick Henry            rank   1   2.5s/ex, ~10.5 min left
+  [202/450] 2024 r6  Derrick Henry            rank   1   2.5s/ex, ~10.4 min left
+  [203/450] 2024 r6  Derrick Henry            rank   1   2.5s/ex, ~10.4 min left
+  [204/450] 2024 r6  Derrick Henry            rank   1   2.5s/ex, ~10.3 min left
+  [205/450] 2024 r6  Derrick Henry            rank   1   2.5s/ex, ~10.3 min left
+  [206/450] 2024 r6  Cooper Kupp              rank   3   2.5s/ex, ~10.3 min left
+  [207/450] 2024 r6  Cooper Kupp              rank   4   2.5s/ex, ~10.2 min left
+  [208/450] 2024 r6  Cooper Kupp              rank   5   2.5s/ex, ~10.2 min left
+  [209/450] 2024 r6  Cooper Kupp              rank   5   2.5s/ex, ~10.1 min left
+  [210/450] 2024 r6  Cooper Kupp              rank   4   2.5s/ex, ~10.1 min left
+  [211/450] 2024 r7  Cooper Kupp              rank   5   2.5s/ex, ~10.0 min left
+  [212/450] 2024 r7  George Pickens           rank   8   2.5s/ex, ~10.0 min left
+  [213/450] 2024 r7  Drake London             rank   1   2.5s/ex, ~10.0 min left
+  [214/450] 2024 r7  Brock Purdy              rank   7   2.5s/ex, ~9.9 min left
+  [215/450] 2024 r7  Aaron Jones              rank   3   2.5s/ex, ~9.9 min left
+  [216/450] 2024 r7  DeAndre Hopkins          rank  11   2.5s/ex, ~9.9 min left
+  [217/450] 2024 r7  Aaron Jones              rank   4   2.5s/ex, ~9.8 min left
+  [218/450] 2024 r7  Drake London             rank   2   2.5s/ex, ~9.8 min left
+  [219/450] 2024 r7  Aaron Jones              rank   4   2.5s/ex, ~9.7 min left
+  [220/450] 2024 r7  Aaron Jones              rank   3   2.5s/ex, ~9.7 min left
+  [221/450] 2024 r8  Aaron Jones              rank   3   2.5s/ex, ~9.7 min left
+  [222/450] 2024 r8  Alvin Kamara             rank   3   2.5s/ex, ~9.6 min left
+  [223/450] 2024 r8  Drake London             rank   1   2.5s/ex, ~9.6 min left
+  [224/450] 2024 r8  Drake London             rank   1   2.5s/ex, ~9.5 min left
+  [225/450] 2024 r8  Drake London             rank   1   2.5s/ex, ~9.5 min left
+  [226/450] 2024 r8  Drake London             rank   1   2.5s/ex, ~9.5 min left
+  [227/450] 2024 r8  Drake London             rank   1   2.5s/ex, ~9.4 min left
+  [228/450] 2024 r8  Drake London             rank   1   2.5s/ex, ~9.4 min left
+  [229/450] 2024 r8  Drake London             rank   1   2.5s/ex, ~9.3 min left
+  [230/450] 2024 r8  Kenneth Walker III       rank   8   2.5s/ex, ~9.3 min left
+  [231/450] 2024 r9  Alvin Kamara             rank   1   2.5s/ex, ~9.3 min left
+  [232/450] 2024 r9  Kenneth Walker III       rank   5   2.5s/ex, ~9.2 min left
+  [233/450] 2024 r9  Jonathan Taylor          rank   3   2.5s/ex, ~9.2 min left
+  [234/450] 2024 r9  Tyler Lockett            rank  11   2.5s/ex, ~9.1 min left
+  [235/450] 2024 r9  Tyler Lockett            rank  11   2.5s/ex, ~9.1 min left
+  [236/450] 2024 r9  Tyler Lockett            rank   9   2.5s/ex, ~9.0 min left
+  [237/450] 2024 r9  D'Andre Swift            rank   3   2.5s/ex, ~9.0 min left
+  [238/450] 2024 r9  Tyler Lockett            rank  11   2.5s/ex, ~9.0 min left
+  [239/450] 2024 r9  Tyler Lockett            rank  11   2.5s/ex, ~8.9 min left
+  [240/450] 2024 r9  Ezekiel Elliott          rank  12   2.5s/ex, ~8.9 min left
+  [241/450] 2024 r10 Dallas Goedert           rank   9   2.5s/ex, ~8.8 min left
+  [242/450] 2024 r10 Dallas Goedert           rank   8   2.5s/ex, ~8.8 min left
+  [243/450] 2024 r10 Ezekiel Elliott          rank  11   2.5s/ex, ~8.8 min left
+  [244/450] 2024 r10 Austin Ekeler            rank   4   2.5s/ex, ~8.7 min left
+  [245/450] 2024 r10 Austin Ekeler            rank   3   2.5s/ex, ~8.7 min left
+  [246/450] 2024 r10 Ezekiel Elliott          rank  10   2.5s/ex, ~8.6 min left
+  [247/450] 2024 r10 Ezekiel Elliott          rank   9   2.5s/ex, ~8.6 min left
+  [248/450] 2024 r10 Austin Ekeler            rank   4   2.5s/ex, ~8.6 min left
+  [249/450] 2024 r10 Austin Ekeler            rank   3   2.5s/ex, ~8.5 min left
+  [250/450] 2024 r10 Austin Ekeler            rank   5   2.5s/ex, ~8.5 min left
+  [251/450] 2024 r11 Austin Ekeler            rank   4   2.5s/ex, ~8.4 min left
+  [252/450] 2024 r11 Austin Ekeler            rank   3   2.5s/ex, ~8.4 min left
+  [253/450] 2024 r11 Austin Ekeler            rank   4   2.5s/ex, ~8.4 min left
+  [254/450] 2024 r11 Austin Ekeler            rank   4   2.5s/ex, ~8.3 min left
+  [255/450] 2024 r11 Austin Ekeler            rank   4   2.5s/ex, ~8.3 min left
+  [256/450] 2024 r11 Austin Ekeler            rank   4   2.5s/ex, ~8.2 min left
+  [257/450] 2024 r11 Austin Ekeler            rank   5   2.5s/ex, ~8.2 min left
+  [258/450] 2024 r11 Tua Tagovailoa           rank   8   2.5s/ex, ~8.2 min left
+  [259/450] 2024 r11 Austin Ekeler            rank   5   2.5s/ex, ~8.1 min left
+  [260/450] 2024 r11 Javonte Williams         rank   4   2.5s/ex, ~8.1 min left
+  [261/450] 2024 r12 Javonte Williams         rank   4   2.5s/ex, ~8.0 min left
+  [262/450] 2024 r12 Javonte Williams         rank   3   2.5s/ex, ~8.0 min left
+  [263/450] 2024 r12 Joe Burrow               rank   1   2.6s/ex, ~7.9 min left
+  [264/450] 2024 r12 Tua Tagovailoa           rank   8   2.6s/ex, ~7.9 min left
+  [265/450] 2024 r12 Javonte Williams         rank   4   2.6s/ex, ~7.9 min left
+  [266/450] 2024 r12 Jahan Dotson             rank  11   2.6s/ex, ~7.8 min left
+  [267/450] 2024 r12 Romeo Doubs              rank   6   2.6s/ex, ~7.8 min left
+  [268/450] 2024 r12 Javonte Williams         rank   1   2.6s/ex, ~7.7 min left
+  [269/450] 2024 r12 Javonte Williams         rank   3   2.6s/ex, ~7.7 min left
+  [270/450] 2024 r12 Javonte Williams         rank   3   2.6s/ex, ~7.7 min left
+  [271/450] 2024 r13 Javonte Williams         rank   3   2.6s/ex, ~7.6 min left
+  [272/450] 2024 r13 Dameon Pierce            rank   7   2.6s/ex, ~7.6 min left
+  [273/450] 2024 r13 Dameon Pierce            rank   4   2.6s/ex, ~7.5 min left
+  [274/450] 2024 r13 Christian Watson         rank   8   2.6s/ex, ~7.5 min left
+  [275/450] 2024 r13 Rashid Shaheed           rank   9   2.6s/ex, ~7.5 min left
+  [276/450] 2024 r13 Derek Carr               rank  12   2.6s/ex, ~7.4 min left
+  [277/450] 2024 r13 Christian Watson         rank   9   2.6s/ex, ~7.4 min left
+  [278/450] 2024 r13 Christian Watson         rank  10   2.6s/ex, ~7.3 min left
+  [279/450] 2024 r13 Christian Watson         rank   9   2.6s/ex, ~7.3 min left
+  [280/450] 2024 r13 Michael Mayer            rank   8   2.6s/ex, ~7.3 min left
+  [281/450] 2024 r14 Elijah Moore             rank   7   2.6s/ex, ~7.2 min left
+  [282/450] 2024 r14 Rashid Shaheed           rank  10   2.6s/ex, ~7.2 min left
+  [283/450] 2024 r14 Elijah Moore             rank   7   2.6s/ex, ~7.1 min left
+  [284/450] 2024 r14 Elijah Moore             rank   6   2.6s/ex, ~7.1 min left
+  [285/450] 2024 r14 Antonio Gibson           rank   3   2.6s/ex, ~7.1 min left
+  [286/450] 2024 r14 Elijah Moore             rank   5   2.6s/ex, ~7.0 min left
+  [287/450] 2024 r14 Elijah Moore             rank   5   2.6s/ex, ~7.0 min left
+  [288/450] 2024 r14 D'Onta Foreman           rank   7   2.6s/ex, ~6.9 min left
+  [289/450] 2024 r14 Derek Carr               rank  11   2.6s/ex, ~6.9 min left
+  [290/450] 2024 r14 Derek Carr               rank  11   2.6s/ex, ~6.9 min left
+  [291/450] 2024 r15 Derek Carr               rank  11   2.6s/ex, ~6.8 min left
+  [292/450] 2024 r15 Derek Carr               rank  11   2.6s/ex, ~6.8 min left
+  [293/450] 2024 r15 D'Onta Foreman           rank   5   2.6s/ex, ~6.7 min left
+  [294/450] 2024 r15 Elijah Moore             rank   6   2.6s/ex, ~6.7 min left
+  [295/450] 2024 r15 Michael Carter           rank   6   2.6s/ex, ~6.7 min left
+  [296/450] 2024 r15 Miles Sanders            rank   4   2.6s/ex, ~6.6 min left
+  [297/450] 2024 r15 Elijah Moore             rank   6   2.6s/ex, ~6.6 min left
+  [298/450] 2024 r15 Alec Pierce              rank   3   2.6s/ex, ~6.5 min left
+  [299/450] 2024 r15 Tyler Boyd               rank   9   2.6s/ex, ~6.5 min left
+  [300/450] 2024 r15 Michael Carter           rank   4   2.6s/ex, ~6.5 min left
+  [301/450] 2025 r1  Josh Allen               rank   6   2.6s/ex, ~6.4 min left
+  [302/450] 2025 r1  Josh Allen               rank   7   2.6s/ex, ~6.4 min left
+  [303/450] 2025 r1  Ja'Marr Chase            rank   6   2.6s/ex, ~6.3 min left
+  [304/450] 2025 r1  Ja'Marr Chase            rank   6   2.6s/ex, ~6.3 min left
+  [305/450] 2025 r1  Ja'Marr Chase            rank   6   2.6s/ex, ~6.3 min left
+  [306/450] 2025 r1  Ja'Marr Chase            rank   6   2.6s/ex, ~6.2 min left
+  [307/450] 2025 r1  Bijan Robinson           rank   2   2.6s/ex, ~6.2 min left
+  [308/450] 2025 r1  Patrick Mahomes          rank   8   2.6s/ex, ~6.1 min left
+  [309/450] 2025 r1  Bijan Robinson           rank   2   2.6s/ex, ~6.1 min left
+  [310/450] 2025 r1  CeeDee Lamb              rank   6   2.6s/ex, ~6.0 min left
+  [311/450] 2025 r2  CeeDee Lamb              rank   6   2.6s/ex, ~6.0 min left
+  [312/450] 2025 r2  CeeDee Lamb              rank   7   2.6s/ex, ~5.9 min left
+  [313/450] 2025 r2  Lamar Jackson            rank  11   2.6s/ex, ~5.9 min left
+  [314/450] 2025 r2  Lamar Jackson            rank  10   2.6s/ex, ~5.9 min left
+  [315/450] 2025 r2  George Kittle            rank   8   2.6s/ex, ~5.8 min left
+  [316/450] 2025 r2  A.J. Brown               rank   4   2.6s/ex, ~5.8 min left
+  [317/450] 2025 r2  Saquon Barkley           rank   4   2.6s/ex, ~5.7 min left
+  [318/450] 2025 r2  Sam LaPorta              rank  10   2.6s/ex, ~5.7 min left
+  [319/450] 2025 r2  Jalen Hurts              rank   6   2.6s/ex, ~5.6 min left
+  [320/450] 2025 r2  Saquon Barkley           rank   5   2.6s/ex, ~5.6 min left
+  [321/450] 2025 r3  D.J. Moore               rank   7   2.6s/ex, ~5.6 min left
+  [322/450] 2025 r3  Saquon Barkley           rank   4   2.6s/ex, ~5.5 min left
+  [323/450] 2025 r3  Saquon Barkley           rank   3   2.6s/ex, ~5.5 min left
+  [324/450] 2025 r3  Saquon Barkley           rank   2   2.6s/ex, ~5.4 min left
+  [325/450] 2025 r3  Saquon Barkley           rank   2   2.6s/ex, ~5.4 min left
+  [326/450] 2025 r3  Saquon Barkley           rank   2   2.6s/ex, ~5.3 min left
+  [327/450] 2025 r3  Jalen Hurts              rank   5   2.6s/ex, ~5.3 min left
+  [328/450] 2025 r3  Saquon Barkley           rank   2   2.6s/ex, ~5.3 min left
+  [329/450] 2025 r3  Josh Jacobs              rank   1   2.6s/ex, ~5.2 min left
+  [330/450] 2025 r3  Alvin Kamara             rank  10   2.6s/ex, ~5.2 min left
+  [331/450] 2025 r4  Mark Andrews             rank   7   2.6s/ex, ~5.1 min left
+  [332/450] 2025 r4  Drake London             rank   2   2.6s/ex, ~5.1 min left
+  [333/450] 2025 r4  Drake London             rank   3   2.6s/ex, ~5.0 min left
+  [334/450] 2025 r4  Tyreek Hill              rank  11   2.6s/ex, ~5.0 min left
+  [335/450] 2025 r4  Alvin Kamara             rank   8   2.6s/ex, ~5.0 min left
+  [336/450] 2025 r4  Alvin Kamara             rank   8   2.6s/ex, ~4.9 min left
+  [337/450] 2025 r4  Tyreek Hill              rank  11   2.6s/ex, ~4.9 min left
+  [338/450] 2025 r4  Tyreek Hill              rank  10   2.6s/ex, ~4.8 min left
+  [339/450] 2025 r4  Tyreek Hill              rank  10   2.6s/ex, ~4.8 min left
+  [340/450] 2025 r4  Tyreek Hill              rank  10   2.6s/ex, ~4.7 min left
+  [341/450] 2025 r5  Tyreek Hill              rank  10   2.6s/ex, ~4.7 min left
+  [342/450] 2025 r5  Tyreek Hill              rank  10   2.6s/ex, ~4.6 min left
+  [343/450] 2025 r5  Tyreek Hill              rank  10   2.6s/ex, ~4.6 min left
+  [344/450] 2025 r5  Tyreek Hill              rank  11   2.6s/ex, ~4.6 min left
+  [345/450] 2025 r5  Travis Kelce             rank   4   2.6s/ex, ~4.5 min left
+  [346/450] 2025 r5  Jonathan Taylor          rank   1   2.6s/ex, ~4.5 min left
+  [347/450] 2025 r5  Travis Kelce             rank   5   2.6s/ex, ~4.4 min left
+  [348/450] 2025 r5  Travis Kelce             rank   5   2.6s/ex, ~4.4 min left
+  [349/450] 2025 r5  Travis Kelce             rank   4   2.6s/ex, ~4.3 min left
+  [350/450] 2025 r5  Travis Kelce             rank   4   2.6s/ex, ~4.3 min left
+  [351/450] 2025 r6  Travis Kelce             rank   5   2.6s/ex, ~4.3 min left
+  [352/450] 2025 r6  D.K. Metcalf             rank   8   2.6s/ex, ~4.2 min left
+  [353/450] 2025 r6  Travis Kelce             rank   6   2.6s/ex, ~4.2 min left
+  [354/450] 2025 r6  Travis Kelce             rank   7   2.6s/ex, ~4.1 min left
+  [355/450] 2025 r6  Travis Kelce             rank   7   2.6s/ex, ~4.1 min left
+  [356/450] 2025 r6  Travis Kelce             rank   7   2.6s/ex, ~4.0 min left
+  [357/450] 2025 r6  Derrick Henry            rank   2   2.6s/ex, ~4.0 min left
+  [358/450] 2025 r6  Derrick Henry            rank   2   2.6s/ex, ~4.0 min left
+  [359/450] 2025 r6  Derrick Henry            rank   2   2.6s/ex, ~3.9 min left
+  [360/450] 2025 r6  Derrick Henry            rank   2   2.6s/ex, ~3.9 min left
+  [361/450] 2025 r7  Derrick Henry            rank   2   2.6s/ex, ~3.8 min left
+  [362/450] 2025 r7  Derrick Henry            rank   2   2.6s/ex, ~3.8 min left
+  [363/450] 2025 r7  Derrick Henry            rank   1   2.6s/ex, ~3.8 min left
+  [364/450] 2025 r7  Derrick Henry            rank   1   2.6s/ex, ~3.7 min left
+  [365/450] 2025 r7  Derrick Henry            rank   1   2.6s/ex, ~3.7 min left
+  [366/450] 2025 r7  Derrick Henry            rank   1   2.6s/ex, ~3.6 min left
+  [367/450] 2025 r7  Derrick Henry            rank   1   2.6s/ex, ~3.6 min left
+  [368/450] 2025 r7  Michael Pittman Jr.      rank   3   2.6s/ex, ~3.5 min left
+  [369/450] 2025 r7  Cade Otton               rank   5   2.6s/ex, ~3.5 min left
+  [370/450] 2025 r7  Davante Adams            rank   2   2.6s/ex, ~3.5 min left
+  [371/450] 2025 r8  Davante Adams            rank   2   2.6s/ex, ~3.4 min left
+  [372/450] 2025 r8  Davante Adams            rank   2   2.6s/ex, ~3.4 min left
+  [373/450] 2025 r8  Davante Adams            rank   2   2.6s/ex, ~3.3 min left
+  [374/450] 2025 r8  Davante Adams            rank   2   2.6s/ex, ~3.3 min left
+  [375/450] 2025 r8  Davante Adams            rank   2   2.6s/ex, ~3.2 min left
+  [376/450] 2025 r8  Davante Adams            rank   2   2.6s/ex, ~3.2 min left
+  [377/450] 2025 r8  Davante Adams            rank   1   2.6s/ex, ~3.2 min left
+  [378/450] 2025 r8  Davante Adams            rank   1   2.6s/ex, ~3.1 min left
+  [379/450] 2025 r8  Davante Adams            rank   1   2.6s/ex, ~3.1 min left
+  [380/450] 2025 r8  Davante Adams            rank   1   2.6s/ex, ~3.0 min left
+  [381/450] 2025 r9  Davante Adams            rank   1   2.6s/ex, ~3.0 min left
+  [382/450] 2025 r9  Davante Adams            rank   1   2.6s/ex, ~2.9 min left
+  [383/450] 2025 r9  Stefon Diggs             rank   2   2.6s/ex, ~2.9 min left
+  [384/450] 2025 r9  Aaron Jones              rank   7   2.6s/ex, ~2.9 min left
+  [385/450] 2025 r9  Aaron Jones              rank   6   2.6s/ex, ~2.8 min left
+  [386/450] 2025 r9  Stefon Diggs             rank   3   2.6s/ex, ~2.8 min left
+  [387/450] 2025 r9  Stefon Diggs             rank   3   2.6s/ex, ~2.7 min left
+  [388/450] 2025 r9  C.J. Stroud              rank   7   2.6s/ex, ~2.7 min left
+  [389/450] 2025 r9  C.J. Stroud              rank   8   2.6s/ex, ~2.6 min left
+  [390/450] 2025 r9  Stefon Diggs             rank   3   2.6s/ex, ~2.6 min left
+  [391/450] 2025 r10 Deebo Samuel             rank   4   2.6s/ex, ~2.6 min left
+  [392/450] 2025 r10 Deebo Samuel             rank   4   2.6s/ex, ~2.5 min left
+  [393/450] 2025 r10 Travis Etienne           rank   2   2.6s/ex, ~2.5 min left
+  [394/450] 2025 r10 Travis Etienne           rank   2   2.6s/ex, ~2.4 min left
+  [395/450] 2025 r10 Travis Etienne           rank   2   2.6s/ex, ~2.4 min left
+  [396/450] 2025 r10 Travis Etienne           rank   2   2.6s/ex, ~2.3 min left
+  [397/450] 2025 r10 Travis Etienne           rank   1   2.6s/ex, ~2.3 min left
+  [398/450] 2025 r10 Deebo Samuel             rank   2   2.6s/ex, ~2.3 min left
+  [399/450] 2025 r10 Travis Etienne           rank   1   2.6s/ex, ~2.2 min left
+  [400/450] 2025 r10 Deebo Samuel             rank   2   2.6s/ex, ~2.2 min left
+  [401/450] 2025 r11 Deebo Samuel             rank   2   2.6s/ex, ~2.1 min left
+  [402/450] 2025 r11 Travis Etienne           rank   1   2.6s/ex, ~2.1 min left
+  [403/450] 2025 r11 Deebo Samuel             rank   1   2.6s/ex, ~2.0 min left
+  [404/450] 2025 r11 Deebo Samuel             rank   1   2.6s/ex, ~2.0 min left
+  [405/450] 2025 r11 Nick Chubb               rank  10   2.6s/ex, ~2.0 min left
+  [406/450] 2025 r11 Dalton Schultz           rank   5   2.6s/ex, ~1.9 min left
+  [407/450] 2025 r11 J.K. Dobbins             rank   6   2.6s/ex, ~1.9 min left
+  [408/450] 2025 r11 Deebo Samuel             rank   1   2.6s/ex, ~1.8 min left
+  [409/450] 2025 r11 Nick Chubb               rank   8   2.6s/ex, ~1.8 min left
+  [410/450] 2025 r11 Cooper Kupp              rank   4   2.6s/ex, ~1.7 min left
+  [411/450] 2025 r12 J.K. Dobbins             rank   5   2.6s/ex, ~1.7 min left
+  [412/450] 2025 r12 J.K. Dobbins             rank   6   2.6s/ex, ~1.6 min left
+  [413/450] 2025 r12 J.K. Dobbins             rank   5   2.6s/ex, ~1.6 min left
+  [414/450] 2025 r12 Cooper Kupp              rank   4   2.6s/ex, ~1.6 min left
+  [415/450] 2025 r12 Dalton Schultz           rank   4   2.6s/ex, ~1.5 min left
+  [416/450] 2025 r12 Nick Chubb               rank  11   2.6s/ex, ~1.5 min left
+  [417/450] 2025 r12 Nick Chubb               rank  10   2.6s/ex, ~1.4 min left
+  [418/450] 2025 r12 Cooper Kupp              rank   7   2.6s/ex, ~1.4 min left
+  [419/450] 2025 r12 Nick Chubb               rank  11   2.6s/ex, ~1.3 min left
+  [420/450] 2025 r12 Cooper Kupp              rank   5   2.6s/ex, ~1.3 min left
+  [421/450] 2025 r13 Rhamondre Stevenson      rank   3   2.6s/ex, ~1.3 min left
+  [422/450] 2025 r13 Rhamondre Stevenson      rank   3   2.6s/ex, ~1.2 min left
+  [423/450] 2025 r13 Cooper Kupp              rank   7   2.6s/ex, ~1.2 min left
+  [424/450] 2025 r13 Rashod Bateman           rank  12   2.6s/ex, ~1.1 min left
+  [425/450] 2025 r13 Javonte Williams         rank   1   2.6s/ex, ~1.1 min left
+  [426/450] 2025 r13 Rashod Bateman           rank  12   2.6s/ex, ~1.0 min left
+  [427/450] 2025 r13 Rashod Bateman           rank  11   2.6s/ex, ~1.0 min left
+  [428/450] 2025 r13 Marvin Mims              rank   8   2.6s/ex, ~1.0 min left
+  [429/450] 2025 r13 Rashod Bateman           rank   9   2.6s/ex, ~0.9 min left
+  [430/450] 2025 r13 Rashod Bateman           rank   9   2.6s/ex, ~0.9 min left
+  [431/450] 2025 r14 Austin Ekeler            rank  12   2.6s/ex, ~0.8 min left
+  [432/450] 2025 r14 Austin Ekeler            rank  11   2.6s/ex, ~0.8 min left
+  [433/450] 2025 r14 Austin Ekeler            rank  11   2.6s/ex, ~0.7 min left
+  [434/450] 2025 r14 Austin Ekeler            rank  10   2.6s/ex, ~0.7 min left
+  [435/450] 2025 r14 Austin Ekeler            rank  11   2.6s/ex, ~0.7 min left
+  [436/450] 2025 r14 Austin Ekeler            rank   9   2.6s/ex, ~0.6 min left
+  [437/450] 2025 r14 Elijah Moore             rank   9   2.6s/ex, ~0.6 min left
+  [438/450] 2025 r14 Elijah Moore             rank   8   2.6s/ex, ~0.5 min left
+  [439/450] 2025 r14 Austin Ekeler            rank   8   2.6s/ex, ~0.5 min left
+  [440/450] 2025 r14 Austin Ekeler            rank   7   2.6s/ex, ~0.4 min left
+  [441/450] 2025 r15 Austin Ekeler            rank   6   2.6s/ex, ~0.4 min left
+  [442/450] 2025 r15 Austin Ekeler            rank   6   2.6s/ex, ~0.3 min left
+  [443/450] 2025 r15 Austin Ekeler            rank   8   2.6s/ex, ~0.3 min left
+  [444/450] 2025 r15 Austin Ekeler            rank   8   2.6s/ex, ~0.3 min left
+  [445/450] 2025 r15 Austin Ekeler            rank   5   2.6s/ex, ~0.2 min left
+  [446/450] 2025 r15 Miles Sanders            rank  11   2.6s/ex, ~0.2 min left
+  [447/450] 2025 r15 Miles Sanders            rank  10   2.6s/ex, ~0.1 min left
+  [448/450] 2025 r15 Miles Sanders            rank   9   2.6s/ex, ~0.1 min left
+  [449/450] 2025 r15 Miles Sanders            rank   8   2.6s/ex, ~0.0 min left
+  [450/450] 2025 r15 Miles Sanders            rank   7   2.6s/ex, ~0.0 min left
+
+=== fantasy-draft on sft_test.jsonl ===
+  answered with a shortlisted player   100.0%
+  mean rank of its pick (of 12)        5.41   <- lower is better
+  picked the best of 12                15.1%   (chance 8.3%)
+
+  reference points, on these same 450 examples
+    random choice                      6.50
+    deterministic board (the bar)      6.00
+    this model                         5.41  (+0.59)  BEATS the board
+
+--- by decision difficulty (margin = actual-VBD gap) ---
+  coin flip  <1    n=  10  mean rank 5.00   best 10.0%
+  marginal  1-5    n=  50  mean rank 5.38   best 22.0%
+  real     5-20    n= 121  mean rank 5.08   best 10.7%
+  decisive   20+   n= 269  mean rank 5.58   best 16.0%
+
+--- by season (held out, never trained on) ---
+          n  mean_rank  best_pct
+season                          
+2023    150       5.31      13.3
+2024    150       5.53      18.7
+2025    150       5.40      13.3
+
+wrote eval_fantasy-draft.csv

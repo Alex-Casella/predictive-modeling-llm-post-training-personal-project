@@ -1,0 +1,312 @@
+278 test examples, seasons 2023-2024
+
+querying fantasy-sit via Ollama.
+  loading fantasy-sit into memory (first call only, up to 15 min)... 0s
+  [  1/278] 2023 r5  Isiah Pacheco            rank   2   6.4s/ex, ~29.6 min left
+  [  2/278] 2023 r5  Robert Woods             rank   5   6.5s/ex, ~29.8 min left
+  [  3/278] 2023 r5  D.J. Moore               rank   1   6.5s/ex, ~29.8 min left
+  [  4/278] 2023 r5  Courtland Sutton         rank   6   6.5s/ex, ~29.8 min left
+  [  5/278] 2023 r5  A.J. Brown               rank   3   6.5s/ex, ~29.8 min left
+  [  6/278] 2023 r5  Christian McCaffrey      rank   1   6.5s/ex, ~29.7 min left
+  [  7/278] 2023 r5  Derrick Henry            rank   5   6.5s/ex, ~29.5 min left
+  [  8/278] 2023 r5  Tyreek Hill              rank   1   6.5s/ex, ~29.4 min left
+  [  9/278] 2023 r5  Davante Adams            rank   4   6.5s/ex, ~29.3 min left
+  [ 10/278] 2023 r5  Stefon Diggs             rank   2   6.5s/ex, ~29.2 min left
+  [ 11/278] 2023 r6  Isiah Pacheco            rank   2   6.5s/ex, ~29.1 min left
+  [ 12/278] 2023 r6  David Montgomery         rank   6   6.2s/ex, ~27.5 min left
+  [ 13/278] 2023 r6  D.J. Moore               rank   4   6.2s/ex, ~27.5 min left
+  [ 14/278] 2023 r6  Drake London             rank   1   6.2s/ex, ~27.4 min left
+  [ 15/278] 2023 r6  Alvin Kamara             rank   3   6.3s/ex, ~27.4 min left
+  [ 16/278] 2023 r6  Keenan Allen             rank   1   6.0s/ex, ~26.2 min left
+  [ 17/278] 2023 r6  Derrick Henry            rank   2   6.0s/ex, ~26.2 min left
+  [ 18/278] 2023 r6  Tyreek Hill              rank   1   6.1s/ex, ~26.2 min left
+  [ 19/278] 2023 r6  Davante Adams            rank   5   6.1s/ex, ~26.2 min left
+  [ 20/278] 2023 r6  Stefon Diggs             rank   1   6.1s/ex, ~26.2 min left
+  [ 21/278] 2023 r7  Isiah Pacheco            rank   2   6.1s/ex, ~26.1 min left
+  [ 22/278] 2023 r7  Marquise Brown           rank   3   6.1s/ex, ~26.1 min left
+  [ 23/278] 2023 r7  D.J. Moore               rank   5   6.1s/ex, ~26.0 min left
+  [ 24/278] 2023 r7  Drake London             rank   4   6.1s/ex, ~26.0 min left
+  [ 25/278] 2023 r7  A.J. Brown               rank   1   6.2s/ex, ~26.0 min left
+  [ 26/278] 2023 r7  Keenan Allen             rank   5   6.2s/ex, ~25.9 min left
+  [ 27/278] 2023 r7  D'Andre Swift            rank   3   6.2s/ex, ~25.9 min left
+  [ 28/278] 2023 r7  Tyreek Hill              rank   1   6.2s/ex, ~25.8 min left
+  [ 29/278] 2023 r7  Davante Adams            rank   4   6.2s/ex, ~25.7 min left
+  [ 30/278] 2023 r7  Stefon Diggs             rank   1   6.2s/ex, ~25.7 min left
+  [ 31/278] 2023 r8  D'Onta Foreman           rank   6   6.2s/ex, ~25.6 min left
+  [ 32/278] 2023 r8  Brandon Aiyuk            rank   1   6.2s/ex, ~25.6 min left
+  [ 33/278] 2023 r8  Amon-Ra St. Brown        rank   3   6.2s/ex, ~25.5 min left
+  [ 34/278] 2023 r8  Drake London             rank   4   6.3s/ex, ~25.4 min left
+  [ 35/278] 2023 r8  Alvin Kamara             rank   2   6.2s/ex, ~25.1 min left
+  [ 36/278] 2023 r8  Christian McCaffrey      rank   2   6.2s/ex, ~25.0 min left
+  [ 37/278] 2023 r8  Derrick Henry            rank   3   6.2s/ex, ~24.9 min left
+  [ 38/278] 2023 r8  Tyreek Hill              rank   1   6.2s/ex, ~24.8 min left
+  [ 39/278] 2023 r8  Davante Adams            rank   6   6.2s/ex, ~24.8 min left
+  [ 40/278] 2023 r8  Stefon Diggs             rank   2   6.2s/ex, ~24.7 min left
+  [ 41/278] 2023 r9  D.K. Metcalf             rank   5   6.1s/ex, ~24.3 min left
+  [ 42/278] 2023 r9  Kenneth Walker III       rank   5   6.1s/ex, ~23.8 min left
+  [ 43/278] 2023 r9  D.J. Moore               rank   5   6.1s/ex, ~23.8 min left
+  [ 44/278] 2023 r9  Austin Ekeler            rank   1   6.1s/ex, ~23.7 min left
+  [ 45/278] 2023 r9  Alvin Kamara             rank   3   6.1s/ex, ~23.7 min left
+  [ 46/278] 2023 r9  Keenan Allen             rank   3   6.1s/ex, ~23.6 min left
+  [ 47/278] 2023 r9  Derrick Henry            rank   1   6.1s/ex, ~23.5 min left
+  [ 48/278] 2023 r9  Tyreek Hill              rank   5   6.1s/ex, ~23.5 min left
+  [ 49/278] 2023 r9  Davante Adams            rank   4   6.1s/ex, ~23.4 min left
+  [ 50/278] 2023 r9  Stefon Diggs             rank   2   6.1s/ex, ~23.1 min left
+  [ 51/278] 2023 r10 Saquon Barkley           rank   4   6.1s/ex, ~23.0 min left
+  [ 52/278] 2023 r10 David Montgomery         rank   2   6.1s/ex, ~22.8 min left
+  [ 53/278] 2023 r10 Amon-Ra St. Brown        rank   1   6.1s/ex, ~22.8 min left
+  [ 54/278] 2023 r10 Drake London             rank   6   6.1s/ex, ~22.7 min left
+  [ 55/278] 2023 r10 Alvin Kamara             rank   2   6.1s/ex, ~22.7 min left
+  [ 56/278] 2023 r10 Christian McCaffrey      rank   4   6.1s/ex, ~22.4 min left
+  [ 57/278] 2023 r10 Derrick Henry            rank   6   6.1s/ex, ~22.3 min left
+  [ 58/278] 2023 r10 Michael Pittman Jr.      rank   1   6.1s/ex, ~22.3 min left
+  [ 59/278] 2023 r10 Davante Adams            rank   3   6.1s/ex, ~22.2 min left
+  [ 60/278] 2023 r10 Stefon Diggs             rank   5   6.1s/ex, ~22.1 min left
+  [ 61/278] 2023 r11 D.K. Metcalf             rank   3   6.1s/ex, ~22.1 min left
+  [ 62/278] 2023 r11 Curtis Samuel            rank   6   6.1s/ex, ~22.0 min left
+  [ 63/278] 2023 r11 Amon-Ra St. Brown        rank   2   6.1s/ex, ~21.9 min left
+  [ 64/278] 2023 r11 Austin Ekeler            rank   5   6.1s/ex, ~21.9 min left
+  [ 65/278] 2023 r11 A.J. Brown               rank   6   6.1s/ex, ~21.8 min left
+  [ 66/278] 2023 r11 Keenan Allen             rank   1   6.1s/ex, ~21.7 min left
+  [ 67/278] 2023 r11 Derrick Henry            rank   5   6.2s/ex, ~21.6 min left
+  [ 68/278] 2023 r11 Tyreek Hill              rank   1   6.2s/ex, ~21.6 min left
+  [ 69/278] 2023 r11 Davante Adams            rank   1   6.2s/ex, ~21.5 min left
+  [ 70/278] 2023 r11 Stefon Diggs             rank   4   6.1s/ex, ~21.2 min left
+  [ 71/278] 2023 r12 Saquon Barkley           rank   4   6.1s/ex, ~21.2 min left
+  [ 72/278] 2023 r12 David Montgomery         rank   2   6.1s/ex, ~21.1 min left
+  [ 73/278] 2023 r12 Amon-Ra St. Brown        rank   3   6.1s/ex, ~20.8 min left
+  [ 74/278] 2023 r12 Jaylen Warren            rank   6   6.1s/ex, ~20.7 min left
+  [ 75/278] 2023 r12 Alvin Kamara             rank   1   6.1s/ex, ~20.7 min left
+  [ 76/278] 2023 r12 Keenan Allen             rank   2   6.1s/ex, ~20.6 min left
+  [ 77/278] 2023 r12 Derrick Henry            rank   2   6.1s/ex, ~20.5 min left
+  [ 78/278] 2023 r12 DeVonta Smith            rank   2   6.1s/ex, ~20.4 min left
+  [ 79/278] 2023 r12 Davante Adams            rank   4   6.1s/ex, ~20.4 min left
+  [ 80/278] 2023 r12 Stefon Diggs             rank   3   6.1s/ex, ~20.1 min left
+  [ 81/278] 2023 r13 Isiah Pacheco            rank   3   6.1s/ex, ~20.1 min left
+  [ 82/278] 2023 r13 David Montgomery         rank   3   6.1s/ex, ~20.0 min left
+  [ 83/278] 2023 r13 Amon-Ra St. Brown        rank   3   6.1s/ex, ~19.9 min left
+  [ 84/278] 2023 r13 Drake London             rank   6   6.1s/ex, ~19.8 min left
+  [ 85/278] 2023 r13 Alvin Kamara             rank   1   6.1s/ex, ~19.8 min left
+  [ 86/278] 2023 r13 Keenan Allen             rank   5   6.2s/ex, ~19.7 min left
+  [ 87/278] 2023 r13 Derrick Henry            rank   2   6.2s/ex, ~19.6 min left
+  [ 88/278] 2023 r13 Tyreek Hill              rank   1   6.2s/ex, ~19.5 min left
+  [ 89/278] 2023 r13 Rhamondre Stevenson      rank   5   6.2s/ex, ~19.5 min left
+  [ 90/278] 2023 r13 Tony Pollard             rank   1   6.1s/ex, ~19.2 min left
+  [ 91/278] 2023 r14 D.K. Metcalf             rank   5   6.1s/ex, ~19.1 min left
+  [ 92/278] 2023 r14 David Montgomery         rank   2   6.1s/ex, ~19.1 min left
+  [ 93/278] 2023 r14 Amon-Ra St. Brown        rank   5   6.2s/ex, ~19.0 min left
+  [ 94/278] 2023 r14 Austin Ekeler            rank   2   6.2s/ex, ~18.9 min left
+  [ 95/278] 2023 r14 Alvin Kamara             rank   4   6.2s/ex, ~18.8 min left
+  [ 96/278] 2023 r14 Christian McCaffrey      rank   4   6.2s/ex, ~18.7 min left
+  [ 97/278] 2023 r14 Derrick Henry            rank   2   6.2s/ex, ~18.7 min left
+  [ 98/278] 2023 r14 Tyreek Hill              rank   5   6.2s/ex, ~18.6 min left
+  [ 99/278] 2023 r14 Davante Adams            rank   3   6.2s/ex, ~18.5 min left
+  [100/278] 2023 r14 Stefon Diggs             rank   5   6.2s/ex, ~18.3 min left
+  [101/278] 2023 r15 Saquon Barkley           rank   5   6.2s/ex, ~18.2 min left
+  [102/278] 2023 r15 Curtis Samuel            rank   1   6.2s/ex, ~18.1 min left
+  [103/278] 2023 r15 D.J. Moore               rank   6   6.2s/ex, ~18.1 min left
+  [104/278] 2023 r15 Drake London             rank   5   6.2s/ex, ~17.9 min left
+  [105/278] 2023 r15 Alvin Kamara             rank   2   6.2s/ex, ~17.7 min left
+  [106/278] 2023 r15 Christian McCaffrey      rank   1   6.2s/ex, ~17.7 min left
+  [107/278] 2023 r15 Derrick Henry            rank   6   6.2s/ex, ~17.6 min left
+  [108/278] 2023 r15 Davante Adams            rank   2   6.2s/ex, ~17.5 min left
+  [109/278] 2023 r15 Stefon Diggs             rank   3   6.2s/ex, ~17.4 min left
+  [110/278] 2023 r16 D.K. Metcalf             rank   4   6.2s/ex, ~17.3 min left
+  [111/278] 2023 r16 Curtis Samuel            rank   6   6.2s/ex, ~17.2 min left
+  [112/278] 2023 r16 Amon-Ra St. Brown        rank   1   6.2s/ex, ~17.2 min left
+  [113/278] 2023 r16 Drake London             rank   4   6.2s/ex, ~17.0 min left
+  [114/278] 2023 r16 Alvin Kamara             rank   6   6.2s/ex, ~16.9 min left
+  [115/278] 2023 r16 Christian McCaffrey      rank   2   6.2s/ex, ~16.8 min left
+  [116/278] 2023 r16 Derrick Henry            rank   1   6.2s/ex, ~16.7 min left
+  [117/278] 2023 r16 Tyreek Hill              rank   2   6.2s/ex, ~16.5 min left
+  [118/278] 2023 r16 Davante Adams            rank   6   6.2s/ex, ~16.4 min left
+  [119/278] 2023 r16 Stefon Diggs             rank   5   6.2s/ex, ~16.3 min left
+  [120/278] 2023 r17 Saquon Barkley           rank   5   6.2s/ex, ~16.2 min left
+  [121/278] 2023 r17 Robert Woods             rank   5   6.2s/ex, ~16.2 min left
+  [122/278] 2023 r17 Amon-Ra St. Brown        rank   3   6.2s/ex, ~16.1 min left
+  [123/278] 2023 r17 Drake London             rank   2   6.2s/ex, ~16.0 min left
+  [124/278] 2023 r17 Alvin Kamara             rank   5   6.2s/ex, ~15.9 min left
+  [125/278] 2023 r17 Christian McCaffrey      rank   5   6.2s/ex, ~15.8 min left
+  [126/278] 2023 r17 Ja'Marr Chase            rank   5   6.2s/ex, ~15.7 min left
+  [127/278] 2023 r17 Tyreek Hill              rank   2   6.2s/ex, ~15.6 min left
+  [128/278] 2023 r17 Davante Adams            rank   1   6.2s/ex, ~15.5 min left
+  [129/278] 2023 r17 Stefon Diggs             rank   3   6.2s/ex, ~15.4 min left
+  [130/278] 2023 r18 Saquon Barkley           rank   2   6.2s/ex, ~15.4 min left
+  [131/278] 2023 r18 Curtis Samuel            rank   6   6.2s/ex, ~15.3 min left
+  [132/278] 2023 r18 Amon-Ra St. Brown        rank   1   6.2s/ex, ~15.2 min left
+  [133/278] 2023 r18 Drake London             rank   4   6.2s/ex, ~15.1 min left
+  [134/278] 2023 r18 A.J. Brown               rank   6   6.2s/ex, ~15.0 min left
+  [135/278] 2023 r18 CeeDee Lamb              rank   1   6.3s/ex, ~14.9 min left
+  [136/278] 2023 r18 Derrick Henry            rank   2   6.2s/ex, ~14.8 min left
+  [137/278] 2023 r18 Davante Adams            rank   2   6.2s/ex, ~14.7 min left
+  [138/278] 2023 r18 Stefon Diggs             rank   4   6.2s/ex, ~14.6 min left
+  [139/278] 2024 r5  CeeDee Lamb              rank   3   6.2s/ex, ~14.5 min left
+  [140/278] 2024 r5  Alvin Kamara             rank   6   6.2s/ex, ~14.4 min left
+  [141/278] 2024 r5  James Cook               rank   2   6.2s/ex, ~14.3 min left
+  [142/278] 2024 r5  Bijan Robinson           rank   3   6.2s/ex, ~14.1 min left
+  [143/278] 2024 r5  Derrick Henry            rank   4   6.2s/ex, ~14.0 min left
+  [144/278] 2024 r5  James Conner             rank   3   6.2s/ex, ~13.9 min left
+  [145/278] 2024 r5  Chris Godwin             rank   3   6.2s/ex, ~13.8 min left
+  [146/278] 2024 r5  Ja'Marr Chase            rank   1   6.2s/ex, ~13.7 min left
+  [147/278] 2024 r5  D.K. Metcalf             rank   5   6.3s/ex, ~13.6 min left
+  [148/278] 2024 r5  Justin Jefferson         rank   5   6.2s/ex, ~13.5 min left
+  [149/278] 2024 r6  CeeDee Lamb              rank   2   6.2s/ex, ~13.4 min left
+  [150/278] 2024 r6  Alvin Kamara             rank   3   6.2s/ex, ~13.3 min left
+  [151/278] 2024 r6  Kenneth Walker III       rank   1   6.2s/ex, ~13.2 min left
+  [152/278] 2024 r6  Travis Etienne           rank   6   6.2s/ex, ~13.1 min left
+  [153/278] 2024 r6  Derrick Henry            rank   1   6.2s/ex, ~13.0 min left
+  [154/278] 2024 r6  D.J. Moore               rank   4   6.2s/ex, ~12.9 min left
+  [155/278] 2024 r6  Austin Ekeler            rank   4   6.2s/ex, ~12.8 min left
+  [156/278] 2024 r6  Ja'Marr Chase            rank   6   6.2s/ex, ~12.7 min left
+  [157/278] 2024 r6  David Montgomery         rank   3   6.2s/ex, ~12.5 min left
+  [158/278] 2024 r6  DeVonta Smith            rank   3   6.2s/ex, ~12.4 min left
+  [159/278] 2024 r7  Jahmyr Gibbs             rank   1   6.2s/ex, ~12.3 min left
+  [160/278] 2024 r7  Alvin Kamara             rank   2   6.2s/ex, ~12.2 min left
+  [161/278] 2024 r7  James Cook               rank   4   6.2s/ex, ~12.1 min left
+  [162/278] 2024 r7  Tyreek Hill              rank   6   6.2s/ex, ~12.1 min left
+  [163/278] 2024 r7  Derrick Henry            rank   2   6.2s/ex, ~11.9 min left
+  [164/278] 2024 r7  James Conner             rank   3   6.2s/ex, ~11.8 min left
+  [165/278] 2024 r7  Davante Adams            rank   5   6.2s/ex, ~11.7 min left
+  [166/278] 2024 r7  Ja'Marr Chase            rank   3   6.2s/ex, ~11.6 min left
+  [167/278] 2024 r7  David Montgomery         rank   6   6.2s/ex, ~11.5 min left
+  [168/278] 2024 r7  Josh Jacobs              rank   3   6.2s/ex, ~11.4 min left
+  [169/278] 2024 r8  CeeDee Lamb              rank   1   6.2s/ex, ~11.3 min left
+  [170/278] 2024 r8  Alvin Kamara             rank   2   6.2s/ex, ~11.2 min left
+  [171/278] 2024 r8  Kenneth Walker III       rank   4   6.2s/ex, ~11.1 min left
+  [172/278] 2024 r8  Tyreek Hill              rank   6   6.2s/ex, ~11.0 min left
+  [173/278] 2024 r8  Derrick Henry            rank   3   6.2s/ex, ~10.9 min left
+  [174/278] 2024 r8  D.J. Moore               rank   6   6.2s/ex, ~10.8 min left
+  [175/278] 2024 r8  Davante Adams            rank   2   6.2s/ex, ~10.7 min left
+  [176/278] 2024 r8  Ja'Marr Chase            rank   1   6.2s/ex, ~10.6 min left
+  [177/278] 2024 r8  David Montgomery         rank   3   6.2s/ex, ~10.5 min left
+  [178/278] 2024 r8  Justin Jefferson         rank   3   6.2s/ex, ~10.4 min left
+  [179/278] 2024 r9  CeeDee Lamb              rank   3   6.2s/ex, ~10.3 min left
+  [180/278] 2024 r9  Alvin Kamara             rank   1   6.2s/ex, ~10.2 min left
+  [181/278] 2024 r9  James Cook               rank   5   6.2s/ex, ~10.1 min left
+  [182/278] 2024 r9  Tyreek Hill              rank   5   6.2s/ex, ~10.0 min left
+  [183/278] 2024 r9  Derrick Henry            rank   3   6.2s/ex, ~9.9 min left
+  [184/278] 2024 r9  Joe Mixon                rank   2   6.3s/ex, ~9.8 min left
+  [185/278] 2024 r9  Davante Adams            rank   1   6.3s/ex, ~9.7 min left
+  [186/278] 2024 r9  Ja'Marr Chase            rank   5   6.2s/ex, ~9.6 min left
+  [187/278] 2024 r9  David Montgomery         rank   2   6.2s/ex, ~9.4 min left
+  [188/278] 2024 r9  Josh Jacobs              rank   5   6.2s/ex, ~9.3 min left
+  [189/278] 2024 r10 CeeDee Lamb              rank   5   6.2s/ex, ~9.2 min left
+  [190/278] 2024 r10 Alvin Kamara             rank   2   6.2s/ex, ~9.1 min left
+  [191/278] 2024 r10 James Cook               rank   1   6.2s/ex, ~9.1 min left
+  [192/278] 2024 r10 Travis Etienne           rank   6   6.2s/ex, ~9.0 min left
+  [193/278] 2024 r10 Derrick Henry            rank   4   6.2s/ex, ~8.8 min left
+  [194/278] 2024 r10 D.J. Moore               rank   6   6.2s/ex, ~8.7 min left
+  [195/278] 2024 r10 DeAndre Hopkins          rank   2   6.2s/ex, ~8.6 min left
+  [196/278] 2024 r10 Ja'Marr Chase            rank   1   6.2s/ex, ~8.5 min left
+  [197/278] 2024 r10 David Montgomery         rank   2   6.2s/ex, ~8.4 min left
+  [198/278] 2024 r10 Justin Jefferson         rank   2   6.2s/ex, ~8.3 min left
+  [199/278] 2024 r11 CeeDee Lamb              rank   3   6.3s/ex, ~8.2 min left
+  [200/278] 2024 r11 Alvin Kamara             rank   3   6.3s/ex, ~8.1 min left
+  [201/278] 2024 r11 James Cook               rank   1   6.3s/ex, ~8.0 min left
+  [202/278] 2024 r11 Tyreek Hill              rank   2   6.3s/ex, ~7.9 min left
+  [203/278] 2024 r11 Derrick Henry            rank   4   6.3s/ex, ~7.8 min left
+  [204/278] 2024 r11 Jaxon Smith-Njigba       rank   3   6.3s/ex, ~7.7 min left
+  [205/278] 2024 r11 Davante Adams            rank   2   6.3s/ex, ~7.6 min left
+  [206/278] 2024 r11 Ja'Marr Chase            rank   2   6.3s/ex, ~7.5 min left
+  [207/278] 2024 r11 David Montgomery         rank   2   6.3s/ex, ~7.4 min left
+  [208/278] 2024 r11 Josh Jacobs              rank   1   6.3s/ex, ~7.3 min left
+  [209/278] 2024 r12 CeeDee Lamb              rank   5   6.3s/ex, ~7.2 min left
+  [210/278] 2024 r12 D'Andre Swift            rank   3   6.3s/ex, ~7.1 min left
+  [211/278] 2024 r12 Kenneth Walker III       rank   2   6.3s/ex, ~7.0 min left
+  [212/278] 2024 r12 Tyreek Hill              rank   5   6.3s/ex, ~6.9 min left
+  [213/278] 2024 r12 Derrick Henry            rank   3   6.3s/ex, ~6.8 min left
+  [214/278] 2024 r12 D.J. Moore               rank   1   6.3s/ex, ~6.7 min left
+  [215/278] 2024 r12 DeAndre Hopkins          rank   2   6.3s/ex, ~6.6 min left
+  [216/278] 2024 r12 Amon-Ra St. Brown        rank   4   6.3s/ex, ~6.5 min left
+  [217/278] 2024 r12 David Montgomery         rank   3   6.3s/ex, ~6.4 min left
+  [218/278] 2024 r12 Josh Jacobs              rank   1   6.3s/ex, ~6.3 min left
+  [219/278] 2024 r13 CeeDee Lamb              rank   5   6.3s/ex, ~6.2 min left
+  [220/278] 2024 r13 Alvin Kamara             rank   4   6.3s/ex, ~6.1 min left
+  [221/278] 2024 r13 James Cook               rank   2   6.3s/ex, ~6.0 min left
+  [222/278] 2024 r13 Tyreek Hill              rank   3   6.3s/ex, ~5.9 min left
+  [223/278] 2024 r13 Saquon Barkley           rank   2   6.3s/ex, ~5.8 min left
+  [224/278] 2024 r13 Jaxon Smith-Njigba       rank   5   6.3s/ex, ~5.7 min left
+  [225/278] 2024 r13 Davante Adams            rank   2   6.3s/ex, ~5.6 min left
+  [226/278] 2024 r13 Ja'Marr Chase            rank   2   6.3s/ex, ~5.5 min left
+  [227/278] 2024 r13 David Montgomery         rank   3   6.3s/ex, ~5.4 min left
+  [228/278] 2024 r13 Josh Jacobs              rank   1   6.3s/ex, ~5.3 min left
+  [229/278] 2024 r14 CeeDee Lamb              rank   1   6.3s/ex, ~5.2 min left
+  [230/278] 2024 r14 Alvin Kamara             rank   1   6.3s/ex, ~5.1 min left
+  [231/278] 2024 r14 James Cook               rank   6   6.3s/ex, ~5.0 min left
+  [232/278] 2024 r14 Tyreek Hill              rank   1   6.3s/ex, ~4.9 min left
+  [233/278] 2024 r14 Saquon Barkley           rank   3   6.3s/ex, ~4.7 min left
+  [234/278] 2024 r14 D.J. Moore               rank   4   6.3s/ex, ~4.6 min left
+  [235/278] 2024 r14 Davante Adams            rank   1   6.3s/ex, ~4.5 min left
+  [236/278] 2024 r14 Ja'Marr Chase            rank   1   6.3s/ex, ~4.4 min left
+  [237/278] 2024 r14 David Montgomery         rank   3   6.3s/ex, ~4.3 min left
+  [238/278] 2024 r14 Justin Jefferson         rank   2   6.3s/ex, ~4.2 min left
+  [239/278] 2024 r15 CeeDee Lamb              rank   2   6.3s/ex, ~4.1 min left
+  [240/278] 2024 r15 Alvin Kamara             rank   3   6.3s/ex, ~4.0 min left
+  [241/278] 2024 r15 Jerry Jeudy              rank   2   6.3s/ex, ~3.9 min left
+  [242/278] 2024 r15 Tyreek Hill              rank   6   6.3s/ex, ~3.8 min left
+  [243/278] 2024 r15 Saquon Barkley           rank   5   6.3s/ex, ~3.7 min left
+  [244/278] 2024 r15 D.J. Moore               rank   4   6.3s/ex, ~3.6 min left
+  [245/278] 2024 r15 Davante Adams            rank   1   6.3s/ex, ~3.5 min left
+  [246/278] 2024 r15 Ja'Marr Chase            rank   4   6.3s/ex, ~3.4 min left
+  [247/278] 2024 r15 David Montgomery         rank   5   6.3s/ex, ~3.3 min left
+  [248/278] 2024 r15 Josh Jacobs              rank   2   6.3s/ex, ~3.2 min left
+  [249/278] 2024 r16 CeeDee Lamb              rank   2   6.3s/ex, ~3.1 min left
+  [250/278] 2024 r16 Keenan Allen             rank   1   6.3s/ex, ~3.0 min left
+  [251/278] 2024 r16 James Cook               rank   1   6.3s/ex, ~2.9 min left
+  [252/278] 2024 r16 Tyreek Hill              rank   4   6.3s/ex, ~2.7 min left
+  [253/278] 2024 r16 Saquon Barkley           rank   1   6.3s/ex, ~2.6 min left
+  [254/278] 2024 r16 D.J. Moore               rank   4   6.3s/ex, ~2.5 min left
+  [255/278] 2024 r16 Davante Adams            rank   1   6.4s/ex, ~2.4 min left
+  [256/278] 2024 r16 Ja'Marr Chase            rank   3   6.3s/ex, ~2.3 min left
+  [257/278] 2024 r16 Breece Hall              rank   5   6.3s/ex, ~2.2 min left
+  [258/278] 2024 r16 Josh Jacobs              rank   2   6.3s/ex, ~2.1 min left
+  [259/278] 2024 r17 Zach Charbonnet          rank   4   6.3s/ex, ~2.0 min left
+  [260/278] 2024 r17 Keenan Allen             rank   5   6.3s/ex, ~1.9 min left
+  [261/278] 2024 r17 James Cook               rank   3   6.3s/ex, ~1.8 min left
+  [262/278] 2024 r17 Tyreek Hill              rank   2   6.3s/ex, ~1.7 min left
+  [263/278] 2024 r17 Saquon Barkley           rank   3   6.3s/ex, ~1.6 min left
+  [264/278] 2024 r17 D.J. Moore               rank   2   6.3s/ex, ~1.5 min left
+  [265/278] 2024 r17 Davante Adams            rank   4   6.3s/ex, ~1.4 min left
+  [266/278] 2024 r17 Ja'Marr Chase            rank   2   6.3s/ex, ~1.3 min left
+  [267/278] 2024 r17 D.K. Metcalf             rank   5   6.3s/ex, ~1.2 min left
+  [268/278] 2024 r17 Josh Jacobs              rank   4   6.3s/ex, ~1.1 min left
+  [269/278] 2024 r18 Zach Charbonnet          rank   5   6.3s/ex, ~0.9 min left
+  [270/278] 2024 r18 Tee Higgins              rank   2   6.3s/ex, ~0.8 min left
+  [271/278] 2024 r18 James Cook               rank   5   6.3s/ex, ~0.7 min left
+  [272/278] 2024 r18 Travis Etienne           rank   4   6.3s/ex, ~0.6 min left
+  [273/278] 2024 r18 Derrick Henry            rank   2   6.3s/ex, ~0.5 min left
+  [274/278] 2024 r18 Jonathan Taylor          rank   1   6.3s/ex, ~0.4 min left
+  [275/278] 2024 r18 Davante Adams            rank   1   6.3s/ex, ~0.3 min left
+  [276/278] 2024 r18 Ja'Marr Chase            rank   1   6.3s/ex, ~0.2 min left
+  [277/278] 2024 r18 George Kittle            rank   6   6.3s/ex, ~0.1 min left
+  [278/278] 2024 r18 Josh Jacobs              rank   2   6.3s/ex, ~0.0 min left
+
+=== fantasy-sit on sit_test.jsonl ===
+  answered with a shortlisted player   100.0%
+  mean rank of its pick (of 6)        3.12   <- lower is better
+  picked the best of 6                20.9%   (chance 16.7%)
+
+  reference points, on these same 278 examples
+    random choice                      3.50
+    deterministic board (the bar)      2.92
+    this model                         3.12  (-0.20)  does NOT beat the board -- decoration, per §11g
+
+  !! 232 of 278 answers (83%) ran to the 300-token cap instead of stopping.
+  That is not a slow model, it is an adapter that lost its
+  end-of-sequence token in training. The scores below are
+  still real -- extract_pick reads the name from the start
+  of the answer -- but the model is not usable as-is.
+
+--- by decision difficulty (margin = actual-VBD gap) ---
+  coin flip  <1    n=  39  mean rank 2.97   best 23.1%
+  marginal  1-5    n= 101  mean rank 3.17   best 19.8%
+  real     5-20    n= 124  mean rank 3.10   best 19.4%
+  decisive   20+   n=  14  mean rank 3.36   best 35.7%
+
+--- by season (held out, never trained on) ---
+          n  mean_rank  best_pct
+season                          
+2023    138       3.22      21.7
+2024    140       3.01      20.0
+
+wrote eval_sit_fantasy-sit.csv

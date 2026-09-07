@@ -2,11 +2,9 @@
 
 PROJECT_CONTEXT.md §11e stage 4. Runs on Modal's GPU, not locally.
 
-!! THIS FILE HAS NEVER BEEN EXECUTED !!
-Everything else in this repo was run and its output pasted into a commit
-message. This was not: it needs a Modal account, a GPU, and a Hugging Face
-token, none of which exist in the environment it was written in. Treat it as a
-reviewed draft. The first run will surface something; that is expected.
+Executed three times: draft at 1 epoch (scored 5.41), sit at 2 epochs (3.12),
+and a sit 1-epoch ablation that DID NOT PRODUCE A NUMBER -- see the --tag
+comment in train() for what went wrong and what now prevents it.
 
 WHY MODAL AND NOT THE MAC
     Apple Silicon has unified memory, and macOS lets the GPU address roughly
@@ -31,7 +29,12 @@ BEFORE THE FIRST RUN
     3. modal secret create huggingface HF_TOKEN=hf_...
     4. modal run train_adapter.py --dataset draft
        modal run train_adapter.py --dataset sit
-    5. ./finish_adapter.sh fantasy-draft draft
+    5. EXPECT_EPOCHS=2.0 ./finish_adapter.sh fantasy-draft draft
+
+    Re-running a dataset with a different hyperparameter needs --tag, or the
+    two runs land on the same volume path and become indistinguishable:
+       modal run train_adapter.py --dataset sit --epochs 1 --tag e1
+    or just  ./run_ablation.sh sit 1 e1  which chains all of it.
 
 Data source: Pro-Football-Reference. See ATTRIBUTION.md.
 """
@@ -90,7 +93,8 @@ image = (
     secrets=[modal.Secret.from_name('huggingface')],
 )
 def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
-          lr: float = 2e-4):
+          lr: float = 2e-4, tag: str = ''):
+    import datetime
     import inspect
     import json
     import os
@@ -132,7 +136,19 @@ def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
     if dataset not in DATASETS:
         raise SystemExit(f'--dataset must be one of {sorted(DATASETS)}')
     spec = DATASETS[dataset]
-    out_dir = f'{ADAPTER_DIR}/{dataset}'
+
+    # --tag SEPARATES RUNS THAT DIFFER ONLY IN A HYPERPARAMETER.
+    #
+    # Without it every sit run writes to /adapter/sit, so a second run with
+    # different epochs is indistinguishable from the first ON DISK. That is not
+    # hypothetical: the 1-epoch ablation was launched, the volume was never
+    # overwritten, and finish_adapter.sh happily downloaded the 2-epoch files
+    # and scored them under the new model's name. The eval was byte-identical
+    # to the previous run and nothing in the pipeline noticed.
+    #
+    # A tagged path makes that failure loud instead of silent: if the run did
+    # not commit, /adapter/sit_e1 does not exist and the download fails.
+    out_dir = f'{ADAPTER_DIR}/{dataset}{"_" + tag if tag else ""}'
     os.makedirs(out_dir, exist_ok=True)
 
     train_ds = load(f'/data/{spec["train"]}')
@@ -222,8 +238,15 @@ def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
                  f'PARAMETER temperature 0\n')
     with open(f'{out_dir}/Modelfile', 'w') as f:
         f.write(modelfile)
+    # run_id is a wall-clock stamp written by THIS run. Two adapters that share
+    # every hyperparameter still differ here, so "did the file I downloaded
+    # come from the run I just launched" has an answer that does not depend on
+    # remembering what was launched. finish_adapter.sh asserts on epochs; a
+    # human reading a stale run_id is the backstop.
     with open(f'{out_dir}/PROVENANCE.txt', 'w') as f:
-        f.write(f'dataset={dataset}\nbase={BASE}\n'
+        f.write(f'dataset={dataset}\ntag={tag or "(none)"}\n'
+                f'run_id={datetime.datetime.utcnow():%Y-%m-%dT%H:%M:%SZ}\n'
+                f'base={BASE}\n'
                 f'ollama_base={OLLAMA_BASE}\n'
                 f'rank={rank} alpha={rank * 2} lr={lr} epochs={epochs}\n'
                 f'train={len(train_ds)} val={len(val_ds)}\n'
@@ -235,17 +258,20 @@ def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
 
 @app.local_entrypoint()
 def main(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
-         lr: float = 2e-4):
-    train.remote(dataset=dataset, epochs=epochs, rank=rank, lr=lr)
+         lr: float = 2e-4, tag: str = ''):
+    train.remote(dataset=dataset, epochs=epochs, rank=rank, lr=lr, tag=tag)
+    subdir = f'{dataset}{"_" + tag if tag else ""}'
     print('\nnext:')
     # The volume is MOUNTED at /adapter, so its own root IS that directory.
     # `modal volume get fantasy-lora /adapter ...` fails with "no such file or
     # directory" -- copy from `/`, the volume root.
-    print(f'  modal volume ls fantasy-lora/{dataset}   # confirm files exist')
+    print(f'  modal volume ls fantasy-lora/{subdir}   # confirm files exist')
     print(f'  export HF_TOKEN=hf_...              # gated base model config')
-    print(f'  ./finish_adapter.sh fantasy-{dataset} {dataset}')
+    print(f'  EXPECT_EPOCHS={epochs} ./finish_adapter.sh '
+          f'fantasy-{subdir.replace("_", "-")} {subdir}')
     print('')
     print('  finish_adapter.sh does the rest: download, GGUF conversion,')
     print('  ollama create, and scoring against the right bar for this task.')
-    print('  Read the PROVENANCE it prints at step 2 -- it must say')
-    print(f'  dataset={dataset}, or you are about to score the wrong adapter.')
+    print('  EXPECT_EPOCHS makes it ABORT on a provenance mismatch rather than')
+    print('  print one and carry on -- that is how the last ablation scored the')
+    print('  wrong adapter and reported the number with a straight face.')

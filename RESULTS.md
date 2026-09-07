@@ -524,11 +524,26 @@ not more.
   adding rookies is exactly that. Expect some of the 7.7 points, not all: draft
   position makes rookies rankable, not predictable, and the widened-pool
   precedent netted +0.36 from a smaller and likely higher-precision group.
-- **A paired significance test** on the un-tuned vs fine-tuned per-example
-  ranks. Both CSVs exist; the test does not. See above.
-- **Ablations.** One adapter was trained, at one rank, for one epoch. Nothing
-  here separates "post-training helps" from "these particular hyperparameters
-  help", and no second seed was run.
+- **Ablations.** Two adapters exist and they were trained at DIFFERENT epoch
+  counts — draft at 1, sit at 2 — so the two headline results are confounded.
+  "Start/sit is harder for an LLM" and "two epochs over-trained it" are not
+  separated by anything measured. Rank was 16 for both and no second seed was
+  run.
+
+  The 1-epoch sit ablation was launched and **produced no result.** The volume
+  path is keyed on the dataset alone, so both runs targeted `/adapter/sit`; the
+  second never overwrote it, `finish_adapter.sh` downloaded the 2-epoch files,
+  served them as `fantasy-sit-1ep` and scored them. The eval was byte-identical
+  to the 2-epoch run — same mean rank, same md5, same Ollama content ID
+  `e69c6953baa1` — and it read as a plausible ablation until the identity was
+  noticed.
+
+  Logged here because it is a result about the harness rather than the model:
+  at `temperature 0` decoding is deterministic, so **two identical eval CSVs
+  are proof of identical weights, not of a reproducible finding.** The fix is
+  `--tag` (a per-run volume path), `EXPECT_EPOCHS` (provenance asserted, not
+  printed), and a content-ID collision check before any scoring runs.
+  `run_ablation.sh` chains all three.
 - **In-season start/sit.** The built system replays completed seasons. Advising
   on a week of a season currently in progress is a different system and cannot
   be validated until that season ends.

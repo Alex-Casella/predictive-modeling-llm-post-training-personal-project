@@ -139,7 +139,13 @@ python3 eval_agent.py --model llama3.1:8b \
 
 modal run train_adapter.py --dataset sit   # ~20 min on an A10G
 export HF_TOKEN=hf_...
-./finish_adapter.sh fantasy-sit sit        # download, convert, serve, score
+EXPECT_EPOCHS=2.0 ./finish_adapter.sh fantasy-sit sit   # download, convert,
+                                                        # serve, score
+
+# re-running the SAME dataset with a different hyperparameter needs a --tag,
+# or both runs write to /adapter/sit and the second one silently scores the
+# first. run_ablation.sh chains train -> serve -> score -> paired test:
+./run_ablation.sh sit 1 e1
 
 git add <the files you changed> <the eval csv>
 git commit -m "sit/start: ... mean rank X.XX of 6 (rule 2.92, base 3.02)"
@@ -235,6 +241,7 @@ are should drive every modeling decision after it.
 | `assistant.py` | The draft CLI backed by the fine-tuned model. |
 | `paired_test.py` | Is the gap between two eval runs real? |
 | `finish_adapter.sh` | Modal volume → GGUF → Ollama → scored, in one command. |
+| `run_ablation.sh` | One hyperparameter varied, end to end, with the paired test. |
 
 **Docs**
 

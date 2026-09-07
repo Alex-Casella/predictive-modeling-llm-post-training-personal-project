@@ -14,6 +14,25 @@
 > the wrong adapter then scoring it against the other task's bar is a mistake
 > that produces a plausible-looking number.
 
+> **Re-training a dataset you have already trained needs a `--tag`.**
+> Both runs otherwise write to `/adapter/sit` and become indistinguishable on
+> disk. This is not hypothetical — a 1-epoch start/sit ablation was launched,
+> the volume was never overwritten, the 2-epoch adapter was downloaded,
+> converted, served as `fantasy-sit-1ep` and scored. The result was
+> byte-identical to the 2-epoch run and read as a finding.
+>
+> ```bash
+> modal run train_adapter.py --dataset sit --epochs 1 --tag e1
+> EXPECT_EPOCHS=1.0 ./finish_adapter.sh fantasy-sit-e1 sit_e1
+> ```
+>
+> `EXPECT_EPOCHS` turns "read the provenance" into an assertion that aborts.
+> `finish_adapter.sh` also refuses to score a model whose Ollama content ID
+> matches one already installed — identical IDs are identical weights, so at
+> `temperature 0` the eval could only reproduce the other model's CSV.
+>
+> `./run_ablation.sh sit 1 e1` chains all of it, including the paired test.
+
 `PROJECT_CONTEXT.md` §11e stage 5. Everything here runs on your Mac.
 
 `train_adapter.py` writes a **PEFT/safetensors** adapter. Ollama's `ADAPTER`

@@ -21,11 +21,17 @@
 #   export HF_TOKEN=hf_...            # gated base model config
 #   ./finish_adapter.sh fantasy-draft draft
 #   ./finish_adapter.sh fantasy-sit   sit
+#   EXPECT_EPOCHS=1.0 ./finish_adapter.sh fantasy-sit-1ep sit_e1
 #
 # $1 is the Ollama model name to create, $2 the subdirectory train_adapter.py
-# wrote inside the volume (one per dataset). Passing no $2 reads the volume
-# ROOT, which is where the very first run landed before the script grew a
+# wrote inside the volume (one per dataset, plus --tag). Passing no $2 reads the
+# volume ROOT, which is where the very first run landed before the script grew a
 # --dataset flag.
+#
+# EXPECT_EPOCHS (optional) is asserted against PROVENANCE.txt and ABORTS on a
+# mismatch. Set it whenever you are re-running a dataset you have already
+# trained -- that is the case where a stale adapter is indistinguishable from a
+# fresh one by every other signal.
 set -euo pipefail
 
 MODEL_NAME="${1:-fantasy-draft}"
@@ -92,10 +98,28 @@ say "2/5  provenance -- confirm this is the run you think it is"
 cat "$OUT/PROVENANCE.txt"
 ls -lh "$OUT"
 echo
-echo "  READ THE LINE ABOVE. dataset and epochs must be the run you just"
-echo "  launched. Two adapters that differ only in a hyperparameter produce"
-echo "  IDENTICAL eval output when the wrong one is scored, and nothing"
-echo "  further down will notice."
+
+# ASSERTED, not printed and hoped for. The previous version of this script
+# printed the provenance and told a human to read it. A human read it, saw
+# epochs=2.0 where 1.0 was expected, and the script had already moved on.
+if [ -n "${EXPECT_EPOCHS:-}" ]; then
+    GOT="$(sed -n 's/.*epochs=\([0-9.]*\).*/\1/p' "$OUT/PROVENANCE.txt")"
+    # 1 and 1.0 are the same run. Compare numerically, not as strings.
+    if ! awk -v a="$GOT" -v b="$EXPECT_EPOCHS" \
+         'BEGIN{exit !(a+0==b+0 && a!="")}'; then
+        die "PROVENANCE says epochs=${GOT:-<missing>}, you expected $EXPECT_EPOCHS.
+
+  The volume still holds an older run. Training either never reached
+  volume.commit() or wrote to a different path. Nothing was converted, so
+  no wrong number can be produced from here.
+
+  Check:  $MODAL volume ls fantasy-lora${SUBDIR:+/$SUBDIR}
+          $MODAL app list          # did the run you launched actually finish?"
+    fi
+    echo "  epochs=$GOT matches EXPECT_EPOCHS=$EXPECT_EPOCHS"
+fi
+echo "  run_id above is written by the training run itself. If it predates the"
+echo "  run you just launched, this is not that run's adapter."
 
 say "3/5  converting PEFT -> GGUF in an isolated venv"
 cd "$LLAMA_CPP"
@@ -125,23 +149,53 @@ PARAMETER temperature 0
 MODELFILE
 cat Modelfile
 ollama create "$MODEL_NAME" -f Modelfile
-ollama list | head -5
+ollama list | head -8
+
+# THE LAST LINE OF DEFENCE, and the only one that inspects the WEIGHTS rather
+# than a file written alongside them.
+#
+# Ollama addresses a model by the hash of its contents, so two names holding
+# identical bytes share one ID. That is normally an efficiency; here it is a
+# free equality test. If the model just built has the same ID as one already
+# installed, the two are the same model and scoring both is scoring one twice
+# -- which is precisely how the sit ablation produced two identical CSVs.
+#
+# SKIP_TWIN_CHECK=1 bypasses it, for the rare case where a rename is the point.
+if [ -z "${SKIP_TWIN_CHECK:-}" ]; then
+    NEW_ID="$(ollama list | awk -v n="$MODEL_NAME:latest" \
+              '$1==n {print $2; exit}')"
+    if [ -n "$NEW_ID" ]; then
+        TWIN="$(ollama list | awk -v n="$MODEL_NAME:latest" -v id="$NEW_ID" \
+                '$1!=n && $2==id {printf "%s ", $1}')"
+        [ -z "$TWIN" ] || die "$MODEL_NAME has the same content ID ($NEW_ID) as: $TWIN
+
+  Ollama IDs are content hashes, so identical IDs mean IDENTICAL WEIGHTS.
+  At temperature 0 this model would reproduce that one's eval CSV exactly,
+  and the run would look like a successful ablation. It is not one.
+
+  The adapter you downloaded is the same adapter that is already installed.
+  Go back to the volume before spending 30 minutes scoring it."
+        echo "  content ID $NEW_ID is unique among installed models"
+    fi
+fi
 
 say "5/5  scoring against the bar"
 cd "$PROJECT"
-if [ "$SUBDIR" = "sit" ]; then
+case "$SUBDIR" in sit*)
     echo "  278 held-out start/sit decisions, seasons 2023-2024."
     echo "  the bar is 2.92 (start the best season average) out of 6."
     echo "  also score llama3.1:8b the same way before believing any gain."
     "$CONDA_PY" eval_agent.py --model "$MODEL_NAME" \
         --test sit_test.jsonl --key start_sit_examples.jsonl
-else
+    ;;
+*)
     echo "  450 held-out picks. The bar is 5.80 (un-tuned llama3.1:8b),"
     echo "  NOT 6.00 (the board) -- landing between them means post-training"
     echo "  made the model worse. Roughly 75 minutes; Ctrl+C and add"
     echo "  --limit 30 for a smoke test."
     "$CONDA_PY" eval_agent.py --model "$MODEL_NAME"
-fi
+    ;;
+esac
 
 say "done -- record the result"
 echo "  CLAUDE.md: commit after every verified result, score in the message,"

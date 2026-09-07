@@ -81,7 +81,7 @@ target,method,tier,overlap
 2005,B_ppg,50,48.0
 2005,B_ppg,100,67.0
 2005,B_ppg,150,70.66666666666667
-2005,B_ppg,200,69.0
+2005,B_ppg,200,68.5
 2005,B_ppg,250,70.0
 2005,C_ppg_x_games,25,36.0
 2005,C_ppg_x_games,50,52.0
@@ -171,7 +171,7 @@ target,method,tier,overlap
 2010,B_ppg,50,44.0
 2010,B_ppg,100,61.0
 2010,B_ppg,150,67.33333333333333
-2010,B_ppg,200,73.5
+2010,B_ppg,200,73.0
 2010,B_ppg,250,73.6
 2010,C_ppg_x_games,25,44.0
 2010,C_ppg_x_games,50,46.0
@@ -332,7 +332,7 @@ target,method,tier,overlap
 2019,B_ppg,25,36.0
 2019,B_ppg,50,56.00000000000001
 2019,B_ppg,100,65.0
-2019,B_ppg,150,66.66666666666666
+2019,B_ppg,150,66.0
 2019,B_ppg,200,68.0
 2019,B_ppg,250,68.0
 2019,C_ppg_x_games,25,36.0
@@ -361,7 +361,7 @@ target,method,tier,overlap
 2020,C_ppg_x_games,250,70.8
 2021,A_carry_forward,25,48.0
 2021,A_carry_forward,50,50.0
-2021,A_carry_forward,100,61.0
+2021,A_carry_forward,100,62.0
 2021,A_carry_forward,150,64.66666666666666
 2021,A_carry_forward,200,67.0
 2021,A_carry_forward,250,68.0
@@ -398,7 +398,7 @@ target,method,tier,overlap
 2023,A_carry_forward,25,36.0
 2023,A_carry_forward,50,44.0
 2023,A_carry_forward,100,60.0
-2023,A_carry_forward,150,64.66666666666666
+2023,A_carry_forward,150,65.33333333333333
 2023,A_carry_forward,200,69.0
 2023,A_carry_forward,250,68.8
 2023,B_ppg,25,40.0
@@ -434,7 +434,7 @@ target,method,tier,overlap
 2025,A_carry_forward,25,48.0
 2025,A_carry_forward,50,52.0
 2025,A_carry_forward,100,63.0
-2025,A_carry_forward,150,65.33333333333333
+2025,A_carry_forward,150,66.0
 2025,A_carry_forward,200,69.0
 2025,A_carry_forward,250,71.2
 2025,B_ppg,25,48.0

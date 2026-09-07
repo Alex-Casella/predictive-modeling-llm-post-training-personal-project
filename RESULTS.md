@@ -363,9 +363,10 @@ which confirms the join and both implementations at once.
 | random | 3.51 | 17.3% |
 | `llama3.1:8b` **un-tuned** | 3.02 | 23.7% |
 | start the best season average | **2.92** | 24.1% |
-| `fantasy-sit` **fine-tuned** | 3.12 | 20.9% |
+| `fantasy-sit-e1` **fine-tuned, 1 epoch** | 2.99 | 25.9% |
+| `fantasy-sit` **fine-tuned, 2 epochs** | 3.12 | 20.9% |
 
-### The fine-tune changed nothing measurable
+### The 2-epoch fine-tune changed nothing measurable
 
 **3.12 against 3.02 un-tuned and 2.92 for the rule.** It clears neither bar.
 
@@ -410,29 +411,59 @@ Scoring is unaffected: `extract_pick` reads the first shortlisted name and the
 recommendation is written first. The 300-token cap in `eval_agent.py` bounds
 the runaway; without it the first example alone exceeded a 300-second timeout.
 
-### The confound, stated rather than buried
+### The epoch ablation — three comparisons, three nulls
 
-**This ran `epochs=2.0`; the draft adapter ran `epochs=1.0`.** So two
-explanations are not separated by this experiment:
+The 2-epoch run above left a confound: **it ran `epochs=2.0` while the draft
+adapter ran `epochs=1.0`,** so "sit/start leaves less for a language layer" and
+"two epochs over-trained it" both predicted what was seen. `--dataset sit
+--epochs 1` on the same 278 items separates them. It scores **2.99**.
 
-| | |
-|---|---|
-| the task | sit/start leaves less for a language layer than the draft did |
-| the hyperparameter | two epochs over 1,233 short templated examples over-trained it |
+The point estimate moved the way over-training predicts. Nothing else did:
 
-Both predict what was observed. The lost stop token points at the second, since
-format collapse is what over-training on a fixed template looks like.
+| the 1-epoch adapter, against | mean difference | reading |
+|---|---|---|
+| its own 2-epoch sibling | **−0.126** better | p = 0.111 / 0.192 / 0.111, CI **[−0.280, +0.029]** |
+| the un-tuned base (3.02) | **−0.029** better | no test rejects at α = 0.05 |
+| the board / the rule (2.92) | **+0.068** worse | no test rejects at α = 0.05 |
 
-A second candidate cause sits in `train_adapter.py`: `tok.pad_token =
-tok.eos_token`. When pad and EOS are the same token, a collator that masks pad
-positions also masks the real EOS out of the loss, so the model never learns to
-emit it. The draft adapter has identical code and does stop, which is why this
-is a hypothesis and not a conclusion.
+Every interval contains zero. **The 1-epoch adapter is not measurably different
+from anything on this test set** — not from the base it was tuned from, not
+from the sort it was meant to beat, not from its own sibling.
 
-**The experiment that separates them is one run:** `--dataset sit --epochs 1`,
-scored on the same 278. Roughly 20 minutes of GPU time. Until it exists, the
-supportable claim is "this fine-tune made the model worse, and it is defective
-in a way consistent with over-training" — not "an LLM cannot do sit/start".
+Reading the third row as "it matches the rule now" would be wrong, and it is
+the easiest mistake here. A test that cannot resolve a 0.068 gap would also
+miss a genuine 0.068 disadvantage; absence of evidence is not evidence of
+absence. The supportable sentence is *"still behind the rule, by an amount
+278 examples cannot resolve."*
+
+Detecting the epoch gap at 80% power needs **856 paired examples** against the
+278 available, 3.1× short. That is the third time this project has landed on
+"suggestive, underpowered" — the draft gap needed 895 and the base-vs-tuned
+gap 3,065. It is not bad luck. It is what a test set of this size buys, and it
+is a property of the design rather than of any one result.
+
+**What it does buy is an epoch-matched headline.** Both tasks now have a
+1-epoch adapter, so the cross-task comparison no longer varies two things at
+once — not because the epoch question was answered, but because it was
+sidestepped:
+
+| at 1 epoch | board | un-tuned | fine-tuned |
+|---|---|---|---|
+| draft (of 12) | 6.00 | 5.80 | **5.41** — beats both |
+| sit/start (of 6) | 2.92 | 3.02 | **2.99** — beats neither, distinguishably |
+
+**The lost stop token is not over-training.** Runaway generations went 83% at
+two epochs to **96% at one** — 267 of 278. More training produced *more*
+stopping, the opposite of what format collapse predicts, so that explanation is
+out. What survives is the `tok.pad_token = tok.eos_token` hypothesis in
+`train_adapter.py`: when pad and EOS are the same token, a collator masking pad
+positions masks the real EOS out of the loss and the model never learns to emit
+it. Why one epoch stops *less* often than two is not explained by anything
+measured here, and is recorded as an observation rather than a mechanism.
+
+Best-of-6 recovered to 25.9% from the 2-epoch run's 20.9%, above the un-tuned
+23.7% and the rule's 24.1%. Validity stayed at 100%. Per-season means were
+3.04 (2023) and 2.94 (2024), so this is not one year carrying it.
 
 ### The base model does NOT beat the tabular layer here
 
@@ -524,13 +555,14 @@ not more.
   adding rookies is exactly that. Expect some of the 7.7 points, not all: draft
   position makes rookies rankable, not predictable, and the widened-pool
   precedent netted +0.36 from a smaller and likely higher-precision group.
-- **Ablations.** Two adapters exist and they were trained at DIFFERENT epoch
-  counts — draft at 1, sit at 2 — so the two headline results are confounded.
-  "Start/sit is harder for an LLM" and "two epochs over-trained it" are not
-  separated by anything measured. Rank was 16 for both and no second seed was
-  run.
+- **Ablations.** One dimension has now been varied: sit at 1 epoch scores 2.99
+  against 3.12 at 2, and the headline is epoch-matched at 1 (see *The epoch
+  ablation* above). The epoch gap itself is not resolved — it needs 856 paired
+  examples against 278. Rank was 16 everywhere, learning rate never moved, and
+  **no second seed has been run**, so none of these numbers has a
+  run-to-run spread to be judged against.
 
-  The 1-epoch sit ablation was launched and **produced no result.** The volume
+  The first attempt at that ablation **produced no result.** The volume
   path is keyed on the dataset alone, so both runs targeted `/adapter/sit`; the
   second never overwrote it, `finish_adapter.sh` downloaded the 2-epoch files,
   served them as `fantasy-sit-1ep` and scored them. The eval was byte-identical

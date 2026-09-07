@@ -70,7 +70,35 @@ cat adapter/PROVENANCE.txt
 Ollama can convert some HuggingFace LoRA adapters directly; when it cannot,
 `llama.cpp` has the converter.
 
-**Try Ollama first** — if this works, skip to step 3:
+### Direct safetensors loading does NOT work — tested, do not retry
+
+Ollama 0.33.3 on macOS cannot consume the PEFT adapter this project produces.
+Five variants were tried against a directory containing exactly what Ollama's
+own docs require (`adapter_model.safetensors` + `adapter_config.json`):
+
+| `ADAPTER` value | result |
+|---|---|
+| `.` (relative dir) | `no Modelfile or safetensors files found` |
+| absolute path to the dir | `no Modelfile or safetensors files found` |
+| `./adapter_model.safetensors` | finds and copies the file, then `open adapter_config.json: no such file or directory` |
+| absolute path to the safetensors file | same as above |
+| a minimal dir holding ONLY those two files | `no Modelfile or safetensors files found` |
+
+The file-path variants get furthest: Ollama locates and copies the 160 MB
+safetensors, reaches `converting adapter`, then fails looking for
+`adapter_config.json` — which is sitting right beside it. It appears to resolve
+that path against the server's working directory rather than the adapter's.
+
+Matches the open upstream report:
+https://github.com/ollama/ollama/issues/13314
+
+**Go straight to the llama.cpp conversion below.** It is also the path
+`PROJECT_CONTEXT.md` §14's own references (the Unsloth → Ollama walkthrough)
+describe, so this is the mainline rather than a workaround.
+
+<details>
+<summary>The direct attempt, kept for the record</summary>
+
 
 ```bash
 cd adapter
@@ -78,12 +106,18 @@ cd adapter
 sed -i '' 's|ADAPTER ./adapter.gguf|ADAPTER .|' Modelfile
 ollama create fantasy-draft -f Modelfile
 ```
+</details>
 
-**If that fails**, convert explicitly:
+### The conversion that does work
 
 ```bash
 git clone https://github.com/ggerganov/llama.cpp
-cd llama.cpp && pip install -r requirements.txt
+cd llama.cpp
+# ISOLATED env. llama.cpp pins numpy~=1.26 and torch==2.11; installing those
+# into the project env downgrades pandas and numpy and breaks every script here.
+python3 -m venv gguf-convert-env && source gguf-convert-env/bin/activate
+pip install -r requirements.txt
+export HF_TOKEN=...   # convert_lora_to_gguf reads the gated base model's config
 python3 convert_lora_to_gguf.py ../adapter --outfile ../adapter/adapter.gguf
 cd ..
 ollama create fantasy-draft -f adapter/Modelfile

@@ -54,12 +54,34 @@ die() { printf '\n\033[31mERROR: %s\033[0m\n' "$*" >&2; exit 1; }
 command -v ollama >/dev/null || die "ollama not on PATH. brew install ollama"
 
 say "1/5  downloading the adapter from the Modal volume"
+
+# What is actually IN the volume, with timestamps. If these are older than the
+# training run you just launched, the run did not write and everything below
+# would faithfully re-measure the previous adapter.
+"$MODAL" volume ls "fantasy-lora${SUBDIR:+/$SUBDIR}" || true
+
+# WIPE FIRST. A download that fails leaves the previous run's files in place,
+# and the rest of this script would then convert, serve and score the OLD
+# adapter while reporting the new model's name. That happened: a 1-epoch rerun
+# produced byte-identical results to the 2-epoch run because the volume was
+# never overwritten and the stale local copy was still here.
+rm -rf "$OUT"
 mkdir -p "$OUT"
+
+# These three MUST arrive. Tokenizer files are optional -- GGUF conversion
+# reads the base model's config for those.
+REQUIRED="adapter_model.safetensors adapter_config.json PROVENANCE.txt"
 for f in "${FILES[@]}"; do
     # Explicit destination path per file. Passing just the directory makes
     # Modal write the download AS that directory name.
-    "$MODAL" volume get --force fantasy-lora "$REMOTE$f" "$OUT/$f" \
-        || echo "  (skipped $f -- not in the volume)"
+    if ! "$MODAL" volume get --force fantasy-lora "$REMOTE$f" "$OUT/$f"; then
+        case " $REQUIRED " in
+            *" $f "*) die "could not download $REMOTE$f from the volume.
+  Nothing is left in $OUT, so no stale adapter can be scored by mistake.
+  Check:  $MODAL volume ls fantasy-lora${SUBDIR:+/$SUBDIR}" ;;
+            *) echo "  (optional file $f not in the volume, continuing)" ;;
+        esac
+    fi
 done
 [ -s "$OUT/adapter_model.safetensors" ] \
     || die "adapter_model.safetensors did not download.
@@ -67,8 +89,13 @@ done
   An empty listing means training never reached volume.commit()."
 
 say "2/5  provenance -- confirm this is the run you think it is"
-cat "$OUT/PROVENANCE.txt" 2>/dev/null || echo "  (no PROVENANCE.txt)"
+cat "$OUT/PROVENANCE.txt"
 ls -lh "$OUT"
+echo
+echo "  READ THE LINE ABOVE. dataset and epochs must be the run you just"
+echo "  launched. Two adapters that differ only in a hyperparameter produce"
+echo "  IDENTICAL eval output when the wrong one is scored, and nothing"
+echo "  further down will notice."
 
 say "3/5  converting PEFT -> GGUF in an isolated venv"
 cd "$LLAMA_CPP"

@@ -209,7 +209,7 @@ def main():
     print(f'\n=== reading it ===')
     direction = 'BETTER' if mean < 0 else 'WORSE'
     print(f'  {args.b} picked {direction} than {args.a}')
-    print(f'  by {abs(mean):.3f} ranks of 12, on average.')
+    print(f'  by {abs(mean):.3f} ranks, on average.')
     ps = [t.pvalue, w.pvalue, sign.pvalue]
     if all(x < args.alpha for x in ps):
         print(f'  All three tests reject H0 at alpha={args.alpha}: the gap is')
@@ -232,7 +232,7 @@ def main():
 
     print(f'\n  A p-value is P(seeing a gap this big | H0 is true). It is NOT')
     print(f'  the probability that fine-tuning worked, and a small p says')
-    print(f'  nothing about whether 0.39 ranks of 12 is worth caring about.')
+    print(f'  nothing about whether {abs(mean):.3f} ranks is worth caring about.')
     print(f'  That is the effect size above, and it is a separate judgement.')
 
 

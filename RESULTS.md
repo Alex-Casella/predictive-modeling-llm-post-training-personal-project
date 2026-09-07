@@ -365,12 +365,31 @@ which confirms the join and both implementations at once.
 | start the best season average | **2.92** | 24.1% |
 | `fantasy-sit` **fine-tuned** | 3.12 | 20.9% |
 
-### The fine-tune made it worse
+### The fine-tune changed nothing measurable
 
-**3.12 against 3.02 un-tuned and 2.92 for the rule.** Post-training moved the
-model away from both bars, and it is worse in both held-out seasons — 3.22 vs
-3.16 in 2023, 3.01 vs 2.89 in 2024 — so this is not one bad year. Best-of-6
-fell as well, 23.7% to 20.9%. Validity stayed at 100%.
+**3.12 against 3.02 un-tuned and 2.92 for the rule.** It clears neither bar.
+
+But the 0.10 gap against the un-tuned base **is not distinguishable from
+noise**, and unlike the draft result all three tests agree on that
+(`paired_test.py`, same 278 prompts answered by both):
+
+| | |
+|---|---|
+| mean difference | **+0.097** (worse) |
+| 95% CI | **[−0.128, +0.323]** — includes 0 comfortably |
+| paired t | p = 0.400 |
+| Wilcoxon | p = 0.534 |
+| sign test | p = 0.578 |
+
+Detecting an effect that small would need **3,065 paired examples**; there are
+278, so this is 11× short. The tuned model picked better on 75, worse on 83,
+and identically on 120.
+
+So the honest claim is not "post-training made it worse". It is **"post-training
+did nothing detectable, and what it did do points the wrong way"**. Against the
+deterministic rule the story is simpler: 2.92 stands, unbeaten by any model.
+
+Best-of-6 fell 23.7% to 20.9% and validity stayed at 100%.
 
 **83% of its answers never stopped.** 232 of 278 ran to the 300-token cap.
 The adapter produces the trained sentence correctly and then keeps going,

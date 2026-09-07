@@ -94,16 +94,42 @@ def build_situation(board, state, league):
                    for r in shown.itertuples()]), shown
 
 
+def where_are_we(state, league):
+    """(round, overall pick number, is_estimated) for the coming pick.
+
+    The training prompts open with "Round R, pick P overall", so something has
+    to fill those slots -- and getting them wrong is not cosmetic.
+
+    YOUR ROSTER SIZE IS THE RELIABLE CLOCK. You draft exactly one player per
+    round, so your Nth pick is round N, whether or not you bothered logging the
+    other nine teams. Deriving the round from total players gone instead -- the
+    first version of this -- reads "round 1, pick 10 overall" off a nine-man
+    roster the moment a user enters only their own picks.
+
+    That combination NEVER OCCURS IN TRAINING: every round-1 example has an
+    empty roster. The fine-tuned model is the one that suffers, because it
+    learned the round-to-roster-size relationship tightly; fed the contradiction
+    at temperature 0 it stops responding to the roster at all and repeats one
+    name. The base model, having learned no such association, keeps tracking the
+    numbers. An out-of-distribution prompt looks exactly like a bad fine-tune.
+
+    The overall pick number still needs every rival's pick logged. When fewer
+    players are gone than the round implies, fall back to the first slot of that
+    round -- an in-distribution number -- and say it is an estimate.
+    """
+    rnd = len(state['mine']) + 1
+    gone = len(state['taken']) + len(state['mine'])
+    floor = (rnd - 1) * league.teams + 1        # first pick of this round
+    return rnd, max(gone + 1, floor), gone + 1 < floor
+
+
 def build_messages(board, state, league):
     """(messages, shown, pick_no, rnd) -- the exact payload the model sees."""
     situation, shown = build_situation(board, state, league)
-
-    # The training prompts opened with "Round R, pick P overall", so something
-    # has to fill those slots. Derived from how many players are off the board,
-    # which is only correct if every rival pick was entered with `taken`. Stated
-    # at startup rather than assumed silently.
-    pick_no = len(state['taken']) + len(state['mine']) + 1
-    rnd = (pick_no - 1) // league.teams + 1
+    rnd, pick_no, estimated = where_are_we(state, league)
+    if estimated:
+        print(f'  (rivals\' picks not tracked -- pick {pick_no} is an estimate '
+              f'from round {rnd}. Use `taken <name>` to make it exact.)')
 
     example = dict(round=rnd, pick=pick_no, situation=situation)
     return (dict(messages=[

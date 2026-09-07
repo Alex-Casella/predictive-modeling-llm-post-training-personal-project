@@ -102,6 +102,16 @@ def candidates(item):
             for ln in block.strip().splitlines() if ln.strip()]
 
 
+# Every answer in both training sets is one short paragraph -- "Start X (WR).
+# He is averaging ... " -- around 60 tokens. Without a cap, a model that fails
+# to emit its end-of-sequence token generates until the request times out, and
+# a 25-minute eval dies on example 1 having produced nothing. The cap is 5x
+# the length any real answer needs, so it cannot truncate a working model; it
+# only bounds a broken one. extract_pick reads the name from the first few
+# tokens either way.
+MAX_TOKENS = 300
+
+
 def warm(model, timeout=900):
     """Load the model into memory BEFORE the timed loop starts.
 
@@ -137,16 +147,21 @@ def warm(model, timeout=900):
 
 
 def ask_ollama(model, item, timeout=300):
+    """Returns (text, hit_cap). hit_cap means the model never stopped on its own."""
     body = json.dumps({
         'model': model,
         'messages': item['messages'][:2],       # system + user, NOT the answer
         'stream': False,
-        'options': {'temperature': 0},
+        'options': {'temperature': 0, 'num_predict': MAX_TOKENS},
     }).encode()
     req = urllib.request.Request(OLLAMA, data=body,
                                  headers={'Content-Type': 'application/json'})
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read())['message']['content']
+        payload = json.loads(r.read())
+    # 'length' means it ran out of budget rather than finishing a sentence.
+    # A handful is noise; every answer hitting it is a broken adapter, and that
+    # is a finding about the model, not a nuisance to suppress.
+    return payload['message']['content'], payload.get('done_reason') == 'length'
 
 
 def extract_pick(text, names):
@@ -231,7 +246,10 @@ def main():
     else:
         def chooser(it, names, _m=args.model):
             try:
-                return extract_pick(ask_ollama(_m, it), names)
+                text, capped = ask_ollama(_m, it)
+                if capped:
+                    runaway.append(1)
+                return extract_pick(text, names)
             except urllib.error.URLError as e:
                 raise SystemExit(
                     f'cannot reach Ollama at {OLLAMA}: {e}\n'
@@ -241,6 +259,7 @@ def main():
     # K differs between the tasks (12 candidates when drafting, 6 at flex), so
     # chance is derived from the data rather than assumed.
     k = len(candidates(items[0]))
+    runaway = []            # examples where the model never emitted a stop
     is_llm = args.model not in ('board', 'random')
     if is_llm:
         print(f'\nquerying {args.model} via Ollama.')
@@ -264,6 +283,16 @@ def main():
                    'does NOT beat the board -- decoration, per §11g')
         print(f'    this model                         '
               f'{summary["mean_rank"]:.2f}  ({d:+.2f})  {verdict}')
+
+    if runaway:
+        pct = 100 * len(runaway) / len(items)
+        print(f'\n  !! {len(runaway)} of {len(items)} answers ({pct:.0f}%) ran '
+              f'to the {MAX_TOKENS}-token cap instead of stopping.')
+        if pct > 50:
+            print(f'  That is not a slow model, it is an adapter that lost its')
+            print(f'  end-of-sequence token in training. The scores below are')
+            print(f'  still real -- extract_pick reads the name from the start')
+            print(f'  of the answer -- but the model is not usable as-is.')
 
     ok = detail[detail['valid']]
     if len(ok):

@@ -503,15 +503,58 @@ sidestepped:
 **The lost stop token is not over-training.** Runaway generations went 83% at
 two epochs to **96% at one** — 267 of 278. More training produced *more*
 stopping, the opposite of what format collapse predicts, so that explanation is
-out. What survives is the `tok.pad_token = tok.eos_token` hypothesis in
+out. The surviving candidate was the `tok.pad_token = tok.eos_token` line in
 `train_adapter.py`: when pad and EOS are the same token, a collator masking pad
-positions masks the real EOS out of the loss and the model never learns to emit
-it. Why one epoch stops *less* often than two is not explained by anything
-measured here, and is recorded as an observation rather than a mechanism.
+positions masks the real EOS out of the loss. **That was tested and it is only
+part of the story — see below.** Why one epoch stops *less* often than two is
+not explained by anything measured here, and is recorded as an observation
+rather than a mechanism.
 
 Best-of-6 recovered to 25.9% from the 2-epoch run's 20.9%, above the un-tuned
 23.7% and the rule's 24.1%. Validity stayed at 100%. Per-season means were
 3.04 (2023) and 2.94 (2024), so this is not one year carrying it.
+
+### The pad-token fix: a partial one, and a clean dissociation
+
+`--pad-token auto` gives the trainer a reserved Llama pad id distinct from EOS,
+so the real end-of-sequence token stays in the loss. Same seed, same epoch
+count, same data — one line changed.
+
+**The prediction was runaway near zero. It came back at 83%.**
+
+| | runaway | mean rank | picks identical to `e1` |
+|---|---|---|---|
+| pad = eos, seed 0 (`e1`) | 96% | 2.993 | — |
+| pad = eos, seed 1 (`e1s1`) | 93% | 3.036 | 83.5% |
+| **pad = reserved (`e1pad`)** | **83%** | **2.978** | **90.3%** |
+
+Seed noise on runaway is about 3 points, so 96 → 83 is roughly **four times**
+noise and is not an artefact. But four answers in five still never stop. The
+pad/EOS collision is a **contributing factor, not the cause**, and the cause
+remains unidentified.
+
+**Stopping and picking came apart.** The decision score moved −0.014 — p =
+0.764 / 0.746 / 0.701, CI [−0.108, +0.079], and 80% power would need **24,081**
+paired examples against 278, the widest gap between what a question needs and
+what this test set holds anywhere in this project.
+
+More telling than the p-value: **changing the pad token perturbed the model's
+decisions LESS than changing the seed did** — 90.3% of picks identical against
+83.5% for the seed pair, sd 0.797 against 1.123 — while moving runaway four
+times further than the seed did. One line changed how the model *ends* an
+answer without meaningfully changing which player it *names*.
+
+That is worth more than the null it sits next to. It says the format defect and
+the decision quality are separable failures, so the 83% runaway is not evidence
+the fine-tune "learned the surface form instead of the decision" — the surface
+form moved a long way and the decisions did not follow.
+
+**What is ruled out, and what is left.** Over-training is out (runaway rises as
+epochs fall). Serving and prompt format are out: the un-tuned base has *no*
+runaway on the same prompts through the same Ollama path. Loss masking is
+partial. What has not been checked is whether the training examples carry a
+terminating token at all after TRL applies the chat template — a different
+class of bug from loss masking and a different fix.
 
 ### Giving the prompt something the sort cannot see
 

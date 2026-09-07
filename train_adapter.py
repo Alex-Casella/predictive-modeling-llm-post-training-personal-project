@@ -70,6 +70,7 @@ image = (
     secrets=[modal.Secret.from_name('huggingface')],
 )
 def train(epochs: float = 2.0, rank: int = 16, lr: float = 2e-4):
+    import inspect
     import json
     import torch
     from datasets import Dataset
@@ -77,6 +78,26 @@ def train(epochs: float = 2.0, rank: int = 16, lr: float = 2e-4):
     from transformers import (AutoModelForCausalLM, AutoTokenizer,
                               BitsAndBytesConfig)
     from trl import SFTConfig, SFTTrainer
+
+    def accepted(cls, kwargs):
+        """Keep only kwargs this version of `cls` actually accepts.
+
+        TRL renames things between releases -- max_seq_length became
+        max_length, tokenizer became processing_class -- and pinning a version
+        did not save me: the first smoke run died on
+        `SFTConfig.__init__() got an unexpected keyword argument 'max_length'`.
+
+        Filtering against the real signature works across versions instead of
+        betting on one. Dropped keys are PRINTED, never silently discarded --
+        some of them change what the model learns.
+        """
+        valid = set(inspect.signature(cls.__init__).parameters)
+        keep = {k: v for k, v in kwargs.items() if k in valid}
+        dropped = sorted(set(kwargs) - set(keep))
+        if dropped:
+            print(f'  [{cls.__name__}] not supported in this version, '
+                  f'dropped: {dropped}')
+        return keep
 
     def load(path):
         rows = [json.loads(l) for l in open(path)]
@@ -113,35 +134,53 @@ def train(epochs: float = 2.0, rank: int = 16, lr: float = 2e-4):
         target_modules=['q_proj', 'k_proj', 'v_proj', 'o_proj',
                         'gate_proj', 'up_proj', 'down_proj'])
 
-    trainer = SFTTrainer(
+    cfg_kwargs = dict(
+        output_dir='/tmp/out',
+        num_train_epochs=epochs,
+        per_device_train_batch_size=2,
+        gradient_accumulation_steps=8,        # effective batch 16
+        learning_rate=lr,
+        lr_scheduler_type='cosine',
+        warmup_ratio=0.03,
+        bf16=True,
+        gradient_checkpointing=True,
+        logging_steps=10,
+        eval_strategy='epoch',
+        save_strategy='epoch',
+        report_to='none',
+        seed=0,
+        # Prompts are ~1,850 characters; 2048 tokens holds the whole exchange
+        # with room to spare. Truncating here would silently cut the shortlist
+        # and teach the model to answer from a partial list. The two names are
+        # the same setting in different TRL versions -- exactly one survives
+        # the filter below.
+        max_length=2048,
+        max_seq_length=2048,
+        # Train on the answer, not on reciting the shortlist back. Only newer
+        # TRL has this; if it is dropped the run is still valid, just less
+        # efficient per token, so the warning below is a note not an alarm.
+        completion_only_loss=True,
+    )
+    cfg = SFTConfig(**accepted(SFTConfig, cfg_kwargs))
+    if not getattr(cfg, 'completion_only_loss', False):
+        print('  NOTE: loss covers the whole exchange, not just the answer. '
+              'Training will still work; the model spends capacity learning to '
+              'echo the shortlist.')
+
+    trainer_kwargs = dict(
         model=model,
         train_dataset=train_ds,
         eval_dataset=val_ds,
         peft_config=peft_config,
-        processing_class=tok,
-        args=SFTConfig(
-            output_dir='/tmp/out',
-            num_train_epochs=epochs,
-            per_device_train_batch_size=2,
-            gradient_accumulation_steps=8,     # effective batch 16
-            learning_rate=lr,
-            lr_scheduler_type='cosine',
-            warmup_ratio=0.03,
-            bf16=True,
-            gradient_checkpointing=True,
-            logging_steps=10,
-            eval_strategy='epoch',
-            save_strategy='epoch',
-            # Prompts are ~1,850 characters; 2048 tokens holds the whole
-            # exchange with room to spare. Truncation here would silently cut
-            # the shortlist and teach the model to answer from a partial list.
-            max_length=2048,
-            # Train on the answer only. Without this the loss also rewards
-            # reproducing the shortlist, which is copying, not deciding.
-            completion_only_loss=True,
-            report_to='none',
-            seed=0),
+        args=cfg,
     )
+    # `tokenizer` was renamed `processing_class`. Pass whichever exists, never
+    # both -- versions that accept both treat one as deprecated and warn.
+    sig = set(inspect.signature(SFTTrainer.__init__).parameters)
+    trainer_kwargs['processing_class' if 'processing_class' in sig
+                   else 'tokenizer'] = tok
+
+    trainer = SFTTrainer(**accepted(SFTTrainer, trainer_kwargs))
     trainer.train()
 
     trainer.model.save_pretrained(ADAPTER_DIR)

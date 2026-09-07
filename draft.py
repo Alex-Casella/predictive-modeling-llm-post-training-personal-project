@@ -47,6 +47,25 @@ NEED_BONUS = {'starter': 12.0, 'flex': 6.0, 'depth': 0.0}
 # Past this many at a position, more of them is roster clog, not depth.
 MAX_AT_POS = {'QB': 2, 'TE': 2, 'RB': 6, 'WR': 6}
 
+# The shape of a draft: how many teams, and how many candidates a situation
+# surfaces. These live HERE and not in step9_draft_examples.py, which owns the
+# simulation, because step9 imports sklearn -- and a CLI that only needs to know
+# "show twelve" should not have to load the modelling stack to find that out.
+# step9 imports them back, so there is still one definition.
+TEAMS = 10
+SHOW_AVAILABLE = 12
+
+
+def legal(roster_counts, pos):
+    """May another player at this position still be drafted?
+
+    `roster_counts` is keyed by SLOT, not raw position -- a FB occupies an RB
+    slot. Callers must apply POS_ALIAS before counting or the cap silently
+    stops applying to fullbacks.
+    """
+    slot = POS_ALIAS.get(pos, pos)
+    return roster_counts.get(slot, 0) < MAX_AT_POS.get(slot, 6)
+
 
 def normalise(s):
     """Fold a name to letters and spaces only.
@@ -250,7 +269,7 @@ HELP = """
 
 
 def main():
-    league = LeagueConfig(teams=10, **ESPN_STANDARD)
+    league = LeagueConfig(teams=TEAMS, **ESPN_STANDARD)
     board = load_board()
     state = load_state()
     print(f'=== 2026 draft assistant -- {league.label()} ===')

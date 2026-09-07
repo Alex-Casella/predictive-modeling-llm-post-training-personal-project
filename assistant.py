@@ -39,10 +39,9 @@ import urllib.error
 
 # Everything below is imported rather than reimplemented, so that this file
 # cannot disagree with the pipeline that produced the published numbers.
-from draft import (available, load_board, load_state, my_roster, resolve,
-                   save_state, show_lineup)
+from draft import (SHOW_AVAILABLE, TEAMS, available, legal, load_board,
+                   load_state, my_roster, resolve, save_state, show_lineup)
 from eval_agent import OLLAMA, ask_ollama, extract_pick
-from step9_draft_examples import SHOW_AVAILABLE, TEAMS, legal
 from step10_render_sft import SYSTEM, render_user
 from vbd import ESPN_STANDARD, POS_ALIAS, LeagueConfig
 
@@ -67,9 +66,11 @@ def shortlist(board, state, counts):
     """The K candidates the model is allowed to choose from.
 
     Same filter and same K as training: board order, minus anyone already gone,
-    minus positions where you are already at the roster cap. The action space
-    being exactly what is shown is the fix step9 documents at length -- widening
-    it here would ask the model a question it was never trained on.
+    minus positions where you are already at the roster cap. `legal` and
+    SHOW_AVAILABLE come from draft.py, which step9 also imports, so the live
+    shortlist and the trained one cannot diverge. The action space being exactly
+    what is shown is the fix step9 documents at length -- widening it here would
+    ask the model a question it was never trained on.
     """
     avail = available(board, state)
     ok = avail[avail['pos'].apply(lambda p: legal(counts, p))]

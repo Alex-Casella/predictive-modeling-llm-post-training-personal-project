@@ -46,16 +46,17 @@ from sklearn.ensemble import HistGradientBoostingRegressor
 import features
 from board import PARAMS, TIER_GAP, add_tiers
 from checks import Checks
-from draft import MAX_AT_POS
+from draft import SHOW_AVAILABLE, TEAMS, legal
 from vbd import ESPN_STANDARD, POS_ALIAS, LeagueConfig, add_vbd, baselines
 
 SRC = 'fantasy_top250_derived.csv'
 OUT = 'draft_examples.jsonl'
 
 SEASONS = list(range(2007, 2026))   # 2007 gives the model 6 training seasons
-TEAMS = 10
 ROUNDS = 15
-SHOW_AVAILABLE = 12                 # candidates surfaced in each situation
+# TEAMS, SHOW_AVAILABLE and legal() are defined in draft.py and imported above:
+# assistant.py needs them to build a live situation in this exact shape, and
+# importing this module to get them would drag sklearn into an interactive CLI.
 
 
 def prepare(df):
@@ -124,11 +125,6 @@ def actual_vbd(df, n, league, pids):
                             actual_vbd=round(cutoff - base.get(slot, 0.0), 1),
                             made_top250=False)
     return out, cutoff
-
-
-def legal(roster_counts, pos):
-    slot = POS_ALIAS.get(pos, pos)
-    return roster_counts.get(slot, 0) < MAX_AT_POS.get(slot, 6)
 
 
 def snake_order(teams, rounds):

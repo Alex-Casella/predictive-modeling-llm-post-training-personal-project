@@ -160,7 +160,23 @@ python3 board.py               → board_2026.csv
 python3 draft.py               the draft CLI, deterministic (no LLM)
 python3 assistant.py           the draft CLI, backed by the fine-tuned model
 python3 paired_test.py         is the gap between two eval runs real?
+
+python3 step11_weekly_data.py  → weekly_ppr.csv  (nflverse, joined on ids)
+python3 step12_start_sit_examples.py  → start_sit_examples.jsonl + the bars
+python3 step13_render_startsit.py     → sit_train/val/test.jsonl
 ```
+
+The eval harness serves both tasks; the defaults are the draft files:
+
+```
+python3 eval_agent.py --model board
+python3 eval_agent.py --model fantasy-sit \
+    --test sit_test.jsonl --key start_sit_examples.jsonl
+```
+
+`train_adapter.py --dataset draft|sit` picks the data and the volume
+subdirectory from one script, so a difference between two results cannot be a
+drifted hyperparameter.
 
 `assistant.py` imports its prompt from `step10_render_sft.render_user` and its
 answer parsing from `eval_agent.extract_pick` rather than reimplementing either.

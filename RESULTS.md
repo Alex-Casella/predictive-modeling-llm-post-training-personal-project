@@ -513,6 +513,74 @@ Best-of-6 recovered to 25.9% from the 2-epoch run's 20.9%, above the un-tuned
 23.7% and the rule's 24.1%. Validity stayed at 100%. Per-season means were
 3.04 (2023) and 2.94 (2024), so this is not one year carrying it.
 
+### Giving the prompt something the sort cannot see
+
+Every number in the start/sit prompt described the *player*, and the rule sorts
+on one of them. The model was being asked to disagree with a sort using only
+the sort's own inputs. `step15_matchup.py` adds the one thing available for
+free that the rule cannot see — how many points this week's opponent has
+allowed to the player's position, computed from prior weeks only:
+
+```
+K.J. Osborn (WR) vs KC - 7.9 points per game over 4 games, 8.5 over his last 3;
+                         KC has allowed 28.7 per game to WRs, 21 most of 32
+```
+
+**Asked whether the field was usable before asking whether a model could use
+it.** Otherwise a null result has two explanations and no way to separate them:
+the model ignored a useful field, or the field was not useful. A deterministic
+sort is the cleanest consumer of a feature — no prompt, no tokenizer, no
+sampling — so `step16_matchup_signal.py` blends it into one
+(`ppr + w × z(allowed)`, weight fitted on 2011–2022, applied unchanged to
+2023–24).
+
+| | mean rank of 6 | |
+|---|---|---|
+| the sort, ppg alone | 2.924 | the bar |
+| the sort, ppg + matchup | 2.878 | p = 0.539 / 0.814 / 0.897 |
+| `llama3.1:8b`, no matchup | 3.022 | |
+| `llama3.1:8b`, **with matchup** | **2.924** | p = 0.273 / 0.247 / 0.228 |
+
+**Correlations with what the player actually scored:** ppg **+0.320**, last-3
++0.278, points allowed **+0.070**. The field points the right way and is weak.
+
+**The un-tuned base moved 3.02 → 2.92 and drew level with the rule** — the
+first time any model has matched the sort on this task. Mean difference
+**−0.097**, sd 1.475, CI **[−0.270, +0.076]**, and 80% power would need
+**1,810** paired examples against 278. A fourth null.
+
+Two independent probes of the same field land on the same side — the sort
+gained 0.047, the model 0.097, neither significant. Two weak agreeing signals
+are worth more than one, and are still not a result.
+
+Where the model's gain sits is at least consistent:
+
+| margin | without | with |
+|---|---|---|
+| coin flip <1 (n=39) | 3.23 | 3.15 |
+| marginal 1–5 (n=101) | 3.21 | 3.15 |
+| **real 5–20 (n=124)** | 2.84 | **2.69**, best-of-6 25.8% → 31.5% |
+| decisive 20+ (n=14) | 2.71 | 2.79 |
+
+Almost all of it comes from mid-margin decisions, where a matchup plausibly
+decides between two comparable players; the near-ties and the blowouts barely
+move. On n=124 that pattern is suggestive and nothing more.
+
+**This was the cleanest comparison in the project and it still could not
+resolve 0.097.** Same weights, same model, temperature 0, no training anywhere
+— the seed noise floor of 0.043 does not even apply, and the only randomness
+left is which 278 decisions were drawn. If *this* design cannot separate a 0.1
+effect, the binding constraint is the size of the test set, not the models.
+
+**A near miss worth recording.** Written the quick way, the sort's weight was
+chosen by running a grid on the 2023–24 test set and keeping the best. That
+gave **2.820**, a 0.10 improvement, and it was an artefact of picking the
+winner after seeing the answers. Fitted on 2011–2022 instead, the same idea
+gives 0.047 and fails every test. The fitting curve is also nearly flat below
+w = 1.25 (a 0.014 spread), so the minimum is weak evidence for the weight it
+selects. Same shape as the stale-adapter bug: a plausible number produced by a
+broken procedure.
+
 ### The base model does NOT beat the tabular layer here
 
 This is the finding, and it is the opposite of the draft result. §11g's question

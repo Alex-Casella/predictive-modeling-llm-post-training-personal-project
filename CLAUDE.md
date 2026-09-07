@@ -112,6 +112,51 @@ scoring, and valuation as separate steps.
   different from `two_pt_made` blank. Decide per column and document the choice.
 - Every row is an END-OF-SEASON result, not a preseason projection.
 
+## The post-training goal
+
+The fantasy football is the vehicle. **The thing being learned is post-training:
+how to take a general model and make it better at one specific decision, and
+how to know whether it worked.**
+
+That last clause is the whole project. Making an LLM produce fantasy advice is
+easy and worthless — it will produce fluent advice whether or not the advice is
+good. So every design choice here exists to make the question answerable:
+
+| choice | what it buys |
+|---|---|
+| K named candidates, one answer | the answer is checkable, not judged |
+| labelled by hindsight from the K shown | a right answer exists per decision |
+| score = rank of the pick, chance = (K+1)/2 | a scale with a known floor |
+| held-out seasons, never random splits | adjacent decisions cannot leak |
+| the un-tuned base scored FIRST | separates "tuning helped" from "the model could already do this" |
+| a deterministic layer scored on the same items | separates the language layer from the sort underneath it |
+
+**Two tasks exist so the answer is not one anecdote.** One result is a story;
+two results on the same base model through the same harness is a finding — and
+they already disagree, which is the most useful thing either of them produced:
+
+    draft       tabular 6.00 of 12   un-tuned Llama 5.80   LLM WINS untrained
+    sit/start   tabular 2.92 of 6    un-tuned Llama 3.02   LLM LOSES untrained
+
+So "can an LLM beat the spreadsheet" has no single answer. It is task-dependent,
+and that was measured rather than assumed.
+
+### The rules that follow from this
+
+1. **Score the un-tuned base before training, every time.** On the draft task
+   this moved the bar from 6.00 to 5.80 and would otherwise have turned a
+   failure into a reported success.
+2. **Fix the bar before the result exists**, never after.
+3. **One training script, one eval harness.** Forking either lets a drifted
+   hyperparameter masquerade as a task difference.
+4. **Report the negative and the underpowered.** The draft gap has p = 0.047 /
+   0.054 / 0.090 across three tests and needs 895 examples for 80% power
+   against the 450 available. "Suggestive, underpowered" is the honest claim
+   and it is the one to make.
+5. **A defect in the model is a result, not a nuisance.** The start/sit adapter
+   never emits its stop token and enumerates all six candidates. That is
+   recorded, not hidden behind a token cap.
+
 ## Success metric
 
 **Set overlap at 250.** Of the 250 players I predict will finish in next

@@ -28,6 +28,120 @@ what was done, what was found, and what is still open.
 
 ---
 
+## What this is really about
+
+The fantasy football is the vehicle. The subject is **post-training**: taking a
+general model, making it better at one specific decision, and — the hard part —
+knowing whether it actually worked.
+
+Fluent output is free. An LLM will produce confident draft advice whether or not
+the advice is any good, so the entire design exists to make "did it work?"
+answerable:
+
+- the model picks **one** of K named candidates, so the answer is checkable
+  rather than judged
+- each decision is labelled by hindsight **from the K shown**, so a right answer
+  exists — labelling from everyone available returns "who won the season"
+- the score is where the pick finished, with chance at (K+1)/2, so the scale has
+  a known floor
+- splits are by **season**, never random, so adjacent near-identical decisions
+  cannot straddle them
+- the **un-tuned base is scored first**, which separates "fine-tuning helped"
+  from "the model could already do this"
+- a **deterministic layer** is scored on the same items, which separates the
+  language layer from the sort underneath it
+
+Two tasks exist so the conclusion is not one anecdote. They already disagree,
+which is the most useful thing either produced:
+
+| | tabular layer | un-tuned Llama | |
+|---|---|---|---|
+| draft | 6.00 of 12 | **5.80** | LLM wins, untrained |
+| start/sit | **2.92** of 6 | 3.02 | LLM loses, untrained |
+
+"Can a language model beat the spreadsheet?" turns out to be task-dependent —
+measured on the same base model through the same harness, rather than assumed.
+
+---
+
+## Setup
+
+Everything runs locally except training, which rents a GPU for under an hour.
+
+**1. Python.** Python 3.11+ and the project dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+> pandas, scikit-learn, scipy, and `nfl_data_py` (the weekly data source).
+> If `scipy` fails to import complaining about NumPy, pin it:
+> `pip install "numpy>=2.0,<2.8"`. Installing llama.cpp's requirements into
+> this environment will downgrade NumPy and break it — use a separate venv for
+> that step, which `finish_adapter.sh` does.
+
+**2. Ollama**, to serve the models locally. No API, no per-request cost:
+
+```bash
+brew install ollama          # macOS
+ollama pull llama3.1:8b      # 4.9 GB, the base model
+```
+
+**3. Hugging Face**, only needed for training and GGUF conversion:
+
+- accept the Llama 3.1 licence at
+  <https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct> (the weights are
+  gated)
+- create a **read** token at <https://huggingface.co/settings/tokens>
+- `export HF_TOKEN=hf_...` — never commit it, never paste it into a chat
+
+**4. Modal**, for the GPU:
+
+```bash
+pip install modal && modal setup
+modal secret create huggingface HF_TOKEN=hf_...
+```
+
+**5. llama.cpp**, for the PEFT → GGUF conversion, cloned NEXT TO this repo:
+
+```bash
+git clone https://github.com/ggerganov/llama.cpp ../llama.cpp
+```
+
+> `finish_adapter.sh` looks for it at `../llama.cpp` and builds its own
+> `gguf-convert-env` inside it, so llama.cpp's pinned NumPy never touches the
+> project environment.
+
+Only steps 1 and 2 are needed to run the analysis and talk to an existing
+model. Steps 3–5 are needed only to train a new adapter.
+
+### The loop, end to end
+
+```bash
+git pull                                   # always start here
+
+python3 step11_weekly_data.py              # data, if rebuilding
+python3 step12_start_sit_examples.py
+python3 step13_render_startsit.py
+
+# score the UN-TUNED base first -- this is the step that fixes the bar
+python3 eval_agent.py --model llama3.1:8b \
+    --test sit_test.jsonl --key start_sit_examples.jsonl
+
+modal run train_adapter.py --dataset sit   # ~20 min on an A10G
+export HF_TOKEN=hf_...
+./finish_adapter.sh fantasy-sit sit        # download, convert, serve, score
+
+git add <the files you changed> <the eval csv>
+git commit -m "sit/start: ... mean rank X.XX of 6 (rule 2.92, base 3.02)"
+git push -u origin main
+```
+
+Never `git add .` — stage files explicitly, and keep the score in the commit
+message so `git log --oneline` reads as a history of what worked.
+
+---
+
 ## Getting started
 
 Put all files in one folder, then:

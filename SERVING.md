@@ -110,17 +110,49 @@ ollama create fantasy-draft -f Modelfile
 
 ### The conversion that does work
 
+VERIFIED WORKING. Produced a 167.8 MB GGUF with 448 tensors from a rank-16
+adapter over all 32 layers.
+
 ```bash
 git clone https://github.com/ggerganov/llama.cpp
 cd llama.cpp
-# ISOLATED env. llama.cpp pins numpy~=1.26 and torch==2.11; installing those
-# into the project env downgrades pandas and numpy and breaks every script here.
+
+# ISOLATED env, not the project env. llama.cpp pins numpy~=1.26 and torch==2.11;
+# installing those into the project env downgrades numpy 2.5.3 -> 1.26.4 and
+# pandas 3.0.5 -> 2.2.3 and breaks every script in this repo. Learned the hard
+# way. A clean env also clears the "cannot import name 'GenerationMixin'"
+# ImportError, which is a half-upgraded transformers, not a real conflict.
 python3 -m venv gguf-convert-env && source gguf-convert-env/bin/activate
 pip install -r requirements.txt
-export HF_TOKEN=...   # convert_lora_to_gguf reads the gated base model's config
-python3 convert_lora_to_gguf.py ../adapter --outfile ../adapter/adapter.gguf
-cd ..
-ollama create fantasy-draft -f adapter/Modelfile
+
+export HF_TOKEN=...   # the base model's config is gated; only the config is read
+
+# --base-model-id, NOT --base.
+#   --base           expects a LOCAL directory of base-model files, and fails
+#                    with FileNotFoundError: 'meta-llama/Llama-3.1-8B-Instruct'
+#                    after downloading config.json, because it then tries to
+#                    listdir() the repo id as a path.
+#   --base-model-id  fetches just the config from Hugging Face. A LoRA
+#                    conversion needs the architecture and dimensions, not the
+#                    16 GB of base weights.
+python convert_lora_to_gguf.py \
+  /abs/path/to/adapter_files \
+  --outfile /abs/path/to/adapter_files/adapter.gguf \
+  --base-model-id meta-llama/Llama-3.1-8B-Instruct
+
+deactivate
+```
+
+Then, from the adapter directory:
+
+```bash
+cat > Modelfile <<'MODELFILE'
+FROM llama3.1:8b
+ADAPTER ./adapter.gguf
+
+PARAMETER temperature 0
+MODELFILE
+ollama create fantasy-draft -f Modelfile
 ```
 
 ```bash

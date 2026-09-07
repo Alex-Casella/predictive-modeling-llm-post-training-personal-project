@@ -364,6 +364,7 @@ which confirms the join and both implementations at once.
 | `llama3.1:8b` **un-tuned** | 3.02 | 23.7% |
 | start the best season average | **2.92** | 24.1% |
 | `fantasy-sit-e1` **fine-tuned, 1 epoch** | 2.99 | 25.9% |
+| `fantasy-sit-e1s1` same recipe, seed 1 | 3.04 | 24.5% |
 | `fantasy-sit` **fine-tuned, 2 epochs** | 3.12 | 20.9% |
 
 ### The 2-epoch fine-tune changed nothing measurable
@@ -435,6 +436,53 @@ the easiest mistake here. A test that cannot resolve a 0.068 gap would also
 miss a genuine 0.068 disadvantage; absence of evidence is not evidence of
 absence. The supportable sentence is *"still behind the rule, by an amount
 278 examples cannot resolve."*
+
+### The seed replicate — what the noise floor actually is
+
+Every gap above was measured against zero, because nothing in this project had
+ever been trained twice. `--seed 1`, everything else identical to the 1-epoch
+run, gives the first answer to *"how much does a rerun move on its own?"*
+
+**3.04 against 2.99. Mean difference +0.043**, sd 1.123, CI
+**[−0.089, +0.175]**, p = 0.522 / 0.671 / 0.659.
+
+| pair | what varies | mean gap |
+|---|---|---|
+| seed 0 vs seed 1 | nothing but the draw | **0.043** |
+| 1 epoch vs 2 epochs | the hyperparameter | **0.126** |
+
+So the epoch gap is about **three times** the one measurement of run-to-run
+noise available. It was not measuring the seed. It keeps whatever weight its
+p-values allow — which is not much, but it is not nothing either.
+
+**The aggregate hides how unstable the individual decisions are.** Two adapters
+built from the same recipe disagree on one flex call in six:
+
+| pair | items answered differently | split |
+|---|---|---|
+| seed only | **46 / 278 (16.5%)** | 21 better, 25 worse — a coin toss |
+| 1 vs 2 epochs | 57 / 278 (20.5%) | 35 better, 22 worse — leaning |
+
+The epoch change did not make the model disagree with itself much *more often*
+(57 against 46). It biased *which way* the disagreements fell. That is a
+different mechanism from what the mean gap alone suggests, and it is only
+visible with a replicate to compare against.
+
+Two practical consequences. A single flex recommendation from this system is
+not a stable object — reseed and it changes about 17% of the time, so it should
+never be presented as *the* answer. And detecting an effect the size of the
+seed gap would need **5,315 paired examples**, 19× what exists, which sets a
+floor on what any future comparison here can resolve.
+
+Runaway generation also moves with the seed: 93% here against 96% at seed 0.
+The 83% → 96% change between epoch counts is larger than that, so the
+direction reported below is not a seed artefact.
+
+**One replicate bounds the noise, it does not estimate it.** 0.043 is a single
+draw, not a standard deviation. Two more seeds would give the spread; until
+then "the epoch gap is 3× the noise" rests on one number.
+
+### Why every comparison here is underpowered
 
 Detecting the epoch gap at 80% power needs **856 paired examples** against the
 278 available, 3.1× short. That is the third time this project has landed on
@@ -558,9 +606,14 @@ not more.
 - **Ablations.** One dimension has now been varied: sit at 1 epoch scores 2.99
   against 3.12 at 2, and the headline is epoch-matched at 1 (see *The epoch
   ablation* above). The epoch gap itself is not resolved — it needs 856 paired
-  examples against 278. Rank was 16 everywhere, learning rate never moved, and
-  **no second seed has been run**, so none of these numbers has a
-  run-to-run spread to be judged against.
+  examples against 278. Rank was 16 everywhere and the learning rate never
+  moved.
+
+  One seed replicate now exists, on the sit 1-epoch config only: it puts the
+  noise floor at **0.043**, roughly a third of the epoch gap. That is one draw
+  rather than a spread, and **no replicate exists for the draft adapter at
+  all**, so 5.41 and its 0.39 gap against the base still have nothing to be
+  judged against.
 
   The first attempt at that ablation **produced no result.** The volume
   path is keyed on the dataset alone, so both runs targeted `/adapter/sit`; the

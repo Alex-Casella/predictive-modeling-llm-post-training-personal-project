@@ -11,12 +11,13 @@ Each test example offers 12 candidates. After the season played out they can be
 ranked by what actually happened. Score = where the chosen player lands in that
 ranking. Lower is better.
 
-    random choice                 6.5   (chance, by construction)
-    the deterministic board       5.98  <- THE BAR (measured, step 9)
+    random choice                 6.50  (chance, by construction)
+    the deterministic board       6.00  <- THE BAR, on the 450-example test set
     a fine-tuned model            ?
 
-A model that scores worse than 5.98 is decoration and should be reported as
-such, not tuned until it isn't.
+The bar is recomputed on whatever slice is evaluated, never hardcoded -- see
+RANDOM_BAR below. A model that scores worse than the board is decoration and
+should be reported as such, not tuned until it isn't.
 
 Also tracked, because a language model can fail in ways a sort cannot:
 
@@ -41,6 +42,7 @@ import argparse
 import json
 import random
 import re
+import time
 import urllib.error
 import urllib.request
 
@@ -105,9 +107,18 @@ def extract_pick(text, names):
     return min(hits)[1] if hits else None
 
 
-def score(items, chooser, label):
+def score(items, chooser, label, progress=False):
+    """Score one chooser over `items`.
+
+    `progress` prints a line per example. An LLM run is 60+ sequential
+    generations at ~500-token prompts with the first one also paging ~5 GB of
+    weights into memory, so several minutes of total silence looks exactly like
+    a hang. It is not, but a user cannot tell the difference -- hence the
+    per-item output and the running ETA.
+    """
     rows = []
-    for it in items:
+    t0 = time.time()
+    for i, it in enumerate(items, 1):
         names = candidates(it)
         pick = chooser(it, names)
         valid = pick in it['ranking'] if pick else False
@@ -116,6 +127,14 @@ def score(items, chooser, label):
             pick=pick, valid=valid,
             rank=it['ranking'][pick] if valid else None,
             best=bool(valid and it['ranking'][pick] == 1)))
+        if progress:
+            per = (time.time() - t0) / i
+            eta = per * (len(items) - i)
+            rk = rows[-1]['rank']
+            print(f'  [{i:>3}/{len(items)}] {it["season"]} r{it["round"]:<2} '
+                  f'{(pick or "NO VALID PICK"):<24} '
+                  f'rank {rk if rk else "-":>3}   '
+                  f'{per:.1f}s/ex, ~{eta / 60:.1f} min left', flush=True)
     r = pd.DataFrame(rows)
     ok = r[r['valid']]
     return dict(model=label, n=len(r),
@@ -154,9 +173,13 @@ def main():
                     f'  start it with `ollama serve`, and make sure '
                     f'`ollama list` shows "{_m}"')
 
-    summary, detail = score(items, chooser, args.model)
+    is_llm = args.model not in ('board', 'random')
+    if is_llm:
+        print(f'\nquerying {args.model} via Ollama -- first call also loads\n'
+              f'the model into memory, so expect a slow start.\n')
+    summary, detail = score(items, chooser, args.model, progress=is_llm)
     # The bar, measured on exactly the examples just evaluated.
-    bar, _ = score(items, lambda it, names: it['board_pick'], 'board')
+    bar, _ = score(items, lambda it, names: it['board_pick'], 'board')  # no LLM, instant
 
     print(f'\n=== {args.model} on {TEST} ===')
     print(f"  answered with a shortlisted player   {summary['validity']}%")

@@ -242,9 +242,10 @@ def main(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
     # `modal volume get fantasy-lora /adapter ...` fails with "no such file or
     # directory" -- copy from `/`, the volume root.
     print(f'  modal volume ls fantasy-lora/{dataset}   # confirm files exist')
+    print(f'  export HF_TOKEN=hf_...              # gated base model config')
     print(f'  ./finish_adapter.sh fantasy-{dataset} {dataset}')
-    print('  # convert the PEFT adapter to GGUF (llama.cpp '
-          'convert_lora_to_gguf.py), then:')
-    print('  ollama create fantasy-draft -f adapter/Modelfile')
-    print('  python3 eval_agent.py --model fantasy-draft --limit 60')
-    print(f'  # compare against: python3 eval_agent.py --model {OLLAMA_BASE}')
+    print('')
+    print('  finish_adapter.sh does the rest: download, GGUF conversion,')
+    print('  ollama create, and scoring against the right bar for this task.')
+    print('  Read the PROVENANCE it prints at step 2 -- it must say')
+    print(f'  dataset={dataset}, or you are about to score the wrong adapter.')

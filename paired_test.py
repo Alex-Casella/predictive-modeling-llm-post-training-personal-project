@@ -55,7 +55,30 @@ from scipy import stats
 # The columns that identify an example, independent of which model answered
 # it. If these do not line up row-for-row the two runs are not comparable and
 # every number below would be meaningless.
-KEYS = ['season', 'round', 'margin']
+#
+# 'round' was renamed 'stage' when eval_agent.py grew a second task (a draft
+# has rounds, a season has weeks). CSVs written before that rename still say
+# 'round', so both are accepted -- but the two files must agree, since a file
+# with each is a file from each side of the rename and they were not
+# necessarily produced by the same code.
+KEY_ALIASES = ['round', 'stage']
+BASE_KEYS = ['season', 'margin']
+
+
+def identity_columns(a, b):
+    have_a = [k for k in KEY_ALIASES if k in a.columns]
+    have_b = [k for k in KEY_ALIASES if k in b.columns]
+    if not have_a or not have_b:
+        raise SystemExit(
+            f'neither file has a {" or ".join(KEY_ALIASES)} column; these are '
+            f'not eval_agent.py outputs.')
+    if have_a[0] != have_b[0]:
+        raise SystemExit(
+            f'one file uses "{have_a[0]}" and the other "{have_b[0]}". Those '
+            f'come from either side of the round->stage rename, so they were '
+            f'not written by the same code. Re-run the older one before '
+            f'comparing.')
+    return BASE_KEYS + [have_a[0]]
 
 
 def load_pair(path_a, path_b):
@@ -72,7 +95,8 @@ def load_pair(path_a, path_b):
             f'different lengths: {path_a} has {len(a)} rows, {path_b} has '
             f'{len(b)}.\n  A --limit run cannot be compared against a full '
             f'one. Re-run the shorter model without --limit.')
-    mismatched = (a[KEYS] != b[KEYS]).any(axis=1).sum()
+    keys = identity_columns(a, b)
+    mismatched = (a[keys] != b[keys]).any(axis=1).sum()
     if mismatched:
         raise SystemExit(
             f'{mismatched} rows describe different examples in the two files. '

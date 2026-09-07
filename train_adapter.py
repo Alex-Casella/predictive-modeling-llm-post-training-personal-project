@@ -206,7 +206,11 @@ def train(epochs: float = 2.0, rank: int = 16, lr: float = 2e-4):
 def main(epochs: float = 2.0, rank: int = 16, lr: float = 2e-4):
     train.remote(epochs=epochs, rank=rank, lr=lr)
     print('\nnext:')
-    print('  modal volume get fantasy-lora /adapter ./adapter')
+    # The volume is MOUNTED at /adapter, so its own root IS that directory.
+    # `modal volume get fantasy-lora /adapter ...` fails with "no such file or
+    # directory" -- copy from `/`, the volume root.
+    print('  modal volume ls fantasy-lora        # confirm files exist')
+    print('  modal volume get fantasy-lora / ./adapter')
     print('  # convert the PEFT adapter to GGUF (llama.cpp '
           'convert_lora_to_gguf.py), then:')
     print('  ollama create fantasy-draft -f adapter/Modelfile')

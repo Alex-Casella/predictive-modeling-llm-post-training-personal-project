@@ -39,10 +39,19 @@ the adapter is still cooking.
 
 ## 1 · Pull the adapter down from Modal
 
+The volume is MOUNTED at `/adapter` inside the container, so the volume's own
+root *is* that directory. `modal volume get fantasy-lora /adapter ...` fails
+with "no such file or directory" — there is no `/adapter` inside the volume.
+Copy from the root:
+
 ```bash
-modal volume get fantasy-lora /adapter ./adapter
+modal volume ls fantasy-lora          # confirm the files are there first
+modal volume get fantasy-lora / ./adapter
 ls adapter/
 ```
+
+An empty `modal volume ls` means the job errored after training but before
+`volume.commit()` — check the Modal logs rather than re-running blind.
 
 Expect `adapter_model.safetensors`, `adapter_config.json`, tokenizer files,
 plus the `Modelfile` and `PROVENANCE.txt` the training job wrote.

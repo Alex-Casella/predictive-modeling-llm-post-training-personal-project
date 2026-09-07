@@ -299,6 +299,106 @@ guards the regression.
 
 See `SERVING.md` for the conversion and serving runbook.
 
+## Sit/start (stage 6)
+
+A second, separate task on the same architecture: given the six flex-eligible
+players on your roster this week, which do you start? Score is where your choice
+finished among the six once the week was played, so chance is 3.50.
+
+Weekly data did not exist in this project and now does: `step11_weekly_data.py`
+pulls nflverse via `nfl_data_py` and joins it on identifiers
+(`gsis_id` -> `pfr_id` -> `pid`), never names. It is validated by
+reconstruction: summing weekly PPR reproduces the season `ppr` column that came
+from Pro-Football-Reference, median difference **+0.00**, mean absolute 0.27,
+93.3% within one point. Two independent sources scoring PPR independently agree,
+which confirms the join and both implementations at once.
+
+**278 held-out decisions, seasons 2023-2024:**
+
+| | mean rank (of 6) | best of 6 |
+|---|---|---|
+| chance, by construction | 3.50 | 16.7% |
+| random | 3.51 | 17.3% |
+| `llama3.1:8b` **un-tuned** | 3.02 | 23.7% |
+| start the best season average | **2.92** | 24.1% |
+| fine-tuned adapter | *pending* | |
+
+### The base model does NOT beat the tabular layer here
+
+This is the finding, and it is the opposite of the draft result. §11g's question
+-- *can a language model beat the number it was handed?* -- turns out to have a
+different answer per task, on the same base model, through the same harness:
+
+| | tabular layer | un-tuned Llama | verdict |
+|---|---|---|---|
+| draft | 6.00 of 12 | **5.80** | LLM wins by 0.20 |
+| sit/start | **2.92** of 6 | 3.02 | LLM loses by 0.10 |
+
+It is worse in both held-out seasons (3.16 vs 3.13, 2.89 vs 2.72), so this is an
+effect rather than one bad year. **The bar for the fine-tune is therefore 2.92,
+the deterministic rule** -- unlike the draft, where the un-tuned base moved the
+bar upward.
+
+The two are close to mirror images by decision difficulty:
+
+| margin | rule | un-tuned Llama |
+|---|---|---|
+| coin flip <1 (n=39) | **2.92** | 3.23 |
+| marginal 1-5 (n=101) | **3.01** | 3.21 |
+| real 5-20 (n=124) | **2.81** | 2.84 |
+| decisive 20+ (n=14) | 3.36 | **2.71** |
+
+The rule wins three of four bands. The band the model wins holds 14 decisions
+and should not be leaned on.
+
+### Recency loses, measured twice
+
+| | r | r squared |
+|---|---|---|
+| season-to-date mean -> next week | **0.389** | 0.152 |
+| last 3 weeks mean -> next week | 0.377 | 0.142 |
+| this week alone -> next week | 0.308 | 0.095 |
+
+Measured on 18,719 player-weeks, 2019-2024, restricted to players with 8+ games
+and 5+ mean PPR. It reproduces at the decision level: starting the hot hand
+scores 2.91 against 2.71 for the plain season average, over all 1,774 decisions.
+"He is hot right now" is the most common advice in fantasy football and it loses
+to an average.
+
+`last3` is still shown in every prompt. Removing it would engineer the answer
+into the input; leaving it in makes "does the fine-tune chase recency?" a
+question that can be asked of the trained model.
+
+### Weekly is a third as predictable as seasonal, but the rule is stronger
+
+r squared 0.152 against 0.455 for season-level PPG. That predicted more room for
+a language layer here than in the draft. **The prediction was wrong**, and the
+measurement says why: what matters is not how noisy a single week is but how
+much of the available signal the deterministic rule already captures.
+
+| | chance | rule | signal captured |
+|---|---|---|---|
+| draft (VBD) | 6.50 | 6.00 | 9.1% |
+| sit/start (season PPG) | 3.50 | 2.92 | 23.2% |
+
+Averaging six players' noise still orders them usefully. Less is left over here,
+not more.
+
+### Known limits of this task
+
+- **2025 is unavailable.** `nfl_data_py` 0.3.3 returns 404 for it, so weekly
+  data ends at 2024. Verified against the current release, not assumed.
+- **Coverage collapses before 2010** -- 12% of top-250 player-seasons in 2000
+  against 99% from 2010, because early-2000s players have no `pfr_id` upstream.
+  `USABLE_FROM = 2010`, so ten seasons of the file are unusable for this task.
+- **Rosters are simulated,** by a snake draft over last season's PPR finish. No
+  real roster exists in any of this data.
+- **Only the flex slot.** A QB slot with one QB on the roster is not a decision.
+- **1,774 decisions** against the draft task's 2,850, and 278 held out against
+  450, so every number here carries wider error bars than the draft's.
+
+---
+
 ## What is NOT done
 
 - **Rookies.** 23.2% of a real top 250 cannot appear on the board. Needs PFR

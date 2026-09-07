@@ -102,7 +102,41 @@ def candidates(item):
             for ln in block.strip().splitlines() if ln.strip()]
 
 
-def ask_ollama(model, item, timeout=120):
+def warm(model, timeout=900):
+    """Load the model into memory BEFORE the timed loop starts.
+
+    The first generation also pages ~5 GB of weights in, and on a machine
+    already holding another model that can take longer than any sensible
+    per-request timeout -- which is exactly how a working 25-minute eval dies
+    on example 1 with a bare TimeoutError. Doing the load as its own call, with
+    a much longer budget, separates "the model is slow to load" from "the model
+    is slow to answer".
+    """
+    print(f'  loading {model} into memory (first call only, up to '
+          f'{timeout // 60} min)...', end='', flush=True)
+    t0 = time.time()
+    body = json.dumps({'model': model, 'messages': [
+        {'role': 'user', 'content': 'ok'}], 'stream': False,
+        'options': {'num_predict': 1}}).encode()
+    req = urllib.request.Request(OLLAMA, data=body,
+                                 headers={'Content-Type': 'application/json'})
+    try:
+        with urllib.request.urlopen(req, timeout=timeout) as r:
+            r.read()
+    except urllib.error.URLError as e:
+        raise SystemExit(
+            f'\n  cannot reach Ollama at {OLLAMA}: {e}\n'
+            f'  start it with `ollama serve`, and check `ollama list` shows '
+            f'"{model}"')
+    except TimeoutError:
+        raise SystemExit(
+            f'\n  {model} did not load within {timeout}s.\n'
+            f'  Check `ollama ps` -- if other models are resident, free the '
+            f'memory first:\n    ollama stop <other-model>')
+    print(f' {time.time() - t0:.0f}s')
+
+
+def ask_ollama(model, item, timeout=300):
     body = json.dumps({
         'model': model,
         'messages': item['messages'][:2],       # system + user, NOT the answer
@@ -209,8 +243,8 @@ def main():
     k = len(candidates(items[0]))
     is_llm = args.model not in ('board', 'random')
     if is_llm:
-        print(f'\nquerying {args.model} via Ollama -- first call also loads\n'
-              f'the model into memory, so expect a slow start.\n')
+        print(f'\nquerying {args.model} via Ollama.')
+        warm(args.model)
     summary, detail = score(items, chooser, args.model, progress=is_llm)
     # The bar, measured on exactly the examples just evaluated.
     bar, _ = score(items, lambda it, names: it['board_pick'], 'board')  # no LLM, instant

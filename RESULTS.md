@@ -512,8 +512,18 @@ not more.
 
 ## What is NOT done
 
-- **Rookies.** 23.2% of a real top 250 cannot appear on the board. Needs PFR
-  draft results, 26 seasons, joined on `pfr_id`.
+- **Rookies.** 23.2% of a real top 250 cannot appear on the board, which is
+  what caps it at 76.8%. **The blocker is removable and the source is already
+  installed**: `nfl_data_py.import_draft_picks()` returns NFL draft position
+  back to 2000 with a `pfr_player_id` that joins the same way the weekly data
+  did. `draft_2026_offense.csv` covers only 2026 — enough to APPLY a rookie
+  model, not to train one.
+
+  This is the only remaining lever on the headline metric. Finding #1 proved
+  @250 cannot be moved by reordering, only by changing the candidate pool, and
+  adding rookies is exactly that. Expect some of the 7.7 points, not all: draft
+  position makes rookies rankable, not predictable, and the widened-pool
+  precedent netted +0.36 from a smaller and likely higher-precision group.
 - **A paired significance test** on the un-tuned vs fine-tuned per-example
   ranks. Both CSVs exist; the test does not. See above.
 - **Ablations.** One adapter was trained, at one rank, for one epoch. Nothing

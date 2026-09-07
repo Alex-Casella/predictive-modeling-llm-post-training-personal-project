@@ -67,6 +67,42 @@ def legal(roster_counts, pos):
     return roster_counts.get(slot, 0) < MAX_AT_POS.get(slot, 6)
 
 
+def snake_order(teams, rounds):
+    """(round, seat) in draft order. Round 1 runs 1..N, round 2 runs N..1.
+
+    Seats are 0-indexed. The reversal is what makes the last seat pick twice in
+    a row across the round boundary, and it is the whole reason draft strategy
+    differs by seat: from seat 9 in a 10-team league picks 10 and 11 are back to
+    back, then nothing for eighteen.
+    """
+    for r in range(rounds):
+        seats = range(teams) if r % 2 == 0 else reversed(range(teams))
+        for seat in seats:
+            yield r + 1, seat
+
+
+def overall_pick(rnd, seat, teams):
+    """Overall pick number (1-indexed) for a seat in a given round.
+
+    Walks snake_order rather than using a closed form, so it cannot drift from
+    the simulation that generated the training data. Cheap: 150 iterations.
+    """
+    for i, (r, s) in enumerate(snake_order(teams, rnd), 1):
+        if r == rnd and s == seat:
+            return i
+    raise ValueError(f'seat {seat} is not in a {teams}-team draft')
+
+
+def picks_until_next(rnd, seat, teams):
+    """How many picks pass before this seat is up again.
+
+    2 at the turn (you pick, one other team picks, you pick), up to 2*teams-2
+    at the other end. This is the number that decides whether you can wait on a
+    position, and it is invisible in a flat board.
+    """
+    return overall_pick(rnd + 1, seat, teams) - overall_pick(rnd, seat, teams)
+
+
 def normalise(s):
     """Fold a name to letters and spaces only.
 

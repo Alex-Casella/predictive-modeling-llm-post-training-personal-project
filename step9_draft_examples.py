@@ -46,7 +46,7 @@ from sklearn.ensemble import HistGradientBoostingRegressor
 import features
 from board import PARAMS, TIER_GAP, add_tiers
 from checks import Checks
-from draft import SHOW_AVAILABLE, TEAMS, legal
+from draft import SHOW_AVAILABLE, TEAMS, legal, snake_order
 from vbd import ESPN_STANDARD, POS_ALIAS, LeagueConfig, add_vbd, baselines
 
 SRC = 'fantasy_top250_derived.csv'
@@ -125,13 +125,6 @@ def actual_vbd(df, n, league, pids):
                             actual_vbd=round(cutoff - base.get(slot, 0.0), 1),
                             made_top250=False)
     return out, cutoff
-
-
-def snake_order(teams, rounds):
-    for r in range(rounds):
-        seats = range(teams) if r % 2 == 0 else reversed(range(teams))
-        for seat in seats:
-            yield r + 1, seat
 
 
 def build_season(d, feat_cols, df, n, league):

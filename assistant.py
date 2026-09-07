@@ -40,7 +40,8 @@ import urllib.error
 # Everything below is imported rather than reimplemented, so that this file
 # cannot disagree with the pipeline that produced the published numbers.
 from draft import (SHOW_AVAILABLE, TEAMS, available, legal, load_board,
-                   load_state, my_roster, resolve, save_state, show_lineup)
+                   load_state, my_roster, overall_pick, picks_until_next,
+                   resolve, save_state, show_lineup)
 from eval_agent import OLLAMA, ask_ollama, extract_pick
 from step10_render_sft import SYSTEM, render_user
 from vbd import ESPN_STANDARD, POS_ALIAS, LeagueConfig
@@ -94,8 +95,13 @@ def build_situation(board, state, league):
                    for r in shown.itertuples()]), shown
 
 
-def where_are_we(state, league):
+def where_are_we(state, league, seat=None):
     """(round, overall pick number, is_estimated) for the coming pick.
+
+    `seat` is your 0-indexed draft position. Given it, the overall pick number
+    is exact from the snake order alone and nothing needs tracking: in a 10-team
+    league seat 9 picks 10th, then 11th, then 30th, then 31st. Without it, the
+    fallback below applies.
 
     The training prompts open with "Round R, pick P overall", so something has
     to fill those slots -- and getting them wrong is not cosmetic.
@@ -118,18 +124,20 @@ def where_are_we(state, league):
     round -- an in-distribution number -- and say it is an estimate.
     """
     rnd = len(state['mine']) + 1
+    if seat is not None:
+        return rnd, overall_pick(rnd, seat, league.teams), False
     gone = len(state['taken']) + len(state['mine'])
     floor = (rnd - 1) * league.teams + 1        # first pick of this round
     return rnd, max(gone + 1, floor), gone + 1 < floor
 
 
-def build_messages(board, state, league):
+def build_messages(board, state, league, seat=None):
     """(messages, shown, pick_no, rnd) -- the exact payload the model sees."""
     situation, shown = build_situation(board, state, league)
-    rnd, pick_no, estimated = where_are_we(state, league)
+    rnd, pick_no, estimated = where_are_we(state, league, seat)
     if estimated:
-        print(f'  (rivals\' picks not tracked -- pick {pick_no} is an estimate '
-              f'from round {rnd}. Use `taken <name>` to make it exact.)')
+        print(f'  (pick {pick_no} is an estimate. Pass --seat N, or log rivals '
+              f'with `taken <name>`, to make it exact.)')
 
     example = dict(round=rnd, pick=pick_no, situation=situation)
     return (dict(messages=[
@@ -169,8 +177,8 @@ def show_answer(model, pick, text, shown):
         print(f'    {line}')
 
 
-def recommend(board, state, league, models):
-    item, shown, pick_no, rnd = build_messages(board, state, league)
+def recommend(board, state, league, models, seat=None):
+    item, shown, pick_no, rnd = build_messages(board, state, league, seat)
     if shown.empty:
         print('  no legal candidates left -- board exhausted or roster capped.')
         return
@@ -179,6 +187,14 @@ def recommend(board, state, league, models):
 
     print(f'\n=== round {rnd}, pick {pick_no} overall '
           f'-- {len(shown)} candidates ===')
+    if seat is not None:
+        # The number that decides whether you can wait on a position. It is 2
+        # at the turn and 2*teams-2 at the other end, and it is invisible in a
+        # flat board -- which is why a snake-aware assistant is worth having.
+        gap = picks_until_next(rnd, seat, league.teams)
+        nxt = overall_pick(rnd + 1, seat, league.teams)
+        print(f'  seat {seat + 1} of {league.teams}. Your next pick after this '
+              f'is {nxt} overall, {gap - 1} picks away.')
     print(f'\n  the board (draft.py, no LLM)')
     print(f'  picks {board_pick["player"]} ({board_pick["pos"]})  '
           f'-- board rank {board_pick["vbd_rk"]}, tier {board_pick["tier"]}, '
@@ -227,8 +243,15 @@ def main():
                     help=f'Ollama model to ask (default {DEFAULT_MODEL})')
     ap.add_argument('--compare', default=None, metavar='MODEL',
                     help='also ask a second model and show both answers')
+    ap.add_argument('--seat', type=int, default=None, metavar='N',
+                    help=f'your draft position, 1-{TEAMS}. Makes the pick '
+                         f'number exact from the snake order and reports how '
+                         f'long until your next turn.')
     args = ap.parse_args()
     models = [args.model] + ([args.compare] if args.compare else [])
+    if args.seat is not None and not 1 <= args.seat <= TEAMS:
+        raise SystemExit(f'--seat must be between 1 and {TEAMS}')
+    seat = args.seat - 1 if args.seat else None     # humans count from 1
 
     league = LeagueConfig(teams=TEAMS, **ESPN_STANDARD)
     board = load_board()
@@ -240,8 +263,12 @@ def main():
     print(f'  {len(board)} players on the board, {SHOW_AVAILABLE} shown per '
           f'question.')
     print(f'  ROOKIES ARE ABSENT (~23% of a real top 250).')
-    print(f'  Round and pick number are derived from how many players are off')
-    print(f'  the board, so enter rivals\' picks with `taken` to keep them right.')
+    if seat is not None:
+        print(f'  You are seat {seat + 1} of {league.teams}; pick numbers come')
+        print(f'  from the snake order, so nothing else needs tracking.')
+    else:
+        print(f'  No --seat given: the round comes from your roster size and the')
+        print(f'  pick number is estimated. Pass --seat N to make it exact.')
     print(HELP)
 
     for line in sys.stdin:
@@ -257,9 +284,10 @@ def main():
         elif cmd == 'help':
             print(HELP)
         elif cmd in ('rec', 'recommend', 'ask'):
-            recommend(board, state, league, models)
+            recommend(board, state, league, models, seat)
         elif cmd == 'prompt':
-            item, shown, pick_no, rnd = build_messages(board, state, league)
+            item, shown, pick_no, rnd = build_messages(board, state, league,
+                                                       seat)
             for m in item['messages']:
                 print(f'\n[{m["role"].upper()}]\n{m["content"]}')
         elif cmd == 'board':

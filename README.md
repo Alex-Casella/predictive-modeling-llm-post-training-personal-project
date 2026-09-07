@@ -21,10 +21,16 @@ scripts that produce them.
 `CLAUDE.md` holds the working rules and constraints. This file is the history —
 what was done, what was found, and what is still open.
 
-> **Data source:** All NFL statistics in this project come from
+> **Data sources:** Season statistics come from
 > [Pro-Football-Reference](https://www.pro-football-reference.com), a Sports
-> Reference LLC site. Please credit them in any output, chart, or write-up
-> derived from this data. See `ATTRIBUTION.md`.
+> Reference LLC site. Weekly statistics come from
+> [nflverse](https://github.com/nflverse) via `nfl_data_py`. Please credit both
+> in any output, chart, or write-up derived from this data. See
+> `ATTRIBUTION.md`.
+
+> **License:** the code is MIT (`LICENSE.txt`). **The data is not covered by
+> it** — this project does not own the NFL statistics and cannot license them.
+> Every CSV here carries its original source's terms. See `ATTRIBUTION.md`.
 
 ---
 

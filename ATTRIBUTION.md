@@ -17,6 +17,37 @@ derived from this data.**
 Sports Reference publishes data use terms here:
 https://www.sports-reference.com/data_use.html
 
+## nflverse
+
+The per-player, per-week statistics in `weekly_ppr.csv` come from the
+**nflverse** project (https://github.com/nflverse), retrieved through the
+`nfl_data_py` Python package (https://github.com/nflverse/nfl_data_py). The
+`fantasy_points_ppr` column is nflverse's own computation and is used as
+published rather than reimplemented.
+
+nflverse also supplies the `gsis_id` ↔ `pfr_id` crosswalk (`import_ids()`) that
+lets weekly rows join to this project's `pid` without ever matching on a name.
+
+**Please credit nflverse alongside Pro-Football-Reference in any output built
+on the weekly data.** nflverse data is released under CC BY 4.0; see
+https://github.com/nflverse/nflverse-data for current terms.
+
+That the two sources agree is itself documented: summing weekly PPR reproduces
+the season `ppr` column from Pro-Football-Reference to a median difference of
++0.00 (`step11_weekly_data.py`).
+
+## THE MIT LICENSE COVERS THE CODE, NOT THE DATA
+
+`LICENSE.txt` grants MIT terms over **the software in this repository** — the
+scripts, the harnesses, the documentation this project wrote.
+
+It does **not** and cannot grant any rights over the NFL statistics, which this
+project does not own. `fantasy_top250.csv`, `fantasy_top250_derived.csv`,
+`weekly_ppr.csv`, `board_2026.csv` and every file derived from them carry the
+terms of their original sources, above. Anyone reusing this repository is bound
+by those terms for the data regardless of what the MIT license says about the
+code.
+
 ## A note on licensing
 
 Attribution is not a license. Crediting the source is good practice and the

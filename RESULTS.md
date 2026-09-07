@@ -257,10 +257,24 @@ would be tighter. `eval_llama3.1_8b.csv` and `eval_fantasy-draft.csv` hold the
 per-example ranks needed for it. Until that is run, "beats the base model" is
 supported by the per-season and per-margin consistency, not by a p-value.
 
-**Context for the size of the win: the board beats random by only 0.52 ranks
+**Context for the size of the win: the board beats chance by only 0.50 ranks
 out of 12.** Once VBD has sorted twelve players into a narrow band, choosing
-between them is close to a coin flip. Against that, moving 6.00 → 5.41 is
-roughly doubling the separable signal the tabular layer found.
+between them is close to a coin flip. Measured against the 6.50 that chance
+gives by construction:
+
+| | mean rank | gap under chance |
+|---|---|---|
+| deterministic board | 6.00 | 0.50 |
+| fine-tuned adapter | 5.41 | **1.09** |
+
+So the agent finds slightly more than twice the signal the tabular layer did.
+
+Use 6.50 rather than the sampled `random` run (6.36) as the reference for this
+comparison. 6.50 is exact by construction — the mean of 1..12 — whereas 6.36 is
+one draw of a random chooser and carries its own sampling error; against it the
+board's gap reads 0.35 and the ratio changes. The two references answer
+different questions and mixing them is how a "0.52" that reproduces from
+neither gets published.
 
 A labelling error was caught and is documented in `step9_draft_examples.py`:
 the first version labelled each pick with the best actual outcome over all ~200

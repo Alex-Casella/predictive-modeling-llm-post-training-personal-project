@@ -160,7 +160,8 @@ def check_access():
     secrets=[modal.Secret.from_name('huggingface')],
 )
 def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
-          lr: float = 2e-4, tag: str = '', seed: int = 0):
+          lr: float = 2e-4, tag: str = '', seed: int = 0,
+          pad_token: str = ''):
     import datetime
     import inspect
     import json
@@ -224,8 +225,60 @@ def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
     print(f'writing to {out_dir}')
 
     tok = AutoTokenizer.from_pretrained(BASE)
-    if tok.pad_token is None:
+
+    # THE PAD TOKEN DECIDES WHETHER THE MODEL EVER LEARNS TO STOP.
+    #
+    # The obvious line is `tok.pad_token = tok.eos_token`, and it is what this
+    # file did. It produces an adapter that never emits EOS: 96% of the
+    # start/sit model's answers ran to the token cap and enumerated every
+    # candidate instead of stopping after the recommendation.
+    #
+    #   labels     ... Start Pacheco (RB). ... EOS PAD PAD PAD
+    #   masking    label == pad_id  ->  -100          ^^^^^^^^^^^ intended
+    #                                            ^^^ ALSO MASKED, because
+    #                                                pad_id == eos_id
+    #
+    # The one position that teaches "stop here" is the one position removed
+    # from the loss. No amount of training fixes it -- confirmed empirically:
+    # runaway was WORSE at one epoch (96%) than at two (83%), the opposite of
+    # what over-training would predict.
+    #
+    # The fix is a pad id that is not the eos id. Llama 3.x ships reserved
+    # slots for exactly this, so no embedding resize is needed -- resizing
+    # would change the vocabulary out from under `llama3.1:8b` and break
+    # serving the adapter in Ollama.
+    #
+    # Which reserved token exists varies by release, so this searches rather
+    # than asserting, PRINTS what it picked, and refuses to fall back to EOS
+    # silently. A silent fallback is how the original bug survived.
+    if not pad_token:
         tok.pad_token = tok.eos_token
+        print(f'  pad_token = eos_token ({tok.eos_token!r}). THE ORIGINAL '
+              f'BEHAVIOUR: real EOS is masked out of the loss and the model '
+              f'will not learn to stop. Pass --pad-token to fix.')
+    else:
+        wanted = ([pad_token] if pad_token != 'auto' else
+                  ['<|finetune_right_pad_id|>', '<|reserved_special_token_0|>',
+                   '<|reserved_special_token_1|>'])
+        chosen = None
+        for cand in wanted:
+            tid = tok.convert_tokens_to_ids(cand)
+            if tid is not None and tid != tok.unk_token_id and tid >= 0:
+                chosen = (cand, tid)
+                break
+        if chosen is None:
+            raise SystemExit(
+                f'none of {wanted} exists in this tokenizer, and falling back '
+                f'to EOS is\n  the bug this flag exists to fix. Print '
+                f'tok.additional_special_tokens to see what is available.')
+        tok.pad_token = chosen[0]
+        if tok.pad_token_id == tok.eos_token_id:
+            raise SystemExit(
+                f'{chosen[0]} resolves to the same id as EOS '
+                f'({tok.eos_token_id}); it is not a usable pad token.')
+        print(f'  pad_token = {chosen[0]!r} (id {chosen[1]}), '
+              f'eos is id {tok.eos_token_id} -- distinct, so EOS stays in the '
+              f'loss')
 
     # 4-bit base. The adapter itself trains in bf16 -- that is the QLoRA idea:
     # a frozen quantised backbone with a small high-precision delta on top.
@@ -322,6 +375,8 @@ def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
                 f'ollama_base={OLLAMA_BASE}\n'
                 f'rank={rank} alpha={rank * 2} lr={lr} epochs={epochs} '
                 f'seed={seed}\n'
+                f'pad_token={tok.pad_token!r} id={tok.pad_token_id} '
+                f'eos_id={tok.eos_token_id}\n'
                 f'train={len(train_ds)} val={len(val_ds)}\n'
                 f'seasons: {spec["seasons"]}\n')
     volume.commit()
@@ -331,7 +386,8 @@ def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
 
 @app.local_entrypoint()
 def main(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
-         lr: float = 2e-4, tag: str = '', seed: int = 0):
+         lr: float = 2e-4, tag: str = '', seed: int = 0,
+         pad_token: str = ''):
     # Credentials before the GPU, always. A CPU container costs seconds; the
     # same failure discovered inside train() costs the image build, the A10G
     # allocation, and the walk to the coffee machine.
@@ -340,7 +396,7 @@ def main(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
     check_access.remote()
 
     train.remote(dataset=dataset, epochs=epochs, rank=rank, lr=lr, tag=tag,
-                 seed=seed)
+                 seed=seed, pad_token=pad_token)
     subdir = f'{dataset}{"_" + tag if tag else ""}'
     print('\nnext:')
     # The volume is MOUNTED at /adapter, so its own root IS that directory.

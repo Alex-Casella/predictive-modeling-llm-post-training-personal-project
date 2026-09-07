@@ -50,6 +50,15 @@ EPOCHS="${2:?epochs, e.g. 1}"
 TAG="${3:?a short tag, e.g. e1 -- it keys the volume path and the model name}"
 SEED="${4:-0}"
 
+# PAD_TOKEN='auto' picks a reserved token distinct from EOS, so the real EOS
+# stays in the training loss and the model can learn to stop. Empty (default)
+# reproduces the original pad_token = eos_token behaviour, which is what every
+# adapter scored so far was trained with -- changing the default would silently
+# make old runs unreproducible.
+#
+#   PAD_TOKEN=auto COMPARE=fantasy-sit-e1 ./run_ablation.sh sit 1 e1pad
+PAD_TOKEN="${PAD_TOKEN:-}"
+
 PROJECT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 CONDA_PY="${CONDA_PY:-/opt/miniconda3/envs/pllmpp/bin/python}"
 MODAL="${MODAL:-/opt/miniconda3/envs/pllmpp/bin/modal}"
@@ -118,6 +127,7 @@ printf '  dataset      %s\n  epochs       %s\n  seed         %s\n' \
        "$DATASET" "$EPOCHS" "$SEED"
 printf '  volume path  fantasy-lora/%s\n  ollama model %s\n' \
        "$SUBDIR" "$MODEL_NAME"
+printf '  pad token    %s\n' "${PAD_TOKEN:-<eos, the original buggy behaviour>}"
 printf '  compare vs   %s\n  writes       %s\n' "$BASE_CSV" "$NEW_CSV"
 
 # Installed models sharing a content ID are the same weights under two names.
@@ -136,7 +146,8 @@ echo "  only after trainer.train() returns, so an interrupted run leaves"
 echo "  NOTHING recoverable -- not a checkpoint, not a partial adapter."
 cd "$PROJECT"
 "$MODAL" run train_adapter.py \
-    --dataset "$DATASET" --epochs "$EPOCHS" --tag "$TAG" --seed "$SEED"
+    --dataset "$DATASET" --epochs "$EPOCHS" --tag "$TAG" --seed "$SEED" \
+    --pad-token "$PAD_TOKEN"
 
 say "2/3  download, convert, serve and score"
 EXPECT_EPOCHS="$EPOCHS" EXPECT_SEED="$SEED" \

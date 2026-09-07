@@ -279,12 +279,38 @@ inverted that. Decisive picks were already solvable by sorting — that is what
 VBD is — so a language layer had nothing to add there and, measurably, added
 nothing. The coin flips are where it earned its keep.
 
-**Not yet established: significance.** 0.39 ranks over 450 examples is roughly
-2.4 standard errors treating the two runs as independent, which they are not —
-both models answered the same 450 prompts, so the correct test is paired and
-would be tighter. `eval_llama3.1_8b.csv` and `eval_fantasy-draft.csv` hold the
-per-example ranks needed for it. Until that is run, "beats the base model" is
-supported by the per-season and per-margin consistency, not by a p-value.
+**Significance: measured, and the answer is "suggestive, underpowered".**
+`paired_test.py`, on the same 450 prompts answered by both models:
+
+| | | |
+|---|---|---|
+| mean difference | **−0.393** | ranks of 12 |
+| sd of one difference | 4.197 | |
+| se of the mean | 0.198 | one "noise width" |
+| 95% CI | **[−0.781, −0.005]** | excludes 0, barely |
+
+| test | what it keeps | p |
+|---|---|---|
+| paired t | sizes, assumes normality | **0.047** |
+| Wilcoxon signed-rank | ranks of sizes, no shape assumption | **0.054** |
+| sign test | direction only | **0.090** |
+
+Three tests resting on progressively weaker assumptions, straddling 0.05. **The
+honest reading is not to pick the friendliest one.** It is that the effect sits
+at the edge of what 450 examples can resolve.
+
+Detecting a 0.393 shift with sd 4.197 at 80% power needs **895 paired
+examples**. The test split has 450, so this experiment is about **2× short** of
+the size that would settle it. That is the actionable number: the fix is more
+held-out decisions, not a different test.
+
+Direction is consistent — the tuned model picked better on 195, worse on 162,
+identically on 93 — and so are the per-season and per-margin breakdowns. So
+"probably real, not established" is the claim the data supports.
+
+The 20.7% exact ties are also why the t-test and Wilcoxon differ. The
+difference histogram is symmetric and unimodal, so skew is not the problem; a
+spike of 93 zeros is simply not something a normal distribution produces.
 
 **Context for the size of the win: the board beats chance by only 0.50 ranks
 out of 12.** Once VBD has sorted twelve players into a narrow band, choosing

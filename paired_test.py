@@ -28,14 +28,20 @@ the 12 shown", so a negative difference means the second model picked a
 better player. The sign is checked and printed in words rather than left for
 the reader to work out.
 
-TWO TESTS, NOT ONE
+THREE TESTS, NOT ONE
 
-The t-test assumes the differences are roughly normal. These differences are
-between bounded integers in 1..12, so that assumption is worth doubting.
-Wilcoxon signed-rank makes no such assumption -- it throws away the sizes and
-keeps only the ranks of the absolute differences. Running both is the honest
-move: if they agree the conclusion does not rest on the assumption, and if
-they disagree that is itself the finding.
+    paired t-test    assumes the differences are roughly normal
+    Wilcoxon         assumes nothing about shape; keeps ranks, drops sizes
+    sign test        keeps direction only; drops sizes AND ranks
+
+Each discards more than the last, and each therefore rests on less. If all
+three agree the conclusion does not depend on which you trust.
+
+If they STRADDLE the threshold -- as they do on this project's draft result,
+p = 0.047 / 0.054 / 0.090 -- the answer is not to pick the friendliest one.
+It is that the effect sits at the edge of what the sample can resolve, and the
+fix is more examples, not a different test. So this file also prints the
+confidence interval and the n that 80% power would require.
 
 Usage:
     python3 paired_test.py                       # base vs fine-tuned
@@ -156,21 +162,49 @@ def main():
     print(f'  Wilcoxon signed-rank W={w.statistic:.1f}  p={w.pvalue:.4g}')
     print(f'    assumes nothing about the shape; ties kept, signs split')
 
+    # A third view that throws away the sizes entirely and keeps only the
+    # direction. If three tests with three different assumptions land in the
+    # same place, the reading does not depend on which one you trust.
+    sign = stats.binomtest(int(better), int(better + worse), 0.5)
+    print(f'  sign test           {better}/{better + worse} better  '
+          f'p={sign.pvalue:.4g}')
+    print(f'    ignores how big each difference was; direction only')
+
+    lo, hi = mean - 1.96 * se, mean + 1.96 * se
+    print(f'\n  95% CI for the true mean difference  '
+          f'[{lo:+.3f}, {hi:+.3f}]')
+
+    # The question a borderline p-value should prompt is not "which side of
+    # 0.05" but "was this study big enough to answer at all".
+    za, zb = stats.norm.ppf(0.975), stats.norm.ppf(0.80)
+    need = (za + zb) ** 2 * sd ** 2 / mean ** 2 if mean else float('inf')
+    print(f'  n for 80% power at this effect size  {need:.0f}'
+          f'   (you have {n}, {need / n:.1f}x short)')
+
     agree = (t.pvalue < args.alpha) == (w.pvalue < args.alpha)
     print(f'\n=== reading it ===')
     direction = 'BETTER' if mean < 0 else 'WORSE'
     print(f'  {args.b} picked {direction} than {args.a}')
     print(f'  by {abs(mean):.3f} ranks of 12, on average.')
-    if agree:
-        verdict = ('too large to explain as noise'
-                   if t.pvalue < args.alpha else
-                   'NOT distinguishable from noise')
-        print(f'  Both tests agree at alpha={args.alpha}: the gap is {verdict}.')
+    ps = [t.pvalue, w.pvalue, sign.pvalue]
+    if all(x < args.alpha for x in ps):
+        print(f'  All three tests reject H0 at alpha={args.alpha}: the gap is')
+        print(f'  too large to explain as noise.')
+    elif all(x >= args.alpha for x in ps):
+        print(f'  No test rejects H0 at alpha={args.alpha}: the gap is not')
+        print(f'  distinguishable from noise at this sample size.')
     else:
-        print(f'  THE TWO TESTS DISAGREE at alpha={args.alpha}. Trust Wilcoxon --')
-        print(f'  it is the one that does not assume normality, and the')
-        print(f'  histogram above is why that assumption is doubtful. Report')
-        print(f'  the disagreement rather than picking the friendlier number.')
+        # The honest reading of a straddle is NOT "pick the test you like".
+        # Three tests with three different assumptions landing either side of
+        # one threshold means the threshold is where the effect sits, and the
+        # sample cannot resolve it. Say that, and say how much data would.
+        print(f'  THE TESTS STRADDLE alpha={args.alpha} '
+              f'(p = {", ".join(f"{x:.3f}" for x in ps)}).')
+        print(f'  Do NOT pick the friendlier one. Three tests with three sets')
+        print(f'  of assumptions landing either side of one threshold means')
+        print(f'  the effect sits AT the threshold and {n} examples cannot')
+        print(f'  resolve it. The finding is "suggestive, underpowered", and')
+        print(f'  the fix is {need:.0f} paired examples, not a different test.')
 
     print(f'\n  A p-value is P(seeing a gap this big | H0 is true). It is NOT')
     print(f'  the probability that fine-tuning worked, and a small p says')

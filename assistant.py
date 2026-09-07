@@ -63,7 +63,28 @@ def roster_counts(roster):
     return counts
 
 
-def shortlist(board, state, counts):
+def phantom_taken(board, state, pick_no):
+    """Players the rivals must already have taken, when you are not logging them.
+
+    Nobody enters ninety other people's picks during a live draft, so by round
+    11 the state holds ten players and the board still offers the overall number
+    one. The prompt then says "pick 110 overall" above a round-1 shortlist, and
+    no training example looks like that: at pick 110 the top 109 are gone.
+
+    Rivals are assumed to take the best available player, which is exactly the
+    rule step9's simulation used to generate the training data -- `taken =
+    board_pick`. Nothing is persisted: the assumption is recomputed from the
+    current state every time, so entering a real `taken` replaces a phantom one
+    and picking someone this assumed gone simply shifts the assumption down.
+    """
+    shortfall = (pick_no - 1) - (len(state['taken']) + len(state['mine']))
+    if shortfall <= 0:
+        return []
+    pool = board[~board['pid'].isin(state['taken'] + state['mine'])]
+    return list(pool.head(shortfall)['pid'])
+
+
+def shortlist(board, state, counts, gone=()):
     """The K candidates the model is allowed to choose from.
 
     Same filter and same K as training: board order, minus anyone already gone,
@@ -74,15 +95,16 @@ def shortlist(board, state, counts):
     ask the model a question it was never trained on.
     """
     avail = available(board, state)
+    avail = avail[~avail['pid'].isin(gone)]
     ok = avail[avail['pos'].apply(lambda p: legal(counts, p))]
     return ok.head(SHOW_AVAILABLE)
 
 
-def build_situation(board, state, league):
+def build_situation(board, state, league, gone=()):
     """A live draft, in exactly the dict shape step9 wrote to disk."""
     roster = my_roster(board, state)
     counts = roster_counts(roster)
-    shown = shortlist(board, state, counts)
+    shown = shortlist(board, state, counts, gone)
     return dict(
         league=league.label(),
         roster=[dict(player=r.player, pos=r.pos, proj_ppr=float(r.proj_ppr))
@@ -132,18 +154,23 @@ def where_are_we(state, league, seat=None):
 
 
 def build_messages(board, state, league, seat=None):
-    """(messages, shown, pick_no, rnd) -- the exact payload the model sees."""
-    situation, shown = build_situation(board, state, league)
+    """(messages, shown, pick_no, rnd, n_phantom) -- what the model sees.
+
+    Order matters: the pick number has to be settled BEFORE the shortlist,
+    because it is what says how many players should already be gone.
+    """
     rnd, pick_no, estimated = where_are_we(state, league, seat)
     if estimated:
         print(f'  (pick {pick_no} is an estimate. Pass --seat N, or log rivals '
               f'with `taken <name>`, to make it exact.)')
+    gone = phantom_taken(board, state, pick_no)
+    situation, shown = build_situation(board, state, league, gone)
 
     example = dict(round=rnd, pick=pick_no, situation=situation)
     return (dict(messages=[
         dict(role='system', content=SYSTEM.format(league=situation['league'])),
         dict(role='user', content=render_user(example))]),
-        shown, pick_no, rnd)
+        shown, pick_no, rnd, len(gone))
 
 
 def ask(model, item, names):
@@ -178,7 +205,8 @@ def show_answer(model, pick, text, shown):
 
 
 def recommend(board, state, league, models, seat=None):
-    item, shown, pick_no, rnd = build_messages(board, state, league, seat)
+    item, shown, pick_no, rnd, phantom = build_messages(board, state, league,
+                                                        seat)
     if shown.empty:
         print('  no legal candidates left -- board exhausted or roster capped.')
         return
@@ -187,6 +215,9 @@ def recommend(board, state, league, models, seat=None):
 
     print(f'\n=== round {rnd}, pick {pick_no} overall '
           f'-- {len(shown)} candidates ===')
+    if phantom:
+        print(f'  assuming the {phantom} picks you did not log went to the best '
+              f'available. Use `taken <name>` for the real ones.')
     if seat is not None:
         # The number that decides whether you can wait on a position. It is 2
         # at the turn and 2*teams-2 at the other end, and it is invisible in a
@@ -286,13 +317,18 @@ def main():
         elif cmd in ('rec', 'recommend', 'ask'):
             recommend(board, state, league, models, seat)
         elif cmd == 'prompt':
-            item, shown, pick_no, rnd = build_messages(board, state, league,
-                                                       seat)
+            item, shown, pick_no, rnd, _ = build_messages(board, state,
+                                                          league, seat)
             for m in item['messages']:
                 print(f'\n[{m["role"].upper()}]\n{m["content"]}')
         elif cmd == 'board':
             n = int(arg) if arg.isdigit() else SHOW_AVAILABLE
-            av = available(board, state).head(n)
+            _, pick_no, _ = where_are_we(state, league, seat)
+            gone = phantom_taken(board, state, pick_no)
+            if gone:
+                print(f'  ({len(gone)} unlogged picks assumed taken by rivals)')
+            av = available(board, state)
+            av = av[~av['pid'].isin(gone)].head(n)
             print(av[['vbd_rk', 'player', 'pos', 'pos_rk', 'tier', 'age',
                       'proj_ppr', 'vbd']].to_string(index=False))
         elif cmd in ('pick', 'taken'):

@@ -28,9 +28,10 @@ what was done, what was found, and what is still open.
 > in any output, chart, or write-up derived from this data. See
 > `ATTRIBUTION.md`.
 
-> **License:** the code is MIT (`LICENSE.txt`). **The data is not covered by
-> it** — this project does not own the NFL statistics and cannot license them.
-> Every CSV here carries its original source's terms. See `ATTRIBUTION.md`.
+> **License:** none. The repository is public to be read, not reused — with no
+> license file, all rights are reserved by default. The data is a separate
+> matter and was never this project's to license; each CSV carries its source's
+> terms. See `ATTRIBUTION.md`.
 
 ---
 

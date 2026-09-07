@@ -36,17 +36,21 @@ That the two sources agree is itself documented: summing weekly PPR reproduces
 the season `ppr` column from Pro-Football-Reference to a median difference of
 +0.00 (`step11_weekly_data.py`).
 
-## THE MIT LICENSE COVERS THE CODE, NOT THE DATA
+## No license is granted on the code
 
-`LICENSE.txt` grants MIT terms over **the software in this repository** — the
-scripts, the harnesses, the documentation this project wrote.
+This repository carries **no license file**, which under copyright means all
+rights are reserved by default. The code is public to be read, not to be
+reused: nobody is granted permission to copy, modify, or redistribute it.
+(Forking within GitHub is separately permitted by GitHub's own terms of
+service, which is a narrower thing than a license.)
 
-It does **not** and cannot grant any rights over the NFL statistics, which this
-project does not own. `fantasy_top250.csv`, `fantasy_top250_derived.csv`,
-`weekly_ppr.csv`, `board_2026.csv` and every file derived from them carry the
-terms of their original sources, above. Anyone reusing this repository is bound
-by those terms for the data regardless of what the MIT license says about the
-code.
+This is a deliberate choice, not an oversight. Adding a permissive license
+later is one file; withdrawing one already granted is not.
+
+The **data** is a separate question and was never this project's to license.
+`fantasy_top250.csv`, `fantasy_top250_derived.csv`, `weekly_ppr.csv`,
+`board_2026.csv` and every file derived from them carry the terms of their
+original sources above, independently of anything decided about the code.
 
 ## A note on licensing
 

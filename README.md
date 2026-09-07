@@ -12,8 +12,9 @@ comparable.
 
 **Status:** model built and backtested; draft board and CLI running; draft agent
 fine-tuned and scored (5.41 mean rank of 12 vs 5.80 un-tuned, 6.00 board);
-start/sit data built and its bars measured (2.92 rule, 3.02 un-tuned base),
-adapter trained and scoring in progress.
+start/sit adapter trained and scored — **3.12 of 6 against a 2.92 rule and a
+3.02 un-tuned base, so that fine-tune made the model worse**, and 83% of its
+answers never stopped.
 Best result **69.1%** set overlap @250 against a **68.8%** baseline and a
 **76.8%** structural ceiling. See `RESULTS.md` for every number and the
 scripts that produce them.

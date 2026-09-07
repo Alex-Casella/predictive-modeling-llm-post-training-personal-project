@@ -363,7 +363,57 @@ which confirms the join and both implementations at once.
 | random | 3.51 | 17.3% |
 | `llama3.1:8b` **un-tuned** | 3.02 | 23.7% |
 | start the best season average | **2.92** | 24.1% |
-| fine-tuned adapter | *pending* | |
+| `fantasy-sit` **fine-tuned** | 3.12 | 20.9% |
+
+### The fine-tune made it worse
+
+**3.12 against 3.02 un-tuned and 2.92 for the rule.** Post-training moved the
+model away from both bars, and it is worse in both held-out seasons — 3.22 vs
+3.16 in 2023, 3.01 vs 2.89 in 2024 — so this is not one bad year. Best-of-6
+fell as well, 23.7% to 20.9%. Validity stayed at 100%.
+
+**83% of its answers never stopped.** 232 of 278 ran to the 300-token cap.
+The adapter produces the trained sentence correctly and then keeps going,
+inventing a rejection for every other candidate:
+
+```
+Start Isiah Pacheco (RB). He is averaging 14.5 ... larger sample.   <- trained format, exact
+Do not start Marvin Jones (WR); ...                                 <- "Do not start" appears
+Do not start George Kittle (TE); ...                                   NOWHERE in the training data
+```
+
+An adapter that loses its end-of-sequence token and enumerates the whole
+shortlist has fit the surface form of its training data rather than the
+decision inside it. That is the most likely explanation of the worse picks too,
+and it is a result about post-training rather than about fantasy football.
+
+Scoring is unaffected: `extract_pick` reads the first shortlisted name and the
+recommendation is written first. The 300-token cap in `eval_agent.py` bounds
+the runaway; without it the first example alone exceeded a 300-second timeout.
+
+### The confound, stated rather than buried
+
+**This ran `epochs=2.0`; the draft adapter ran `epochs=1.0`.** So two
+explanations are not separated by this experiment:
+
+| | |
+|---|---|
+| the task | sit/start leaves less for a language layer than the draft did |
+| the hyperparameter | two epochs over 1,233 short templated examples over-trained it |
+
+Both predict what was observed. The lost stop token points at the second, since
+format collapse is what over-training on a fixed template looks like.
+
+A second candidate cause sits in `train_adapter.py`: `tok.pad_token =
+tok.eos_token`. When pad and EOS are the same token, a collator that masks pad
+positions also masks the real EOS out of the loss, so the model never learns to
+emit it. The draft adapter has identical code and does stop, which is why this
+is a hypothesis and not a conclusion.
+
+**The experiment that separates them is one run:** `--dataset sit --epochs 1`,
+scored on the same 278. Roughly 20 minutes of GPU time. Until it exists, the
+supportable claim is "this fine-tune made the model worse, and it is defective
+in a way consistent with over-training" — not "an LLM cannot do sit/start".
 
 ### The base model does NOT beat the tabular layer here
 

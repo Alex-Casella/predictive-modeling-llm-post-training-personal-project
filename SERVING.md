@@ -194,9 +194,13 @@ evaluates, so the comparison is never apples-to-oranges. Fill this in:
 | model | validity | mean rank (of 12) | best of 12 |
 |---|---|---|---|
 | random | 100% | 6.36 | 8.4% |
-| deterministic board — **the bar** | 100% | 6.00 | 9.6% |
-| `llama3.1:8b` (un-tuned base) | | | |
-| `fantasy-draft` (fine-tuned) | | | |
+| deterministic board | 100% | 6.00 | 9.6% |
+| `llama3.1:8b` (un-tuned base) — **the bar** | 100% | 5.80 | 11.1% |
+| `fantasy-draft` (fine-tuned) | 100% | **5.41** | 15.1% |
+
+The bar is the un-tuned base, not the board. A fine-tune that lands between
+5.80 and 6.00 beats the tabular layer while being worse than the model it
+started from, and `eval_agent.py` will still print "BEATS the board" for it.
 
 Run the full 450 once the short runs look sane:
 

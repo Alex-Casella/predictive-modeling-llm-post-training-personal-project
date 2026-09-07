@@ -187,7 +187,7 @@ All 450 held-out picks, seasons 2023-2025:
 | random | 100% | 6.36 | 8.4% |
 | deterministic board (`draft.py`) | 100% | 6.00 | 9.6% |
 | `llama3.1:8b` **un-tuned** | 100% | **5.80** | 11.1% |
-| fine-tuned adapter | — | *pending* | |
+| `fantasy-draft` **fine-tuned** | 100% | **5.41** | 15.1% |
 
 Random landing at 6.36 / 8.4% against a theoretical 6.50 / 8.3% is the check
 that the metric is wired up correctly.
@@ -216,20 +216,51 @@ The full set gives 5.80. The subsample flattered it by 0.13, which is most of
 the effect size — a reminder that `--limit` is for smoke-testing the plumbing,
 never for producing a number.
 
-### This raises the bar for stage 4
+### The bar this raised, and the fine-tune clearing it
 
-§11g asks two questions, and the answer to the first is now in: *can a language
-model beat the tabular layer?* Yes, untrained. What remains is whether
-fine-tuning adds anything on top of a base that already wins.
+§11g asks two questions. The un-tuned run answered the first — *can a language
+model beat the tabular layer?* Yes, untrained — and in doing so moved the bar
+for stage 4 from 6.00 to **5.80**. Landing between them would have meant
+post-training made the model worse than leaving it alone.
 
-**The fine-tuned adapter must beat 5.80, not 6.00.** Landing between them would
-mean post-training made the model worse than leaving it alone.
+**The fine-tuned adapter scores 5.41** (QLoRA rank 16, 1 epoch over 1,950
+examples, `PROVENANCE.txt` in the adapter). That is 0.39 below the un-tuned
+base and 0.59 below the board, at 100% validity, and it is below the base in
+every held-out season:
 
-**The board beats random by 0.52 ranks out of 12.** Once VBD has sorted twelve
-players into a narrow band, choosing between them is close to a coin flip. That
-is both the opportunity for the agent and the reason to expect the fine-tune
-may not beat 6.00. §11g: *"If the agent doesn't beat the number it was handed,
-the language layer is decoration."*
+| season | untuned | fine-tuned | Δ |
+|---|---|---|---|
+| 2023 | 5.72 | **5.31** | −0.41 |
+| 2024 | 5.97 | **5.53** | −0.44 |
+| 2025 | 5.73 | **5.40** | −0.33 |
+
+Best-of-12 rose 11.1% → 15.1% against 8.3% chance, so the gain is finding the
+right player rather than only avoiding the worst one.
+
+**The gain is concentrated where the sort was useless, not where it was
+already working.** By decision difficulty:
+
+| margin (actual-VBD gap) | n | untuned | fine-tuned | Δ |
+|---|---|---|---|---|
+| marginal 1–5 | 50 | 6.66 | **5.38** | −1.28 |
+| decisive 20+ | 269 | 5.52 | 5.58 | +0.06 |
+
+The base model was worst on near-ties and best on obvious calls; fine-tuning
+inverted that. Decisive picks were already solvable by sorting — that is what
+VBD is — so a language layer had nothing to add there and, measurably, added
+nothing. The coin flips are where it earned its keep.
+
+**Not yet established: significance.** 0.39 ranks over 450 examples is roughly
+2.4 standard errors treating the two runs as independent, which they are not —
+both models answered the same 450 prompts, so the correct test is paired and
+would be tighter. `eval_llama3.1_8b.csv` and `eval_fantasy-draft.csv` hold the
+per-example ranks needed for it. Until that is run, "beats the base model" is
+supported by the per-season and per-margin consistency, not by a p-value.
+
+**Context for the size of the win: the board beats random by only 0.52 ranks
+out of 12.** Once VBD has sorted twelve players into a narrow band, choosing
+between them is close to a coin flip. Against that, moving 6.00 → 5.41 is
+roughly doubling the separable signal the tabular layer found.
 
 A labelling error was caught and is documented in `step9_draft_examples.py`:
 the first version labelled each pick with the best actual outcome over all ~200
@@ -245,8 +276,11 @@ See `SERVING.md` for the conversion and serving runbook.
 
 - **Rookies.** 23.2% of a real top 250 cannot appear on the board. Needs PFR
   draft results, 26 seasons, joined on `pfr_id`.
-- **The LLM agent.** `PROJECT_CONTEXT.md` §11e stages 3–5. Stages 1 and 2 are
-  complete, so this is unblocked.
+- **A paired significance test** on the un-tuned vs fine-tuned per-example
+  ranks. Both CSVs exist; the test does not. See above.
+- **Ablations.** One adapter was trained, at one rank, for one epoch. Nothing
+  here separates "post-training helps" from "these particular hyperparameters
+  help", and no second seed was run.
 - **Sit/start.** Blocked on weekly data. `fantasy_top250.csv` has no week
   column. `draft.py lineup` gives the static ordering, which never changes week
   to week.

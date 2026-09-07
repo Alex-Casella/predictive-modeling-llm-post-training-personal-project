@@ -180,33 +180,50 @@ near-duplicates on both sides.
 picks). Each pick offers 12 candidates; score is where the chosen player lands
 once the season is played out, lower is better:
 
-| | validity | mean rank (of 12) | best of 12 | n |
-|---|---|---|---|---|
-| random | 100% | 6.36 | 8.4% | 450 |
-| deterministic board (`draft.py`) | 100% | **6.00** | 9.6% | 450 |
-| `llama3.1:8b` un-tuned base | 100% | **5.67** | 10.0% | 60 |
-| fine-tuned adapter | — | *pending* | | |
+All 450 held-out picks, seasons 2023-2025:
+
+| | validity | mean rank (of 12) | best of 12 |
+|---|---|---|---|
+| random | 100% | 6.36 | 8.4% |
+| deterministic board (`draft.py`) | 100% | 6.00 | 9.6% |
+| `llama3.1:8b` **un-tuned** | 100% | **5.80** | 11.1% |
+| fine-tuned adapter | — | *pending* | |
 
 Random landing at 6.36 / 8.4% against a theoretical 6.50 / 8.3% is the check
 that the metric is wired up correctly.
 
-**The un-tuned base model beats the board by 0.36 ranks**, with 100% validity —
-it named a shortlisted player on every one of 60 prompts, so the prompt format
-and the answer parser both work. On the same 60 examples the board scores 6.03,
-so the comparison is like-for-like.
+**The un-tuned base model beats the board by 0.20 ranks, with no training at
+all.** Validity 100% matters as much as the rank: it named a player from the
+shortlist on all 450 prompts, and `eval_agent.py` refuses to map near-misses
+onto real players, so that is not charity.
 
-Read that carefully before celebrating: the interesting question is no longer
-"can a language model do this at all" but "does fine-tuning add anything on top
-of a base model that already can?" A fine-tune that lands near 5.67 has
-demonstrated nothing.
+It is below 6.00 in every held-out season, which makes it an effect rather than
+one season's luck:
 
-**Caveat on the 5.67.** `--limit 60` takes the FIRST 60 test examples, which are
-all season 2023, rounds 1-6. That is one season's early picks, not the held-out
-set. Re-run over all 450 before treating it as final:
+| season | n | mean rank | best of 12 |
+|---|---|---|---|
+| 2023 | 150 | 5.72 | 10.7% |
+| 2024 | 150 | 5.97 | 9.3% |
+| 2025 | 150 | 5.73 | 13.3% |
 
-```bash
-python3 eval_agent.py --model llama3.1:8b
-```
+It is also strongest exactly where the decision matters most — on picks where
+the gap between the best and second-best option was decisive (20+ VBD) it
+scores 5.52, against 6.66 on marginal 1-5 point gaps.
+
+**Why the first measurement was wrong.** A `--limit 60` run scored 5.67, but
+`--limit` takes the FIRST 60 examples, which are all season 2023 rounds 1-6.
+The full set gives 5.80. The subsample flattered it by 0.13, which is most of
+the effect size — a reminder that `--limit` is for smoke-testing the plumbing,
+never for producing a number.
+
+### This raises the bar for stage 4
+
+§11g asks two questions, and the answer to the first is now in: *can a language
+model beat the tabular layer?* Yes, untrained. What remains is whether
+fine-tuning adds anything on top of a base that already wins.
+
+**The fine-tuned adapter must beat 5.80, not 6.00.** Landing between them would
+mean post-training made the model worse than leaving it alone.
 
 **The board beats random by 0.52 ranks out of 12.** Once VBD has sorted twelve
 players into a narrow band, choosing between them is close to a coin flip. That

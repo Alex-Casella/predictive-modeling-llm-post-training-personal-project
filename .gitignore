@@ -7,3 +7,11 @@ draft_state.json
 # resume material, deliberately not published with the code
 PORTFOLIO.md
 portfolio.html
+
+# Downloaded adapters: safetensors plus a ~100 MB GGUF each, and every one of
+# them is reproducible from the Modal volume via finish_adapter.sh. The eval
+# CSVs are the artefact worth keeping, not the weights.
+adapter_*/
+
+# Editor settings, personal to one machine.
+.vscode/

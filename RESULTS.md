@@ -157,8 +157,21 @@ python3 step6_widen_pool.py    widened candidate pool
 python3 step7_truncation.py    truncation sensitivity
 python3 step8_model.py         the model, walk-forward
 python3 board.py               → board_2026.csv
-python3 draft.py               the draft CLI
+python3 draft.py               the draft CLI, deterministic (no LLM)
+python3 assistant.py           the draft CLI, backed by the fine-tuned model
+python3 paired_test.py         is the gap between two eval runs real?
 ```
+
+`assistant.py` imports its prompt from `step10_render_sft.render_user` and its
+answer parsing from `eval_agent.extract_pick` rather than reimplementing either.
+A LoRA adapter learns the shape of its training prompt, so a second "equivalent"
+renderer would move the served input off the trained distribution and the damage
+would read as a bad fine-tune rather than a formatting bug.
+
+It shows the model's pick beside the board's and says when they disagree. It
+does **not** score them: `board_2026.csv` projects a season whose outcome is
+unknown. Scoring lives in `eval_agent.py`, on 2023-2025, where an answer key
+exists.
 
 Shared modules: `checks.py` (assert harness), `common.py`, `evaluate.py`
 (set-overlap harness), `features.py`, `vbd.py`.

@@ -1,5 +1,19 @@
 # Stage 5 — from a trained adapter to a served model
 
+> **Two adapters now.** The draft agent and the start/sit agent are separate
+> adapters over the same base, written to separate subdirectories of the Modal
+> volume. Everything below applies to both; `finish_adapter.sh` takes the
+> subdirectory as its second argument:
+>
+> ```bash
+> ./finish_adapter.sh fantasy-draft draft
+> ./finish_adapter.sh fantasy-sit   sit
+> ```
+>
+> Read the PROVENANCE it prints at step 2. It names the dataset, and building
+> the wrong adapter then scoring it against the other task's bar is a mistake
+> that produces a plausible-looking number.
+
 `PROJECT_CONTEXT.md` §11e stage 5. Everything here runs on your Mac.
 
 `train_adapter.py` writes a **PEFT/safetensors** adapter. Ollama's `ADAPTER`

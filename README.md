@@ -1,11 +1,19 @@
-# Fantasy football projection + draft board
+# Fantasy football projection + draft board + start/sit
 
 Predict the top 250 PPR fantasy football players for an upcoming season, turn
-that into a draft board, and build a CLI assistant that recommends picks based
-on the board plus current roster composition.
+that into a draft board, build a CLI assistant that recommends picks from the
+board plus current roster — and then a second, separate assistant that answers
+the in-season question: of the flex-eligible players on my roster this week,
+which do I start?
+
+The two assistants are two fine-tuned adapters over the same base model,
+trained by one script and scored by one harness, which is what makes them
+comparable.
 
 **Status:** model built and backtested; draft board and CLI running; draft agent
-fine-tuned and scored (5.41 mean rank of 12 vs 5.80 un-tuned, 6.00 board).
+fine-tuned and scored (5.41 mean rank of 12 vs 5.80 un-tuned, 6.00 board);
+start/sit data built and its bars measured (2.92 rule, 3.02 un-tuned base),
+adapter trained and scoring in progress.
 Best result **69.1%** set overlap @250 against a **68.8%** baseline and a
 **76.8%** structural ceiling. See `RESULTS.md` for every number and the
 scripts that produce them.
@@ -72,14 +80,48 @@ are should drive every modeling decision after it.
 
 ## Current contents
 
+**Data**
+
 | File | What it is |
 |---|---|
-| `fantasy_top250.csv` | 6,500 rows. Top 250 players by PPR per season, 2000-2025, no gaps. |
+| `fantasy_top250.csv` | 6,500 rows. Top 250 players by PPR per season, 2000-2025, no gaps. Never modified. |
+| `fantasy_top250_derived.csv` | The above plus derived columns (`step2_derive.py`). |
+| `weekly_ppr.csv` | 84,909 player-weeks, nflverse, 2000-2024 (`step11_weekly_data.py`). |
+| `board_2026.csv` | The projected draft board (`board.py`). |
 | `draft_2026_offense.csv` | 81 skill-position players from the 2026 NFL draft. |
-| `CLAUDE.md` | Project brief loaded automatically by Claude Code each session. |
-| `vbd.py` | League-agnostic VBD module. Takes a LeagueConfig, works on actuals or predictions. |
+| `yoy.csv` | Year-over-year matched pairs (`step3_yoy.py`). |
+
+**System 1 — the projection model**
+
+| File | What it is |
+|---|---|
+| `step1_profile_g.py` … `step8_model.py` | Profiling, baseline, feature work, the model. |
+| `features.py` | Feature table, no look-ahead by construction. |
+| `evaluate.py` | Set-overlap harness with a deterministic tiebreak. |
+| `vbd.py` | League-agnostic VBD. Takes a LeagueConfig; never hardcode settings elsewhere. |
+| `board.py`, `draft.py` | The board, and the deterministic draft CLI (no LLM). |
+
+**Systems 2 and 3 — the two agents**
+
+| File | What it is |
+|---|---|
+| `step9` / `step10` | Draft decisions → SFT examples (2,850). |
+| `step12` / `step13` | Start/sit decisions → SFT examples (1,774). |
+| `train_adapter.py` | QLoRA on Modal. `--dataset draft\|sit` — one script, two adapters. |
+| `eval_agent.py` | Scoring. `--test/--key` point it at either task. |
+| `assistant.py` | The draft CLI backed by the fine-tuned model. |
+| `paired_test.py` | Is the gap between two eval runs real? |
+| `finish_adapter.sh` | Modal volume → GGUF → Ollama → scored, in one command. |
+
+**Docs**
+
+| File | What it is |
+|---|---|
+| `CLAUDE.md` | Working rules, loaded automatically each session. |
+| `RESULTS.md` | The findings log — every number and the script that produces it. |
+| `SERVING.md` | Adapter → GGUF → Ollama runbook. |
 | `ATTRIBUTION.md` | Data source credit and identifier documentation. |
-| `README.md` | This file. |
+| `checks.py` | Assert harness: collect every failure, print the wall, then raise. |
 
 ---
 
@@ -311,8 +353,16 @@ snap. Rookies are structurally unpredictable from it and require external data.
 preseason prediction needs depth charts, team changes, and injury history that
 this file lacks.
 
-**No weekly resolution.** Season totals only. Any in-season or week-to-week
-modeling requires a different dataset.
+**No weekly resolution — resolved for the second system.** `fantasy_top250.csv`
+is season totals only, which blocked start/sit. `step11_weekly_data.py` now adds
+`weekly_ppr.csv`: 84,909 player-weeks from nflverse, joined on identifiers and
+validated by reconstruction against the season totals (median difference +0.00).
+The season file is unchanged and still has no week column; the two files sit
+side by side.
+
+Two limits came with it: coverage collapses before 2010 (12% in 2000 against
+99% from 2010, a `pfr_id` gap upstream) and 2025 is not published by
+`nfl_data_py` 0.3.3. Weekly work runs 2010–2024.
 
 ### Where to fill them: Pro-Football-Reference
 
@@ -380,7 +430,13 @@ would need re-cutting on the union of formats (about 260 players per season).
 **User-supplied league settings.** The end goal — anyone enters their own
 league and gets a board. Everything above is a step toward it.
 
-**Weekly / in-season modelling.** Season totals only in the current data.
+**In-season updating.** Start/sit is built, but it replays completed seasons.
+Predicting a week of a season currently in progress is a different system, and
+it cannot be validated until that season finishes.
+
+**Full-lineup optimisation.** Start/sit answers the flex slot only, because a
+QB slot with one QB on the roster is not a decision. Naming all nine starters
+is a different decision shape and none of the current scoring applies to it.
 
 ## Out of scope for v1
 
@@ -391,4 +447,4 @@ league and gets a board. Everything above is a step toward it.
   broken community tooling before. Manual board entry first.
 - Live draft tracking.
 - Web app.
-- Weekly / in-season projections.
+- Predicting a season already in progress (see Deferred).

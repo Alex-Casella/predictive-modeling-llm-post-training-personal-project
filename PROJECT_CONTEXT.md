@@ -14,6 +14,11 @@ Self-contained. Assumes no prior conversation.
 
 1. **End-of-season top 250 (PPR)** — a projected board
 2. **Sit/start advice** for a user's specific roster
+   — BUILT. See RESULTS.md "Sit/start (stage 6)". Weekly data arrived via
+   nflverse (`step11_weekly_data.py`), which unblocked this; the decision was
+   scoped to the flex slot so the draft agent's whole scoring harness applies
+   unchanged. §1's two-goal framing beat CLAUDE.md's board-only v1 scope, and
+   all three documents now describe three systems.
 3. **Confidence ratings** — probability a player hits, booms, or busts against his
    projection
 

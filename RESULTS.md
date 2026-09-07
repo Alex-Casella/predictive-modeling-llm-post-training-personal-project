@@ -450,8 +450,20 @@ not more.
 - **Ablations.** One adapter was trained, at one rank, for one epoch. Nothing
   here separates "post-training helps" from "these particular hyperparameters
   help", and no second seed was run.
-- **Sit/start.** Blocked on weekly data. `fantasy_top250.csv` has no week
-  column. `draft.py lineup` gives the static ordering, which never changes week
-  to week.
-- **The spec conflict.** `CLAUDE.md` and `README.md` scope v1 to the draft
-  board; `PROJECT_CONTEXT.md` §1 adds a weekly model and sit/start. Unresolved.
+- **In-season start/sit.** The built system replays completed seasons. Advising
+  on a week of a season currently in progress is a different system and cannot
+  be validated until that season ends.
+- **Full-lineup optimisation.** Start/sit answers the flex slot only. Naming
+  nine starters is a different decision shape and none of this scoring applies.
+- **2025 weekly data.** Not published by `nfl_data_py` 0.3.3, so weekly work
+  ends at 2024 while the season file runs to 2025.
+
+### Resolved
+
+- ~~**Sit/start blocked on weekly data.**~~ `step11_weekly_data.py` adds
+  `weekly_ppr.csv` (84,909 player-weeks, nflverse, joined on identifiers,
+  validated by reconstruction). See the stage 6 section above.
+- ~~**The spec conflict.**~~ `CLAUDE.md` and `README.md` scoped v1 to the draft
+  board while `PROJECT_CONTEXT.md` §1 wanted a weekly model and sit/start.
+  Resolved in favour of §1: start/sit is now a built system, and all three
+  documents describe three systems rather than two.

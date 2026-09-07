@@ -1,15 +1,47 @@
-# Fantasy football projection + draft board
+# Fantasy football projection + draft board + start/sit
 
 ## What this project is
 
-Two separate systems. Do not merge them.
+Three systems. Do not merge them.
 
 1. **Projection model** — a tabular regression model that predicts each player's
    2026 PPR fantasy points. This is NOT an LLM. Use scikit-learn / XGBoost /
    LightGBM. LLMs are the wrong tool for numeric prediction over a table.
 2. **Draft assistant** — an LLM-backed CLI that reads the finished board plus my
    current roster and recommends a pick with reasoning. This IS where an LLM
-   belongs. Build it only after system 1 is validated.
+   belongs. Build it only after system 1 is validated. Done: `assistant.py`.
+3. **Start/sit assistant** — a SECOND fine-tuned adapter, on a SECOND dataset,
+   answering a different question: given the flex-eligible players on my roster
+   this week, which do I start? Added deliberately, not as scope creep — the
+   point is a second post-training run to compare against the first.
+
+Systems 2 and 3 share one training script (`train_adapter.py --dataset
+draft|sit`) and one eval harness (`eval_agent.py --test/--key`). That is not
+convenience: copying either would fork the hyperparameters, and a difference
+between two results could then be the task or a drifted learning rate, with no
+way to tell which. Keep it that way.
+
+## The weekly data (system 3)
+
+`weekly_ppr.csv` — 84,909 player-weeks from nflverse via `nfl_data_py`, built
+by `step11_weekly_data.py`. Separate from `fantasy_top250.csv`; neither
+replaces the other.
+
+- Joined on identifiers only: `gsis_id` → `pfr_id` → `pid`. The name rule below
+  applies here too and is not relaxed because the data came from elsewhere.
+- **Validated by reconstruction.** Summing weekly PPR reproduces the season
+  `ppr` column from Pro-Football-Reference: median difference +0.00, mean
+  absolute 0.27, 93.3% within one point from 2010. Two independent sources
+  agreeing is what makes the join trustworthy. Re-run that check if the file is
+  ever rebuilt.
+- **`USABLE_FROM = 2010`.** Coverage is 12% in 2000 and 99% from 2010, because
+  early-2000s players have no `pfr_id` upstream. Ten seasons of the season file
+  are unusable for anything weekly.
+- **2025 is not published** by `nfl_data_py` 0.3.3 (404). Weekly runs
+  2000–2024. Verified against the current release, not assumed.
+- 12 `pfr_id`s are claimed by more than one `gsis_id` and at least one pairs two
+  different people. All are dropped, never tie-broken.
+- Credit nflverse alongside Pro-Football-Reference in anything built from this.
 
 ## The data
 
@@ -195,8 +227,13 @@ yet", not "no".
 - **User-supplied league settings.** The end goal. Everything above is a step
   toward it. Design for it now by keeping settings as arguments; build it
   later.
-- **Weekly / in-season modelling.** The dataset is season totals only.
 - **ESPN integration.** Manual board entry first.
+- **In-season updating.** Start/sit is built, but it replays completed seasons.
+  Predicting week N of a season currently in progress is a different system and
+  is not built. It also cannot be tested until a season finishes.
+- **Full-lineup optimisation.** Start/sit answers the flex slot only. Naming
+  all nine starters is a different decision shape and none of the current
+  scoring applies to it.
 
 ## Out of scope for v1
 
@@ -204,4 +241,4 @@ yet", not "no".
   cookies; revisit after the CLI works with manual entry)
 - Live draft tracking
 - Web app / anything others use
-- Weekly projections (this data is season totals only)
+- Predicting a season already in progress (see Deferred)

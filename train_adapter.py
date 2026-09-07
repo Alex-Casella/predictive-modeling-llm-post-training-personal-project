@@ -85,6 +85,73 @@ image = (
 )
 
 
+# NO GPU, NO TRAINING IMAGE. This is the credential check, and it has to be
+# cheap enough to run before every training job.
+#
+# The container's Hugging Face token does NOT come from the shell that launched
+# `modal run` -- it comes from the Modal secret above, set once and never
+# re-read. So `export HF_TOKEN=...` locally can be correct while the container
+# is still using a revoked token, and the failure surfaces on the FIRST LINE
+# THAT TOUCHES THE HUB, minutes into a job that is already billing an A10G.
+#
+# That happened. A stale secret 401'd at AutoTokenizer.from_pretrained after
+# the image had been built and the GPU allocated.
+#
+# The status code distinguishes the two causes, which need different fixes:
+#     401  the token is missing, malformed or revoked  -> update the secret
+#     403  the token is valid but the account has not accepted the Llama 3.1
+#          license, or the grant lapsed                -> accept it on HF
+@app.function(
+    image=modal.Image.debian_slim(python_version='3.11'),
+    timeout=120,
+    secrets=[modal.Secret.from_name('huggingface')],
+)
+def check_access():
+    import os
+    import urllib.error
+    import urllib.request
+
+    url = f'https://huggingface.co/{BASE}/resolve/main/config.json'
+    tok = os.environ.get('HF_TOKEN', '')
+    if not tok:
+        raise SystemExit(
+            'the Modal secret "huggingface" does not set HF_TOKEN.\n'
+            '  The key name matters -- huggingface_hub reads HF_TOKEN '
+            'specifically.\n'
+            '  Fix it at https://modal.com/secrets (not the CLI, so the token '
+            'stays out\n  of your shell history).')
+
+    # Length and prefix only. NEVER print the token, not even truncated -- a
+    # log is a place a credential cannot be un-leaked from.
+    print(f'  secret provides HF_TOKEN, {len(tok)} chars, '
+          f'starts "{tok[:3]}"')
+
+    req = urllib.request.Request(url, method='HEAD',
+                                 headers={'Authorization': f'Bearer {tok}'})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            print(f'  HTTP {r.status} -- the container can read {BASE}')
+            return 'ok'
+    except urllib.error.HTTPError as e:
+        if e.code == 401:
+            raise SystemExit(
+                f'HTTP 401 from the Hub. The token IN THE MODAL SECRET is '
+                f'rejected.\n'
+                f'  Your local $HF_TOKEN is irrelevant here -- the container '
+                f'never sees it.\n'
+                f'  Replace the secret at https://modal.com/secrets, key '
+                f'HF_TOKEN.')
+        if e.code == 403:
+            raise SystemExit(
+                f'HTTP 403 from the Hub. The token is VALID but this account '
+                f'may not\n  read {BASE}. Accept the license at\n'
+                f'  https://huggingface.co/{BASE} and check the request was '
+                f'granted.')
+        raise SystemExit(f'HTTP {e.code} from the Hub: {e.reason}')
+    except urllib.error.URLError as e:
+        raise SystemExit(f'could not reach the Hub at all: {e.reason}')
+
+
 @app.function(
     image=image,
     gpu='A10G',                       # 24 GB. QLoRA on 8B fits; H100 is waste.
@@ -259,6 +326,13 @@ def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
 @app.local_entrypoint()
 def main(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
          lr: float = 2e-4, tag: str = ''):
+    # Credentials before the GPU, always. A CPU container costs seconds; the
+    # same failure discovered inside train() costs the image build, the A10G
+    # allocation, and the walk to the coffee machine.
+    print('checking the container\'s Hugging Face access '
+          '(CPU container, no GPU) ...')
+    check_access.remote()
+
     train.remote(dataset=dataset, epochs=epochs, rank=rank, lr=lr, tag=tag)
     subdir = f'{dataset}{"_" + tag if tag else ""}'
     print('\nnext:')

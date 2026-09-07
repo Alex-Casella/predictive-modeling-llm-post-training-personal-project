@@ -66,12 +66,23 @@ die() { printf '\n\033[31mERROR: %s\033[0m\n' "$*" >&2; exit 1; }
 
 say "0/3  preflight -- everything that can fail cheaply, before the GPU bill"
 
-# Each of these has cost a run. HF_TOKEN in particular fails 40 minutes in,
-# at the conversion step, long after training has been paid for.
+# TWO SEPARATE CREDENTIAL PATHS, and this only checks one of them.
+#
+#   your Mac            $HF_TOKEN  ->  finish_adapter.sh, GGUF conversion
+#   Modal container     the secret named "huggingface"  ->  training
+#
+# The container never sees your shell. Exporting a fresh token here while the
+# Modal secret still holds a revoked one looks exactly like success until the
+# first line of train() that touches the Hub 401s, on a billing A10G. Checking
+# the far side needs a container, so train_adapter.py's entrypoint does it --
+# check_access() runs on CPU before train() is ever submitted.
 [ -n "${HF_TOKEN:-}" ] || die "HF_TOKEN is not set. The base model's config is
   gated, and finish_adapter.sh cannot convert without it. Get a Read token at
   https://huggingface.co/settings/tokens then:  export HF_TOKEN=hf_...
-  Type it in THIS TERMINAL. Never paste a token into a chat window."
+  Type it in THIS TERMINAL. Never paste a token into a chat window.
+
+  This is the LOCAL token only. The Modal container reads its own copy from
+  the secret named 'huggingface' -- https://modal.com/secrets"
 [ -x "$MODAL" ] || die "modal not found at $MODAL (set MODAL=/path/to/modal)"
 [ -x "$CONDA_PY" ] || die "python not found at $CONDA_PY (set CONDA_PY=...)"
 [ -f "$PROJECT/finish_adapter.sh" ] || die "finish_adapter.sh is missing"

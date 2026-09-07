@@ -33,6 +33,30 @@
 >
 > `./run_ablation.sh sit 1 e1` chains all of it, including the paired test.
 
+> **`HF_TOKEN` lives in two places and they drift apart.**
+>
+> | who needs it | where it comes from | what it does |
+> |---|---|---|
+> | your Mac | `export HF_TOKEN=...` | `finish_adapter.sh`, GGUF conversion |
+> | the Modal container | the secret named `huggingface` | training |
+>
+> The container never reads your shell, so a fresh local export can sit
+> alongside a revoked secret and everything looks fine until `train()` hits the
+> Hub — on an allocated A10G. `train_adapter.py` now runs `check_access()` on a
+> CPU container first, and the status code names the fix:
+>
+> - **401** — the secret's token is rejected. Replace it at
+>   <https://modal.com/secrets> (the web UI, so it misses your shell history).
+> - **403** — the token is valid but the account cannot read the gated repo.
+>   Re-accept the Llama 3.1 license.
+>
+> To test the local half without leaking anything:
+>
+> ```bash
+> curl -sI -H "Authorization: Bearer $HF_TOKEN" \
+>   https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct/resolve/main/config.json | head -1
+> ```
+
 `PROJECT_CONTEXT.md` §11e stage 5. Everything here runs on your Mac.
 
 `train_adapter.py` writes a **PEFT/safetensors** adapter. Ollama's `ADAPTER`

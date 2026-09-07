@@ -29,8 +29,9 @@ BEFORE THE FIRST RUN
     2. Accept the Llama 3.1 license on Hugging Face -- the weights are gated.
        https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct
     3. modal secret create huggingface HF_TOKEN=hf_...
-    4. modal run train_adapter.py::train
-    5. modal volume get fantasy-lora /adapter ./adapter
+    4. modal run train_adapter.py --dataset draft
+       modal run train_adapter.py --dataset sit
+    5. ./finish_adapter.sh fantasy-draft draft
 
 Data source: Pro-Football-Reference. See ATTRIBUTION.md.
 """
@@ -39,6 +40,23 @@ import modal
 BASE = 'meta-llama/Llama-3.1-8B-Instruct'
 OLLAMA_BASE = 'llama3.1:8b'          # the SAME base, as Ollama names it
 ADAPTER_DIR = '/adapter'
+
+# TWO TASKS, ONE SCRIPT. The draft agent and the start/sit agent differ only in
+# which pair of jsonl files they read and where the adapter lands. Copying this
+# file for the second task would fork the hyperparameters, and then a difference
+# in a result could be the task or could be a drifted learning rate -- with no
+# way to tell which. One script, one set of defaults, one variable.
+#
+# Each writes into its OWN subdirectory of the volume, so the two adapters
+# coexist and can be downloaded independently.
+DATASETS = {
+    'draft': dict(train='sft_train.jsonl', val='sft_val.jsonl',
+                  seasons='train 2007-2019, val 2020-2022 '
+                          '(test 2023-2025 never seen)'),
+    'sit':   dict(train='sit_train.jsonl', val='sit_val.jsonl',
+                  seasons='train 2011-2020, val 2021-2022 '
+                          '(test 2023-2024 never seen)'),
+}
 
 app = modal.App('fantasy-draft-lora')
 volume = modal.Volume.from_name('fantasy-lora', create_if_missing=True)
@@ -59,6 +77,8 @@ image = (
     # than mounting a volume.
     .add_local_file('sft_train.jsonl', '/data/sft_train.jsonl')
     .add_local_file('sft_val.jsonl', '/data/sft_val.jsonl')
+    .add_local_file('sit_train.jsonl', '/data/sit_train.jsonl')
+    .add_local_file('sit_val.jsonl', '/data/sit_val.jsonl')
 )
 
 
@@ -69,9 +89,12 @@ image = (
     volumes={ADAPTER_DIR: volume},
     secrets=[modal.Secret.from_name('huggingface')],
 )
-def train(epochs: float = 2.0, rank: int = 16, lr: float = 2e-4):
+def train(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
+          lr: float = 2e-4):
     import inspect
     import json
+    import os
+
     import torch
     from datasets import Dataset
     from peft import LoraConfig
@@ -106,8 +129,16 @@ def train(epochs: float = 2.0, rank: int = 16, lr: float = 2e-4):
         # outcome. Nothing but the conversation reaches the trainer.
         return Dataset.from_list([{'messages': r['messages']} for r in rows])
 
-    train_ds, val_ds = load('/data/sft_train.jsonl'), load('/data/sft_val.jsonl')
-    print(f'train {len(train_ds)}  val {len(val_ds)}')
+    if dataset not in DATASETS:
+        raise SystemExit(f'--dataset must be one of {sorted(DATASETS)}')
+    spec = DATASETS[dataset]
+    out_dir = f'{ADAPTER_DIR}/{dataset}'
+    os.makedirs(out_dir, exist_ok=True)
+
+    train_ds = load(f'/data/{spec["train"]}')
+    val_ds = load(f'/data/{spec["val"]}')
+    print(f'dataset={dataset}  train {len(train_ds)}  val {len(val_ds)}')
+    print(f'writing to {out_dir}')
 
     tok = AutoTokenizer.from_pretrained(BASE)
     if tok.pad_token is None:
@@ -183,34 +214,35 @@ def train(epochs: float = 2.0, rank: int = 16, lr: float = 2e-4):
     trainer = SFTTrainer(**accepted(SFTTrainer, trainer_kwargs))
     trainer.train()
 
-    trainer.model.save_pretrained(ADAPTER_DIR)
-    tok.save_pretrained(ADAPTER_DIR)
+    trainer.model.save_pretrained(out_dir)
+    tok.save_pretrained(out_dir)
 
     modelfile = (f'FROM {OLLAMA_BASE}\n'
                  f'ADAPTER ./adapter.gguf\n\n'
                  f'PARAMETER temperature 0\n')
-    with open(f'{ADAPTER_DIR}/Modelfile', 'w') as f:
+    with open(f'{out_dir}/Modelfile', 'w') as f:
         f.write(modelfile)
-    with open(f'{ADAPTER_DIR}/PROVENANCE.txt', 'w') as f:
-        f.write(f'base={BASE}\nollama_base={OLLAMA_BASE}\n'
+    with open(f'{out_dir}/PROVENANCE.txt', 'w') as f:
+        f.write(f'dataset={dataset}\nbase={BASE}\n'
+                f'ollama_base={OLLAMA_BASE}\n'
                 f'rank={rank} alpha={rank * 2} lr={lr} epochs={epochs}\n'
                 f'train={len(train_ds)} val={len(val_ds)}\n'
-                f'seasons: train 2007-2019, val 2020-2022 '
-                f'(test 2023-2025 never seen)\n')
+                f'seasons: {spec["seasons"]}\n')
     volume.commit()
-    print(f'adapter written to {ADAPTER_DIR}')
+    print(f'adapter written to {out_dir}')
     print(modelfile)
 
 
 @app.local_entrypoint()
-def main(epochs: float = 2.0, rank: int = 16, lr: float = 2e-4):
-    train.remote(epochs=epochs, rank=rank, lr=lr)
+def main(dataset: str = 'draft', epochs: float = 2.0, rank: int = 16,
+         lr: float = 2e-4):
+    train.remote(dataset=dataset, epochs=epochs, rank=rank, lr=lr)
     print('\nnext:')
     # The volume is MOUNTED at /adapter, so its own root IS that directory.
     # `modal volume get fantasy-lora /adapter ...` fails with "no such file or
     # directory" -- copy from `/`, the volume root.
-    print('  modal volume ls fantasy-lora        # confirm files exist')
-    print('  modal volume get fantasy-lora / ./adapter')
+    print(f'  modal volume ls fantasy-lora/{dataset}   # confirm files exist')
+    print(f'  ./finish_adapter.sh fantasy-{dataset} {dataset}')
     print('  # convert the PEFT adapter to GGUF (llama.cpp '
           'convert_lora_to_gguf.py), then:')
     print('  ollama create fantasy-draft -f adapter/Modelfile')

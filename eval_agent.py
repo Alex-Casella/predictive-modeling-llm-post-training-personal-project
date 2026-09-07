@@ -16,7 +16,7 @@ ranking. Lower is better.
     a fine-tuned model            ?
 
 The bar is recomputed on whatever slice is evaluated, never hardcoded -- see
-RANDOM_BAR below. A model that scores worse than the board is decoration and
+main() below. A model that scores worse than the board is decoration and
 should be reported as such, not tuned until it isn't.
 
 Also tracked, because a language model can fail in ways a sort cannot:
@@ -48,8 +48,18 @@ import urllib.request
 
 import pandas as pd
 
+# Defaults are the draft task, so every published draft number reproduces with
+# no flags. --test/--key point the same harness at the start/sit task, whose
+# examples were deliberately built in the same shape (K named candidates, a
+# hindsight ranking) precisely so this file would not need forking.
 TEST = 'sft_test.jsonl'
 KEY = 'draft_examples.jsonl'
+
+# Where the candidate block starts and ends in a prompt. The two tasks phrase
+# the question differently; the ROW format is identical, which is what lets one
+# parser serve both.
+BLOCK_MARKERS = [('Available players:', 'Which one'),
+                 ('Eligible players on your roster:', 'Which one')]
 OLLAMA = 'http://localhost:11434/api/chat'
 
 # The bar is RECOMPUTED on whatever slice is being evaluated, never hardcoded.
@@ -58,13 +68,16 @@ OLLAMA = 'http://localhost:11434/api/chat'
 # the test split against a bar measured on everything is the same apples-to-
 # oranges error CLAUDE.md rules out for the projection model ("report its score
 # next to the baseline score on the same held-out years"). Same rule here.
-RANDOM_BAR = 6.5        # (12 + 1) / 2, by construction
+# Chance is (K + 1) / 2 by construction, and K differs between the tasks -- 12
+# candidates when drafting, 6 at the flex slot. Derived from the loaded data in
+# main() rather than fixed here, so pointing the harness at a different task
+# cannot leave a stale reference number on screen.
 
 
-def load():
-    test = [json.loads(l) for l in open(TEST)]
+def load(test_path=TEST, key_path=KEY):
+    test = [json.loads(l) for l in open(test_path)]
     key = {}
-    for e in (json.loads(l) for l in open(KEY)):
+    for e in (json.loads(l) for l in open(key_path)):
         key[(e['season'], e['pick'])] = {
             r['player']: i + 1
             for i, r in enumerate(e['label']['ranking'])}
@@ -77,7 +90,14 @@ def load():
 def candidates(item):
     """Player names offered in the prompt, in the order shown."""
     user = item['messages'][1]['content']
-    block = user.split('Available players:')[1].split('Which one')[0]
+    for start, end in BLOCK_MARKERS:
+        if start in user:
+            block = user.split(start)[1].split(end)[0]
+            break
+    else:
+        raise SystemExit(
+            'cannot find the candidate block in this prompt. Add its opening '
+            f'line to BLOCK_MARKERS. Prompt starts:\n  {user[:120]}')
     return [re.match(r'\s*(.+?) \(', ln).group(1)
             for ln in block.strip().splitlines() if ln.strip()]
 
@@ -123,7 +143,11 @@ def score(items, chooser, label, progress=False):
         pick = chooser(it, names)
         valid = pick in it['ranking'] if pick else False
         rows.append(dict(
-            season=it['season'], round=it['round'], margin=it['margin'],
+            season=it['season'],
+            # 'round' in the draft task, 'week' in start/sit. One column so the
+            # detail CSVs and the by-stage breakdown work for either.
+            stage=it.get('round', it.get('week')),
+            margin=it['margin'],
             pick=pick, valid=valid,
             rank=it['ranking'][pick] if valid else None,
             best=bool(valid and it['ranking'][pick] == 1)))
@@ -131,7 +155,8 @@ def score(items, chooser, label, progress=False):
             per = (time.time() - t0) / i
             eta = per * (len(items) - i)
             rk = rows[-1]['rank']
-            print(f'  [{i:>3}/{len(items)}] {it["season"]} r{it["round"]:<2} '
+            print(f'  [{i:>3}/{len(items)}] {it["season"]} '
+                  f'r{rows[-1]["stage"]:<2} '
                   f'{(pick or "NO VALID PICK"):<24} '
                   f'rank {rk if rk else "-":>3}   '
                   f'{per:.1f}s/ex, ~{eta / 60:.1f} min left', flush=True)
@@ -150,9 +175,15 @@ def main():
     ap.add_argument('--limit', type=int, default=0,
                     help='evaluate only the first N examples (LLM runs are slow)')
     ap.add_argument('--seed', type=int, default=0)
+    ap.add_argument('--test', default=TEST,
+                    help=f'rendered test split (default {TEST}; '
+                         f'sit_test.jsonl for start/sit)')
+    ap.add_argument('--key', default=KEY,
+                    help=f'answer key with the hindsight ranking (default '
+                         f'{KEY}; start_sit_examples.jsonl for start/sit)')
     args = ap.parse_args()
 
-    items = load()
+    items = load(args.test, args.key)
     if args.limit:
         items = items[:args.limit]
     print(f'{len(items)} test examples, seasons '
@@ -173,6 +204,9 @@ def main():
                     f'  start it with `ollama serve`, and make sure '
                     f'`ollama list` shows "{_m}"')
 
+    # K differs between the tasks (12 candidates when drafting, 6 at flex), so
+    # chance is derived from the data rather than assumed.
+    k = len(candidates(items[0]))
     is_llm = args.model not in ('board', 'random')
     if is_llm:
         print(f'\nquerying {args.model} via Ollama -- first call also loads\n'
@@ -181,14 +215,14 @@ def main():
     # The bar, measured on exactly the examples just evaluated.
     bar, _ = score(items, lambda it, names: it['board_pick'], 'board')  # no LLM, instant
 
-    print(f'\n=== {args.model} on {TEST} ===')
+    print(f'\n=== {args.model} on {args.test} ===')
     print(f"  answered with a shortlisted player   {summary['validity']}%")
-    print(f"  mean rank of its pick (of 12)        {summary['mean_rank']}"
+    print(f"  mean rank of its pick (of {k})        {summary['mean_rank']}"
           f"   <- lower is better")
-    print(f"  picked the best of 12                {summary['best_pct']}%"
-          f"   (chance 8.3%)")
+    print(f"  picked the best of {k}                {summary['best_pct']}%"
+          f"   (chance {100 / k:.1f}%)")
     print(f'\n  reference points, on these same {len(items)} examples')
-    print(f'    random choice                      {RANDOM_BAR:.2f}')
+    print(f'    random choice                      {(k + 1) / 2:.2f}')
     print(f"    deterministic board (the bar)      {bar['mean_rank']:.2f}")
     if summary['mean_rank'] and args.model != 'board':
         d = bar['mean_rank'] - summary['mean_rank']
@@ -214,7 +248,9 @@ def main():
               .assign(best_pct=lambda d: (100 * d['best_pct']).round(1))
               .round(2).to_string())
 
-    out = f'eval_{args.model.replace(":", "_").replace("/", "_")}.csv'
+    tag = args.test.replace('_test.jsonl', '')
+    out = (f'eval_{tag}_'
+           f'{args.model.replace(":", "_").replace("/", "_")}.csv')
     detail.to_csv(out, index=False)
     print(f'\nwrote {out}')
 

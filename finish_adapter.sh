@@ -18,16 +18,24 @@
 #     SERVING.md), so GGUF is required rather than optional
 #
 # Usage:
-#   export HF_TOKEN=hf_...          # gated base model config
-#   ./finish_adapter.sh             # or: ./finish_adapter.sh my-model-name
+#   export HF_TOKEN=hf_...            # gated base model config
+#   ./finish_adapter.sh fantasy-draft draft
+#   ./finish_adapter.sh fantasy-sit   sit
+#
+# $1 is the Ollama model name to create, $2 the subdirectory train_adapter.py
+# wrote inside the volume (one per dataset). Passing no $2 reads the volume
+# ROOT, which is where the very first run landed before the script grew a
+# --dataset flag.
 set -euo pipefail
 
 MODEL_NAME="${1:-fantasy-draft}"
+SUBDIR="${2:-}"
+REMOTE="${SUBDIR:+$SUBDIR/}"
 PROJECT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LLAMA_CPP="${LLAMA_CPP:-$(dirname "$PROJECT")/llama.cpp}"
 CONDA_PY="${CONDA_PY:-/opt/miniconda3/envs/pllmpp/bin/python}"
 MODAL="${MODAL:-/opt/miniconda3/envs/pllmpp/bin/modal}"
-OUT="$PROJECT/adapter_real"
+OUT="$PROJECT/adapter_${SUBDIR:-real}"
 BASE_ID="meta-llama/Llama-3.1-8B-Instruct"
 OLLAMA_BASE="llama3.1:8b"
 
@@ -50,12 +58,12 @@ mkdir -p "$OUT"
 for f in "${FILES[@]}"; do
     # Explicit destination path per file. Passing just the directory makes
     # Modal write the download AS that directory name.
-    "$MODAL" volume get --force fantasy-lora "$f" "$OUT/$f" \
+    "$MODAL" volume get --force fantasy-lora "$REMOTE$f" "$OUT/$f" \
         || echo "  (skipped $f -- not in the volume)"
 done
 [ -s "$OUT/adapter_model.safetensors" ] \
     || die "adapter_model.safetensors did not download.
-  Check the volume:  $MODAL volume ls fantasy-lora
+  Check the volume:  $MODAL volume ls fantasy-lora/$SUBDIR
   An empty listing means training never reached volume.commit()."
 
 say "2/5  provenance -- confirm this is the run you think it is"
@@ -92,12 +100,21 @@ cat Modelfile
 ollama create "$MODEL_NAME" -f Modelfile
 ollama list | head -5
 
-say "5/5  scoring against the bar -- all 450 held-out picks"
-echo "  the bar is 5.80 (un-tuned llama3.1:8b), NOT 6.00 (the board)."
-echo "  landing between them means post-training made the model worse."
-echo "  this takes roughly 75 minutes. Ctrl+C and add --limit 30 for a smoke test."
+say "5/5  scoring against the bar"
 cd "$PROJECT"
-"$CONDA_PY" eval_agent.py --model "$MODEL_NAME"
+if [ "$SUBDIR" = "sit" ]; then
+    echo "  278 held-out start/sit decisions, seasons 2023-2024."
+    echo "  the bar is 2.92 (start the best season average) out of 6."
+    echo "  also score llama3.1:8b the same way before believing any gain."
+    "$CONDA_PY" eval_agent.py --model "$MODEL_NAME" \
+        --test sit_test.jsonl --key start_sit_examples.jsonl
+else
+    echo "  450 held-out picks. The bar is 5.80 (un-tuned llama3.1:8b),"
+    echo "  NOT 6.00 (the board) -- landing between them means post-training"
+    echo "  made the model worse. Roughly 75 minutes; Ctrl+C and add"
+    echo "  --limit 30 for a smoke test."
+    "$CONDA_PY" eval_agent.py --model "$MODEL_NAME"
+fi
 
 say "done -- record the result"
 echo "  CLAUDE.md: commit after every verified result, score in the message,"

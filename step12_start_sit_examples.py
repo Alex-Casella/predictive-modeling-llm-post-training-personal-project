@@ -172,6 +172,12 @@ def build(wk, seasons, names):
 
                 examples.append(dict(
                     season=int(n), week=int(week), seat=int(seat),
+                    # eval_agent.py joins its answer key on (season, pick).
+                    # A decision is identified by week and seat; packing them
+                    # into one integer keeps that join a single column, so it
+                    # cannot half-match. Defined here and imported by step13 --
+                    # two definitions of this would silently mislabel.
+                    pick=int(week) * 100 + int(seat),
                     situation=dict(
                         slot='FLEX',
                         candidates=[

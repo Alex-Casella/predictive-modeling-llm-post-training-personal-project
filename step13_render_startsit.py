@@ -119,11 +119,7 @@ def main():
             continue
         out[split].append(dict(
             season=e['season'], week=e['week'], seat=e['seat'],
-            # eval_agent.py joins its answer key on (season, pick). Reusing
-            # that harness means giving it a `pick` -- here a decision is
-            # identified by week and seat, packed into one integer so the join
-            # stays a single column and cannot half-match.
-            pick=e['week'] * 100 + e['seat'],
+            pick=e['pick'],          # packed in step12, never recomputed
             margin=e['margin'],
             board_rank=e['baseline_rank'],
             board_pick=e['baseline_pick'],

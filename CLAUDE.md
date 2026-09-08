@@ -135,11 +135,24 @@ good. So every design choice here exists to make the question answerable:
 two results on the same base model through the same harness is a finding — and
 they already disagree, which is the most useful thing either of them produced:
 
-    draft       tabular 6.00 of 12   un-tuned Llama 5.80   LLM WINS untrained
-    sit/start   tabular 2.92 of 6    un-tuned Llama 3.02   LLM LOSES untrained
+    draft       tabular 6.00 of 12   un-tuned Llama 5.80   fine-tuned 5.41
+    sit/start   tabular 2.92 of 6    un-tuned Llama 3.02   fine-tuned 2.99
 
 So "can an LLM beat the spreadsheet" has no single answer. It is task-dependent,
 and that was measured rather than assumed.
+
+**On draft the fine-tune beats the board and it replicates.** −0.593 (p =
+0.0041 / 0.0040 / 0.0068) and −0.587 on a second independently trained adapter
+(p = 0.0066 / 0.0070 / 0.0112). Both CIs sit entirely below zero. This is the
+only adequately powered comparison in the project and the only one that
+replicates.
+
+**On start/sit nothing is distinguishable from anything** — five paired
+comparisons, five intervals containing zero. Before reading that as a fact
+about the task, note that the board's own score swings **0.43** between the
+test seasons while the effects being chased were 0.014–0.126. The bar is
+noisier than the signal, so the sit results are a statement about the test set
+at least as much as about language models.
 
 ### The rules that follow from this
 
@@ -149,13 +162,27 @@ and that was measured rather than assumed.
 2. **Fix the bar before the result exists**, never after.
 3. **One training script, one eval harness.** Forking either lets a drifted
    hyperparameter masquerade as a task difference.
-4. **Report the negative and the underpowered.** The draft gap has p = 0.047 /
-   0.054 / 0.090 across three tests and needs 895 examples for 80% power
-   against the 450 available. "Suggestive, underpowered" is the honest claim
-   and it is the one to make.
-5. **A defect in the model is a result, not a nuisance.** The start/sit adapter
-   never emits its stop token and enumerates all six candidates. That is
-   recorded, not hidden behind a token cap.
+4. **Report the negative and the underpowered.** Draft fine-tune vs un-tuned
+   base is p = 0.047 / 0.054 / 0.090 and needs 895 against 450 — still
+   "suggestive, underpowered", and still the honest claim for *that* pairing.
+   Draft vs the board is a different question and is significant; do not let
+   one stand in for the other.
+5. **Run every pairing, not just the obvious one.** Draft-vs-board went
+   unmeasured for days because a `round`→`stage` column rename left the two
+   draft CSVs on the old side of a guard in `paired_test.py`. Nothing failed;
+   the comparison was simply never available. It turned out to be the
+   strongest result in the project. **A guard that hides a result is as costly
+   as one that lets a wrong result through.**
+6. **A defect in the model is a result, not a nuisance.** The start/sit adapter
+   emitted no stop token and enumerated all six candidates on 96% of answers.
+   Recorded rather than hidden behind a token cap — and then fixed:
+   `tok.pad_token = tok.eos_token` masked the real EOS out of the loss.
+   `--pad-token auto` took runaway to 0% and moved decisions by 0.014 on sit
+   and 0.007 on draft. **Use `--pad-token auto` on every future run.**
+7. **Check what the bar itself does before trusting a gap.** Season-to-season
+   swing in the board's own score is 0.11 on draft and 0.43 on sit. An effect
+   smaller than its bar's variation is not measurable no matter how the test
+   is run.
 
 ## Success metric
 

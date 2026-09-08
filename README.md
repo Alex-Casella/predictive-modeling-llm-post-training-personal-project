@@ -10,15 +10,28 @@ The two assistants are two fine-tuned adapters over the same base model,
 trained by one script and scored by one harness, which is what makes them
 comparable.
 
-**Status:** model built and backtested; draft board and CLI running; draft agent
-fine-tuned and scored (5.41 mean rank of 12 vs 5.80 un-tuned, 6.00 board);
-start/sit adapter trained and scored — **3.12 of 6 against a 2.92 rule and a
-3.02 un-tuned base, so it beat neither**, though the gap to the base is
-indistinguishable from noise (p = 0.40 / 0.53 / 0.58). 83% of its answers never
-stopped.
-Best result **69.1%** set overlap @250 against a **68.8%** baseline and a
-**76.8%** structural ceiling. See `RESULTS.md` for every number and the
-scripts that produce them.
+**Status**
+
+- **Draft agent beats the sort it was handed, and it replicates.** 5.41 mean
+  rank of 12 against a 6.00 board — p = 0.0041 / 0.0040 / 0.0068 across three
+  paired tests, and −0.587 with p = 0.0066 / 0.0070 / 0.0112 on a second
+  independently trained adapter. The only adequately powered comparison here
+  and the only one that replicates. Against the *un-tuned* base (5.80) the same
+  model is suggestive but underpowered, p = 0.047 / 0.054 / 0.090.
+- **Start/sit is a clean set of nulls.** 2.99 of 6 against a 2.92 rule and a
+  3.02 un-tuned base. Five paired comparisons, five confidence intervals
+  containing zero — and the board's own score swings 0.43 across the test
+  seasons, so the bar is noisier than the effects being measured against it.
+- **Projection: 72.2% set overlap @250 on held-out 2016–2025**, against a 68.6%
+  carry-forward baseline on the same seasons and a 75.0% target. Reached by
+  widening the candidate pool with NFL draft position (rookies) and stale
+  returners. `@25` and `@50` have not moved on any experiment.
+- **The stop-token defect is fixed.** The start/sit adapter used to run to the
+  token cap on 96% of answers; `--pad-token auto` takes that to 0% and changes
+  decisions by 0.014.
+
+See `RESULTS.md` for every number and the script that produces it, including
+the retractions.
 
 `CLAUDE.md` holds the working rules and constraints. This file is the history —
 what was done, what was found, and what is still open.
@@ -63,13 +76,20 @@ answerable:
 Two tasks exist so the conclusion is not one anecdote. They already disagree,
 which is the most useful thing either produced:
 
-| | tabular layer | un-tuned Llama | |
-|---|---|---|---|
-| draft | 6.00 of 12 | **5.80** | LLM wins, untrained |
-| start/sit | **2.92** of 6 | 3.02 | LLM loses, untrained |
+| | tabular layer | un-tuned Llama | fine-tuned | vs the sort |
+|---|---|---|---|---|
+| draft | 6.00 of 12 | 5.80 | **5.41** | **beats it, p = 0.004, replicated** |
+| start/sit | **2.92** of 6 | 3.02 | 2.99 | no measurable difference |
 
 "Can a language model beat the spreadsheet?" turns out to be task-dependent —
 measured on the same base model through the same harness, rather than assumed.
+
+One caveat that matters more than it looks. The board's own score swings 0.11
+between the draft test seasons and **0.43** between the start/sit ones, while
+the sit effects being chased were 0.014–0.126. On draft the effect is five
+times its season noise; on sit it is a fraction of it. "Significant on one task,
+five nulls on the other" is at least as much a fact about the two test sets as
+about language models, and saying otherwise would be overclaiming.
 
 ---
 

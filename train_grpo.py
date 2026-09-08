@@ -69,18 +69,26 @@ volume = modal.Volume.from_name('fantasy-lora', create_if_missing=True)
 image = (
     modal.Image.debian_slim(python_version='3.11')
     .pip_install(
+        # PINNED: CUDA-sensitive, and these worked for the SFT runs.
         'torch==2.5.1',
-        'transformers==4.46.3',
-        'peft==0.13.2',
-        # GRPOTrainer needs a newer TRL than the SFT runs used. Pinned, and
-        # every kwarg is filtered against the real signature below, because
-        # TRL renames arguments between releases -- that is what the same
-        # filter in train_adapter.py exists for.
-        'trl==0.12.1',
-        'datasets==3.1.0',
         'bitsandbytes==0.44.1',
-        'accelerate==1.1.1',
         'pandas==2.2.3',
+        # UNPINNED ON PURPOSE. The first attempt pinned trl==0.12.1 to match
+        # train_adapter.py and died on
+        #     ImportError: cannot import name 'GRPOConfig' from 'trl'
+        # because GRPO postdates that release. Rather than guess which version
+        # introduced it, take the current one and let pip resolve transformers
+        # and accelerate to match. The versions actually installed are printed
+        # and written to PROVENANCE, so the run is still reproducible after
+        # the fact -- which is the property that matters, not the pin.
+        #
+        # Safe to float here: this image is separate from train_adapter.py's,
+        # so nothing that produced 5.41 / 5.42 / 5.25 can be affected.
+        'trl',
+        'transformers',
+        'peft',
+        'accelerate',
+        'datasets',
     )
     .add_local_file('sft_train.jsonl', '/data/sft_train.jsonl')
     .add_local_file('draft_examples.jsonl', '/data/draft_examples.jsonl')
@@ -106,10 +114,26 @@ def train(limit: int = 600, epochs: float = 1.0, generations: int = 8,
     import sys
 
     import torch
+    import transformers
+    import trl
     from datasets import Dataset
     from peft import LoraConfig
     from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
-    from trl import GRPOConfig, GRPOTrainer
+
+    # Printed first so a failure below is diagnosable from the log alone. The
+    # versions float (see the image comment), so the log IS the record.
+    print(f'trl {trl.__version__}  transformers {transformers.__version__}  '
+          f'torch {torch.__version__}')
+    try:
+        from trl import GRPOConfig, GRPOTrainer
+    except ImportError as e:
+        have = sorted(n for n in dir(trl) if n.endswith('Trainer'))
+        raise SystemExit(
+            f'{e}\n\n  trl {trl.__version__} does not export GRPO. Trainers it '
+            f'does have:\n    {", ".join(have)}\n'
+            f'  GRPO postdates the 0.12.x line this project used for SFT. If '
+            f'the current\n  release has dropped or renamed it, pick one from '
+            f'the list above rather than\n  guessing a version number.')
 
     sys.path.insert(0, '/data')
     from eval_agent import candidates, extract_pick     # noqa: E402
@@ -297,6 +321,9 @@ def train(limit: int = 600, epochs: float = 1.0, generations: int = 8,
                 f'PARAMETER temperature 0\n')
     with open(f'{out_dir}/PROVENANCE.txt', 'w') as f:
         f.write(f'method=GRPO\ndataset=draft\ntag={tag}\n'
+                f'trl={trl.__version__} '
+                f'transformers={transformers.__version__} '
+                f'torch={torch.__version__}\n'
                 f'run_id={datetime.datetime.utcnow():%Y-%m-%dT%H:%M:%SZ}\n'
                 f'base={BASE}\nollama_base={OLLAMA_BASE}\n'
                 f'rank={rank} alpha={rank * 2} lr={lr} epochs={epochs} '

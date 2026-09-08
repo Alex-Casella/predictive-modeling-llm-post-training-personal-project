@@ -1,0 +1,241 @@
+method,target,tier,overlap
+A_carry_forward,2016,25,48.0
+A_carry_forward,2016,50,56.0
+A_carry_forward,2016,100,59.0
+A_carry_forward,2016,150,63.333333333333336
+A_carry_forward,2016,200,65.0
+A_carry_forward,2016,250,66.4
+A_carry_forward,2017,25,32.0
+A_carry_forward,2017,50,62.0
+A_carry_forward,2017,100,62.0
+A_carry_forward,2017,150,64.0
+A_carry_forward,2017,200,64.5
+A_carry_forward,2017,250,66.8
+A_carry_forward,2018,25,40.0
+A_carry_forward,2018,50,50.0
+A_carry_forward,2018,100,54.0
+A_carry_forward,2018,150,60.0
+A_carry_forward,2018,200,64.5
+A_carry_forward,2018,250,65.2
+A_carry_forward,2019,25,44.0
+A_carry_forward,2019,50,46.0
+A_carry_forward,2019,100,64.0
+A_carry_forward,2019,150,68.0
+A_carry_forward,2019,200,69.5
+A_carry_forward,2019,250,68.0
+A_carry_forward,2020,25,48.0
+A_carry_forward,2020,50,52.0
+A_carry_forward,2020,100,62.0
+A_carry_forward,2020,150,64.66666666666667
+A_carry_forward,2020,200,67.5
+A_carry_forward,2020,250,70.8
+A_carry_forward,2021,25,48.0
+A_carry_forward,2021,50,50.0
+A_carry_forward,2021,100,62.0
+A_carry_forward,2021,150,64.66666666666667
+A_carry_forward,2021,200,67.0
+A_carry_forward,2021,250,68.0
+A_carry_forward,2022,25,48.0
+A_carry_forward,2022,50,54.0
+A_carry_forward,2022,100,68.0
+A_carry_forward,2022,150,66.66666666666667
+A_carry_forward,2022,200,70.5
+A_carry_forward,2022,250,69.2
+A_carry_forward,2023,25,36.0
+A_carry_forward,2023,50,44.0
+A_carry_forward,2023,100,60.0
+A_carry_forward,2023,150,65.33333333333333
+A_carry_forward,2023,200,69.0
+A_carry_forward,2023,250,68.8
+A_carry_forward,2024,25,28.0
+A_carry_forward,2024,50,42.0
+A_carry_forward,2024,100,60.0
+A_carry_forward,2024,150,66.66666666666667
+A_carry_forward,2024,200,70.0
+A_carry_forward,2024,250,71.2
+A_carry_forward,2025,25,48.0
+A_carry_forward,2025,50,52.0
+A_carry_forward,2025,100,63.0
+A_carry_forward,2025,150,66.0
+A_carry_forward,2025,200,69.0
+A_carry_forward,2025,250,71.2
+returners only (d=0.5),2016,25,48.0
+returners only (d=0.5),2016,50,56.0
+returners only (d=0.5),2016,100,60.0
+returners only (d=0.5),2016,150,63.333333333333336
+returners only (d=0.5),2016,200,65.0
+returners only (d=0.5),2016,250,67.6
+returners only (d=0.5),2017,25,32.0
+returners only (d=0.5),2017,50,62.0
+returners only (d=0.5),2017,100,62.0
+returners only (d=0.5),2017,150,64.0
+returners only (d=0.5),2017,200,64.0
+returners only (d=0.5),2017,250,68.0
+returners only (d=0.5),2018,25,40.0
+returners only (d=0.5),2018,50,50.0
+returners only (d=0.5),2018,100,56.0
+returners only (d=0.5),2018,150,61.333333333333336
+returners only (d=0.5),2018,200,64.0
+returners only (d=0.5),2018,250,66.0
+returners only (d=0.5),2019,25,44.0
+returners only (d=0.5),2019,50,46.0
+returners only (d=0.5),2019,100,65.0
+returners only (d=0.5),2019,150,68.66666666666667
+returners only (d=0.5),2019,200,70.0
+returners only (d=0.5),2019,250,67.6
+returners only (d=0.5),2020,25,48.0
+returners only (d=0.5),2020,50,52.0
+returners only (d=0.5),2020,100,63.0
+returners only (d=0.5),2020,150,64.0
+returners only (d=0.5),2020,200,68.5
+returners only (d=0.5),2020,250,70.8
+returners only (d=0.5),2021,25,48.0
+returners only (d=0.5),2021,50,50.0
+returners only (d=0.5),2021,100,62.0
+returners only (d=0.5),2021,150,64.0
+returners only (d=0.5),2021,200,68.0
+returners only (d=0.5),2021,250,67.6
+returners only (d=0.5),2022,25,48.0
+returners only (d=0.5),2022,50,54.0
+returners only (d=0.5),2022,100,68.0
+returners only (d=0.5),2022,150,66.66666666666667
+returners only (d=0.5),2022,200,70.0
+returners only (d=0.5),2022,250,71.2
+returners only (d=0.5),2023,25,36.0
+returners only (d=0.5),2023,50,44.0
+returners only (d=0.5),2023,100,60.0
+returners only (d=0.5),2023,150,65.33333333333333
+returners only (d=0.5),2023,200,69.0
+returners only (d=0.5),2023,250,66.8
+returners only (d=0.5),2024,25,28.0
+returners only (d=0.5),2024,50,42.0
+returners only (d=0.5),2024,100,60.0
+returners only (d=0.5),2024,150,66.0
+returners only (d=0.5),2024,200,69.5
+returners only (d=0.5),2024,250,70.8
+returners only (d=0.5),2025,25,48.0
+returners only (d=0.5),2025,50,52.0
+returners only (d=0.5),2025,100,64.0
+returners only (d=0.5),2025,150,65.33333333333333
+returners only (d=0.5),2025,200,69.0
+returners only (d=0.5),2025,250,70.8
+rookies only (boost=1.5),2016,25,48.0
+rookies only (boost=1.5),2016,50,56.0
+rookies only (boost=1.5),2016,100,61.0
+rookies only (boost=1.5),2016,150,63.333333333333336
+rookies only (boost=1.5),2016,200,66.0
+rookies only (boost=1.5),2016,250,69.6
+rookies only (boost=1.5),2017,25,32.0
+rookies only (boost=1.5),2017,50,62.0
+rookies only (boost=1.5),2017,100,63.0
+rookies only (boost=1.5),2017,150,65.33333333333333
+rookies only (boost=1.5),2017,200,66.0
+rookies only (boost=1.5),2017,250,69.2
+rookies only (boost=1.5),2018,25,40.0
+rookies only (boost=1.5),2018,50,50.0
+rookies only (boost=1.5),2018,100,58.0
+rookies only (boost=1.5),2018,150,64.0
+rookies only (boost=1.5),2018,200,67.5
+rookies only (boost=1.5),2018,250,69.2
+rookies only (boost=1.5),2019,25,44.0
+rookies only (boost=1.5),2019,50,46.0
+rookies only (boost=1.5),2019,100,64.0
+rookies only (boost=1.5),2019,150,69.33333333333333
+rookies only (boost=1.5),2019,200,70.5
+rookies only (boost=1.5),2019,250,70.4
+rookies only (boost=1.5),2020,25,48.0
+rookies only (boost=1.5),2020,50,52.0
+rookies only (boost=1.5),2020,100,62.0
+rookies only (boost=1.5),2020,150,66.66666666666667
+rookies only (boost=1.5),2020,200,72.0
+rookies only (boost=1.5),2020,250,74.8
+rookies only (boost=1.5),2021,25,48.0
+rookies only (boost=1.5),2021,50,50.0
+rookies only (boost=1.5),2021,100,64.0
+rookies only (boost=1.5),2021,150,64.0
+rookies only (boost=1.5),2021,200,69.5
+rookies only (boost=1.5),2021,250,71.2
+rookies only (boost=1.5),2022,25,48.0
+rookies only (boost=1.5),2022,50,54.0
+rookies only (boost=1.5),2022,100,70.0
+rookies only (boost=1.5),2022,150,68.66666666666667
+rookies only (boost=1.5),2022,200,72.5
+rookies only (boost=1.5),2022,250,73.2
+rookies only (boost=1.5),2023,25,36.0
+rookies only (boost=1.5),2023,50,44.0
+rookies only (boost=1.5),2023,100,61.0
+rookies only (boost=1.5),2023,150,70.0
+rookies only (boost=1.5),2023,200,71.0
+rookies only (boost=1.5),2023,250,72.8
+rookies only (boost=1.5),2024,25,28.0
+rookies only (boost=1.5),2024,50,42.0
+rookies only (boost=1.5),2024,100,64.0
+rookies only (boost=1.5),2024,150,71.33333333333333
+rookies only (boost=1.5),2024,200,74.0
+rookies only (boost=1.5),2024,250,74.0
+rookies only (boost=1.5),2025,25,48.0
+rookies only (boost=1.5),2025,50,52.0
+rookies only (boost=1.5),2025,100,66.0
+rookies only (boost=1.5),2025,150,68.0
+rookies only (boost=1.5),2025,200,71.0
+rookies only (boost=1.5),2025,250,74.4
+"BOTH (d=0.5, boost=1.5)",2016,25,48.0
+"BOTH (d=0.5, boost=1.5)",2016,50,56.0
+"BOTH (d=0.5, boost=1.5)",2016,100,61.0
+"BOTH (d=0.5, boost=1.5)",2016,150,63.333333333333336
+"BOTH (d=0.5, boost=1.5)",2016,200,66.5
+"BOTH (d=0.5, boost=1.5)",2016,250,70.4
+"BOTH (d=0.5, boost=1.5)",2017,25,32.0
+"BOTH (d=0.5, boost=1.5)",2017,50,62.0
+"BOTH (d=0.5, boost=1.5)",2017,100,63.0
+"BOTH (d=0.5, boost=1.5)",2017,150,65.33333333333333
+"BOTH (d=0.5, boost=1.5)",2017,200,66.5
+"BOTH (d=0.5, boost=1.5)",2017,250,70.0
+"BOTH (d=0.5, boost=1.5)",2018,25,40.0
+"BOTH (d=0.5, boost=1.5)",2018,50,50.0
+"BOTH (d=0.5, boost=1.5)",2018,100,59.0
+"BOTH (d=0.5, boost=1.5)",2018,150,65.33333333333333
+"BOTH (d=0.5, boost=1.5)",2018,200,68.0
+"BOTH (d=0.5, boost=1.5)",2018,250,68.4
+"BOTH (d=0.5, boost=1.5)",2019,25,44.0
+"BOTH (d=0.5, boost=1.5)",2019,50,46.0
+"BOTH (d=0.5, boost=1.5)",2019,100,65.0
+"BOTH (d=0.5, boost=1.5)",2019,150,69.33333333333333
+"BOTH (d=0.5, boost=1.5)",2019,200,71.0
+"BOTH (d=0.5, boost=1.5)",2019,250,70.8
+"BOTH (d=0.5, boost=1.5)",2020,25,48.0
+"BOTH (d=0.5, boost=1.5)",2020,50,52.0
+"BOTH (d=0.5, boost=1.5)",2020,100,63.0
+"BOTH (d=0.5, boost=1.5)",2020,150,67.33333333333333
+"BOTH (d=0.5, boost=1.5)",2020,200,71.5
+"BOTH (d=0.5, boost=1.5)",2020,250,74.8
+"BOTH (d=0.5, boost=1.5)",2021,25,48.0
+"BOTH (d=0.5, boost=1.5)",2021,50,50.0
+"BOTH (d=0.5, boost=1.5)",2021,100,64.0
+"BOTH (d=0.5, boost=1.5)",2021,150,64.0
+"BOTH (d=0.5, boost=1.5)",2021,200,70.5
+"BOTH (d=0.5, boost=1.5)",2021,250,72.0
+"BOTH (d=0.5, boost=1.5)",2022,25,48.0
+"BOTH (d=0.5, boost=1.5)",2022,50,54.0
+"BOTH (d=0.5, boost=1.5)",2022,100,70.0
+"BOTH (d=0.5, boost=1.5)",2022,150,68.66666666666667
+"BOTH (d=0.5, boost=1.5)",2022,200,72.0
+"BOTH (d=0.5, boost=1.5)",2022,250,74.8
+"BOTH (d=0.5, boost=1.5)",2023,25,36.0
+"BOTH (d=0.5, boost=1.5)",2023,50,44.0
+"BOTH (d=0.5, boost=1.5)",2023,100,61.0
+"BOTH (d=0.5, boost=1.5)",2023,150,70.0
+"BOTH (d=0.5, boost=1.5)",2023,200,71.0
+"BOTH (d=0.5, boost=1.5)",2023,250,72.4
+"BOTH (d=0.5, boost=1.5)",2024,25,28.0
+"BOTH (d=0.5, boost=1.5)",2024,50,42.0
+"BOTH (d=0.5, boost=1.5)",2024,100,64.0
+"BOTH (d=0.5, boost=1.5)",2024,150,71.33333333333333
+"BOTH (d=0.5, boost=1.5)",2024,200,74.0
+"BOTH (d=0.5, boost=1.5)",2024,250,74.0
+"BOTH (d=0.5, boost=1.5)",2025,25,48.0
+"BOTH (d=0.5, boost=1.5)",2025,50,52.0
+"BOTH (d=0.5, boost=1.5)",2025,100,66.0
+"BOTH (d=0.5, boost=1.5)",2025,150,68.66666666666667
+"BOTH (d=0.5, boost=1.5)",2025,200,71.5
+"BOTH (d=0.5, boost=1.5)",2025,250,74.4

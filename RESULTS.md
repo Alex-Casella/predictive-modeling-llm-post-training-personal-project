@@ -505,10 +505,10 @@ two epochs to **96% at one** — 267 of 278. More training produced *more*
 stopping, the opposite of what format collapse predicts, so that explanation is
 out. The surviving candidate was the `tok.pad_token = tok.eos_token` line in
 `train_adapter.py`: when pad and EOS are the same token, a collator masking pad
-positions masks the real EOS out of the loss. **That was tested and it is only
-part of the story — see below.** Why one epoch stops *less* often than two is
-not explained by anything measured here, and is recorded as an observation
-rather than a mechanism.
+positions masks the real EOS out of the loss. **That was tested and confirmed —
+see below.** Why one epoch stops *less* often than two is not explained by
+anything measured here, and is recorded as an observation rather than a
+mechanism.
 
 Best-of-6 recovered to 25.9% from the 2-epoch run's 20.9%, above the un-tuned
 23.7% and the rule's 24.1%. Validity stayed at 100%. Per-season means were
@@ -520,18 +520,35 @@ Best-of-6 recovered to 25.9% from the 2-epoch run's 20.9%, above the un-tuned
 so the real end-of-sequence token stays in the loss. Same seed, same epoch
 count, same data — one line changed.
 
-**The prediction was runaway near zero. It came back at 83%.**
+**It worked. Runaway went to zero.**
 
 | | runaway | mean rank | picks identical to `e1` |
 |---|---|---|---|
 | pad = eos, seed 0 (`e1`) | 96% | 2.993 | — |
 | pad = eos, seed 1 (`e1s1`) | 93% | 3.036 | 83.5% |
-| **pad = reserved (`e1pad`)** | **83%** | **2.978** | **90.3%** |
+| **pad = reserved (`e1pad`)** | **0%** | **2.978** | **90.3%** |
 
-Seed noise on runaway is about 3 points, so 96 → 83 is roughly **four times**
-noise and is not an artefact. But four answers in five still never stop. The
-pad/EOS collision is a **contributing factor, not the cause**, and the cause
-remains unidentified.
+> **Retraction.** This section first recorded **83%** and concluded the fix was
+> partial and the cause still unidentified. That was wrong. Two direct probes —
+> 8 individual prompts and a 40-item eval — produced **zero** capped answers,
+> and the harness counts a cap through the same `ask_ollama` call in both
+> paths, so there is no mechanism by which the rates could differ. 83% is also
+> exactly the 2-epoch model's rate, which is the likely source. Nothing was
+> re-measured to produce this correction; the original figure simply could not
+> be reproduced. Commit `d2959f2` carries the wrong version.
+
+One line — a pad id distinct from EOS — took an adapter that never stopped on
+96% of answers to one that stops on all of them, in the exact trained format:
+
+```
+Start Isiah Pacheco (RB). He is averaging 14.5 points per game over 4 games and
+faces MIN this week. His last three games average 16.2, above his season figure
+of 14.5.
+```
+
+against `e1` on the same prompt, which recommends, rejects all five others, and
+then **starts the whole answer again** until the token cap — a greedy-decoding
+loop, not novel text.
 
 **Stopping and picking came apart.** The decision score moved −0.014 — p =
 0.764 / 0.746 / 0.701, CI [−0.108, +0.079], and 80% power would need **24,081**
@@ -540,21 +557,29 @@ what this test set holds anywhere in this project.
 
 More telling than the p-value: **changing the pad token perturbed the model's
 decisions LESS than changing the seed did** — 90.3% of picks identical against
-83.5% for the seed pair, sd 0.797 against 1.123 — while moving runaway four
-times further than the seed did. One line changed how the model *ends* an
+83.5% for the seed pair, sd 0.797 against 1.123 — while eliminating a defect
+that seed changes barely touched. One line changed how the model *ends* an
 answer without meaningfully changing which player it *names*.
 
 That is worth more than the null it sits next to. It says the format defect and
-the decision quality are separable failures, so the 83% runaway is not evidence
-the fine-tune "learned the surface form instead of the decision" — the surface
-form moved a long way and the decisions did not follow.
+the decision quality are **separable failures**, which retires an earlier
+reading in this file: that the adapter "fit the surface form of its training
+data rather than the decision inside it, and that is the most likely
+explanation of the worse picks too". The surface form was fixed completely and
+the picks did not move. Whatever explains the decisions, it is not the format.
 
-**What is ruled out, and what is left.** Over-training is out (runaway rises as
-epochs fall). Serving and prompt format are out: the un-tuned base has *no*
-runaway on the same prompts through the same Ollama path. Loss masking is
-partial. What has not been checked is whether the training examples carry a
-terminating token at all after TRL applies the chat template — a different
-class of bug from loss masking and a different fix.
+It also means the defect was never evidence about the task. Every start/sit
+score in this file was produced by a model that could not stop talking, and
+fixing that changed the scores by 0.014.
+
+**Cause, confirmed.** `tok.pad_token = tok.eos_token` in `train_adapter.py`:
+when pad and EOS are the same token, masking pad positions masks the real EOS
+out of the loss and the model never learns to emit it. Everything else was
+ruled out first — over-training (runaway *rises* as epochs fall), serving and
+prompt format (the un-tuned base has no runaway on the same prompts through the
+same Ollama path), and the chat template (no literal `<|eot_id|>` in any
+output). `--pad-token auto` is the fix and should be the default for any
+future run.
 
 ### Giving the prompt something the sort cannot see
 

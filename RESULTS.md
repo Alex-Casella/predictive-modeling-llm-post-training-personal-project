@@ -347,6 +347,30 @@ significant on all three tests.** The language layer beats the sort it was
 handed, on held-out seasons, by 0.593 ranks of 12. Better on 204, worse on 152,
 identical on 94.
 
+**And it replicates.** `fantasy-draft-pad` is a second adapter trained from
+scratch on the same data at the same 1 epoch and seed, differing only in the
+pad token. It scores **5.42** and is tested against the same board:
+
+| | gap vs board | paired t / Wilcoxon / sign | 95% CI | n needed |
+|---|---|---|---|---|
+| `fantasy-draft` | **−0.593** | 0.0041 / 0.0040 / 0.0068 | [−0.997, −0.190] | 425 |
+| `fantasy-draft-pad` | **−0.587** | 0.0066 / 0.0070 / 0.0112 | [−1.008, −0.166] | 473 |
+
+Two separately trained adapters, two independent evaluation runs, the same
+conclusion at α = 0.05 on all three tests. Nothing else in this project
+replicates, and a replication is worth more than either result alone.
+
+The two adapters differ from each other by **+0.007**, p = 0.933 / 0.644 /
+0.545, CI [−0.148, +0.162] — so the pad-token change that eliminated the
+start/sit runaway does not touch draft decisions either. Third independent
+confirmation that the stop-token defect and the decision quality are separate
+systems.
+
+**An open question this run sharpened rather than settled.** The draft adapter
+was trained with the *same* `pad_token = eos_token` line and has never shown
+the runaway defect, on either version. Identical code, identical bug, fatal on
+one dataset and harmless on the other. Nothing measured here explains that.
+
 **Why it went unmeasured for days is the lesson.** `eval_agent.py`'s `round`
 column was renamed `stage` when the harness grew a second task. The two draft
 LLM runs predate that rename; every sit file postdates it. `paired_test.py`

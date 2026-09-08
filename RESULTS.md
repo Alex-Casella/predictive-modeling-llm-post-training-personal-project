@@ -326,6 +326,37 @@ Direction is consistent — the tuned model picked better on 195, worse on 162,
 identically on 93 — and so are the per-season and per-margin breakdowns. So
 "probably real, not established" is the claim the data supports.
 
+### But the comparison that actually answers §11g was never run
+
+The table above tests the fine-tune against the **un-tuned base**, which asks
+"did post-training help". §11g asks something else — *can the language layer
+beat the number it was handed?* — and that is the fine-tune against **the
+board**. Both CSVs had been sitting in the repo for days:
+
+| | | |
+|---|---|---|
+| board | **6.004** | the bar |
+| `fantasy-draft` | **5.411** | |
+| mean difference | **−0.593** | sd 4.366, se 0.206, 2.88 noise widths |
+| 95% CI | **[−0.997, −0.190]** | entirely below zero |
+| paired t / Wilcoxon / sign | **0.0041 / 0.0040 / 0.0068** | all three reject |
+| n for 80% power | **425** | against 450 available |
+
+**This is the only adequately powered comparison in the project, and it is
+significant on all three tests.** The language layer beats the sort it was
+handed, on held-out seasons, by 0.593 ranks of 12. Better on 204, worse on 152,
+identical on 94.
+
+**Why it went unmeasured for days is the lesson.** `eval_agent.py`'s `round`
+column was renamed `stage` when the harness grew a second task. The two draft
+LLM runs predate that rename; every sit file postdates it. `paired_test.py`
+correctly refuses to pair files from either side of the rename — so the
+base-vs-tuned comparison still worked (both files were old and agreed) while
+the board-vs-tuned comparison was silently unavailable. A guard against
+comparing incompatible files hid the project's best result, and nothing
+surfaced it because nothing ever failed. The two files have since had their
+headers migrated, with every other column asserted byte-identical.
+
 The 20.7% exact ties are also why the t-test and Wilcoxon differ. The
 difference histogram is symmetric and unimodal, so skew is not the problem; a
 spike of 93 zeros is simply not something a normal distribution produces.

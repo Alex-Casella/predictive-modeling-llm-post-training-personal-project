@@ -15,15 +15,33 @@ by a script in this repo — the filename is given next to each result.
 |---|---|---|---|---|---|---|
 | Carry-forward baseline | 42.1 | 51.2 | 61.4 | 65.1 | 67.6 | **68.8** |
 | Best reordering method | 43.5 | 53.5 | 62.0 | 65.5 | 67.9 | **68.8** |
-| Best method overall (widened pool) | 42.1 | 51.2 | 61.4 | 65.2 | 67.8 | **69.1** |
+| Widened pool, returners (`step6`) | 42.1 | 51.2 | 61.4 | 65.2 | 67.8 | **69.1** |
 | Target | | | | | | 75.0 |
 | **Structural ceiling without rookie data** | | | | | | **76.8** |
 
 Set overlap %, mean over 25 walk-forward season pairs. The baseline was
 reproduced independently to 0.0 at all six tiers (`step4_race.py`).
 
-**The project beats its baseline by 0.3 points and is 5.9 short of target.**
-The reason is structural and is the main finding below.
+**Rookies via draft position (`step17`) is the best method, and it is reported
+on a different span**, so it sits in its own table rather than being compared
+to rows above it. The boost was fitted on 2001–2015 and these seasons were
+never shown to that choice:
+
+| held out, 2016–2025 | @25 | @50 | @100 | @150 | @200 | **@250** |
+|---|---|---|---|---|---|---|
+| Carry-forward baseline | 42.0 | 50.8 | 61.4 | 64.9 | 67.6 | **68.6** |
+| **+ rookies, boost 1.5** | 42.0 | 50.8 | 63.3 | 67.1 | 70.0 | **71.9** |
+| delta | 0.0 | 0.0 | +1.9 | +2.2 | +2.4 | **+3.3** |
+
+**+3.3 points on held-out seasons, against +0.3 from everything before it.**
+That is 3.1 short of the 75.0 target, and the 76.8 "ceiling" no longer applies:
+it assumed rookies were unreachable, and this reaches some of them.
+
+**Read the elite tiers before celebrating.** @25 and @50 did not move at all.
+Every point comes from tier 100 and below, which is exactly the pattern the
+success-metric section warns about — rookies rarely finish top 50, so this
+widens the pool where it was already easiest. The top of the board, where draft
+picks are most expensive, is untouched by anything in this project.
 
 ---
 

@@ -1,0 +1,301 @@
+method,target,tier,overlap
+carry_forward,2001,25,52.0
+carry_forward,2001,50,52.0
+carry_forward,2001,100,60.0
+carry_forward,2001,150,66.0
+carry_forward,2001,200,66.0
+carry_forward,2001,250,66.0
+carry_forward,2002,25,48.0
+carry_forward,2002,50,62.0
+carry_forward,2002,100,63.0
+carry_forward,2002,150,63.333333333333336
+carry_forward,2002,200,70.0
+carry_forward,2002,250,66.8
+carry_forward,2003,25,52.0
+carry_forward,2003,50,58.0
+carry_forward,2003,100,67.0
+carry_forward,2003,150,75.33333333333333
+carry_forward,2003,200,73.0
+carry_forward,2003,250,73.2
+carry_forward,2004,25,36.0
+carry_forward,2004,50,52.0
+carry_forward,2004,100,56.0
+carry_forward,2004,150,63.333333333333336
+carry_forward,2004,200,68.0
+carry_forward,2004,250,70.4
+carry_forward,2005,25,40.0
+carry_forward,2005,50,50.0
+carry_forward,2005,100,68.0
+carry_forward,2005,150,69.33333333333333
+carry_forward,2005,200,67.5
+carry_forward,2005,250,70.0
+carry_forward,2006,25,40.0
+carry_forward,2006,50,52.0
+carry_forward,2006,100,61.0
+carry_forward,2006,150,65.33333333333333
+carry_forward,2006,200,64.5
+carry_forward,2006,250,68.0
+carry_forward,2007,25,36.0
+carry_forward,2007,50,46.0
+carry_forward,2007,100,61.0
+carry_forward,2007,150,64.66666666666667
+carry_forward,2007,200,67.0
+carry_forward,2007,250,68.0
+carry_forward,2008,25,28.0
+carry_forward,2008,50,50.0
+carry_forward,2008,100,65.0
+carry_forward,2008,150,61.333333333333336
+carry_forward,2008,200,64.5
+carry_forward,2008,250,67.6
+carry_forward,2009,25,40.0
+carry_forward,2009,50,50.0
+carry_forward,2009,100,62.0
+carry_forward,2009,150,65.33333333333333
+carry_forward,2009,200,68.0
+carry_forward,2009,250,70.4
+carry_forward,2010,25,44.0
+carry_forward,2010,50,46.0
+carry_forward,2010,100,63.0
+carry_forward,2010,150,67.33333333333333
+carry_forward,2010,200,73.0
+carry_forward,2010,250,73.6
+carry_forward,2011,25,40.0
+carry_forward,2011,50,52.0
+carry_forward,2011,100,58.0
+carry_forward,2011,150,60.666666666666664
+carry_forward,2011,200,67.0
+carry_forward,2011,250,72.4
+carry_forward,2012,25,52.0
+carry_forward,2012,50,46.0
+carry_forward,2012,100,61.0
+carry_forward,2012,150,67.33333333333333
+carry_forward,2012,200,66.5
+carry_forward,2012,250,66.4
+carry_forward,2013,25,56.0
+carry_forward,2013,50,50.0
+carry_forward,2013,100,59.0
+carry_forward,2013,150,62.666666666666664
+carry_forward,2013,200,67.5
+carry_forward,2013,250,70.4
+carry_forward,2014,25,36.0
+carry_forward,2014,50,58.0
+carry_forward,2014,100,63.0
+carry_forward,2014,150,64.66666666666667
+carry_forward,2014,200,63.5
+carry_forward,2014,250,63.6
+carry_forward,2015,25,32.0
+carry_forward,2015,50,48.0
+carry_forward,2015,100,55.0
+carry_forward,2015,150,62.666666666666664
+carry_forward,2015,200,67.0
+carry_forward,2015,250,66.4
+carry_forward,2016,25,48.0
+carry_forward,2016,50,56.0
+carry_forward,2016,100,59.0
+carry_forward,2016,150,63.333333333333336
+carry_forward,2016,200,65.0
+carry_forward,2016,250,66.4
+carry_forward,2017,25,32.0
+carry_forward,2017,50,62.0
+carry_forward,2017,100,62.0
+carry_forward,2017,150,64.0
+carry_forward,2017,200,64.5
+carry_forward,2017,250,66.8
+carry_forward,2018,25,40.0
+carry_forward,2018,50,50.0
+carry_forward,2018,100,54.0
+carry_forward,2018,150,60.0
+carry_forward,2018,200,64.5
+carry_forward,2018,250,65.2
+carry_forward,2019,25,44.0
+carry_forward,2019,50,46.0
+carry_forward,2019,100,64.0
+carry_forward,2019,150,68.0
+carry_forward,2019,200,69.5
+carry_forward,2019,250,68.0
+carry_forward,2020,25,48.0
+carry_forward,2020,50,52.0
+carry_forward,2020,100,62.0
+carry_forward,2020,150,64.66666666666667
+carry_forward,2020,200,67.5
+carry_forward,2020,250,70.8
+carry_forward,2021,25,48.0
+carry_forward,2021,50,50.0
+carry_forward,2021,100,62.0
+carry_forward,2021,150,64.66666666666667
+carry_forward,2021,200,67.0
+carry_forward,2021,250,68.0
+carry_forward,2022,25,48.0
+carry_forward,2022,50,54.0
+carry_forward,2022,100,68.0
+carry_forward,2022,150,66.66666666666667
+carry_forward,2022,200,70.5
+carry_forward,2022,250,69.2
+carry_forward,2023,25,36.0
+carry_forward,2023,50,44.0
+carry_forward,2023,100,60.0
+carry_forward,2023,150,65.33333333333333
+carry_forward,2023,200,69.0
+carry_forward,2023,250,68.8
+carry_forward,2024,25,28.0
+carry_forward,2024,50,42.0
+carry_forward,2024,100,60.0
+carry_forward,2024,150,66.66666666666667
+carry_forward,2024,200,70.0
+carry_forward,2024,250,71.2
+carry_forward,2025,25,48.0
+carry_forward,2025,50,52.0
+carry_forward,2025,100,63.0
+carry_forward,2025,150,66.0
+carry_forward,2025,200,69.0
+carry_forward,2025,250,71.2
+ORACLE reorder,2001,25,96.0
+ORACLE reorder,2001,50,94.0
+ORACLE reorder,2001,100,85.0
+ORACLE reorder,2001,150,79.33333333333333
+ORACLE reorder,2001,200,71.5
+ORACLE reorder,2001,250,66.0
+ORACLE reorder,2002,25,92.0
+ORACLE reorder,2002,50,92.0
+ORACLE reorder,2002,100,85.0
+ORACLE reorder,2002,150,77.33333333333333
+ORACLE reorder,2002,200,75.0
+ORACLE reorder,2002,250,66.8
+ORACLE reorder,2003,25,96.0
+ORACLE reorder,2003,50,94.0
+ORACLE reorder,2003,100,92.0
+ORACLE reorder,2003,150,89.33333333333333
+ORACLE reorder,2003,200,80.0
+ORACLE reorder,2003,250,73.2
+ORACLE reorder,2004,25,100.0
+ORACLE reorder,2004,50,94.0
+ORACLE reorder,2004,100,82.0
+ORACLE reorder,2004,150,80.66666666666667
+ORACLE reorder,2004,200,76.5
+ORACLE reorder,2004,250,70.4
+ORACLE reorder,2005,25,96.0
+ORACLE reorder,2005,50,96.0
+ORACLE reorder,2005,100,94.0
+ORACLE reorder,2005,150,84.66666666666667
+ORACLE reorder,2005,200,75.0
+ORACLE reorder,2005,250,70.0
+ORACLE reorder,2006,25,88.0
+ORACLE reorder,2006,50,82.0
+ORACLE reorder,2006,100,82.0
+ORACLE reorder,2006,150,79.33333333333333
+ORACLE reorder,2006,200,74.0
+ORACLE reorder,2006,250,68.0
+ORACLE reorder,2007,25,92.0
+ORACLE reorder,2007,50,92.0
+ORACLE reorder,2007,100,86.0
+ORACLE reorder,2007,150,81.33333333333333
+ORACLE reorder,2007,200,74.0
+ORACLE reorder,2007,250,68.0
+ORACLE reorder,2008,25,80.0
+ORACLE reorder,2008,50,80.0
+ORACLE reorder,2008,100,79.0
+ORACLE reorder,2008,150,75.33333333333333
+ORACLE reorder,2008,200,71.5
+ORACLE reorder,2008,250,67.6
+ORACLE reorder,2009,25,96.0
+ORACLE reorder,2009,50,98.0
+ORACLE reorder,2009,100,87.0
+ORACLE reorder,2009,150,80.0
+ORACLE reorder,2009,200,75.5
+ORACLE reorder,2009,250,70.4
+ORACLE reorder,2010,25,88.0
+ORACLE reorder,2010,50,90.0
+ORACLE reorder,2010,100,89.0
+ORACLE reorder,2010,150,82.66666666666667
+ORACLE reorder,2010,200,80.0
+ORACLE reorder,2010,250,73.6
+ORACLE reorder,2011,25,88.0
+ORACLE reorder,2011,50,92.0
+ORACLE reorder,2011,100,88.0
+ORACLE reorder,2011,150,82.0
+ORACLE reorder,2011,200,79.5
+ORACLE reorder,2011,250,72.4
+ORACLE reorder,2012,25,80.0
+ORACLE reorder,2012,50,84.0
+ORACLE reorder,2012,100,82.0
+ORACLE reorder,2012,150,80.0
+ORACLE reorder,2012,200,73.0
+ORACLE reorder,2012,250,66.4
+ORACLE reorder,2013,25,100.0
+ORACLE reorder,2013,50,94.0
+ORACLE reorder,2013,100,87.0
+ORACLE reorder,2013,150,80.0
+ORACLE reorder,2013,200,75.5
+ORACLE reorder,2013,250,70.4
+ORACLE reorder,2014,25,92.0
+ORACLE reorder,2014,50,90.0
+ORACLE reorder,2014,100,81.0
+ORACLE reorder,2014,150,74.66666666666667
+ORACLE reorder,2014,200,67.5
+ORACLE reorder,2014,250,63.6
+ORACLE reorder,2015,25,92.0
+ORACLE reorder,2015,50,88.0
+ORACLE reorder,2015,100,82.0
+ORACLE reorder,2015,150,75.33333333333333
+ORACLE reorder,2015,200,72.0
+ORACLE reorder,2015,250,66.4
+ORACLE reorder,2016,25,88.0
+ORACLE reorder,2016,50,90.0
+ORACLE reorder,2016,100,83.0
+ORACLE reorder,2016,150,76.66666666666667
+ORACLE reorder,2016,200,69.0
+ORACLE reorder,2016,250,66.4
+ORACLE reorder,2017,25,84.0
+ORACLE reorder,2017,50,84.0
+ORACLE reorder,2017,100,82.0
+ORACLE reorder,2017,150,78.0
+ORACLE reorder,2017,200,71.0
+ORACLE reorder,2017,250,66.8
+ORACLE reorder,2018,25,88.0
+ORACLE reorder,2018,50,86.0
+ORACLE reorder,2018,100,82.0
+ORACLE reorder,2018,150,78.66666666666667
+ORACLE reorder,2018,200,72.0
+ORACLE reorder,2018,250,65.2
+ORACLE reorder,2019,25,96.0
+ORACLE reorder,2019,50,90.0
+ORACLE reorder,2019,100,79.0
+ORACLE reorder,2019,150,79.33333333333333
+ORACLE reorder,2019,200,74.5
+ORACLE reorder,2019,250,68.0
+ORACLE reorder,2020,25,92.0
+ORACLE reorder,2020,50,88.0
+ORACLE reorder,2020,100,81.0
+ORACLE reorder,2020,150,80.0
+ORACLE reorder,2020,200,76.0
+ORACLE reorder,2020,250,70.8
+ORACLE reorder,2021,25,92.0
+ORACLE reorder,2021,50,94.0
+ORACLE reorder,2021,100,86.0
+ORACLE reorder,2021,150,77.33333333333333
+ORACLE reorder,2021,200,72.0
+ORACLE reorder,2021,250,68.0
+ORACLE reorder,2022,25,96.0
+ORACLE reorder,2022,50,98.0
+ORACLE reorder,2022,100,86.0
+ORACLE reorder,2022,150,81.33333333333333
+ORACLE reorder,2022,200,75.5
+ORACLE reorder,2022,250,69.2
+ORACLE reorder,2023,25,88.0
+ORACLE reorder,2023,50,82.0
+ORACLE reorder,2023,100,80.0
+ORACLE reorder,2023,150,79.33333333333333
+ORACLE reorder,2023,200,74.0
+ORACLE reorder,2023,250,68.8
+ORACLE reorder,2024,25,80.0
+ORACLE reorder,2024,50,78.0
+ORACLE reorder,2024,100,82.0
+ORACLE reorder,2024,150,82.66666666666667
+ORACLE reorder,2024,200,77.0
+ORACLE reorder,2024,250,71.2
+ORACLE reorder,2025,25,96.0
+ORACLE reorder,2025,50,92.0
+ORACLE reorder,2025,100,87.0
+ORACLE reorder,2025,150,80.66666666666667
+ORACLE reorder,2025,200,77.0
+ORACLE reorder,2025,250,71.2

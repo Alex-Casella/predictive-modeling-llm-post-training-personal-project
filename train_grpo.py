@@ -69,21 +69,29 @@ volume = modal.Volume.from_name('fantasy-lora', create_if_missing=True)
 image = (
     modal.Image.debian_slim(python_version='3.11')
     .pip_install(
-        # PINNED: CUDA-sensitive, and these worked for the SFT runs.
-        'torch==2.5.1',
-        'bitsandbytes==0.44.1',
-        'pandas==2.2.3',
-        # UNPINNED ON PURPOSE. The first attempt pinned trl==0.12.1 to match
-        # train_adapter.py and died on
-        #     ImportError: cannot import name 'GRPOConfig' from 'trl'
-        # because GRPO postdates that release. Rather than guess which version
-        # introduced it, take the current one and let pip resolve transformers
-        # and accelerate to match. The versions actually installed are printed
-        # and written to PROVENANCE, so the run is still reproducible after
-        # the fact -- which is the property that matters, not the pin.
+        'pandas',
+        # NOTHING IS PINNED, and that took two failed smoke tests to arrive at.
         #
-        # Safe to float here: this image is separate from train_adapter.py's,
-        # so nothing that produced 5.41 / 5.42 / 5.25 can be affected.
+        #   attempt 1  trl==0.12.1 (to match train_adapter.py)
+        #              ImportError: cannot import name 'GRPOConfig'
+        #              -- GRPO postdates that release
+        #   attempt 2  trl floated, torch==2.5.1 kept
+        #              ImportError: cannot import name 'FSDPModule' from
+        #              torch.distributed.fsdp
+        #              -- trl 1.12 needs the FSDP2 API from a newer torch
+        #
+        # The SFT stack (torch 2.5.1 / transformers 4.46 / trl 0.12) is nearly
+        # two years older than the release that first shipped GRPO. Pinning one
+        # layer of that stack while floating another cannot work: the pin just
+        # moves which import fails. Let pip resolve the whole set.
+        #
+        # Reproducibility comes from RECORDING, not pinning -- the installed
+        # versions are printed at startup and written into PROVENANCE.txt.
+        #
+        # Safe to float: this image is separate from train_adapter.py's, so
+        # nothing that produced 5.41 / 5.42 / 5.25 can be affected by it.
+        'torch',
+        'bitsandbytes',
         'trl',
         'transformers',
         'peft',

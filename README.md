@@ -177,6 +177,38 @@ message so `git log --oneline` reads as a history of what worked.
 
 ---
 
+## How this was built
+
+Most of the code here was written by **Claude Opus 5 via Claude Code**, working
+from my direction. 84 of the 90 commits carry a `Co-Authored-By` trailer, so
+`git log` is the authoritative record rather than this paragraph.
+
+What that division actually looked like, since "AI-assisted" covers a wide range:
+
+| mine | the assistant's |
+|---|---|
+| what to measure, and against what bar | the implementation |
+| which experiment to run next, and in what order | the statistics and plotting code |
+| running every training job and eval | the data-pipeline code |
+| reading results and deciding what they meant | the checks and guards |
+| catching numbers that looked wrong | drafting the documentation |
+
+Some of the decisions that shaped the results were mine and are worth naming,
+because they are the reason the numbers mean anything: scoring the un-tuned
+base model *before* training rather than after; running a seed replicate to
+establish a noise floor before trusting a 0.126 gap; and checking whether the
+matchup feature carried any signal at all before asking a model to use it. Each
+of those changed a conclusion.
+
+The assistant also produced several confidently wrong numbers during this work
+— a stale adapter scored as a new one, a hyperparameter tuned on the test set,
+a runaway rate misread from a scroll and published before it was checked. All
+are recorded in `RESULTS.md` with their retractions. That is the honest picture
+of building this way: fast, and requiring exactly the kind of verification this
+project was already built to do.
+
+---
+
 ## Getting started
 
 Put all files in one folder, then:

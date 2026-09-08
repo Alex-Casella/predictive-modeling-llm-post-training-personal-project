@@ -221,12 +221,18 @@ def train(limit: int = 600, epochs: float = 1.0, generations: int = 8,
                 continue
             r = rk.index(pick) + 1               # 1 = best of K, by hindsight
             out.append((k + 1 - r) / k)
-        # One call covers one group when the batch is exactly G wide, which is
-        # how cfg is configured. If that ever stops holding the counter simply
-        # stops incrementing rather than reporting something false.
-        if len(out) == generations:
+        # Group boundaries, the hard way. The first version only counted when
+        # len(out) == generations, TRL passes a whole batch at once, so it
+        # never incremented and then reported 0.0% flat by dividing 0 by
+        # max(0, 1). A counter that silently measures nothing and prints a
+        # reassuring number is worse than no counter -- TRL's own
+        # frac_reward_zero_std said 1.0 while this said 0%.
+        #
+        # Completions arrive grouped: G for prompt 1, then G for prompt 2, ...
+        for i in range(0, len(out) - generations + 1, generations):
+            grp = out[i:i + generations]
             stats['groups'] += 1
-            if max(out) - min(out) < 1e-9:
+            if max(grp) - min(grp) < 1e-9:
                 stats['flat_groups'] += 1
         return out
 
@@ -279,7 +285,12 @@ def train(limit: int = 600, epochs: float = 1.0, generations: int = 8,
         max_prompt_length=2048,
         learning_rate=lr,           # far lower than SFT's 2e-4; RL is touchy
         beta=beta,                  # KL penalty toward the base model
-        temperature=0.9,            # must be > 0 or every sample is identical
+        # 0.9 was not enough: the smoke test produced FOUR IDENTICAL PICKS per
+        # prompt (board_agreement 100%, frac_reward_zero_std 1.0), so every
+        # group had zero advantage and the loss was exactly 0. GRPO learns from
+        # DISAGREEMENT between samples of the same prompt; without it there is
+        # nothing to rank. Higher temperature buys that disagreement.
+        temperature=1.1,
         lr_scheduler_type='constant',
         bf16=True,
         gradient_checkpointing=True,

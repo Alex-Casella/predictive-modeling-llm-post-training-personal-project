@@ -434,6 +434,74 @@ pick — in 2021 the label was Cooper Kupp for ten consecutive picks, and a
 12 candidates actually shown fixed it (21–37 distinct labels), and an assert
 guards the regression.
 
+### GRPO — a second training method reaches the same place
+
+`train_grpo.py`. Everything above is supervised fine-tuning: the model is shown
+the right answer and trained to reproduce it. This is reinforcement learning,
+and it is never shown a right answer at all. For each prompt it samples 8 picks
+at temperature 1.1, scores each by `(K+1-rank)/K` — where the pick actually
+finished among the 12 shown — and pushes toward the ones that beat *the group's
+own average*. An invalid answer scores 0.
+
+Trained on the first 600 rows of `sft_train.jsonl` (seasons 2007–2010), one
+epoch, `beta=0.04`, seed 0, from the **base** model rather than from an SFT
+checkpoint. Scored on the same 450 held-out picks as every adapter above;
+overlap between the 600 trained prompts and the 450 test items is **0**, and
+the two spans are thirteen years apart.
+
+**Three instrumentation gates were read before the score, and the order was
+fixed in advance.** This matters because two of them had already failed once:
+
+| | smoke test (temp 0.9) | this run (temp 1.1) | |
+|---|---|---|---|
+| `invalid_pct` | 0.0 | **1.5** | higher temperature cost little |
+| `board_agreement_pct` | 100.0 | **32.4** | no collapse onto the sort |
+| `flat_group_pct` | (the counter lied) | **14.0** | 86% of groups carried gradient |
+
+`frac_reward_zero_std` was **1.0 at temperature 0.9** — every sample of a prompt
+named the same player, so every within-group advantage was exactly zero and the
+gradient was zero with it. The loss curve looked fine. Two hours of that would
+have trained nothing. Temperature 0.9 → 1.1 is the entire fix, and this time the
+project's own flat-group counter agreed with TRL's metric instead of reporting a
+reassuring 0.0%.
+
+| | score | gap vs board | p (t / Wilcoxon / sign) | 95% CI | n for 80% power |
+|---|---|---|---|---|---|
+| `fantasy-draft-grpo` | **5.351** | **−0.653** | 0.0015 / 0.0027 / 0.0152 | [−1.053, −0.253] | **345** vs 450 |
+
+Best draft score in the project, adequately powered, all three tests reject.
+Better on 187, worse on 142, identical on 121.
+
+**Against the SFT adapter it is nothing.** −0.067, p = 0.7445 / 0.7728 / 1.0,
+CI [−0.467, +0.334], 149 better against 148 worse. `n` for 80% power at that
+effect size is **33,212** against the 450 available — and 0.067 is well inside
+the 0.160 seed noise floor either way. The claim is *matches*, not *beats*, and
+the histogram says it without any test: the two adapters make **identical picks
+on 34%** of decisions despite sharing no training objective.
+
+| | method | trained on | score | gap vs board |
+|---|---|---|---|---|
+| `fantasy-draft` | SFT | 1,950 labelled | 5.411 | −0.593 |
+| `fantasy-draft-pad` | SFT | 1,950 labelled | 5.418 | −0.587 |
+| `fantasy-draft-pads1` | SFT, seed 1 | 1,950 labelled | 5.249 | −0.762 |
+| `fantasy-draft-grpo` | **GRPO** | **600 unlabelled** | **5.351** | **−0.653** |
+
+**Four adapters, two training methods, one conclusion.** Supervised learning on
+1,950 labelled examples and reinforcement learning on 600 unlabelled prompts
+land in the same place, from opposite directions, and the four gaps span
+0.587–0.762 against a 0.160 noise floor. Every CI is entirely below zero.
+
+The reading that follows is about the ceiling, not the methods: **if a labelled
+approach and an unlabelled approach converge, the limit is upstream of
+training** — in what the prompt can see, or in how much of a season is knowable
+at draft time at all. Trying a third optimiser is not the experiment; changing
+what the model is told is.
+
+Not attempted, and the obvious next run: GRPO starting from the SFT adapter
+rather than the base, which is how post-training pipelines normally stack. A
+gain of half a rank there would be detectable at n=450 — 0.653 was found with
+345 needed — whereas the 0.067 measured here never could be.
+
 See `SERVING.md` for the conversion and serving runbook.
 
 ## Sit/start (stage 6)

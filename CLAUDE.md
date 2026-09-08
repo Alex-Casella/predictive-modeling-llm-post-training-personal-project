@@ -135,8 +135,8 @@ good. So every design choice here exists to make the question answerable:
 two results on the same base model through the same harness is a finding — and
 they already disagree, which is the most useful thing either of them produced:
 
-    draft       tabular 6.00 of 12   un-tuned Llama 5.80   fine-tuned 5.41
-    sit/start   tabular 2.92 of 6    un-tuned Llama 3.02   fine-tuned 2.99
+    draft       tabular 6.00 of 12   un-tuned Llama 5.80   SFT 5.41   GRPO 5.35
+    sit/start   tabular 2.92 of 6    un-tuned Llama 3.02   SFT 2.99
 
 So "can an LLM beat the spreadsheet" has no single answer. It is task-dependent,
 and that was measured rather than assumed.
@@ -146,6 +146,28 @@ and that was measured rather than assumed.
 (p = 0.0066 / 0.0070 / 0.0112). Both CIs sit entirely below zero. This is the
 only adequately powered comparison in the project and the only one that
 replicates.
+
+**And a second training method lands in the same place.** `train_grpo.py` runs
+GRPO reinforcement learning — no labelled answers, reward is the rank of the
+model's own pick among the 12 shown, advantage taken against the group's own
+mean over 8 samples. From the *base* model on 600 unlabelled prompts it scores
+**5.351, −0.653 vs the board** (p = 0.0015 / 0.0027 / 0.0152, CI [−1.053,
+−0.253], adequately powered at n=345 of 450). Against the SFT adapter it is
+−0.067, p = 0.7445, needing n=33,212 to detect — **matches, does not beat**, and
+0.067 sits well inside the 0.160 noise floor. Four adapters, two methods, gaps
+spanning 0.587–0.762, every CI below zero.
+
+That convergence is the finding: **if labelled and unlabelled training reach the
+same score, the ceiling is upstream of the optimiser** — in what the prompt can
+see, or in how much of a season is knowable at draft time. A third optimiser is
+not the next experiment; changing what the model is told is.
+
+**Read the three GRPO gates before any GRPO score**, in this order, and stop at
+the first bad one: `invalid_pct`, `board_agreement_pct`, `flat_group_pct`. At
+temperature 0.9 all 8 samples of a prompt named the same player, so every
+within-group advantage was zero and the gradient was zero — while the loss curve
+looked normal. Temperature 1.1 fixed it. `--generations` and `--temperature` are
+the two knobs that buy disagreement, and without disagreement GRPO cannot learn.
 
 **On start/sit nothing is distinguishable from anything** — five paired
 comparisons, five intervals containing zero. Before reading that as a fact

@@ -18,6 +18,14 @@ comparable.
   independently trained adapter. The only adequately powered comparison here
   and the only one that replicates. Against the *un-tuned* base (5.80) the same
   model is suggestive but underpowered, p = 0.047 / 0.054 / 0.090.
+- **Reinforcement learning reaches the same place from the other direction.**
+  GRPO on 600 *unlabelled* prompts, trained from the base model with no right
+  answer ever shown, scores **5.351 — −0.653 vs the board**, p = 0.0015 /
+  0.0027 / 0.0152, adequately powered. Against the supervised adapter it is
+  −0.067 (p = 0.74, n=33,212 needed): **it matches SFT, it does not beat it.**
+  Four adapters, two training methods, every confidence interval below zero.
+  Convergence from opposite directions is the result — the ceiling is upstream
+  of the optimiser, in what the prompt can see.
 - **Start/sit is a clean set of nulls.** 2.99 of 6 against a 2.92 rule and a
   3.02 un-tuned base. Five paired comparisons, five confidence intervals
   containing zero — and the board's own score swings 0.43 across the test
@@ -76,10 +84,10 @@ answerable:
 Two tasks exist so the conclusion is not one anecdote. They already disagree,
 which is the most useful thing either produced:
 
-| | tabular layer | un-tuned Llama | fine-tuned | vs the sort |
-|---|---|---|---|---|
-| draft | 6.00 of 12 | 5.80 | **5.41** | **beats it, p = 0.004, replicated** |
-| start/sit | **2.92** of 6 | 3.02 | 2.99 | no measurable difference |
+| | tabular layer | un-tuned Llama | SFT | GRPO | vs the sort |
+|---|---|---|---|---|---|
+| draft | 6.00 of 12 | 5.80 | **5.41** | **5.35** | **beats it, p ≤ 0.004, replicated on 4 adapters across 2 methods** |
+| start/sit | **2.92** of 6 | 3.02 | 2.99 | — | no measurable difference |
 
 "Can a language model beat the spreadsheet?" turns out to be task-dependent —
 measured on the same base model through the same harness, rather than assumed.

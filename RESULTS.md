@@ -347,18 +347,40 @@ significant on all three tests.** The language layer beats the sort it was
 handed, on held-out seasons, by 0.593 ranks of 12. Better on 204, worse on 152,
 identical on 94.
 
-**And it replicates.** `fantasy-draft-pad` is a second adapter trained from
-scratch on the same data at the same 1 epoch and seed, differing only in the
-pad token. It scores **5.42** and is tested against the same board:
+**And it replicates twice.** Three adapters were trained from scratch on the
+same data at the same 1 epoch, differing only in the pad token and the seed.
+All three are tested against the same board:
 
-| | gap vs board | paired t / Wilcoxon / sign | 95% CI | n needed |
+| | score | gap vs board | paired t | 95% CI |
 |---|---|---|---|---|
-| `fantasy-draft` | **−0.593** | 0.0041 / 0.0040 / 0.0068 | [−0.997, −0.190] | 425 |
-| `fantasy-draft-pad` | **−0.587** | 0.0066 / 0.0070 / 0.0112 | [−1.008, −0.166] | 473 |
+| `fantasy-draft` | 5.411 | **−0.593** | 0.0041 | [−0.997, −0.190] |
+| `fantasy-draft-pad` | 5.418 | **−0.587** | 0.0066 | [−1.008, −0.166] |
+| `fantasy-draft-pads1` | 5.249 | **−0.762** | **0.0003** | [−1.175, −0.348] |
 
-Two separately trained adapters, two independent evaluation runs, the same
-conclusion at α = 0.05 on all three tests. Nothing else in this project
-replicates, and a replication is worth more than either result alone.
+Three separately trained adapters, three independent evaluation runs, every
+confidence interval entirely below zero. Nothing else in this project
+replicates even once.
+
+**The draft noise floor is 0.160.** `pads1` differs from `pad` only in the
+seed, so the gap between them is pure run-to-run variation: −0.160,
+p = 0.105 / 0.323 / 0.235, CI [−0.354, +0.033]. That is the yardstick the
+board result has to be read against:
+
+    board gap    0.593 – 0.762
+    noise floor  0.160
+                 ─────────────
+                 3.7x to 4.8x noise
+
+Which is a weaker statement than the p-values alone imply, and the right one.
+A p-value asks whether a different *test set* could have produced this; the
+noise floor asks whether a different *training run* could have. Both had to be
+answered and only one of them was, until now.
+
+Normalised for K, draft is noisier per unit of scale than start/sit — 0.160/12
+= 0.0133 against 0.043/6 = 0.0072. That is the opposite of what the bar's
+season-to-season swing suggested (0.11 on draft, 0.43 on sit), and the two are
+not the same quantity: one is variation in the target, the other in the model.
+No mechanism is offered for the difference.
 
 The two adapters differ from each other by **+0.007**, p = 0.933 / 0.644 /
 0.545, CI [−0.148, +0.162] — so the pad-token change that eliminated the

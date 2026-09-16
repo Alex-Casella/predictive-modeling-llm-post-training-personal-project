@@ -13,6 +13,23 @@ The fantasy football is the vehicle. The subject is **post-training**: take a
 general model, make it better at one specific decision, and — the hard part —
 find out whether it actually worked.
 
+### Start here
+
+Everything is flat at the repo root, and the `stepN_` prefix is the experiment
+order — the numbers are the log. Five files worth reading first:
+
+| | |
+|---|---|
+| `RESULTS.md` | Every number, the script that produced it, and the retractions. The findings log. |
+| `eval_agent.py` | The evaluation harness. One file scores both agents and every baseline — this is the piece the rest depends on. |
+| `paired_test.py` | The significance tests. Runs on the committed CSVs with no setup. |
+| `train_adapter.py` | Supervised fine-tuning, both tasks, one script. `train_grpo.py` is the reinforcement-learning counterpart. |
+| `CLAUDE.md` | The rules the project runs under: no look-ahead, walk-forward only, never join on player name. |
+
+`PROJECT_CONTEXT.md` and `KICKOFF_PROMPT.md` are the pre-build spec, kept as a
+record of how the problem was scoped. Where they disagree with `RESULTS.md`,
+`RESULTS.md` is correct.
+
 ## Results
 
 | | scored on | chance | the bar to beat | best result | verdict |

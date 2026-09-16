@@ -1,5 +1,15 @@
 # NFL Fantasy Prediction — Project Context
 
+> **This is the original spec, written before any code existed.** It is kept as
+> a record of how the problem was scoped — the open questions, the traps
+> anticipated, the metrics being weighed. Much of it has since been answered,
+> and some of it was answered differently than expected. **Where this document
+> and `RESULTS.md` disagree, `RESULTS.md` is correct.** `README.md` is the
+> history of what was actually built; `CLAUDE.md` holds the rules in force.
+>
+> Notably still open here and unbuilt: the confidence-rating and calibration
+> work in §3d. That was scoped, not delivered.
+
 Merged handoff. Supersedes `ppg_feature_design_notes.md`; that document's content is
 carried forward here in full, with new material from a subsequent session added and
 three direct conflicts flagged in §2.

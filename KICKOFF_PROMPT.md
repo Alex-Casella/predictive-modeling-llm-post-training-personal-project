@@ -1,5 +1,11 @@
 # Kickoff prompt for Claude Code
 
+> **Archival.** This is the message that started the project from an empty
+> folder. It describes work that has since been done — see `README.md` for what
+> was built and `RESULTS.md` for what it measured. Kept because the constraints
+> set here (baseline before model, walk-forward only, never join on player
+> name) are the ones the finished project still runs under.
+
 Paste everything below the line, with `PROJECT_CONTEXT.md`, `fantasy_top250.csv`, and
 `draft_2026_offense.csv` in the working directory.
 

@@ -174,19 +174,32 @@ def build_messages(board, state, league, seat=None):
 
 
 def ask(model, item, names):
-    """Send one situation to Ollama. Returns (pick_or_None, raw_text)."""
+    """Send one situation to Ollama. Returns (pick_or_None, raw_text, hit_cap).
+
+    ask_ollama returns TWO values. An earlier version of this file bound the
+    whole tuple to `text`, which made extract_pick search a 2-tuple -- so every
+    answer was reported INVALID while the model was in fact naming a player,
+    and the next line died on tuple.strip(). Unpacking both is the fix, and
+    `hit_cap` is worth keeping rather than discarding: it is how the start/sit
+    runaway was caught (RESULTS.md, 96% of answers running to the token cap).
+    """
     try:
-        text = ask_ollama(model, item, timeout=180)
+        text, hit_cap = ask_ollama(model, item, timeout=180)
     except urllib.error.URLError as e:
         print(f'\n  cannot reach Ollama at {OLLAMA}: {e}')
         print(f'  start it with `ollama serve`, and check `ollama list` shows '
               f'"{model}"')
-        return None, None
-    return extract_pick(text, names), text
+        return None, None, False
+    return extract_pick(text, names), text, hit_cap
 
 
-def show_answer(model, pick, text, shown):
+def show_answer(model, pick, text, shown, hit_cap=False):
     print(f'\n  --- {model} ---')
+    if hit_cap:
+        # Not cosmetic. A truncated answer may have been cut off before it
+        # named anyone, so an INVALID below can be the token budget rather
+        # than the model.
+        print('  NOTE: ran to the token cap without stopping on its own.')
     if pick is None:
         # Not a wrong pick, a broken one. eval_agent.py refuses to map a
         # near-miss onto a real player and so does this; softening it here
@@ -233,9 +246,9 @@ def recommend(board, state, league, models, seat=None):
 
     picks = {}
     for m in models:
-        p, text = ask(m, item, names)
+        p, text, hit_cap = ask(m, item, names)
         picks[m] = p
-        show_answer(m, p, text, shown)
+        show_answer(m, p, text, shown, hit_cap)
 
     valid = [p for p in picks.values() if p]
     if valid:

@@ -1,16 +1,49 @@
 # Fantasy football projection + draft board + start/sit
 
-Predict the top 250 PPR fantasy football players for an upcoming season, turn
-that into a draft board, build a CLI assistant that recommends picks from the
-board plus current roster — and then a second, separate assistant that answers
-the in-season question: of the flex-eligible players on my roster this week,
-which do I start?
+Three systems built over 26 seasons of NFL data:
 
-The two assistants are two fine-tuned adapters over the same base model,
-trained by one script and scored by one harness, which is what makes them
-comparable.
+1. a **projection model** — scikit-learn, not an LLM — predicting who finishes
+   in next season's top 250
+2. a **draft agent** — Llama 3.1 8B, fine-tuned — picking one player out of
+   twelve available at a real draft pick
+3. a **start/sit agent** — a second adapter, answering a different weekly
+   question: of the flex-eligible players on my roster, which do I start?
 
-**Status**
+The fantasy football is the vehicle. The subject is **post-training**: take a
+general model, make it better at one specific decision, and — the hard part —
+find out whether it actually worked.
+
+## Results
+
+| | scored on | chance | the bar to beat | best result | verdict |
+|---|---|---|---|---|---|
+| **Draft agent** | 450 held-out picks, 2023–25 | 6.50 | **6.00** — a spreadsheet sort | **5.35** | beats it, on 4 adapters and 2 training methods |
+| **Start/sit agent** | 278 held-out decisions, 2023–24 | 3.50 | **2.92** — start the best average | 2.99 | beats nothing. five comparisons, five nulls |
+| **Projection model** | 10 held-out seasons, 2016–25 | — | **68.6%** — carry last year forward | **72.2%** | +3.6 points, but the top 25 never moved |
+
+The two agents are scored by *mean rank of the player they chose* — 1 is the
+best of the candidates shown, 12 (or 6) the worst, so **lower is better** and
+chance is a known number, (K+1)/2. The projection model is scored by set
+overlap at 250, where higher is better.
+
+**Three results, and only one of them is a win.** That is the honest shape of
+this project, and all three are reported the same way.
+
+### Why the draft result is believable
+
+- **Checked three ways.** A paired t-test, a Wilcoxon signed-rank test and a
+  sign test on the same 450 decisions all reject at α = 0.05. The sign test
+  ignores how big each win was, so the result does not depend on a few large
+  ones.
+- **Trained four separate times.** Three supervised adapters and one trained by
+  reinforcement learning, all beating the spreadsheet, every confidence
+  interval below zero.
+- **Measured against its own noise.** Retraining with nothing changed but the
+  random seed moves the score by **0.16**. The win is **0.59**, so it is
+  roughly 3.7× the amount that retraining alone shifts things — a weaker claim
+  than the p-values alone imply, and the right one.
+
+**The numbers in full**
 
 - **Draft agent beats the sort it was handed, and it replicates.** 5.41 mean
   rank of 12 against a 6.00 board — p = 0.0041 / 0.0040 / 0.0068 across three
@@ -58,15 +91,11 @@ what was done, what was found, and what is still open.
 
 ---
 
-## What this is really about
-
-The fantasy football is the vehicle. The subject is **post-training**: taking a
-general model, making it better at one specific decision, and — the hard part —
-knowing whether it actually worked.
+## How the evaluation was designed
 
 Fluent output is free. An LLM will produce confident draft advice whether or not
-the advice is any good, so the entire design exists to make "did it work?"
-answerable:
+the advice is any good, so every design choice below exists to make "did it
+work?" answerable:
 
 - the model picks **one** of K named candidates, so the answer is checkable
   rather than judged
@@ -219,53 +248,39 @@ project was already built to do.
 
 ## Getting started
 
-Put all files in one folder, then:
+**The statistics reproduce with no setup at all.** Every model's per-decision
+results are committed as CSVs, so the significance tests run on a clean clone:
 
-```
-cd path/to/fantasy-project
-git init
-claude
-```
+```bash
+pip install -r requirements.txt
 
-`CLAUDE.md` is read automatically at the start of every session. Paste this as
-the first message:
-
-```
-Read CLAUDE.md first.
-
-Session 1: establish the baseline and understand where the difficulty is.
-No modeling yet.
-
-Work through these in order, stopping after each so I can inspect the output:
-
-1. Load fantasy_top250.csv. Print the season list, rows per season, and a count
-   of blanks per column. Tell me anything that surprises you.
-
-2. Implement the carry-forward baseline from scratch: treat last season's top N
-   as the prediction for this season, measure set overlap, average across all 25
-   consecutive year-pairs. Report it at N = 25, 50, 100, 150, 200, 250.
-   My numbers are in CLAUDE.md. If yours disagree at any tier, stop and work out
-   which of us is wrong before continuing.
-
-3. The top-25 baseline is only 42.1%, meaning ~15 of each season's top 25 were
-   not there the year before. Identify those players. For every season, list who
-   entered the top 25 and split them into:
-     (a) true rookies — no prior season anywhere in the data
-     (b) returning players who were outside the top 25 the previous year
-   For group (b), separate those who played fewer than 10 games the prior season
-   from those who played a full season but scored poorly.
-   Show the breakdown by position and by year.
-
-4. Stop and tell me what that implies about which of the three groups is
-   realistically predictable, and which features might reach them.
-
-Ask me before making any judgment call about blanks, filtering, or scoring.
+python3 paired_test.py --a eval_board.csv --b eval_fantasy-draft-grpo.csv
+python3 paired_test.py --a eval_fantasy-draft-pad.csv --b eval_fantasy-draft-pads1.csv
 ```
 
-Step 3 is the point of the session. Whatever it shows about who those players
-are should drive every modeling decision after it.
+The first is the headline: the fine-tuned agent against the spreadsheet. The
+second is the noise floor — two adapters differing only in the random seed.
 
----
+**The projection model also runs from the CSVs in this repo**, no GPU and no
+model weights:
+
+```bash
+python3 step4_race.py            # the baseline, and why reordering cannot move it
+python3 step18_stack_pools.py    # the 72.2% result, walk-forward
+```
+
+**Running the agent itself** needs Ollama and a built adapter — see `Setup`
+above, then `SERVING.md` for the conversion runbook:
+
+```bash
+ollama serve                     # in another tab
+python3 assistant.py             # `rec` for a pick, `prompt` to see the exact input
+python3 eval_agent.py --model fantasy-draft-grpo    # ~15 min, 450 decisions
+```
+
+Every number in `RESULTS.md` names the script that produces it. The original
+kickoff prompt — how this was started from an empty folder — is in
+`KICKOFF_PROMPT.md`.
 
 ## Current contents
 
@@ -279,6 +294,7 @@ are should drive every modeling decision after it.
 | `board_2026.csv` | The projected draft board (`board.py`). |
 | `draft_2026_offense.csv` | 81 skill-position players from the 2026 NFL draft. |
 | `yoy.csv` | Year-over-year matched pairs (`step3_yoy.py`). |
+| `week1_2026_raw.csv` | Raw Pro-Football-Reference export, week 1 of 2026. 425 rows, not yet ingested — PFR's standard-scoring columns are still on it. Kept for the in-season work under **Deferred**; no script reads it yet. |
 
 **System 1 — the projection model**
 

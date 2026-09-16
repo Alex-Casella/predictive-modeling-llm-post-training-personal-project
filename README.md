@@ -217,7 +217,7 @@ message so `git log --oneline` reads as a history of what worked.
 ## How this was built
 
 Most of the code here was written by **Claude Opus 5 via Claude Code**, working
-from my direction. 84 of the 90 commits carry a `Co-Authored-By` trailer, so
+from my direction. 93 of the 100 commits carry a `Co-Authored-By` trailer, so
 `git log` is the authoritative record rather than this paragraph.
 
 What that division actually looked like, since "AI-assisted" covers a wide range:
